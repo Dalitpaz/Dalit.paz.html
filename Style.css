@@ -1,0 +1,161 @@
+img {         
+	border:3px solid blue;
+	border-radius:10px;
+	padding:20px;
+	width:150px;
+	height:250px
+	}
+
+body {
+	background-color:lightgray;
+	font-family:Arial;
+	font-size:20px;
+	
+
+
+.centered-text {
+    text-align: center;
+    font-size: 18px; /
+	* גודל הטקסט */
+    color: #333; /* צבע הטקסט */
+    margin: 20px 0; /* רווחים מעל ומתחת */
+}
+
+
+header {
+    position: fixed;
+	
+}
+
+.header-sticky {
+    position: fixed;
+}
+
+.header-area {
+    position: fixed; /* מקבע את ה-Header לראש הדף */
+}
+
+
+
+.large-text {
+    font-size: 48px;
+}
+<div style="font-size: 36px;">
+    זהו טקסט גדול בתוך div
+</div>
+
+header {
+    display: flex;
+    justify-content: center; /* למרכז את הלוגו */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 50px;
+    }
+    header img {
+        height: 40px; /* התאמה לגודל מסך קטן */
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: center; /* למרכז את הלוגו */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="C:\html\templatemo-villa-agency.css">
+  <title>Dalit Paz Villas</title>
+  <style>
+    body {
+      background-color: #C0C0C0; /* צבע רקע לכל הדף */
+      font-family: 'Cinzel', serif; /* פונט עבור כל הדף */
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #C0C0C0; /* צבע רקע לחלק העליון */
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+    }
+    .content {
+      background-color: #f0f8ff; /* צבע רקע לחלק התוכן */
+      text-align: center;
+      font-size: 15px;
+      padding: 20px;
+    }
+    .social-links a {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .social-links li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+background-image: url('https://drive.google.com/uc?id=FILE_ID');
+
+
+/* סגנון לתמונת הלוגו */
+.logo {
+    height: 50px; /* גובה מותאם אישית */
+
+.header-titles h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* תוכן נוסף */
+.content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* סגנון לתמונת הלוגו */
+.logo {
+    height: 50px; /* גובה מותאם אישית */
+}
+
+
+.header-titles h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* תוכן נוסף */
+.content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
