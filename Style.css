@@ -4,8 +4,10 @@
 }
 
 .villa-image {
-    width: 500px;
-    height: 500px;
+    width: 500px; /* רוחב התמונה */
+    height: auto; /* גובה יחסי לרוחב */
+    display: block; /* יישור אלמנטי */
+    margin: 0 auto; /* מיקום במרכז */
 }
 
 
