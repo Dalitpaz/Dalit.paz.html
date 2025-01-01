@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Retreats - By Dalit Paz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f8ff;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      header nav {
+        display: flex;
+        align-items: center;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      header nav ul li {
+        margin: 0 10px;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+
+      header .menu-trigger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .main-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .main-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .text-container h2 {
+        color: #FFD700;
+        font-size: 28px;
+      }
+
+      .text-container p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .video-section {
+        margin-top: 30px;
+      }
+
+      .video-section h4 {
+        color: #FFD700;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        header nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+        }
+
+        header.nav-active ul {
+          display: flex;
+        }
+
+        header .menu-trigger {
+          display: block;
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="assets\images\my logo.png" alt="Logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Gallery</a></li>
+          <li><a href="property-details.html">Contact</a></li>
+        </ul>
+        <span class="menu-trigger" onclick="toggleMenu()">☰</span>
+      </nav>
+    </header>
+
+    <main style="text-align:center" class="main-content">
+      <img style="float:right;width:660px;height:650px" src="assets\images\my vila.jpg" alt="Villa">
+      <div  style="text-align:right"class="text-container">
+        <h2 style="text-align:center">Welcome to the World of Dalit Paz Villas!</h2>
+        <h4><p style="text-align:center">Hello, my name is Dalit Paz, 38 years old.<br>
+          I always had a desire to live in a big house.<br>
+          So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
+          Everyone has their own dream.<br></h4>
+        </p>
+      </div>
+	  
+      <div class="video-section">
+        <h2>Get Closer View & A Different Feeling</h2>
+        <h4>The Most Expensive Villa in Israel</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4swJ4pDWf9M" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector("header nav");
+        nav.classList.toggle("nav-active");
+      }
+    </script>
+  </body>
+</html>
+
+
+
