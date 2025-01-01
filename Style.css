@@ -3,6 +3,75 @@
     box-sizing: border-box;
 }
 
+
+
+/* התפריט בנייד */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+/* התפריט לא יוסתר במסכים גדולים */
+@media screen and (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-trigger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-trigger span {
+        font-size: 24px;
+    }
+
+    /* הצגת התפריט לאחר לחיצה */
+    .main-nav.active ul {
+        display: flex;
+    }
+}
+
+/* התפריט יישאר מוצג גם במחשב */
+@media screen and (min-width: 769px) {
+    .main-nav ul {
+        display: flex;
+        flex-direction: row; /* התפריט יהיה מוצג בצורה אופקית */
+    }
+
+    .main-nav ul li {
+        margin: 0 15px;
+    }
+
+    .menu-trigger {
+        display: none; /* לא להציג את כפתור התפריט במחשב */
+    }
+}
+
+
 .villa-image {
     width: 500px; /* רוחב התמונה */
     height: auto; /* גובה יחסי לרוחב */
