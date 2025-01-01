@@ -54,6 +54,54 @@ body {
     }
 }
 
+
+
+    }
+
+    /* עיצוב ה-header */
+    header {
+        height: 60px; /* גובה מותאם */
+    }
+
+    header img {
+        height: 35px; /* גובה מותאם ללוגו */
+    }
+}
+
+/* עיצוב ה-header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+/* סגנון לתמונת הלוגו */
+.logo {
+    height: 50px;
+}
+
+/* כותרת ה-header */
+.header-titles h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* תוכן נוסף */
+.content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
 /* עיצוב ה-header */
 header {
     display: flex;
