@@ -41,6 +41,269 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+
+
+img {         
+	border:3px solid blue;
+	border-radius:10px;
+	padding:20px;
+	width:150px;
+	height:250px
+	}
+
+body {
+	background-color:lightgray;
+	font-family:Arial;
+	font-size:20px;
+	
+
+
+.centered-text {
+    text-align: center;
+    font-size: 18px; /
+	* גודל הטקסט */
+    color: #333; /* צבע הטקסט */
+    margin: 20px 0; /* רווחים מעל ומתחת */
+}
+
+
+header {
+    position: fixed;
+	
+}
+
+.header-sticky {
+    position: fixed;
+}
+
+.header-area {
+    position: fixed; /* מקבע את ה-Header לראש הדף */
+}
+
+
+
+.large-text {
+    font-size: 48px;
+}
+<div style="font-size: 36px;">
+    זהו טקסט גדול בתוך div
+</div>
+
+header {
+    display: flex;
+    justify-content: center; /* למרכז את הלוגו */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 50px;
+    }
+    header img {
+        height: 40px; /* התאמה לגודל מסך קטן */
+    }
+}
+
+
+header {
+    display: flex;
+    justify-content: center; /* למרכז את הלוגו */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="C:\html\templatemo-villa-agency.css">
+  <title>Dalit Paz Villas</title>
+  <style>
+    body {
+      background-color: #C0C0C0; /* צבע רקע לכל הדף */
+      font-family: 'Cinzel', serif; /* פונט עבור כל הדף */
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #C0C0C0; /* צבע רקע לחלק העליון */
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+    }
+    .content {
+      background-color: #f0f8ff; /* צבע רקע לחלק התוכן */
+      text-align: center;
+      font-size: 15px;
+      padding: 20px;
+    }
+    .social-links a {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .social-links li {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+background-image: url('https://drive.google.com/uc?id=FILE_ID');
+
+
+/* עיצוב ברירת מחדל */
+.logo-img {
+  width: 100px; /* גודל התמונה בברירת המחדל */
+  height: auto; /* נשאיר את הגובה אוטומטי כך שהתמונה תשמור על יחס היבט */
+}
+
+/* אם המסך קטן מ-600px (כמו בניידים), נגדיל את הלוגו */
+@media (max-width: 600px) {
+  .logo-img {
+    width: 80px; /* גודל קטן יותר עבור ניידים */
+  }
+}
+
+/* אם המסך גדול מ-1200px (כמו במסכים רחבים), נוודא שהלוגו לא ייצא מהמסך */
+@media (min-width: 1200px) {
+  .logo-img {
+    width: 150px; /* גודל יותר גדול עבור מסכים רחבים */
+  }
+}
+
+/* עיצוב הלוגו */
+.logo {
+  display: inline-block; /* תוודא שהלוגו יהיה בלוק Inline */
+  text-align: center; /* מוודא שהלוגו ממורכז */
+}
+
+/* עיצוב התמונה */
+.logo-img {
+  width: 100px; /* גודל התמונה בברירת המחדל */
+  height: auto; /* הגובה מותאם לפי רוחב התמונה כדי לשמור על יחס היבט */
+}
+
+/* התאמות עבור מסכים קטנים (כמו ניידים) */
+@media (max-width: 600px) {
+  .logo-img {
+    width: 80px; /* גודל קטן יותר עבור ניידים */
+  }
+}
+
+/* התאמות עבור מסכים גדולים יותר (כמו מחשבים שולחניים) */
+@media (min-width: 1200px) {
+  .logo-img {
+    width: 150px; /* גודל גדול יותר עבור מסכים רחבים */
+  }
+}
+.video.section {
+  background-image: url("assets\images\video-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video.section {
+  background-image: url('path-to-your-image.jpg'); /* החלף את הנתיב לנתיב לתמונה שלך */
+  background-size: contain; /* משנה את גודל התמונה כך שתתאים למסגרת */
+  background-position: center; /* ממקם את התמונה במרכז */
+  background-repeat: no-repeat; /* מונע חזרה של התמונה */
+  width: 50%; /* או קבע גודל ספציפי אם צריך */
+  height: 300px; /* קבע את הגובה הרצוי */
+}
+
+.video.section {
+  background-image: url("assets\images\video-bg.jpg"); /* החלף בנתיב לתמונה שלך */
+  background-size: cover; /* או contain, תלוי איך אתה רוצה שהתמונה תוצג */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* התאמת גובה */
+}
+
+
+
+/* סגנון לתמונת הלוגו */
+.logo {
+    height: 50px; /* גובה מותאם אישית */
+
+.header-titles h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* תוכן נוסף */
+.content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+/* סגנון לתמונת הלוגו */
+.logo {
+    height: 50px; /* גובה מותאם אישית */
+}
+
+
+.header-titles h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* תוכן נוסף */
+.content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+.video.section {
+    background-image: url('assets/images/video-bg.jpg'); /* נתיב לתמונת הרקע */
+    background-size: cover; /* ממלא את המסגרת בלי לעבור את גבולותיה */
+    background-position: center; /* ממקם את התמונה במרכז */
+    background-repeat: no-repeat; /* מונע חזרה של התמונה */
+    width: 100%; /* התאמת רוחב למסגרת */
+    height: 300px; /* גובה מותאם (שנה לפי הצורך) */
+    border: 1px solid #ddd; /* מסגרת לדוגמה, לא חובה */
+}
+
+<style>
+    .main-content img {
+        max-width: 80%; /* הקטנת התמונה הגדולה */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* התאמה לניידים */
+    @media screen and (max-width: 768px) {
+        .main-content img {
+            max-width: 100%; /* בשימוש במסכים קטנים יותר, התמונה תתפוס את כל הרוחב */
+            height: auto;
+        }
+    }
+</style>
+
+
 .clearfix:after {
   content: ".";
   display: block;
