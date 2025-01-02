@@ -299,53 +299,6 @@ background-image: url('https://drive.google.com/uc?id=FILE_ID');
     height: 300px; /* גובה מותאם (שנה לפי הצורך) */
     border: 1px solid #ddd; /* מסגרת לדוגמה, לא חובה */
 }
-<style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    h1 {
-      text-align: center;
-      padding: 20px;
-      color: #444;
-      font-size: 2em;
-      font-weight: 500;
-    }
-
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 עמודות */
-      gap: 20px; /* רווח בין התמונות */
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .image-gallery img {
-      width: 100%; /* התאמה לגודל העמודה */
-      height: auto;
-      aspect-ratio: 1 / 1; /* יחס 1:1 לכל תמונה */
-      border: 6px solid #D4AF37; /* מסגרת זהב */
-      border-radius: 10px; /* פינות מעוגלות */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
-      object-fit: cover; /* התאמה לתמונה */
-    }
-
-    @media (max-width: 768px) {
-      .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* התאמה למסכים קטנים */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .image-gallery {
-        grid-template-columns: 1fr; /* תמונה אחת בשורה */
-      }
-    }
-    </style>
 
 <style>
     .main-content img {
