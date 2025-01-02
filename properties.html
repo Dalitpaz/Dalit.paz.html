@@ -17,6 +17,36 @@
 <meta charset="UTF-8">
   <title>Your Page Title</title>
   <style>
+    
+  /* הגדרת הגלריה */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+    gap: 10px; /* מרווח בין התמונות */
+    width: 100%; /* לגלריה יש רוחב מלא של הדף */
+    height: 100vh; /* הגדרת גובה הגלריה על 100% מגובה המסך */
+    padding: 10px; /* רווח פנימי בין התמונות והקירות */
+    box-sizing: border-box; /* כולל את הרווח בתוך הגובה והרוחב */
+  }
+
+  /* הגדרת התמונות בתוך הגלריה */
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+    border: 2px solid #D4AF37; /* מסגרת זהב סביב כל תמונה */
+  }
+
+  /* עיצוב של הקטגוריות */
+  .category {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #D4AF37;
+    font-weight: bold;
+  }
+</style>
+
     .image-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
