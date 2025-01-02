@@ -196,17 +196,42 @@
   <h1 style="text-align:center">Quality of life begins with the home you've always dreamed of.</h1>
 </div>
 
-    <br>
-    <div class="container">
-      <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 col-sm-12 properties-items">
-          <a href="property-details.html"><img src="images/property-01.jpg">
-          <span class="category">Luxury Villa</span>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 properties-items">
-          <a href="property-details.html"><img src="images/property-02.jpg">
-          <span class="category">Luxury Villa</span>
-        </div>
+  <style>
+    .properties-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .properties-items img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .category {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="properties-box">
+      <div class="properties-items">
+        <a href="property-details.html"><img src="assets/images/property-01.jpg" alt="Luxury Villa"></a>
+        <span class="category">Luxury Villa</span>
+      </div>
+
+    <div class="properties-items">
+      <a href="property-details.html"><img src="assets/images/property-02.jpg" alt="Luxury Villa"></a>
+      <span class="category">Luxury Villa</span>
+    </div>
+
         <div class="col-lg-4 col-md-6 col-sm-12 properties-items">
           <a href="property-details.html"><img src="images/property-03.jpg">
           <span class="category">Luxury Villa</span>
