@@ -245,6 +245,11 @@ background-image: url('https://drive.google.com/uc?id=FILE_ID');
 }
 
 
+	.header-text h1 {
+  text-align: center;
+}
+
+
 .video.section {
     background-image: url('assets/images/video-bg.jpg'); /* נתיב לתמונת הרקע */
     background-size: cover; /* ממלא את המסגרת בלי לעבור את גבולותיה */
