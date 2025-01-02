@@ -42,6 +42,22 @@ https://templatemo.com/tm-591-villa-agency
         font-family: 'Poppins', sans-serif;
         background-color: #f0f8ff;
       }
+	    body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    padding-top: 11px; /* הוספת רווח שיתפנה למקום ה-header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* כדי לוודא שה-header יהיה מעל שאר האלמנטים */
+    height: 60px; /* קבע גובה קבוע ל-header אם זה לא קבוע כבר */
+}
+
 
       header {
         background-color: #333;
