@@ -140,6 +140,34 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
+
+      
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .image-gallery img {
+      width: 100%; /* רוחב מלא */
+      max-width: 1000px; /* רוחב מקסימלי */
+      height: auto;
+      border: 6px solid #D4AF37; /* מסגרת זהב */
+      border-radius: 10px; /* פינות מעוגלות */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
+    }
+
+    @media (max-width: 768px) {
+      .image-gallery img {
+        max-width: 90%; /* התאמה למסכים קטנים */
+      }
+    }
+
+
       .properties-box {
         display: flex;
         flex-wrap: wrap;
