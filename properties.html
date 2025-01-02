@@ -167,6 +167,28 @@
   max-width: 300px; /* גודל אחיד לכל כרטיס */
 }
 
+       <style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+    gap: 10px; /* מרווח בין התמונות */
+  }
+
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+  }
+
+  .category {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #D4AF37;
+    font-weight: bold;
+  }
+</style>
+
 
           .category {
         display: block;
@@ -254,27 +276,7 @@
   }
 </style>
   </head>
-  <style>
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
-    gap: 10px; /* מרווח בין התמונות */
-  }
-
-  .image-gallery img {
-    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
-    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
-    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
-  }
-
-  .category {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #D4AF37;
-    font-weight: bold;
-  }
-</style>
+ 
     <header>
       <img src="my new logo.png">
       <nav>
