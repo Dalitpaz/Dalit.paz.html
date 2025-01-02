@@ -66,6 +66,45 @@ body {
   object-fit: cover; /* מבטיח שהתמונה תתמלא בתיבה מבלי לעוות את הפרופורציות */
 }
 
+
+	<style>
+  .category {
+    font-weight: bold; 
+    font-size: 18px; 
+    color: #FFD700; 
+    text-transform: uppercase; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    margin-top: 10px; 
+    display: block; 
+    text-align: center; 
+  }
+
+  .properties-items {
+    display: flex;
+    justify-content: center; /* ממורכז את התמונות בתוך המסגרת */
+    align-items: center; /* יישור אנכי למרכז */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #444;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px; /* רווח בין התיבות */
+  }
+
+  .properties-items:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .properties-items img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* שומר על פרופורציות התמונה */
+  }
+</style>
+
+
 .category {
   display: block;
   margin-top: 10px;
