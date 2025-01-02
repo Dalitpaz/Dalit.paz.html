@@ -15,6 +15,10 @@
     text-align: center; /* ממרכז את הטקסט */
   }
 </style>
+
+
+
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
