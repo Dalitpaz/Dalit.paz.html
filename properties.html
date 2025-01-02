@@ -243,14 +243,20 @@
     }
 
 
-      .properties-items img {
-  width: 100%; /* גורם לתמונה למלא את הכרטיס */
-  height: 250px; /* גובה אחיד לכל התמונות */
-  object-fit: cover; /* מוודא שהתמונה נשארת פרופורציונלית */
-  border-radius: 10px;
-}
 
-  </style>
+<style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות */
+    gap: 10px; /* מרווח בין התמונות */
+  }
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+  }
+</style>
+
 </head>
 <body>
 
