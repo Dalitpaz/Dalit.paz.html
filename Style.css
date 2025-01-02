@@ -6,6 +6,51 @@ img {
 	height:250px
 	}
 
+
+
+
+  <style>
+    
+    /* הגדרת הגלריה */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+      gap: 20px; /* מרווח בין התמונות */
+      padding: 20px; /* רווח פנימי בין התמונות והקירות */
+      box-sizing: border-box; /* כולל את הרווח בתוך הגובה והרוחב */
+    }
+
+    /* הגדרת התמונה */
+    .image-gallery img {
+      width: 100%; /* התמונות יימלאו את הרוחב של התיבה */
+      height: 100%; /* התמונות יימלאו את הגובה של התיבה */
+      object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+      border: 4px solid #D4AF37; /* מסגרת זהב סביב כל תמונה */
+      border-radius: 10px; /* קצוות מעוגלים */
+    }
+
+    /* עיצוב כדי שכל התמונות יתמלאו את כל המסך בצורה נכונה */
+    @media (max-width: 768px) {
+      .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* תצוגה של 2 עמודות במסכים קטנים */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-gallery {
+        grid-template-columns: 1fr; /* תצוגה של עמודה אחת במסכים מאוד קטנים */
+      }
+    }
+
+    /* כדי לשמור על גובה ורוחב אחיד לכל התיבות */
+    .image-gallery div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px; /* גובה אחיד לכל התיבה */
+      overflow: hidden; /* מונע יציאה של התמונה מחוץ לתיבה */
+    }
+  </style>
 body {
 	background-color:lightgray;
 	font-family:Arial;
