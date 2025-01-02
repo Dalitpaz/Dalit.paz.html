@@ -1180,4 +1180,16 @@ header {
     color: #555;
 }
 
+
+.properties-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* רווח בין התמונות */
+}
+.properties-items {
+  text-align: center;
+}
+
+
  
