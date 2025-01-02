@@ -2,190 +2,49 @@
 <html lang="he">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <title>Luxury Retreats-By Dalit Paz</title>
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Retreats - By Dalit Paz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* עיצוב כללי של הדף */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f7f7f7;
       margin: 0;
-      padding: 0;
-    }
-
-    /* כותרת ראשית */
-    .header-text {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .header-text h1 {
+      background-color: #f5f5f5;
       color: #333;
-      font-size: 36px;
-      font-weight: 600;
-      margin: 0;
-      letter-spacing: 2px;
     }
 
-    /* הגדרת גלריית התמונות */
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 תמונות בעמוד */
-      gap: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .image-gallery img {
-      width: 100%;
-      height: 300px; /* גובה אחיד לתמונות */
-      object-fit: cover; /* התמונות יתאימו לגודל בלי עיוות */
-      border: 5px solid #D4AF37; /* מסגרת זהב */
-      border-radius: 15px; /* קצוות מעוגלים */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* הצללה עדינה */
-    }
-
-    /* תצוגה רספונסיבית */
-    @media (max-width: 768px) {
-      .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 תמונות בעמוד במסכים קטנים */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .image-gallery {
-        grid-template-columns: 1fr; /* תמונה אחת בעמוד במסכים קטנים מאוד */
-      }
-    }
-  </style>
-</head>
-<body>
-
-
-  <style>
-    /* הגדרת עיצוב גלריית התמונות */
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 עמודות אחידות */
-      gap: 20px; /* רווחים בין התמונות */
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    /* עיצוב התמונות */
-    .image-gallery img {
-      width: 100%; /* התמונות ימלאו את הרוחב של כל תא */
-      height: 100%; /* התמונות ימלאו את הגובה של כל תא */
-      object-fit: cover; /* התמונות יתאימו לגודל בלי עיוות */
-      border: 4px solid #D4AF37; /* מסגרת זהב סביב כל תמונה */
-      border-radius: 15px; /* קצוות מעוגלים */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* הצללה עדינה */
-    }
-
-    /* כאשר הדף מוצג במסכים קטנים */
-    @media (max-width: 768px) {
-      .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* שתי עמודות במסכים קטנים */
-      }
-    }
-
-    /* כאשר הדף מוצג במסכים מאוד קטנים */
-    @media (max-width: 480px) {
-      .image-gallery {
-        grid-template-columns: 1fr; /* עמודה אחת במסכים קטנים מאוד */
-      }
-    }
-
-    /* עיצוב הראשי של הדף */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* עיצוב כותרת */
-    .header-text {
+    h1 {
       text-align: center;
-      padding: 50px 20px;
-    }
-
-    .header-text h1 {
-      color: #333;
-      font-size: 36px;
-      font-weight: 600;
-      margin: 0;
-      letter-spacing: 2px;
-    }
-
-    /* עיצוב כותרת ראשית */
-    header {
-      background-color: #333;
-      color: white;
       padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-
-    header nav {
-      display: flex;
-      align-items: center;
-    }
-
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-
-    header nav ul li {
-      margin: 0 15px;
-    }
-
-    header nav ul li a {
-      text-decoration: none;
-      color: white;
+      color: #444;
+      font-size: 2em;
       font-weight: 500;
     }
 
-    header .menu-trigger {
-      display: none;
-      cursor: pointer;
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    /* עיצוב רספונסיבי */
-    @media screen and (max-width: 768px) {
-      header nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-      }
-
-      header.nav-active ul {
-        display: flex;
-      }
-
-      header .menu-trigger {
-        display: block;
-        font-size: 24px;
-      }
+    .image-gallery img {
+      width: 100%; /* רוחב מלא */
+      max-width: 1000px; /* רוחב מקסימלי */
+      height: auto;
+      border: 6px solid #D4AF37; /* מסגרת זהב */
+      border-radius: 10px; /* פינות מעוגלות */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
     }
 
+    @media (max-width: 768px) {
+      .image-gallery img {
+        max-width: 90%; /* התאמה למסכים קטנים */
+      }
+    }
   </style>
 </head>
 <body>
