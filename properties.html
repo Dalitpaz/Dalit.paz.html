@@ -185,6 +185,21 @@
   object-fit: cover; /* מוודא שהתמונה נשארת פרופורציונלית */
   border-radius: 10px;
 }
+      
+<style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+    gap: 10px; /* מרווח בין התמונות */
+    width: 100%;
+    height: 100vh; /* משתמש בגובה של כל המסך */
+  }
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+  }
+</style>
 
       
 
@@ -274,6 +289,22 @@
     height: 100%; /* תמונה ממלאת את הגובה של התיבה */
     object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
   }
+
+    
+<style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+    gap: 10px; /* מרווח בין התמונות */
+    width: 100%;
+    height: 100vh; /* משתמש בגובה של כל המסך */
+  }
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+  }
+</style>
 </style>
 
 </head>
