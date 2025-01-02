@@ -15,6 +15,18 @@
     text-align: center; /* ממרכז את הטקסט */
   }
 </style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* רווח בין התמונות */
+}
+
+.gallery img {
+    width: 150px; /* גודל קבוע לכל תמונה */
+    height: auto; /* שמירה על יחס רוחב-גובה */
+}
+
 
 
 
