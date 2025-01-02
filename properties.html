@@ -10,6 +10,23 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
     gap: 10px; /* מרווח בין התמונות */
+  }
+  .image-gallery img {
+    width: 100%; /* תמונה ממלאת את הרוחב של התיבה */
+    height: 100%; /* תמונה ממלאת את הגובה של התיבה */
+    object-fit: cover; /* התמונה תמלא את התיבה בלי להתעוות */
+  }
+
+  .image-gallery img {
+    aspect-ratio: 1; /* יחס של רוחב/גובה אחיד */
+  }
+</style>
+    
+<style>
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* שלושה עמודות אחידות */
+    gap: 10px; /* מרווח בין התמונות */
     width: 100%;
     height: 100vh; /* משתמש בגובה של כל המסך */
   }
