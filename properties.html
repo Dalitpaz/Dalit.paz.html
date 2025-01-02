@@ -22,18 +22,18 @@
     }
 
     header {
-      background-color: #D4AF37; /* צבע זהב */
-      color: #fff;
-      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 10px 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
       font-size: 1.5em;
       font-weight: 600;
+      color: #D4AF37;
     }
 
     nav ul {
@@ -44,21 +44,15 @@
       gap: 15px;
     }
 
-    nav ul li {
-      display: inline;
-    }
-
     nav ul li a {
       text-decoration: none;
-      color: #fff;
+      color: #333;
       font-weight: 500;
-      padding: 5px 10px;
-      transition: background-color 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      background-color: #444;
-      border-radius: 5px;
+      color: #D4AF37;
     }
 
     .image-gallery {
@@ -84,17 +78,12 @@
       .image-gallery img {
         max-width: 90%; /* התאמה למסכים קטנים */
       }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Dalit Paz - Luxury Retreats</div>
+    <div class="logo">Dalit Paz</div>
     <nav>
       <ul>
         <li><a href="#home">בית</a></li>
@@ -119,6 +108,5 @@
   </div>
 </body>
 </html>
-
 
 
