@@ -10,6 +10,15 @@ body {
 	background-color:lightgray;
 	font-family:Arial;
 	font-size:20px;
+
+	body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* גובה של כל הדף */
+  margin: 0; /* ביטול שוליים */
+}
+
 	
 
 
