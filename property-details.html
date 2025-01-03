@@ -17,6 +17,47 @@
  
     <link rel="stylesheet" href="styles.css">
     <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* מונע גלילה אופקית */
+    }
+
+    .image-container {
+        text-align: center; /* ממקם את התמונה והטקסט במרכז */
+        padding: 20px; /* מרווחים מכל הצדדים */
+    }
+
+    .responsive-image {
+        width: 100%; /* התמונה תיקח את כל רוחב המסך */
+        height: auto; /* שומרת על פרופורציות התמונה */
+        max-width: 90%; /* מוודא שהתמונה לא תהיה גדולה מדי על המסך */
+        margin: 0 auto; /* ממקם את התמונה במרכז */
+        border-radius: 10px; /* רדיוס זוויות קטן לתמונה לקבלת מראה מעודן */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* הוספת הצללה רכה לתמונה */
+    }
+
+    .centered-text {
+        font-family: 'Cinzel', serif; /* גופן אלגנטי */
+        font-size: 24px; /* גודל טקסט בינוני */
+        color: #333; /* צבע טקסט כהה */
+        margin-top: 15px; /* רווח מעל הטקסט */
+        line-height: 1.6; /* שיפור קריאות הטקסט */
+    }
+
+    /* עיצוב רספונסיבי */
+    @media only screen and (max-width: 768px) {
+        .responsive-image {
+            max-width: 100%; /* בתנאי של מסך קטן, התמונה תיקח 100% מהמסך */
+            height: auto; /* שומרת על פרופורציות נכונות */
+        }
+
+        .centered-text {
+            font-size: 18px; /* גודל טקסט קטן יותר במסך נייד */
+            padding: 0 10px; /* רווחים שמגייסים את הטקסט למסך */
+        }
+    }
           .image-container {
         text-align: center; /* ממרכז את הטקסט בתוך ה-container */
     }
