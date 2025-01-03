@@ -155,14 +155,6 @@ header nav ul li a:hover {
             color: black;
         }
 
-        /* עיצוב למובייל */
-        @media screen and (max-width: 768px) {
-            /* הופך את התפריט לתפריט אנכי בנייד */
-            ul.navbar {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
 
             .menu-icon {
                 display: block;
@@ -181,17 +173,7 @@ header nav ul li a:hover {
                 background-color: #444;
             }
 
-            /* עיצוב תפריט בכשיש מסך קטן */
-            header nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                width: 100%;
-            }
-
+       
             header.nav-active ul {
                 display: flex;
             }
@@ -294,7 +276,7 @@ header nav ul li a:hover {
   <body>
 <header>
     <div class="header-container">
-        <img src="my-new-logo.png" alt="Logo" class="logo">
+        <img src="my-new-logo.png">
         <nav>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
@@ -305,16 +287,7 @@ header nav ul li a:hover {
     </div>
 </header>
 
-
-
-
-
-
-
-
-
-
-    <div style="background-color: #C0C0C0; font-family: 'Cinzel', serif; font-size: 20px; text-align: center">
+ <div style="background-color: #C0C0C0; font-family: 'Cinzel', serif; font-size: 20px; text-align: center">
         <h1><b><i><u>Talk to Me - Let's Connect Dreams to Reality</i></u></b></h1>
         <br>
         <img src="images/villa.jpg" alt="Villa">
