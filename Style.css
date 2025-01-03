@@ -17,14 +17,23 @@ img {
   height: auto; /* שמירה על יחס גובה-רוחב */
 }
 
-    @media (max-width: 480px) {
+  @media (max-width: 480px) {
   .image-gallery {
     display: flex;
     flex-direction: column; /* הצגת כל תמונה בשורה נפרדת */
     gap: 20px; /* רווח בין התמונות */
     margin: 0 auto;
-    width: 100%; /* להבטיח שהתמונות יתאימו לרוחב המובייל */
+    width: 100%; /* התמונות יתאימו לרוחב המובייל */
   }
+
+  .image-item img {
+    width: 100%;  /* התאמה לרוחב המיכל */
+    height: auto; /* שמירה על יחס הגובה-רוחב */
+    object-fit: cover; /* תמונות יציגו את עצמן בצורה יפה */
+    border-radius: 8px;
+  }
+}
+
 
 .social-icon:hover {
     color: #FFD700;
