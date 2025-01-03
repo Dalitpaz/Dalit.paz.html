@@ -238,6 +238,25 @@
       justify-content: space-between;
       align-items: center;
     }
+	    @media (max-width: 480px) {
+  .image-gallery {
+    display: flex;
+    flex-direction: column; /* הצגת כל תמונה בשורה נפרדת */
+    gap: 20px; /* רווח בין התמונות */
+    margin: 0 auto;
+    width: 100%; /* להבטיח שהתמונות יתאימו לרוחב המובייל */
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* הגבלת רוחב התמונה */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
+  }
+}
+
 
     header img {
       width: 50px;
