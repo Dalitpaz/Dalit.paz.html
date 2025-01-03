@@ -17,6 +17,35 @@
  
     <link rel="stylesheet" href="styles.css">
     <style>
+          .image-container {
+        text-align: center; /* ממרכז את הטקסט בתוך ה-container */
+    }
+
+    .responsive-image {
+        width: 100%; /* התמונה תיקח את כל רוחב המסך */
+        height: auto; /* שומרת על פרופורציות התמונה */
+        max-width: 90%; /* מוודא שהתמונה לא תהיה גדולה מדי על המסך */
+        margin: 0 auto; /* ממקם את התמונה במרכז */
+    }
+
+    .centered-text {
+        font-size: 20px; /* גודל טקסט בינוני, אפשר להתאים לפי הצורך */
+        color: #333; /* צבע טקסט כהה */
+        margin-top: 10px; /* רווח מעל הטקסט */
+    }
+
+    /* עיצוב רספונסיבי */
+    @media only screen and (max-width: 768px) {
+        .responsive-image {
+            max-width: 100%; /* בתנאי של מסך קטן, התמונה תיקח 100% מהמסך */
+            height: auto; /* שומרת על פרופורציות נכונות */
+        }
+
+        .centered-text {
+            font-size: 18px; /* גודל טקסט קטן יותר במסך נייד */
+        }
+    }
+
 
         .responsive-image {
         width: 50%; /* התמונה תיקח את כל רוחב המסך */
