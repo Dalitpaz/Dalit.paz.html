@@ -19,18 +19,7 @@
       function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.classList.toggle("hidden");
-}
-
-
-
-      .menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-
-      /* עיצוב ללוגו */
+}/* עיצוב ללוגו */
 .logo {
     max-height: 50px;
     margin-right: 20px;
@@ -42,63 +31,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #333; /* צבע רקע של header */
+    background-color: #333;
     color: #ffffff;
 }
 
 /* עיצוב תפריט */
 #menu {
-    display: flex; /* כותרות מוצגות לרוחב */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-      /* עיצוב ללוגו */
-.logo {
-    max-height: 50px; /* נשאר אותו הדבר במחשב */
-    margin-right: 20px;
-}
-
-/* עיצוב כללי ל-header */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333; /* צבע רקע */
-    color: #ffffff;
-}
-
-/* עיצוב תפריט במחשב */
-#menu {
-    display: flex; /* כותרות מוצגות לרוחב */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu li {
-    margin: 0 15px; /* רווח בין הכותרות */
-}
-
-      /* עיצוב ל-header */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* הלוגו בצד אחד והתפריט בצד השני */
-    padding: 10px 20px;
-    background-color: #333; /* צבע רקע */
-    color: #ffffff;
-}
-
-/* עיצוב ללוגו */
-.logo {
-    max-height: 50px; /* גובה מקסימלי ללוגו */
-}
-
-/* תפריט במחשב */
-#menu {
     display: flex;
     list-style: none;
     margin: 0;
@@ -106,335 +44,42 @@
 }
 
 #menu li {
-    margin: 0 15px; /* רווח בין הכותרות */
+    margin: 0 15px;
 }
 
 #menu li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
+    display: inline-block;
     padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #333;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 #menu li a:hover {
     background-color: #444;
-    border-radius: 5px;
 }
 
 /* התאמות לנייד */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* מסדר את ה-header אנכית */
+        flex-direction: column;
         align-items: center;
     }
 
     .logo {
-        margin-bottom: 10px; /* רווח בין הלוגו לתפריט */
+        margin-bottom: 10px;
     }
 
     #menu {
-        display: flex;
-        flex-wrap: wrap; /* הכותרות יסתדרו בשורות אם אין מקום */
-        justify-content: center; /* ממרכז את הכותרות */
-    }
-
-    #menu li {
-        margin: 10px; /* רווח בין הכותרות */
-    }
-
-    #menu li a {
-        font-size: 16px; /* גודל טקסט קטן יותר בנייד */
-        padding: 5px 10px;
-    }
-}
-
-
-#menu li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-#menu li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-}
-
-/* התאמות לנייד */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* מסדר את ה-header אנכית */
-        align-items: center;
-    }
-
-    .logo {
-        margin-bottom: 10px; /* רווח בין הלוגו לתפריט */
-    }
-
-    #menu {
-        display: flex;
-        flex-wrap: wrap; /* כותרות יסתדרו ברוחב ואם אין מקום - בשורה נוספת */
-        justify-content: center; /* ממרכז את הכותרות */
-    }
-
-    #menu li {
-        margin: 10px; /* רווח בין הכותרות */
-    }
-
-    #menu li a {
-        font-size: 16px; /* גודל טקסט קטן יותר */
-        padding: 5px 10px;
-    }
-}
-
-
-#menu li {
-    margin: 0 15px; /* רווח בין הכותרות */
-}
-
-#menu li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-#menu li a:hover {
-    background-color: #444;
-    border-radius: 5px;
-}
-
-/* התאמות לנייד */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* ה-header יסתדר אנכית בנייד */
-        align-items: center;
-    }
-
-    .logo {
-        margin-bottom: 10px; /* רווח קל בין הלוגו לתפריט */
-    }
-
-    #menu {
-        flex-wrap: wrap; /* אם אין מספיק מקום, הכותרות יסתדרו בשורות נוספות */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     #menu li {
-        margin: 10px; /* רווח קטן יותר בין הכותרות */
-    }
-
-    #menu li a {
-        font-size: 16px; /* גודל טקסט קטן יותר בנייד */
-    }
-}
-
-
-      /* עיצוב התפריט */
-#menu {
-    display: flex; /* מציג את הפריטים בשורה */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; /* מרכז את הכותרות */
-    align-items: center; /* מיישר את הכותרות אנכית */
-}
-
-#menu li {
-    margin: 0 15px; /* ריווח בין הכותרות */
-}
-
-#menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #333;
-    border-radius: 5px; /* עיצוב עגלגל לכפתורים */
-    transition: background-color 0.3s ease;
-}
-
-#menu li a:hover {
-    background-color: #444;
-}
-
-/* רספונסיביות לנייד */
-@media (max-width: 768px) {
-    #menu {
-        flex-wrap: wrap; /* הכותרות ימשיכו בשורה חדשה אם אין מקום */
-    }
-
-    #menu li {
-        margin: 10px 5px; /* ריווח קטן יותר בנייד */
-    }
-
-    #menu li a {
-        font-size: 16px; /* טקסט קטן יותר בנייד */
-        padding: 8px 12px;
-    }
-}
-
-
-#menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-#menu.hidden {
-    display: none;
-}
-
-/* תפריט לנייד */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    #menu {
-        display: none;
-        flex-direction: column;
-    }
-
-    #menu.hidden {
-        display: flex;
-    }
-}
-
-
-      @media (max-width: 768px) {
-    img {
-        max-width: 90%; /* הגדרת תמונה קטנה יותר בנייד */
-    }
-}
-
-        /* עיצוב כללי לתפריט */
-        ul.navbar {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: #333;
-            overflow: hidden;
-            display: flex; /* תפריט רספונסיבי */
-            justify-content: center; /* מרכז את התפריט */
-        }
-      /* עיצוב לוגו */
-header img {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* עיצוב כללי לתפריט */
-#menu {
-    display: flex; /* כותרות לרוחב */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; /* מרכז את הכותרות */
-    align-items: center;
-}
-
-#menu li {
-    margin: 0 20px; /* ריווח בין הכותרות */
-}
-
-#menu li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#menu li a:hover {
-    background-color: #444;
-}
-
-/* התאמות לנייד */
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #menu {
-        justify-content: center; /* כותרות נשארות לרוחב */
-        overflow-x: auto; /* גלילה רוחבית במקרה הצורך */
-    }
-
-    #menu li {
-        margin: 0 10px; /* ריווח קטן יותר בנייד */
-    }
-
-    #menu li a {
-        font-size: 16px; /* טקסט קטן יותר בנייד */
-        padding: 8px 12px;
-    }
-}
-
-
-
-      /* עיצוב התפריט */
-#menu {
-    display: flex; /* תפריט גמיש עם פריטים אחד ליד השני */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; /* מרכז את הפריטים */
-}
-
-#menu li {
-    margin: 0 10px; /* מרווחים בין הכותרות */
-}
-
-
-      /* עיצוב כללי לתפריט */
-#menu {
-    display: flex; /* שומר על הכותרות לרוחב */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; /* מרכז את הכותרות */
-    align-items: center;
-}
-
-#menu li {
-    margin: 0 15px; /* ריווח בין הכותרות */
-}
-
-#menu li a {
-    display: inline-block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#menu li a:hover {
-    background-color: #444;
-}
-
-/* התאמות לנייד */
-@media (max-width: 768px) {
-    #menu {
-        flex-wrap: nowrap; /* שומר את התפריט בשורה אחת */
-        overflow-x: auto; /* מאפשר גלילה אופקית אם הכותרות ארוכות מדי */
-    }
-
-    #menu li {
-        margin: 0 10px; /* ריווח קטן יותר בנייד */
+        margin: 10px;
     }
 
     #menu li a {
@@ -442,159 +87,6 @@ header img {
         padding: 8px 12px;
     }
 }
-
-#menu li a {
-    display: block;
-    padding: 14px 20px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background-color: #333;
-    border-radius: 5px; /* עיצוב עגלגל לכפתורים */
-}
-
-#menu li a:hover {
-    background-color: #444;
-}
-
-/* רספונסיביות לנייד */
-@media (max-width: 768px) {
-    #menu {
-        flex-direction: column; /* התפריט יהפוך לאנכי בנייד */
-        align-items: center; /* מרכז את הפריטים */
-    }
-
-    #menu li {
-        margin: 5px 0; /* מרווחים בין הכותרות */
-    }
-
-    #menu li a {
-        width: 100%; /* הכותרות יתפסו את כל הרוחב */
-        text-align: center;
-    }
-}
-
-
-        ul.navbar li {
-            flex: 1;
-        }
-
-        ul.navbar li a {
-            display: block;
-            padding: 14px 20px;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        /* עיצוב כשלוחצים על התפריט */
-        ul.navbar li a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-
-
-      /* ברירת מחדל לתפריט */
-#menu {
-    display: flex; /* תפריט רגיל */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* עיצוב למחלקה hidden */
-#menu.hidden {
-    display: none;
-}
-
-/* עיצוב לטריגר */
-.menu-trigger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* רספונסיביות לנייד */
-@media (max-width: 768px) {
-    .menu-trigger {
-        display: block; /* הצגת הטריגר */
-    }
-
-    #menu {
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 40px;
-        left: 0;
-    }
-
-    #menu li a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    #menu li a:hover {
-        background-color: #444;
-    }
-}
-
-        /* עיצוב למובייל */
-        @media screen and (max-width: 768px) {
-            /* הופך את התפריט לתפריט אנכי בנייד */
-            ul.navbar {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: #333;
-                position: absolute;
-                top: 40px;
-                right: 0;
-                z-index: 1;
-            }
-
-            /* הצגת התפריט כשהאייקון נלחץ */
-            ul.navbar.show {
-                display: flex;
-            }
-
-            /* הצגת האייקון כשיש מסך קטן */
-            .menu-icon {
-                display: block;
-                background-color: #333;
-                color: white;
-                padding: 10px;
-                cursor: pointer;
-                text-align: center;
-                font-size: 24px;
-            }
-
-            .menu-icon:hover {
-                background-color: #444;
-            }
-
-            /* שינוי גודל התמונה למובייל */
-            .main-content img {
-                max-width: 50%; /* התמונה תתאים לרוחב המסך */
-                height: auto;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            /* עיצוב הטקסט במובייל */
-            .main-content {
-                padding: 15px;
-                text-align: center;
-            }
-
-            .text-container h2 {
-                font-size: 24px; /* גודל טקסט יותר קטן בנייד */
-                color: #FFD700;
-            }
 
             .text-container p {
                 font-size: 16px;
