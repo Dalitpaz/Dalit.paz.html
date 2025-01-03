@@ -73,6 +73,52 @@
             justify-content: center; /* מרכז את התפריט */
         }
 
+
+      /* עיצוב התפריט */
+#menu {
+    display: flex; /* תפריט גמיש עם פריטים אחד ליד השני */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* מרכז את הפריטים */
+}
+
+#menu li {
+    margin: 0 10px; /* מרווחים בין הכותרות */
+}
+
+#menu li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 5px; /* עיצוב עגלגל לכפתורים */
+}
+
+#menu li a:hover {
+    background-color: #444;
+}
+
+/* רספונסיביות לנייד */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column; /* התפריט יהפוך לאנכי בנייד */
+        align-items: center; /* מרכז את הפריטים */
+    }
+
+    #menu li {
+        margin: 5px 0; /* מרווחים בין הכותרות */
+    }
+
+    #menu li a {
+        width: 100%; /* הכותרות יתפסו את כל הרוחב */
+        text-align: center;
+    }
+}
+
+
         ul.navbar li {
             flex: 1;
         }
