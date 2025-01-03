@@ -15,6 +15,40 @@
     <!-- Custom CSS -->
     <style>
 
+
+      .menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#menu.hidden {
+    display: none;
+}
+
+/* תפריט לנייד */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    #menu.hidden {
+        display: flex;
+    }
+}
+
+
       @media (max-width: 768px) {
     img {
         max-width: 90%; /* הגדרת תמונה קטנה יותר בנייד */
