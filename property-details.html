@@ -14,6 +14,75 @@
 
     <!-- Custom CSS -->
     <style>
+
+      /* עיצוב כללי של header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;  /* מקם את הלוגו בצד שמאל והתפריט בצד ימין */
+    align-items: center;
+}
+
+/* עיצוב הלוגו */
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* עיצוב התפריט */
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* עיצוב בעת לחיצה על תפריט */
+header nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* עיצוב המובייל */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    header.nav-active ul {
+        display: flex;
+    }
+
+    header .menu-trigger {
+        display: block;
+        font-size: 24px;
+    }
+}
+
         /* עיצוב כללי של גוף הדף */
         body {
             margin: 0;
