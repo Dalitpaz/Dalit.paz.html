@@ -91,6 +91,56 @@
             color: black;
         }
 
+
+
+      /* ברירת מחדל לתפריט */
+#menu {
+    display: flex; /* תפריט רגיל */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב למחלקה hidden */
+#menu.hidden {
+    display: none;
+}
+
+/* עיצוב לטריגר */
+.menu-trigger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* רספונסיביות לנייד */
+@media (max-width: 768px) {
+    .menu-trigger {
+        display: block; /* הצגת הטריגר */
+    }
+
+    #menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+
+    #menu li a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #menu li a:hover {
+        background-color: #444;
+    }
+}
+
         /* עיצוב למובייל */
         @media screen and (max-width: 768px) {
             /* הופך את התפריט לתפריט אנכי בנייד */
