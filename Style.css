@@ -199,6 +199,54 @@ background-image: url('https://drive.google.com/uc?id=FILE_ID');
   }
 }
 
+	/* עיצוב כללי של header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
+    align-items: center;
+}
+
+/* עיצוב הלוגו */
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* עיצוב התפריט */
+header nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* עיצוב בעת לחיצה על תפריט */
+header nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
 /* התאמות עבור מסכים גדולים יותר (כמו מחשבים שולחניים) */
 @media (min-width: 1200px) {
   .logo-img {
