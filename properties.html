@@ -271,7 +271,7 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
-.container {
+ .container {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -331,17 +331,19 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
   }
 
-  /* התאמת הגלריה לטאבלטים */
-  @media (max-width: 768px) {
-    .image-gallery {
-      grid-template-columns: repeat(2, 1fr); /* 2 תמונות בשורה */
-    }
-  }
-
   /* התאמת הגלריה לניידים */
   @media (max-width: 480px) {
     .image-gallery {
       grid-template-columns: 1fr; /* כל תמונה בשורה נפרדת */
+      gap: 20px; /* רווח בין התמונות */
+    }
+
+    .image-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px; /* פינות מעוגלות */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
     }
   }
 	    </style>
