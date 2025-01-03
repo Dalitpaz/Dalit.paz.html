@@ -6,7 +6,12 @@ img {
 	height:250px
 	}
 
-
+ /* עיצוב הכללי למובייל */
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+      }
 .social-icon:hover {
     color: #FFD700;
 }
