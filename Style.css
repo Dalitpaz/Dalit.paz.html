@@ -100,6 +100,10 @@ img {
       }
     }
 
+	    .image-gallery {
+  gap: 10px; /* הפחתת הרווח */
+}
+
     @media (max-width: 480px) {
       .image-gallery {
         grid-template-columns: 1fr; /* תצוגה של עמודה אחת במסכים מאוד קטנים */
