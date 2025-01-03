@@ -200,6 +200,14 @@
             color: #FFD700;
         }
 
+
+	    	        <script>
+        // פונקציה להציג ולהחביא את התפריט במובייל
+        function toggleMenu() {
+            var navbar = document.querySelector('ul.navbar');
+            navbar.classList.toggle('show');
+        }
+    </script>
         /* עיצוב רספונסיבי לתפריט */
         @media screen and (max-width: 768px) {
             header nav ul {
@@ -495,13 +503,7 @@ font-size:30px;text-align:center"
             transform: scale(1.2);
         }
 
-	        <script>
-        // פונקציה להציג ולהחביא את התפריט במובייל
-        function toggleMenu() {
-            var navbar = document.querySelector('ul.navbar');
-            navbar.classList.toggle('show');
-        }
-    </script>
+
     </style>
 </head>
 
