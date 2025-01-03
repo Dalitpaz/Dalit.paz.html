@@ -10,6 +10,22 @@ img {
         }
       }
 
+.image-gallery {
+  width: 100%; /* וודא שהגלריה לא חורגת מהרוחב */
+  margin: 20px auto; /* לא למרוח את הגלריה */
+  display: grid; /* אחזור על הגלריה כגריד */
+  grid-template-columns: 1fr; /* כל תמונה בשורה נפרדת */
+  gap: 20px; /* רווח בין התמונות */
+}
+
+@media (max-width: 480px) {
+  .image-gallery {
+    display: flex;
+    flex-direction: column; /* כל תמונה בשורה נפרדת */
+    gap: 20px;
+    width: 100%; /* להבטיח שהתמונות יתאימו לרוחב המובייל */
+  }
+}
 
 .image-item img {
   object-fit: cover; /* שמירה על התמונה מלאה */
