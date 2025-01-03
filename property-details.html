@@ -21,169 +21,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-<style>
-    /* עיצוב כללי לתפריט */
+<style>/* עיצוב כללי לתפריט */
+ul.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    overflow: hidden;
+    display: flex; /* תפריט רספונסיבי */
+    justify-content: center; /* מרכז את התפריט */
+}
+
+ul.navbar li {
+    flex: 1;
+}
+
+ul.navbar li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* עיצוב כשלוחצים על התפריט */
+ul.navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* עיצוב למובייל */
+@media screen and (max-width: 768px) {
+    /* הופך את התפריט לתפריט אנכי בנייד */
     ul.navbar {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #333;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
-
-    ul.navbar li {
-        flex: 1;
-    }
-
-    ul.navbar li a {
-        display: block;
-        padding: 14px 20px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    /* עיצוב כשלוחצים על התפריט */
-    ul.navbar li a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    /* עיצוב למובייל */
-    @media screen and (max-width: 768px) {
-        /* הופך את התפריט לתפריט אנכי בנייד */
-        ul.navbar {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            background-color: #333;
-            position: absolute;
-            top: 60px;
-            right: 0;
-            z-index: 1;
-        }
-
-        /* הצגת האייקון כשיש מסך קטן */
-        .menu-icon {
-            display: block;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            text-align: center;
-            font-size: 24px;
-        }
-
-        /* הצגת התפריט כשהאייקון נלחץ */
-        ul.navbar.show {
-            display: flex;
-        }
-
-        /* עיצוב של אייקון התפריט */
-        .menu-icon:hover {
-            background-color: #444;
-        }
-
-        /* שינוי גודל התמונה למובייל */
-        .main-content img {
-            width: 100%; /* התמונה תתאים לרוחב המסך */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* שינוי עיצוב הטקסט למובייל */
-        .text-container h2 {
-            font-size: 24px; /* גודל טקסט יותר קטן בנייד */
-            color: #FFD700;
-            text-align: center;
-        }
-
-        .text-container p {
-            font-size: 16px;
-            color: #333;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        /* עיצוב הטקסט במובייל */
-        .main-content {
-            padding: 15px;
-        }
-
-        .video-section h4 {
-            font-size: 18px;
-            color: #FFD700;
-            text-align: center;
-        }
-    }
-
-    /* עיצוב הכללי של גוף הדף */
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f0f8ff;
-    }
-
-    header {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
-
-    header nav {
-        display: flex;
-        align-items: center;
-    }
-
-    header nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 0 10px;
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-    }
-
-    header .menu-trigger {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+    }
+
+    /* הצגת התפריט כשהאייקון נלחץ */
+    ul.navbar.show {
+        display: flex;
+    }
+
+    /* הצגת האייקון כשיש מסך קטן */
+    .menu-icon {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px;
         cursor: pointer;
-    }
-
-    .main-content {
-        padding: 20px;
         text-align: center;
+        font-size: 24px;
     }
 
+    .menu-icon:hover {
+        background-color: #444;
+    }
+
+    /* שינוי גודל התמונה למובייל */
     .main-content img {
-        max-width: 100%;
+        max-width: 100%; /* התמונה תתאים לרוחב המסך */
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    /* עיצוב הטקסט במובייל */
+    .main-content {
+        padding: 15px;
+        text-align: center;
+    }
+
     .text-container h2 {
+        font-size: 24px; /* גודל טקסט יותר קטן בנייד */
         color: #FFD700;
-        font-size: 28px;
     }
 
     .text-container p {
@@ -192,67 +109,126 @@
         line-height: 1.6;
     }
 
-    .video-section {
-        margin-top: 30px;
-    }
-
     .video-section h4 {
+        font-size: 18px;
         color: #FFD700;
     }
+}
 
-    /* עיצוב רספונסיבי לתפריט */
-    @media screen and (max-width: 768px) {
-        header nav ul {
-            display: none;
-            flex-direction: column;
-            background-color: #333;
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 100%;
-        }
+/* עיצוב הכללי של גוף הדף */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+}
 
-        header.nav-active ul {
-            display: flex;
-        }
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        header .menu-trigger {
-            display: block;
-            font-size: 24px;
-        }
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+header .menu-trigger {
+    display: none;
+    cursor: pointer;
+}
+
+/* עיצוב רספונסיבי לתפריט */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
     }
 
-    /* עיצוב של אייקוני סושיאל */
-    .social-icon {
+    header.nav-active ul {
+        display: flex;
+    }
+
+    header .menu-trigger {
+        display: block;
         font-size: 24px;
-        color: white;
-        margin: 0 10px;
     }
+}
 
-    .social-icon:hover {
-        color: #FFD700;
-    }
+.social-icon {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+}
 
-    /* עיצוב מותאם אישית לאייקונים */
-    .social-icon {
-        width: 30px;
-        height: 30px;
-    }
+.social-icon:hover {
+    color: #FFD700;
+}
 
-    .email-icon {
-        font-size: 30px;
-        color: #D4AF37;
-    }
+/* עיצוב מותאם אישית לאייקונים */
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
 
-    .email-link {
-        text-decoration: none;
-        color: #D4AF37;
-        font-size: 30px;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
+.email-icon {
+    font-size: 30px;
+    color: #D4AF37;
+}
 
-</style>
+.email-link {
+    text-decoration: none;
+    color: #D4AF37;
+    font-size: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+HTML (הוספת כפתור תפריט):
+html
+Copy code
+<header>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">בית</a></li>
+            <li><a href="#about">אודות</a></li>
+            <li><a href="#services">שירותים</a></li>
+            <li><a href="#contact">צור קשר</a></li>
+        </ul>
+    </nav>
+</header>
 
 <script>
     // פונקציה להציג ולהחביא את התפריט במובייל
@@ -261,7 +237,6 @@
         navbar.classList.toggle('show');
     }
 </script>
-
   <body>
     <header>
       <img src="my new logo.png">
