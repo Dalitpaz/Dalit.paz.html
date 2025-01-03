@@ -8,6 +8,15 @@ const menu = document.querySelector('.menu');
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('mobile-active');
 });
+    @media (max-width: 768px) {
+    .menu {
+        display: none; /* הסתרת התפריט */
+    }
+    .menu.mobile-active {
+        display: block; /* הצגת התפריט בלחיצה */
+    }
+}
+
 
 
     <meta charset="utf-8">
