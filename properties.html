@@ -334,19 +334,20 @@
   /* התאמת הגלריה לניידים */
   @media (max-width: 480px) {
     .image-gallery {
-      grid-template-columns: 1fr; /* כל תמונה בשורה נפרדת */
+      display: flex;
+      flex-direction: column; /* הצגת כל תמונה בשורה נפרדת */
       gap: 20px; /* רווח בין התמונות */
+      margin: 0 auto;
     }
 
     .image-item img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 8px; /* פינות מעוגלות */
+      border-radius: 8px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צללת תמונה */
     }
-  }
-	    </style>
+      </style>
   </head>
   <body>
 
