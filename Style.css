@@ -20,7 +20,33 @@ img {
 .social-icon:hover img {
     filter: brightness(1.2); /* אם רוצים להוסיף אפקט בעת ריחוף */
 }
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 תמונות בשורה במחשב */
+    gap: 20px;
+    margin: 20px;
+  }
 
+  .image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* התמונות ייתפסו בצורה יפה */
+    border-radius: 8px; /* פינות מעוגלות לתמונות */
+  }
+
+  /* התאמת הגלריה למובייל */
+  @media (max-width: 768px) {
+    .image-gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 תמונות בשורה בגרסה לטאבלט */
+    }
+  }
+
+  /* התאמת הגלריה לניידים */
+  @media (max-width: 480px) {
+    .image-gallery {
+      grid-template-columns: 1fr; /* כל תמונה בשורה נפרדת בנייד */
+    }
+  }
 
 
     
