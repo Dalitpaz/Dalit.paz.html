@@ -17,6 +17,31 @@
  
     <link rel="stylesheet" href="styles.css">
     <style>
+      
+    .email-text {
+        font-family: 'Cinzel', serif; /* גופן אלגנטי */
+        font-size: 24px; /* גודל טקסט בינוני */
+        color: #333; /* צבע טקסט כהה */
+        margin-top: 15px; /* רווח מעל הטקסט */
+        line-height: 1.6; /* שיפור קריאות הטקסט */
+    }
+
+    .email-text i {
+        font-size: 36px; /* גודל אייקון קטן יותר */
+        margin-right: 10px;
+    }
+
+    /* עיצוב רספונסיבי */
+    @media only screen and (max-width: 768px) {
+        .email-text {
+            font-size: 18px; /* גודל טקסט קטן יותר במסך נייד */
+            padding: 0 10px; /* רווחים שמגייסים את הטקסט למסך */
+        }
+
+        .email-text i {
+            font-size: 24px; /* גודל אייקון קטן יותר בנייד */
+        }
+    }
         body, html {
         margin: 0;
         padding: 0;
