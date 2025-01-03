@@ -18,6 +18,20 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
+        .responsive-image {
+        width: 100%; /* התמונה תיקח את כל רוחב המסך */
+        height: auto; /* שמירה על פרופורציות התמונה */
+        max-width: 100%; /* מונע שהתמונה תעבור את רוחב המסך */
+    }
+
+    /* עיצוב רספונסיבי */
+    @media only screen and (max-width: 768px) {
+        .responsive-image {
+            width: 100%; /* תוודא שהתמונה תתאים ב-100% לרוחב המסך */
+            height: auto; /* שומר על פרופורציות נכונות */
+        }
+    }
+
 .social-icon i {
     font-size: 24px !important; /* שים את הגודל הרצוי כאן */
     margin: 0 10px;
