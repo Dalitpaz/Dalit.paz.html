@@ -10,6 +10,13 @@ img {
         }
       }
 
+
+.image-item img {
+  object-fit: cover; /* שמירה על התמונה מלאה */
+  width: 100%;
+  height: auto; /* שמירה על יחס גובה-רוחב */
+}
+
     @media (max-width: 480px) {
   .image-gallery {
     display: flex;
