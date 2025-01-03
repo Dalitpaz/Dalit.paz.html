@@ -54,6 +54,75 @@
     padding: 0;
 }
 
+      /* עיצוב ללוגו */
+.logo {
+    max-height: 50px; /* נשאר אותו הדבר במחשב */
+    margin-right: 20px;
+}
+
+/* עיצוב כללי ל-header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333; /* צבע רקע */
+    color: #ffffff;
+}
+
+/* עיצוב תפריט במחשב */
+#menu {
+    display: flex; /* כותרות מוצגות לרוחב */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin: 0 15px; /* רווח בין הכותרות */
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+#menu li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* התאמות לנייד */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* מסדר את ה-header אנכית */
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px; /* רווח בין הלוגו לתפריט */
+    }
+
+    #menu {
+        display: flex;
+        flex-wrap: wrap; /* כותרות יסתדרו ברוחב ואם אין מקום - בשורה נוספת */
+        justify-content: center; /* ממרכז את הכותרות */
+    }
+
+    #menu li {
+        margin: 10px; /* רווח בין הכותרות */
+    }
+
+    #menu li a {
+        font-size: 16px; /* גודל טקסט קטן יותר */
+        padding: 5px 10px;
+    }
+}
+
+
 #menu li {
     margin: 0 15px; /* רווח בין הכותרות */
 }
