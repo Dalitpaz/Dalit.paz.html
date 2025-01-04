@@ -16,6 +16,16 @@
           },
           options
         );
+
+          document.addEventListener('DOMContentLoaded', () => {
+  const menuTrigger = document.querySelector('.menu-trigger');
+  const luxuryMenu = document.querySelector('.luxury-menu');
+
+  menuTrigger.addEventListener('click', () => {
+    luxuryMenu.classList.toggle('active');
+  });
+});
+
   
         // how many times to update the value, and how much to increment the value on each update
         var loops = Math.ceil(settings.speed / settings.refreshInterval),
