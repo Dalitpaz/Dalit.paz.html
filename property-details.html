@@ -17,7 +17,49 @@
  
     <link rel="stylesheet" href="styles.css">
     <style>
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #8E44AD; /* סגול כהה */
+    color: white;
+    padding: 10px;
+}
 
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.menu-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* מוסתר כברירת מחדל */
+    flex-direction: column;
+}
+
+.menu-links li {
+    margin: 10px 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-links a:hover {
+    color: #D4AF37; /* זהב */
+}
+
+/* הצגת תפריט כשהוא פתוח */
+.menu-links.open {
+    display: flex;
+}
+
+
+      
       /* עיצוב בסיסי לפונט ואייקונים */
 body {
     font-family: 'Times New Roman', serif;
