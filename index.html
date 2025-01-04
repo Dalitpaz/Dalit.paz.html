@@ -425,24 +425,45 @@ body {
 
     </style>
   </head>
-<div class="text-container">
-  <h2>Welcome to the World of Dalit Paz Villas!</h2>
-  <h4>
-    Hello, my name is Dalit Paz, 38 years old.<br>
-    I always had a desire to live in a big house.<br>
-    So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
-    Everyone has their own dream.
-  </h4>
-</div>
+<<body>
+  <header>
+    <img src="my-logo.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Gallery</a></li>
+        <li><a href="property-details.html">Contact</a></li>
+      </ul>
+      <span class="menu-trigger" onclick="toggleMenu()">☰</span>
+    </nav>
+  </header>
 
-<main class="main-content">
-  <img src="my vila.jpg">
-  <div class="video-section">
-    <h2>Get Closer View & A Different Feeling</h2>
-    <h4>The Most Expensive Villa in Israel</h4>
-    <iframe src="https://www.youtube.com/embed/4swJ4pDWf9M" allowfullscreen></iframe>
+  <div class="text-container">
+    <h2>Welcome to the World of Dalit Paz Villas!</h2>
+    <h4>
+      Hello, my name is Dalit Paz, 38 years old.<br>
+      I always had a desire to live in a big house.<br>
+      So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
+      Everyone has their own dream.
+    </h4>
   </div>
-</main>
+
+  <main class="main-content">
+    <img src="my-villa.jpg" alt="Luxury Villa">
+    <div class="video-section">
+      <h2>Get Closer View & A Different Feeling</h2>
+      <h4>The Most Expensive Villa in Israel</h4>
+      <iframe src="https://www.youtube.com/embed/4swJ4pDWf9M" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector("header nav");
+      nav.classList.toggle("nav-active");
+    }
+  </script>
+</body>
 
 </html>
 
