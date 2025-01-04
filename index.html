@@ -19,8 +19,7 @@ menuTrigger.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-
-	    /* הגדרות בסיסיות לתפריט */
+/* הגדרות בסיסיות לתפריט */
 .menu-container {
   position: relative;
   display: flex;
@@ -29,17 +28,20 @@ menuTrigger.addEventListener('click', () => {
   padding: 20px;
   background-color: #C0C0C0;
   font-family: 'Cinzel', serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* להוסיף הצללה קלה לתפריט */
 }
 
 .menu-trigger {
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   color: #1d1b2f;
+  text-transform: uppercase;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .menu-trigger:hover {
-  color: #c89f6b; /* צבע זהב כשתעבור עם העכבר */
+  color: #c89f6b; /* צבע זהב כשעוברים עם העכבר */
 }
 
 /* עיצוב התפריט */
@@ -50,11 +52,10 @@ menuTrigger.addEventListener('click', () => {
   right: 0;
   background-color: #1d1b2f;
   width: 100%;
-  height: 100vh;
   color: #fff;
   text-align: center;
   padding-top: 60px;
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* הצללה חדה יותר לתפריט */
 }
 
 .menu.active {
@@ -84,6 +85,29 @@ menuTrigger.addEventListener('click', () => {
 .menu ul li a:hover {
   color: #c89f6b; /* צבע זהב כאשר מקליקים */
 }
+
+/* עיצוב למובייל – תפריט מוצג בצורה יוקרתית ונעימה */
+@media (max-width: 768px) {
+  .menu-trigger {
+    display: block;
+  }
+
+  .menu ul li {
+    font-size: 20px; /* גודל גופן מתאים לנייד */
+  }
+
+  .menu ul li a {
+    padding: 15px;
+    border-bottom: 2px solid #c89f6b; /* גבול דק עם צבע זהב */
+    transition: background-color 0.3s ease;
+  }
+
+  .menu ul li a:hover {
+    background-color: #c89f6b; /* צבע זהב כהה ברקע כשעוברים על הקישור */
+    color: #1d1b2f; /* שינוי צבע הגופן לשחור כהה */
+  }
+}
+
 
 /* בגרסה הניידת אנחנו מסתירים את התפריט מראש ומציגים אותו רק כשלוחצים */
 @media (max-width: 768px) {
