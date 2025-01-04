@@ -454,6 +454,9 @@ h2, h4 {
 <body>
 		
 <header>
+	<nav class="mobile-menu">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="menu-links">
   <img src="my new logo.png">
   <nav>
     <ul>
@@ -461,20 +464,7 @@ h2, h4 {
       <li><a href="properties.html">Gallery</a></li>
       <li><a href="property-details.html">Contact</a></li>
     </ul>
-  </nav>
-  <!-- אייקון התפריט -->
-  <div class="menu-trigger">&#9776;</div> 
-</header>
 
-<script>
-  // קוד JavaScript להפעלת התפריט במובייל
-  const menuTrigger = document.querySelector('.menu-trigger');
-  const navList = document.querySelector('header nav ul');
-
-  menuTrigger.addEventListener('click', () => {
-    navList.classList.toggle('nav-active');
-  });
-</script>
 
 
 
