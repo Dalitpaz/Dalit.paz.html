@@ -22,6 +22,19 @@
   font-family: 'Cinzel', serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* להוסיף הצללה קלה לתפריט */
 }
+		    <!-- אייקון התפריט -->
+  <div class="menu-trigger">&#9776;</div> 
+</header>
+
+<script>
+  // קוד JavaScript להפעלת התפריט במובייל
+  const menuTrigger = document.querySelector('.menu-trigger');
+  const navList = document.querySelector('header nav ul');
+
+  menuTrigger.addEventListener('click', () => {
+    navList.classList.toggle('nav-active');
+  });
+</script>
 
 .menu-trigger {
   font-size: 20px;
