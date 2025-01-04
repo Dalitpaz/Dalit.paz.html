@@ -20,21 +20,8 @@
   padding: 20px;
   background-color: #C0C0C0;
   font-family: 'Cinzel', serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* להוסיף הצללה קלה לתפריט */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* הצללה קלה */
 }
-		    <!-- אייקון התפריט -->
-  <div class="menu-trigger">&#9776;</div> 
-</header>
-
-<script>
-  // קוד JavaScript להפעלת התפריט במובייל
-  const menuTrigger = document.querySelector('.menu-trigger');
-  const navList = document.querySelector('header nav ul');
-
-  menuTrigger.addEventListener('click', () => {
-    navList.classList.toggle('nav-active');
-  });
-</script>
 
 .menu-trigger {
   font-size: 20px;
@@ -46,25 +33,24 @@
 }
 
 .menu-trigger:hover {
-  color: #c89f6b; /* צבע זהב כשעוברים עם העכבר */
+  color: #c89f6b; /* צבע זהב */
 }
 
-/* עיצוב התפריט */
 .menu {
-  display: none;
+  display: none; /* מוסתר כברירת מחדל */
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 0;
   background-color: #1d1b2f;
   width: 100%;
   color: #fff;
   text-align: center;
-  padding-top: 60px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* הצללה חדה יותר לתפריט */
+  padding-top: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* הצללה */
 }
 
 .menu.active {
-  display: block;
+  display: block; /* תפריט גלוי */
 }
 
 .menu ul {
@@ -72,6 +58,32 @@
   padding: 0;
   margin: 0;
 }
+
+.menu ul li {
+  margin: 10px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #c89f6b; /* צבע זהב */
+}
+
+/* עיצוב למובייל */
+@media (max-width: 768px) {
+  .menu-trigger {
+    display: block;
+  }
+}
+
 
 .menu ul li {
   margin: 20px 0;
