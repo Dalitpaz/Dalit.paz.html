@@ -12,6 +12,79 @@
     <!-- Custom CSS -->
     <style>
 
+	    /* הגדרות בסיסיות לתפריט */
+.menu-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #C0C0C0;
+  font-family: 'Cinzel', serif;
+}
+
+.menu-trigger {
+  font-size: 30px;
+  cursor: pointer;
+  color: #1d1b2f;
+  transition: color 0.3s ease;
+}
+
+.menu-trigger:hover {
+  color: #c89f6b; /* צבע זהב כשתעבור עם העכבר */
+}
+
+/* עיצוב התפריט */
+.menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1d1b2f;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+  transition: all 0.3s ease;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #c89f6b; /* צבע זהב כאשר מקליקים */
+}
+
+/* בגרסה הניידת אנחנו מסתירים את התפריט מראש ומציגים אותו רק כשלוחצים */
+@media (max-width: 768px) {
+  .menu-trigger {
+    display: block;
+  }
+}
+
+
 	    .villa-image {
   width: 80%;
   height: auto;
