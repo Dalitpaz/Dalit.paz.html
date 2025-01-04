@@ -17,6 +17,271 @@
  
     <link rel="stylesheet" href="styles.css">
     <style>
+
+         
+	   /* בסיס */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #f8f8f8;
+}
+
+.luxury-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1d1b2f;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* עיצוב תפריט */
+.luxury-nav {
+  font-size: 18px;
+}
+
+.luxury-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.luxury-menu li {
+  position: relative;
+}
+
+.luxury-menu li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.luxury-menu li a:hover {
+  color: #c89f6b; /* זהב */
+}
+
+/* אפקט אלגנטי */
+.luxury-menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #c89f6b;
+  transition: width 0.3s;
+  margin: 5px auto 0;
+}
+
+.luxury-menu li a:hover::after {
+  width: 100%;
+}
+
+/* עיצוב תפריט למובייל */
+@media (max-width: 768px) {
+  .luxury-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1d1b2f;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .luxury-menu.active {
+    display: flex;
+  }
+
+  .luxury-menu li {
+    text-align: center;
+  }
+
+  .menu-trigger {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    color: #c89f6b;
+  }
+}
+
+	    .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #8E44AD; /* סגול כהה */
+    color: white;
+    padding: 10px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.menu-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* מוסתר כברירת מחדל */
+    flex-direction: column;
+}
+
+.menu-links li {
+    margin: 10px 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-links a:hover {
+    color: #D4AF37; /* זהב */
+}
+
+/* הצגת תפריט כשהוא פתוח */
+.menu-links.open {
+    display: flex;
+}
+
+	
+      /* עיצוב כללי לתפריט */
+      ul.navbar {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #333;
+        overflow: hidden;
+        display: flex; /* תפריט רספונסיבי */
+      }
+
+      ul.navbar li {
+        flex: 1;
+      }
+
+      ul.navbar li a {
+        display: block;
+        padding: 14px 20px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      /* עיצוב כשלוחצים על התפריט */
+      ul.navbar li a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* עיצוב למובייל */
+      @media screen and (max-width: 768px) {
+        /* הופך את התפריט לתפריט אנכי בנייד */
+        ul.navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        /* הצגת האייקון כשיש מסך קטן */
+        .menu-icon {
+          display: block;
+          background-color: #333;
+          color: white;
+          padding: 10px;
+          cursor: pointer;
+          text-align: center;
+        }
+
+        /* הצגת התפריט כשהאייקון נלחץ */
+        ul.navbar.show {
+          display: flex;
+        }
+
+        /* עיצוב של אייקון התפריט */
+        .menu-icon:hover {
+          background-color: #444;
+        }
+      }
+
+      /* עיצוב הכללי למובייל */
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+      }
+
+      /* עיצוב הכללי של גוף הדף */
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f8ff;
+      }
+
+      /* עיצוב כותרת */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+
+	
+        /* עיצוב כללי של header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
+            align-items: center;
+        }
+
+        /* עיצוב הלוגו */
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* עיצוב התפריט */
+        header nav {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 10px;
+        }
 .mobile-menu {
     display: flex;
     flex-direction: column;
