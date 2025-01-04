@@ -8,7 +8,19 @@
         $('#js-preloader').addClass('loaded');
 
     });
+  <!-- אייקון התפריט -->
+  <div class="menu-trigger">&#9776;</div> 
+</header>
 
+<script>
+  // קוד JavaScript להפעלת התפריט במובייל
+  const menuTrigger = document.querySelector('.menu-trigger');
+  const navList = document.querySelector('header nav ul');
+
+  menuTrigger.addEventListener('click', () => {
+    navList.classList.toggle('nav-active');
+  });
+</script>
 
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
