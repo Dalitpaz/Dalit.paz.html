@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+
 /* הגדרת פונט בסיסי */
 body {
   font-family: 'Georgia', serif;
@@ -864,6 +866,12 @@ body {
     </style>
   </head>
 <body>
+		const menuTrigger = document.querySelector('.menu-trigger');
+const navList = document.querySelector('header nav ul');
+
+menuTrigger.addEventListener('click', () => {
+  navList.classList.toggle('nav-active');
+});
   <header>
     <img src="my new logo.png">
     <nav>
