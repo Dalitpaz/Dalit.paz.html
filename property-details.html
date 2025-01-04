@@ -18,6 +18,165 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
+
+	    	   /* עיצוב כללי לתפריט */
+.luxury-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f4e8;
+  padding: 15px 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-header .logo img {
+  width: 80px; /* תוכל לשנות לפי הצורך */
+  height: auto;
+}
+
+.luxury-nav {
+  display: flex;
+}
+
+.luxury-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.luxury-menu li {
+  margin-left: 20px;
+}
+
+.luxury-menu li a {
+  text-decoration: none;
+  color: #8b4513;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.luxury-menu li a:hover {
+  background-color: #d4af37;
+  color: #fff;
+}
+
+/* עיצוב לפסים */
+.luxury-menu li {
+  border-bottom: 2px solid #d4af37; /* פס תחתון */
+}
+
+.luxury-menu li a {
+  display: block;
+  padding: 10px 15px;
+}
+
+/* תפריט רספונסיבי עבור ניידים */
+@media screen and (max-width: 768px) {
+  .luxury-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .luxury-nav {
+    width: 100%;
+  }
+
+  .luxury-menu {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .luxury-menu li {
+    margin-bottom: 15px;
+    border-bottom: none;
+  }
+
+  .luxury-menu li a {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+	   /* בסיס */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #f8f8f8;
+}
+
+.luxury-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1d1b2f;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* עיצוב תפריט */
+.luxury-nav {
+  font-size: 18px;
+}
+
+.luxury-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.luxury-menu li {
+  position: relative;
+}
+
+.luxury-menu li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.luxury-menu li a:hover {
+  color: #c89f6b; /* זהב */
+}
+
+/* אפקט אלגנטי */
+.luxury-menu li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #c89f6b;
+  transition: width 0.3s;
+  margin: 5px auto 0;
+}
+
+.luxury-menu li a:hover::after {
+  width: 100%;
+}
+
+  .luxury-menu.active {
+    display: flex;
+  }
+
+  .luxury-menu li {
+    text-align: center;
+  }
+
+
 	        .container h1 {
         font-family: 'Playfair Display', serif;
         font-weight: bold;
