@@ -13,6 +13,89 @@
 
 
 <style>
+	/* עיצוב גוף הדף */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* עיצוב הטקסט */
+.text-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.text-container h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.text-container h4 {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* עיצוב התוכן המרכזי */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.main-content img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-section {
+  text-align: center;
+  max-width: 600px;
+}
+
+.video-section h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.video-section iframe {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .video-section iframe {
+    max-width: 100%;
+    height: 250px;
+  }
+}
+
 
 .container {
   display: flex;
@@ -276,44 +359,25 @@
       }
     </style>
   </head>
-    <body>
-    <header>
-      <img src="my logo.png">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="properties.html">Gallery</a></li>
-          <li><a href="property-details.html">Contact</a></li>
-        </ul>
-        <span class="menu-trigger" onclick="toggleMenu()">☰</span>
-      </nav>
-    </header>
-  <div  style="text-align:right"class="text-container">
-        <h2 style="text-align:center">Welcome to the World of Dalit Paz Villas!</h2>
-        <h4><p style="text-align:center">Hello, my name is Dalit Paz, 38 years old.<br>
-          I always had a desire to live in a big house.<br>
-          So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
-          Everyone has their own dream.<br></h4>
-        </p>
-      </div>
-	    
-    <main style="text-align:center" class="main-content">
-      <img style="float:right;width:660px;height:650px" src="my vila.jpg"
+<div class="text-container">
+  <h2>Welcome to the World of Dalit Paz Villas!</h2>
+  <h4>
+    Hello, my name is Dalit Paz, 38 years old.<br>
+    I always had a desire to live in a big house.<br>
+    So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
+    Everyone has their own dream.
+  </h4>
+</div>
 
-      <div class="video-section">
-        <h2>Get Closer View & A Different Feeling</h2>
-        <h4>The Most Expensive Villa in Israel</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4swJ4pDWf9M" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </main>
+<main class="main-content">
+  <img src="my-villa.jpg" alt="Villa">
+  <div class="video-section">
+    <h2>Get Closer View & A Different Feeling</h2>
+    <h4>The Most Expensive Villa in Israel</h4>
+    <iframe src="https://www.youtube.com/embed/4swJ4pDWf9M" allowfullscreen></iframe>
+  </div>
+</main>
 
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector("header nav");
-        nav.classList.toggle("nav-active");
-      }
-    </script>
-  </body>
 </html>
 
 
