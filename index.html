@@ -85,6 +85,17 @@
         font-family: 'Poppins', sans-serif;
         background-color: #f0f8ff;
       }
+	.container {
+  display: flex;
+  flex-direction: column; /* ברירת מחדל: טקסט מעל התמונה */
+}
+
+@media screen and (max-width: 768px) { /* כאשר רוחב המסך הוא עד 768 פיקסלים */
+  .container {
+    flex-direction: column-reverse; /* תמונה מעל טקסט */
+  }
+}
+
 
       /* עיצוב כותרת */
       header {
