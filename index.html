@@ -888,13 +888,9 @@ body {
     </style>
   </head>
 <body>
-		const menuTrigger = document.querySelector('.menu-trigger');
-const navList = document.querySelector('header nav ul');
-
-menuTrigger.addEventListener('click', () => {
-  navList.classList.toggle('nav-active');
-});
+		
   <header>
+	  
     <img src="my new logo.png">
     <nav>
       <ul>
@@ -902,8 +898,12 @@ menuTrigger.addEventListener('click', () => {
         <li><a href="properties.html">Gallery</a></li>
         <li><a href="property-details.html">Contact</a></li>
       </ul>
-      <span class="menu-trigger" onclick="toggleMenu()">☰</span>
-    </nav>
+   const menuTrigger = document.querySelector('.menu-trigger');
+const navList = document.querySelector('header nav ul');
+
+menuTrigger.addEventListener('click', () => {
+  navList.classList.toggle('nav-active');
+});
   </header>
 
 
