@@ -280,16 +280,36 @@
       color: white;
       font-weight: 500;
     }
+.header-text {
+  font-family: 'Georgia', serif; /* גופן מהודר ויוקרתי */
+  font-size: 2.5rem; /* גודל טקסט גדול כדי שהוא יהיה בולט */
+  color: #2e1a47; /* צבע כהה ועמוק שייתן תחושת יוקרה */
+  text-align: center; /* ממרכז את הטקסט */
+  background-color: #f5f0e1; /* רקע בהיר ואלגנטי */
+  padding: 50px;
+  margin: 50px auto;
+  border: 10px solid #7d5a4e; /* מסגרת מלכותית בצבע חום כהה */
+  border-radius: 20px; /* פינות מעוגלות שיתנו תחושת רכות */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* הצללה עדינה להדגשה */
+  letter-spacing: 1px; /* ריווח בין אותיות למראה יוקרתי יותר */
+  text-transform: uppercase; /* הופך את הטקסט לאותיות גדולות כדי להדגיש אותו */
+  font-weight: 700; /* משדר עוצמה ואלגנטיות */
+  line-height: 1.4; /* ריווח בין השורות לאיזון טוב יותר */
+  width: 80%; /* הגבלת רוחב התיבה */
+}
 
-    .header-text {
-      background-color: #D4AF37;
-      padding: 20px;
-      font-size: 24px;
-      text-align: center;
-      color: #2C2C2C;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+.header-text::before {
+  content: "✨ "; /* הוספת כוכב קטן לפני הציטוט */
+  font-size: 3rem;
+  color: #c89f6b; /* צבע זהב לשדרג את המראה */
+}
+
+.header-text::after {
+  content: " ✨"; /* הוספת כוכב קטן בסוף הציטוט */
+  font-size: 3rem;
+  color: #c89f6b; /* צבע זהב לשדרג את המראה */
+}
+
  .container {
     max-width: 1200px;
     margin: 0 auto;
