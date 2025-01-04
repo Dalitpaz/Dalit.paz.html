@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
+/* התאמות למובייל */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    display: none; /* תפריט מוסתר בהתחלה */
+  }
+
+  header nav ul.nav-active {
+    display: flex; /* התפריט יופיע כאשר הקלאס nav-active מתווסף */
+  }
+
+  .menu-trigger {
+    display: block; /* האייקון מוצג במובייל */
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
 
 
 /* הגדרת פונט בסיסי */
