@@ -13,7 +13,7 @@
 
 
 <style>
-	/* שמירה על עיצוב התפריט המקורי */
+/* עיצוב לתפריט */
 header {
   display: flex;
   justify-content: space-between;
@@ -51,7 +51,7 @@ header nav ul li a {
   color: #fff;
 }
 
-/* שמירה על העיצוב של הגוף */
+/* עיצוב גוף הדף */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -67,6 +67,48 @@ body {
   max-width: 800px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-content img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.video-section iframe {
+  max-width: 500px;
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+}
+
+/* התאמות למובייל */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  header nav ul.nav-active {
+    display: flex;
+  }
+
+  .menu-trigger {
+    display: block;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
 }
 
 .main-content {
