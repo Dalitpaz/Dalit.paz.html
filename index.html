@@ -13,6 +13,20 @@
 
 
 <style>
+
+	.video-container video {
+  width: 100%; /* הסרטון יתאים לרוחב הקונטיינר */
+  height: auto; /* שמירה על יחס גובה-רוחב */
+}
+
+@media screen and (max-width: 768px) { /* מסכים קטנים */
+  .video-container video {
+    width: 80%; /* הקטן את רוחב הסרטון ל-80% מהרוחב הכולל */
+    max-width: 300px; /* הגבלת רוחב מקסימלי */
+    margin: 0 auto; /* מיקום הסרטון במרכז */
+  }
+}
+
 	
       /* עיצוב כללי לתפריט */
       ul.navbar {
