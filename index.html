@@ -13,6 +13,62 @@
 
 
 <style>
+	/* עיצוב יוקרתי לאתר וילות */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* עיצוב כותרת ראשית */
+.text-container h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* עיצוב טקסט */
+.text-container h4 {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0 auto;
+  color: #444;
+  max-width: 900px;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #ececec);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* טקסט מודגש */
+.text-container h4 strong {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* התאמות מובייל */
+@media (max-width: 768px) {
+  .text-container h2 {
+    font-size: 2rem;
+  }
+
+  .text-container h4 {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
 /* עיצוב לתפריט */
 header {
   display: flex;
@@ -51,23 +107,6 @@ header nav ul li a {
   color: #fff;
 }
 
-/* עיצוב גוף הדף */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.text-container {
-  text-align: center;
-  padding: 40px;
-  background-color: #fff;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .main-content {
   display: flex;
