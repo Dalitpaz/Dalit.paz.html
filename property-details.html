@@ -22,126 +22,160 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
- <style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f8ff;
-  }
+<!DOCTYPE html>
+<html lang="en">
 
-  header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
+  <head>
 
-  header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-  }
+    <title>Lab & QA Insights</title>
 
-  header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-  }
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  .menu-trigger {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-  }
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
-  .main-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap; /* Added this to allow content to wrap on smaller screens */
-  }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  .main-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Ensures image doesn't sit too close to text */
-  }
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
+      }
 
-  .text-container {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 300px; /* Ensures the container has a minimum width */
-  }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
 
-  .text-container h1 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #023e8a;
-    line-height: 1.4;
-  }
+      header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
 
-  .text-container p {
-    font-size: 16px;
-    color: #495057;
-    line-height: 1.8;
-    text-align: justify;
-  }
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
 
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    header nav ul {
-      display: none;
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-    }
+      header nav ul li {
+        margin: 0 15px;
+      }
 
-    header.nav-active ul {
-      display: flex;
-    }
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
 
-    .menu-trigger {
-      display: block;
-    }
+      .menu-trigger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
 
-    .main-content {
-      flex-direction: column;
-      align-items: center;
-    }
+      .main-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
 
-    .text-container {
-      margin-top: 20px;
-    }
+      /* עיצוב רספונסיבי */
+      @media (max-width: 768px) {
+        header nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+        }
 
-    .main-content img {
-      width: 100%; /* Make the image full width on small screens */
-    }
-  }
-</style>
+        header.nav-active ul {
+          display: flex;
+        }
 
+        .menu-trigger {
+          display: block;
+        }
+
+        .main-content img {
+          border-radius: 5px;
+        }
+
+        h1 {
+          font-size: 24px;
+          padding: 20px;
+        }
+
+        div {
+          padding: 20px;
+        }
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+
+      .menu-trigger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
