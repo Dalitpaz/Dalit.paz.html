@@ -15,106 +15,143 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
- <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f0f8ff;
-    }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-    }
-
-    .menu-trigger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .main-content {
-      padding: 20px;
-    }
-
-    .main-content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        display: none;
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
       }
 
-      nav ul.active {
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         display: flex;
       }
 
-      .menu-trigger {
-        display: block;
+      header nav ul li {
+        margin: 0 15px;
       }
-    }
 
-    .properties-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
 
-    .properties-items {
-      transition: transform 0.3s;
-    }
+      .menu-trigger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
 
-    .properties-items:hover {
-      transform: scale(1.05);
-    }
-  </style>
+      .main-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      /* עיצוב רספונסיבי */
+      @media (max-width: 768px) {
+        header nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+        }
+
+        header.nav-active ul {
+          display: flex;
+        }
+
+        .menu-trigger {
+          display: block;
+        }
+
+        .main-content img {
+          border-radius: 5px;
+        }
+
+        h1 {
+          font-size: 24px;
+          padding: 20px;
+        }
+
+        div {
+          padding: 20px;
+        }
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+
+      .menu-trigger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
+    </style>
 
 
 
 
 
   </head>
-
   <body>
    <header>
       <img style="width:80px;height:80px" src="images/logo my lab.jpg">
