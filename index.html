@@ -3,295 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Retreats - By Dalit Paz</title>
+    <title>Lab & QA Insights
+</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-
-
-    <!-- Custom CSS -->
-   <style>
-	   /* עיצוב כללי לתפריט */
-.luxury-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f4e8;
-  padding: 15px 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.luxury-header .logo img {
-  width: 80px; /* תוכל לשנות לפי הצורך */
-  height: auto;
-}
-
-.luxury-nav {
-  display: flex;
-}
-
-.luxury-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.luxury-menu li {
-  margin-left: 20px;
-}
-
-.luxury-menu li a {
-  text-decoration: none;
-  color: #8b4513;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.luxury-menu li a:hover {
-  background-color: #d4af37;
-  color: #fff;
-}
-
-/* עיצוב לפסים */
-.luxury-menu li {
-  border-bottom: 2px solid #d4af37; /* פס תחתון */
-}
-
-.luxury-menu li a {
-  display: block;
-  padding: 10px 15px;
-}
-
-/* תפריט רספונסיבי עבור ניידים */
-@media screen and (max-width: 768px) {
-  .luxury-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .luxury-nav {
-    width: 100%;
-  }
-
-  .luxury-menu {
-    flex-direction: column;
-    margin-top: 20px;
-  }
-
-  .luxury-menu li {
-    margin-bottom: 15px;
-    border-bottom: none;
-  }
-
-  .luxury-menu li a {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
-
-	   /* בסיס */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cinzel', serif;
-  background-color: #f8f8f8;
-}
-
-.luxury-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #1d1b2f;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo img {
-  height: 50px;
-}
-
-/* עיצוב תפריט */
-.luxury-nav {
-  font-size: 18px;
-}
-
-.luxury-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.luxury-menu li {
-  position: relative;
-}
-
-.luxury-menu li a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.luxury-menu li a:hover {
-  color: #c89f6b; /* זהב */
-}
-
-/* אפקט אלגנטי */
-.luxury-menu li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #c89f6b;
-  transition: width 0.3s;
-  margin: 5px auto 0;
-}
-
-.luxury-menu li a:hover::after {
-  width: 100%;
-}
-
-  .luxury-menu.active {
-    display: flex;
-  }
-
-  .luxury-menu li {
-    text-align: center;
-  }
-
-  .menu-trigger {
-    display: block;
-    font-size: 25px;
-    cursor: pointer;
-    color: #c89f6b;
-  }
-}
-
-	    .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #8E44AD; /* סגול כהה */
-    color: white;
-    padding: 10px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    text-align: right;
-}
-
-.menu-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* מוסתר כברירת מחדל */
-    flex-direction: column;
-}
-
-.menu-links li {
-    margin: 10px 0;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.menu-links a:hover {
-    color: #D4AF37; /* זהב */
-}
-
-/* הצגת תפריט כשהוא פתוח */
-.menu-links.open {
-    display: flex;
-}
-
-	
-      /* עיצוב כללי לתפריט */
-      ul.navbar {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #333;
-        overflow: hidden;
-        display: flex; /* תפריט רספונסיבי */
-      }
-
-      ul.navbar li {
-        flex: 1;
-      }
-
-      ul.navbar li a {
-        display: block;
-        padding: 14px 20px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-      }
-
-      /* עיצוב כשלוחצים על התפריט */
-      ul.navbar li a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* עיצוב למובייל */
-      @media screen and (max-width: 768px) {
-        /* הופך את התפריט לתפריט אנכי בנייד */
-        ul.navbar {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-        }
-
-        /* הצגת האייקון כשיש מסך קטן */
-        .menu-icon {
-          display: block;
-          background-color: #333;
-          color: white;
-          padding: 10px;
-          cursor: pointer;
-          text-align: center;
-        }
-
-        /* הצגת התפריט כשהאייקון נלחץ */
-        ul.navbar.show {
-          display: flex;
-        }
-
-        /* עיצוב של אייקון התפריט */
-        .menu-icon:hover {
-          background-color: #444;
-        }
-      }
-
-      /* עיצוב הכללי למובייל */
-      @media (max-width: 768px) {
-        body {
-          font-size: 14px;
-        }
-      }
-
-      /* עיצוב הכללי של גוף הדף */
+  <style>
       body {
         margin: 0;
         font-family: 'Poppins', sans-serif;
         background-color: #f0f8ff;
       }
 
-      /* עיצוב כותרת */
       header {
         background-color: #333;
         color: white;
@@ -299,340 +22,21 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
       }
 
-
-	
-        /* עיצוב כללי של header */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
-            align-items: center;
-        }
-
-        /* עיצוב הלוגו */
-        header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        /* עיצוב התפריט */
-        header nav {
-            display: flex;
-            align-items: center;
-            margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            padding: 10px;
-        }
-
-        /* עיצוב בעת לחיצה על תפריט */
-        header nav ul li a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* עיצוב הכללי של גוף הדף */
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff;
-        }
-      header img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-      }
-
-      header nav {
-        display: flex;
-        align-items: center;
-      }
-
-      header nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-      }
-
-      header nav ul li {
-        margin: 0 10px;
-      }
-
-      header nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-      }
-
-      header .menu-trigger {
-        display: none;
-        cursor: pointer;
-      }
-
-      /* עיצוב תוכן */
-      .main-content {
-        padding: 20px;
-        text-align: center;
-      }
-
-      .main-content img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      /* עיצוב טקסט */
-      .text-container h2 {
-        color: #FFD700;
-        font-size: 28px;
-      }
-
-      .text-container p {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.6;
-      }
-
-  .menu ul li {
-    font-size: 20px; /* גודל גופן מתאים לנייד */
-  }
-
-  .menu ul li a {
-    padding: 15px;
-    border-bottom: 2px solid #c89f6b; /* גבול דק עם צבע זהב */
-    transition: background-color 0.3s ease;
-  }
-
-  .menu ul li a:hover {
-    background-color: #c89f6b; /* צבע זהב כהה ברקע כשעוברים על הקישור */
-    color: #1d1b2f; /* שינוי צבע הגופן לשחור כהה */
-  }
-}
-
-
-/* בגרסה הניידת אנחנו מסתירים את התפריט מראש ומציגים אותו רק כשלוחצים */
-@media (max-width: 768px) {
-  .menu-trigger {
-    display: block;
-  }
-}
-
-
-	    .villa-image {
-  width: 80%;
-  height: auto;
-}
-
-	    .luxury-text {
-  font-size: 1.8rem; /* גודל הטקסט */
-  color: #8e44ad; /* צבע סגול כהה (צבע יוקרתי) */
-  font-weight: bold;
-  text-transform: uppercase; /* הופך את הטקסט לאותיות רישיות */
-  letter-spacing: 2px; /* רווח בין האותיות */
-  padding: 10px 20px; /* רווח פנימי */
-  background-color: #f5f5f5; /* צבע רקע עדין */
-  border: 2px solid #8e44ad; /* מסגרת סגולה עם גוון יוקרתי */
-  border-radius: 15px; /* פינות מעוגלות */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 -4px 10px rgba(255, 255, 255, 0.3); /* צל עם אפקט מלכותי */
-  transition: all 0.3s ease-in-out; /* מעבר חלק בעת חידוש */
-}
-
-.luxury-text:hover {
-  transform: translateY(-5px); /* מעלה את הטקסט מעט כשעוברים עליו */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 -6px 15px rgba(255, 255, 255, 0.4); /* חיזוק הצל */
-}
-
-	    .text-container {
-  text-align: center; /* ממרכז את הטקסט */
-  max-width: 800px; /* מגדיר רוחב מקסימלי */
-  margin: 0 auto; /* ממרכז את ה-div בתוך הדף */
-  padding: 20px; /* רווח פנימי */
-}
-
-h2, h4 {
-  margin: 0 auto;
-}
-
-          /* עיצוב כללי לתפריט */
-      ul.navbar {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #333;
-        overflow: hidden;
-        display: flex; /* תפריט רספונסיבי */
-      }
-
-      ul.navbar li {
-        flex: 1;
-      }
-
-      ul.navbar li a {
-        display: block;
-        padding: 14px 20px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-      }
-
-      /* עיצוב כשלוחצים על התפריט */
-      ul.navbar li a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* עיצוב למובייל */
-      @media screen and (max-width: 768px) {
-        /* הופך את התפריט לתפריט אנכי בנייד */
-        ul.navbar {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-        }
-
-        /* הצגת האייקון כשיש מסך קטן */
-        .menu-icon {
-          display: block;
-          background-color: #333;
-          color: white;
-          padding: 10px;
-          cursor: pointer;
-          text-align: center;
-        }
-
-        /* הצגת התפריט כשהאייקון נלחץ */
-        ul.navbar.show {
-          display: flex;
-        }
-
-        /* עיצוב של אייקון התפריט */
-        .menu-icon:hover {
-          background-color: #444;
-        }
-      }
-
-      /* עיצוב הכללי למובייל */
-      @media (max-width: 768px) {
-        body {
-          font-size: 14px;
-        }
-      }
-
-      /* עיצוב הכללי של גוף הדף */
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f0f8ff;
-      }
-
-      /* עיצוב כותרת */
-      header {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-
-	
-        /* עיצוב כללי של header */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
-            align-items: center;
-        }
-
-        /* עיצוב הלוגו */
-        header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        /* עיצוב התפריט */
-        header nav {
-            display: flex;
-            align-items: center;
-            margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            padding: 10px;
-        }
-
-        /* עיצוב בעת לחיצה על תפריט */
-        header nav ul li a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* עיצוב הכללי של גוף הדף */
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff;
-        }
       header img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
       }
 
-      header nav {
-        display: flex;
-        align-items: center;
-      }
-
       header nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
-      }
-
-      header nav ul li {
-        margin: 0 10px;
+        gap: 15px;
       }
 
       header nav ul li a {
@@ -641,14 +45,19 @@ h2, h4 {
         font-weight: 500;
       }
 
-      header .menu-trigger {
+      .menu-trigger {
         display: none;
         cursor: pointer;
+        font-size: 24px;
+        color: white;
       }
 
       .main-content {
         padding: 20px;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
       }
 
       .main-content img {
@@ -658,50 +67,28 @@ h2, h4 {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
-      .text-container h2 {
-        color: #FFD700;
+      .text-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        flex: 1;
+      }
+
+      .text-container h1 {
+        font-family: 'Roboto Slab', serif;
         font-size: 28px;
+        font-weight: bold;
+        color: #023e8a;
+        line-height: 1.4;
       }
 
       .text-container p {
         font-size: 16px;
-        color: #333;
-        line-height: 1.6;
+        color: #495057;
+        line-height: 1.8;
+        text-align: justify;
       }
-
-   .video-section {
-  text-align: center;
-  margin-top: 50px;
-  background-color: #f1f1f1;
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.video-section h2 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.video-section h4 {
-  font-size: 1.5rem;
-  color: #e0c8a0;
-  font-weight: 500;
-  margin-top: 20px;
-}
-
-.villa-video {
-  width: 100%; /* רוחב מלא של ההורה (הסרטון יתפוס את כל רוחב האזור) */
-  max-width: 1200px; /* גודל מקסימלי של הסרטון */
-  height: 700px; /* גובה מרשים עבור הסרטון */
-  margin-top: 30px;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
-}
 
       /* Responsive Design */
       @media screen and (max-width: 768px) {
@@ -719,113 +106,82 @@ h2, h4 {
           display: flex;
         }
 
-	      .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #8E44AD; /* סגול כהה */
-    color: white;
-    padding: 10px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    text-align: right;
-}
-
-.menu-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* מוסתר כברירת מחדל */
-    flex-direction: column;
-}
-
-.menu-links li {
-    margin: 10px 0;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.menu-links a:hover {
-    color: #D4AF37; /* זהב */
-}
-
-/* הצגת תפריט כשהוא פתוח */
-.menu-links.open {
-    display: flex;
-}
-
-
-        header .menu-trigger {
+        .menu-trigger {
           display: block;
-          font-size: 24px;
+        }
+
+        .main-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .text-container {
+          margin-top: 20px;
         }
       }
     </style>
-
   </head>
-<body>
-		
-<header class="luxury-header">
-  <div class="logo">
-    <img src="my new logo.png">
-  </div>
-  <nav class="luxury-nav">
-    <ul class="luxury-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="properties.html">Gallery</a></li>
-      <li><a href="property-details.html">Contact</a></li>
-    </ul>
-  </nav>
-
-</header>
-
-
-<div style="text-align:center" class="text-container">
-  <h2>Welcome to the World of Dalit Paz Villas!</h2>
-  <h4>
-    Hello, my name is Dalit Paz, 38 years old.<br>
-    I always had a desire to live in a big house.<br>
-    So if I still don't have a huge house, a villa, to live in, then at least I will share my dream with you.<br>
-    <br>
-    Everyone has their own dream.<br><br>
-    Immerse yourself in the elegance and splendor of our exclusive villa showcase. Our platform is dedicated to presenting some of the most breathtaking and architecturally stunning villas. Each villa embodies sophistication, comfort, and timeless design, offering a glimpse into a lifestyle of unparalleled luxury.<br><br>
-    Explore our curated gallery and let your imagination wander through dreamlike spaces, where every detail tells a story of refinement and inspiration.<br><br>
-<strong class="luxury-text">Experience the art of living beautifully.</strong>
-  </h4>
-</div>
-
-<main class="main-content">
-  <div class="content-container">
-    <img class="villa-image" src="my vila.jpg">
-    <div class="text-overlay">
+  <body>
+    <header>
+      <img style="width:80px;height:80px" src="assets\images\logo my lab.jpg">
+      <nav>
+        <ul>
+          <li><a href="index.html">Quality in the laboratory
+</a></li>
+          <li><a href="properties.html">Fields of Specialization
+</a></li>
+          <li><a href="property-details.html">Contact</a></li>
+        </ul>
+        <span class="menu-trigger" onclick="toggleMenu()">☰</span>
+      </nav>
+    </header><main style="display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 40px; 
+            background: #f8f9fa; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);">
+    <!-- תמונה -->
+    <div style="flex: 1; max-width: 500px;">
+        <div style="border: 8px solid #0077b6; border-radius: 15px; overflow: hidden; 
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); transition: transform 0.3s;">
+            <img src="assets/images/labs.jpg" alt="Laboratory QA" 
+                 style="width: 100%; height: auto; display: block;">
+        </div>
     </div>
-  </div>
 
-<div class="video-section">
-  <h2>Get Closer View & A Different Feeling</h2>
-  <h4>The Most Expensive Villa in Israel</h4>
-  <iframe class="villa-video" src="https://www.youtube.com/embed/4swJ4pDWf9M" allowfullscreen></iframe>
-</div>
+    <!-- טקסט -->
+    <div style="flex: 2; padding: 20px; background: #ffffff; border-radius: 15px; 
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);">
+        <h1 style="font-family: 'Roboto Slab', serif; font-size: 32px; font-weight: bold; 
+                   color: #023e8a; margin-bottom: 20px; text-align: left; line-height: 1.4;">
+            Welcome to My Professional QA Journey
+        </h1>
+        <p style="font-family: 'Open Sans', sans-serif; color: #495057; font-size: 18px; line-height: 1.8; text-align: justify;">
+            <strong style="font-size: 20px; color: #0077b6;">My name is Dalit Paz,</strong> 
+            I am 38 years old, with over 5 years of experience as a quality inspector in Tnuva's professional laboratories.
+            My role involved performing rigorous tests to ensure compliance with the highest standards, 
+            focusing on precision, consistency, and excellence.<br><br>
 
+            Throughout my career, I have honed skills in identifying issues, analyzing data, and improving processes. 
+            These skills translate seamlessly into the world of software testing, where attention to detail and analytical thinking 
+            are crucial for success.<br><br>
+
+            My passion for quality testing drives me to continuously learn and adapt. 
+            I bring a strong technical background and the ability to quickly understand and utilize new tools and technologies.
+            Whether it's testing physical products or software, I approach every challenge with the same level of dedication and precision.<br><br>
+
+            If you're looking for a QA professional who values thoroughness, innovation, and teamwork, 
+            I would be honored to bring my expertise and commitment to your organization.
+        </p>
+    </div>
 </main>
 
 
 
-
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector("header nav");
-      nav.classList.toggle("nav-active");
-    }
-  </script>
-</body>
-
+	  
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector("header nav");
+        nav.classList.toggle("nav-active");
+      }
+    </script>
+  </body>
 </html>
 
 

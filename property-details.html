@@ -1,1065 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Retreats - By Dalit Paz</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <title>Lab & QA Insights
+
+</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+  </head>
+<br>
+<br>
+  <!-- ***** Preloader End ***** -->
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Custom CSS -->
- 
-    <link rel="stylesheet" href="styles.css">
-    <style>
-
-
-	    	   /* עיצוב כללי לתפריט */
-.luxury-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f4e8;
-  padding: 15px 30px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.luxury-header .logo img {
-  width: 80px; /* תוכל לשנות לפי הצורך */
-  height: auto;
-}
-
-.luxury-nav {
-  display: flex;
-}
-
-.luxury-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.luxury-menu li {
-  margin-left: 20px;
-}
-
-.luxury-menu li a {
-  text-decoration: none;
-  color: #8b4513;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.luxury-menu li a:hover {
-  background-color: #d4af37;
-  color: #fff;
-}
-
-/* עיצוב לפסים */
-.luxury-menu li {
-  border-bottom: 2px solid #d4af37; /* פס תחתון */
-}
-
-.luxury-menu li a {
-  display: block;
-  padding: 10px 15px;
-}
-
-/* תפריט רספונסיבי עבור ניידים */
-@media screen and (max-width: 768px) {
-  .luxury-header {
-    flex-direction: column;
-    text-align: center;
+    <!-- Custom CSS <style>
+  /* התאמת גוף העמוד */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
   }
 
-  .luxury-nav {
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
   }
 
-  .luxury-menu {
-    flex-direction: column;
-    margin-top: 20px;
+  header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
   }
 
-  .luxury-menu li {
-    margin-bottom: 15px;
-    border-bottom: none;
-  }
-
-  .luxury-menu li a {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
-
-	   /* בסיס */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cinzel', serif;
-  background-color: #f8f8f8;
-}
-
-.luxury-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #1d1b2f;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo img {
-  height: 50px;
-}
-
-/* עיצוב תפריט */
-.luxury-nav {
-  font-size: 18px;
-}
-
-.luxury-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.luxury-menu li {
-  position: relative;
-}
-
-.luxury-menu li a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.luxury-menu li a:hover {
-  color: #c89f6b; /* זהב */
-}
-
-/* אפקט אלגנטי */
-.luxury-menu li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #c89f6b;
-  transition: width 0.3s;
-  margin: 5px auto 0;
-}
-
-.luxury-menu li a:hover::after {
-  width: 100%;
-}
-
-  .luxury-menu.active {
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
   }
 
-  .luxury-menu li {
-    text-align: center;
+  header nav ul li {
+    margin: 0 15px;
   }
 
-
-	        .container h1 {
-        font-family: 'Playfair Display', serif;
-        font-weight: bold;
-    }
-
-    .social-icon:hover {
-        transform: scale(1.2);
-        filter: brightness(1.3);
-    }
-
-    body {
-        background-color: #f9f4e8;
-        font-family: 'Poppins', sans-serif;
-    }
-
-
-         
-	   /* בסיס */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cinzel', serif;
-  background-color: #f8f8f8;
-}
-
-.luxury-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #1d1b2f;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.logo img {
-  height: 50px;
-}
-
-/* עיצוב תפריט */
-.luxury-nav {
-  font-size: 18px;
-}
-
-.luxury-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.luxury-menu li {
-  position: relative;
-}
-
-.luxury-menu li a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.luxury-menu li a:hover {
-  color: #c89f6b; /* זהב */
-}
-
-/* אפקט אלגנטי */
-.luxury-menu li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #c89f6b;
-  transition: width 0.3s;
-  margin: 5px auto 0;
-}
-
-.luxury-menu li a:hover::after {
-  width: 100%;
-}
-
-/* עיצוב תפריט למובייל */
-@media (max-width: 768px) {
-  .luxury-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #1d1b2f;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 20px 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .luxury-menu.active {
-    display: flex;
-  }
-
-  .luxury-menu li {
-    text-align: center;
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
   }
 
   .menu-trigger {
-    display: block;
-    font-size: 25px;
+    display: none;
     cursor: pointer;
-    color: #c89f6b;
+    font-size: 24px;
+    color: white;
   }
-}
 
-	    .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #8E44AD; /* סגול כהה */
-    color: white;
-    padding: 10px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    text-align: right;
-}
-
-.menu-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* מוסתר כברירת מחדל */
-    flex-direction: column;
-}
-
-.menu-links li {
-    margin: 10px 0;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.menu-links a:hover {
-    color: #D4AF37; /* זהב */
-}
-
-/* הצגת תפריט כשהוא פתוח */
-.menu-links.open {
-    display: flex;
-}
-
-	
-      /* עיצוב כללי לתפריט */
-      ul.navbar {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #333;
-        overflow: hidden;
-        display: flex; /* תפריט רספונסיבי */
-      }
-
-      ul.navbar li {
-        flex: 1;
-      }
-
-      ul.navbar li a {
-        display: block;
-        padding: 14px 20px;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-      }
-
-      /* עיצוב כשלוחצים על התפריט */
-      ul.navbar li a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      /* עיצוב למובייל */
-      @media screen and (max-width: 768px) {
-        /* הופך את התפריט לתפריט אנכי בנייד */
-        ul.navbar {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-        }
-
-        /* הצגת האייקון כשיש מסך קטן */
-        .menu-icon {
-          display: block;
-          background-color: #333;
-          color: white;
-          padding: 10px;
-          cursor: pointer;
-          text-align: center;
-        }
-
-        /* הצגת התפריט כשהאייקון נלחץ */
-        ul.navbar.show {
-          display: flex;
-        }
-
-        /* עיצוב של אייקון התפריט */
-        .menu-icon:hover {
-          background-color: #444;
-        }
-      }
-
-      /* עיצוב הכללי למובייל */
-      @media (max-width: 768px) {
-        body {
-          font-size: 14px;
-        }
-      }
-
-      /* עיצוב הכללי של גוף הדף */
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f0f8ff;
-      }
-
-      /* עיצוב כותרת */
-      header {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-
-	
-        /* עיצוב כללי של header */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
-            align-items: center;
-        }
-
-        /* עיצוב הלוגו */
-        header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        /* עיצוב התפריט */
-        header nav {
-            display: flex;
-            align-items: center;
-            margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            padding: 10px;
-        }
-.mobile-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #8E44AD; /* סגול כהה */
-    color: white;
-    padding: 10px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    text-align: right;
-}
-
-.menu-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* מוסתר כברירת מחדל */
-    flex-direction: column;
-}
-
-.menu-links li {
-    margin: 10px 0;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.menu-links a:hover {
-    color: #D4AF37; /* זהב */
-}
-
-/* הצגת תפריט כשהוא פתוח */
-.menu-links.open {
-    display: flex;
-}
-
-
-      
-      /* עיצוב בסיסי לפונט ואייקונים */
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* כותרת עוצמתית */
-.sub-header h1 {
-    font-size: 36px;
-    color: #8E44AD; /* סגול כהה */
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 40px 0;
-    font-style: italic;
-}
-
-/* עיצוב למייל */
-.email-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.email-text a {
-    font-size: 22px;
-    font-weight: 700;
-    color: #D4AF37; /* צבע זהב */
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.email-text a:hover {
-    color: #fff;
-    background-color: #8E44AD; /* סגול כהה */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* אייקון המייל */
-.email-text i {
-    font-size: 40px;
-    margin-right: 15px;
-    color: #D4AF37; /* צבע זהב */
-}
-
-/* עיצוב אייקונים של מדיה חברתית */
-.social-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* עיצוב למרווחים בין אייקונים */
-.social-icons-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.social-icons-container a {
-    margin: 0 20px;
-}
-
-/* עיצוב כללי למערכת */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-/* עיצוב בסיסי לפונט ואייקונים */
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* כותרת עוצמתית */
-.sub-header h1 {
-    font-size: 36px;
-    color: #8E44AD; /* סגול כהה */
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 40px 0;
-    font-style: italic;
-}
-
-/* עיצוב למייל */
-.email-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.email-text a {
-    font-size: 22px;
-    font-weight: 700;
-    color: #D4AF37; /* צבע זהב */
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.email-text a:hover {
-    color: #fff;
-    background-color: #8E44AD; /* סגול כהה */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* אייקון המייל */
-.email-text i {
-    font-size: 40px;
-    margin-right: 15px;
-    color: #D4AF37; /* צבע זהב */
-}
-
-/* עיצוב אייקונים של מדיה חברתית */
-.social-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* עיצוב למרווחים בין אייקונים */
-.social-icons-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.social-icons-container a {
-    margin: 0 20px;
-}
-
-/* עיצוב כללי למערכת */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-      @media (max-width: 768px) {
-    .container {
-        padding: 30px;
-        max-width: 100%;
-    }
-    .social-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-.container {
-    background-color: #C0C0C0; /* אפור כסף */
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    text-align: center;
-    padding: 50px;
+  .main-content img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 50px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    margin-bottom: 20px;
+  }
 
-/* עיצוב כותרת */
-h2 {
-    font-size: 36px;
-    color: #8E44AD; /* סגול כהה */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: underline;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-/* אפקט צבעים יוקרתי */
-h2:hover {
-    color: #D4AF37; /* צבע זהב */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* עיצוב למייל */
-.email-container {
-    margin-top: 20px;
-}
-
-.email-text a {
-    text-decoration: none;
-    color: #D4AF37; /* זהב */
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.email-text a:hover {
-    color: #8E44AD; /* סגול כהה */
-    transform: scale(1.05);
-}
-
-.email-text i {
-    font-size: 30px;
-    margin-right: 10px;
-}
-
-/* עיצוב לאיקונים */
-.social-icon {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-/* עיצוב למרכז החברתי */
-.social-links {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.social-links a {
-    margin-right: 20px;
-}
-
-
-/* עיצוב למרווחים בין אייקונים */
-.social-icons-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.social-icons-container a {
-    margin: 0 20px;
-}
-
-/* עיצוב כללי למערכת */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-      
-    /* עיצוב גנרי עבור המייל */
-    .email-container {
-        text-align: center; /* ממקם את הטקסט במרכז */
-        padding: 20px; /* מרווחים מכל הצדדים */
+  /* עיצוב רספונסיבי */
+  @media (max-width: 768px) {
+    header nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
     }
 
-    .email-text {
-        font-family: 'Cinzel', serif; /* גופן אלגנטי */
-        font-size: 24px; /* גודל טקסט ברירת מחדל */
-        color: #333; /* צבע טקסט כהה */
-        margin-top: 15px; /* רווח מעל הטקסט */
-        line-height: 1.6; /* שיפור קריאות הטקסט */
+    header.nav-active ul {
+      display: flex;
     }
 
-    .email-text i {
-        font-size: 36px; /* גודל אייקון קטן יותר */
-        margin-right: 10px;
+    .menu-trigger {
+      display: block;
     }
 
-    /* עיצוב רספונסיבי לניידים */
-    @media only screen and (max-width: 768px) {
-        .email-text {
-            font-size: 18px; /* גודל טקסט קטן יותר במסך נייד */
-            padding: 0 10px; /* רווחים שיגייסו את הטקסט למסך */
-        }
-
-        .email-text i {
-            font-size: 24px; /* גודל אייקון קטן יותר בנייד */
-        }
-    }
-    }
-        body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden; /* מונע גלילה אופקית */
+    .main-content img {
+      border-radius: 5px;
     }
 
-    .image-container {
-        text-align: center; /* ממקם את התמונה והטקסט במרכז */
-        padding: 20px; /* מרווחים מכל הצדדים */
+    h1 {
+      font-size: 24px;
+      padding: 20px;
     }
 
-    .responsive-image {
-        width: 100%; /* התמונה תיקח את כל רוחב המסך */
-        height: auto; /* שומרת על פרופורציות התמונה */
-        max-width: 90%; /* מוודא שהתמונה לא תהיה גדולה מדי על המסך */
-        margin: 0 auto; /* ממקם את התמונה במרכז */
-        border-radius: 10px; /* רדיוס זוויות קטן לתמונה לקבלת מראה מעודן */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* הוספת הצללה רכה לתמונה */
+    div {
+      padding: 20px;
     }
+  }
+</style>
 
-    .centered-text {
-        font-family: 'Cinzel', serif; /* גופן אלגנטי */
-        font-size: 20px; /* גודל טקסט בינוני */
-        color: #333; /* צבע טקסט כהה */
-        margin-top: 15px; /* רווח מעל הטקסט */
-        line-height: 1.6; /* שיפור קריאות הטקסט */
-    }
+  </head>
+  
+    <header>
+      <img style="width:80px;height:80px" src="assets\images\logo my lab.jpg">
+      <nav>
+        <ul>
+          <li><a href="index.html">Quality in the laboratory
+          <li><a href="properties.html">Fields of Specialization
+          <li><a href="property-details.html">Contact</a></li>
+        </ul>
+        <span class="menu-trigger" onclick="toggleMenu()">☰</span>
+      </nav>
+    </header>
 
-    /* עיצוב רספונסיבי */
-    @media only screen and (max-width: 768px) {
-        .responsive-image {
-            max-width: 100%; /* בתנאי של מסך קטן, התמונה תיקח 100% מהמסך */
-            height: auto; /* שומרת על פרופורציות נכונות */
-        }
+  <!-- ***** Header Area End ***** --><body>
+<link href="C:\html\templatemo-villa-agency.css">
 
-      
-          .image-container {
-        text-align: center; /* ממרכז את הטקסט בתוך ה-container */
-    }
-
-    .responsive-image {
-        width: 100%; /* התמונה תיקח את כל רוחב המסך */
-        height: auto; /* שומרת על פרופורציות התמונה */
-        max-width: 90%; /* מוודא שהתמונה לא תהיה גדולה מדי על המסך */
-        margin: 0 auto; /* ממקם את התמונה במרכז */
-    }
-
-    .centered-text {
-        font-size: 20px; /* גודל טקסט בינוני, אפשר להתאים לפי הצורך */
-        color: #333; /* צבע טקסט כהה */
-        margin-top: 10px; /* רווח מעל הטקסט */
-    }
-
-
-
-        .centered-text {
-            font-size: 10px; /* גודל טקסט קטן יותר במסך נייד */
-        }
-    }
-
-
-        .responsive-image {
-        width: 80%; /* התמונה תיקח את כל רוחב המסך */
-        height: auto; /* שמירה על פרופורציות התמונה */
-        max-width: 100%; /* מונע שהתמונה תעבור את רוחב המסך */
-    }
-
-    /* עיצוב רספונסיבי */
-    @media only screen and (max-width: 768px) {
-        .responsive-image {
-            width: 80%; /* תוודא שהתמונה תתאים ב-100% לרוחב המסך */
-            height: auto; /* שומר על פרופורציות נכונות */
-        }
-    }
-
-.social-icon i {
-    font-size: 24px !important; /* שים את הגודל הרצוי כאן */
-    margin: 0 10px;
-}
+<!-- מסגרת עבור הטקסט והתמונה -->
+<div style="background-color: #C0C0C0; font-family: 'Cinzel', serif; font-size: 30px; text-align: center; 
+            padding: 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+<h1 style="font-family: 'Playfair Display', serif; font-weight: bold; font-style: italic; 
+           color: #ffffff; text-align: center; line-height: 1.5; 
+           font-size: 36px; margin-top: 50px; margin-bottom: 50px; 
+           padding: 30px; 
+           background: linear-gradient(90deg, #1e3c72, #2a5298); 
+           border: 4px solid #FFD700; border-radius: 20px; 
+           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), 0 4px 15px rgba(255, 215, 0, 0.3); 
+           transform: perspective(800px) rotateX(3deg); 
+           transition: all 0.3s ease-in-out;">
+  
+    <span style="font-size: 42px; font-weight: 700; color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+        "Quality is the Key to Success"</span> <br>
+    Whether it’s physical products or software, my passion for testing, combined with practical experience and technical expertise, ensures that I can bring unmatched value to your organization. 
+    <br><br>
+    <span style="font-size: 32px; font-style: normal; color: #f0f0f0;">
+        "I see testing not just as a profession, but as a mission for excellence."
+    </span>
+</h1>
 
 
-.social-icon:hover {
-    color: #FFD700;
-}
+  
+  <img style="float:center; width: 1200px; height: 600px; margin-top: 20px; border-radius: 10px;" src="assets/images/image of testing.jpg">
+  
+</div>
+</body>
 
+  <br>
+  <br>
+  <body>
+  <div style="text-align:center; padding: 60px 30px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">
+    <h1 style="font-family: 'Cinzel', serif; color: #2c3e50; font-size: 40px; font-weight: bold; margin-bottom: 30px;">
+      Would You Like to Provide Feedback About My Website?
+    </h1>
+    
 
-      .social-icon img {
-    width: 40px; /* שים את הגודל הרצוי כאן */
-    height: 40px; /* שים את הגובה הרצוי כאן */
-    margin: 0 10px;
-}
+    <a href="mailto:dalitkahzam6@gmail.com?subject=פנייה מהאתר&body=שלום דלית,"
+       style="font-size: 30px; color: #D4AF37; text-decoration: none; display: inline-block; margin-bottom: 20px;">
+      <span class="fa fa-envelope" style="font-size: 40px;"></span> 
+      <span style="font-family: 'Cinzel', serif; color: #2c3e50;">dalitkahzam6@gmail.com</span>
+    </a>
 
-.social-icon:hover img {
-    filter: brightness(1.2); /* אם רוצים להוסיף אפקט בעת ריחוף */
-}
+    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
+      <!-- Facebook Icon -->
+      <a href="https://www.facebook.com/profile.php?id=100080877307525&locale=he_IL" target="_blank"
+         class="fab fa-facebook" style="font-size: 40px; color: #3b5998; text-decoration: none; transition: all 0.3s;">
+      </a>
 
-        /* עיצוב כללי של header */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* פיצול המרחב בין הלוגו לתפריט */
-            align-items: center;
-        }
-
-        /* עיצוב הלוגו */
-        header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        /* עיצוב התפריט */
-        header nav {
-            display: flex;
-            align-items: center;
-            margin-left: auto; /* דואג שהתפריט יהיה בצד ימין */
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin: 0 10px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            padding: 10px;
-        }
-
-        /* עיצוב בעת לחיצה על תפריט */
-        header nav ul li a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* עיצוב הכללי של גוף הדף */
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff;
-
-      }
-
- h2 {
-  font-family: 'Cinzel', serif; /* גופן קלאסי ואלגנטי */
-  font-size: 3.8rem; /* גודל סביר אבל מרשים */
-  color: #1d1b2f; /* צבע כהה ועמוק */
-  text-align: center; /* מרכז את הטקסט */
-  text-transform: uppercase; /* הופך את הטקסט לאותיות גדולות */
-  letter-spacing: 1px; /* ריווח קל בין אותיות */
-  font-weight: 700; /* משקל כבד לעוד יותר עוצמה */
-  background-color: #C0C0C0; /* רקע אפור בהיר */
-  padding: 20px; /* רווח פנימי להדגשה */
-  border-radius: 15px; /* פינות מעוגלות */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* הצללה עדינה */
-  border-bottom: 3px solid #c89f6b; /* קו תחתון בגוון זהב */
-}
-
-h2 i {
-  font-style: italic; /* הוספת נטייה לאותיות */
-  color: #c89f6b; /* צבע זהב */
-}
-
-h2 u {
-  text-decoration: underline; /* קו תחתון */
-  color: #c89f6b; /* צבע זהב */
-}
-
-    </style>
-</head>
-<body>
-
-<header class="luxury-header">
-  <div class="logo">
-    <img src="my new logo.png">
+      <!-- LinkedIn Icon -->
+      <a href="https://www.linkedin.com/in/dp1986/" target="_blank"
+         class="fab fa-linkedin" style="font-size: 40px; color: #0e76a8; text-decoration: none; transition: all 0.3s;">
+      </a>
+    </div>
   </div>
-  <nav class="luxury-nav">
-    <ul class="luxury-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="properties.html">Gallery</a></li>
-      <li><a href="property-details.html">Contact</a></li>
-    </ul>
-  </nav>
-
-</header>
+</body>
 
 
-<div class="container">
-    <h2><b><i><u>Talk to Me - Let's Connect Dreams to Reality</u></i></b></h2>
-    <br>
-</div>
-<div class="image-container">
-    <br>
-    <img src="images/villa.jpg" alt="Villa" class="responsive-image">    </div>
-
-
-<div class="container" style="background-color: #f9f4e8; color: #333; padding: 15px; border-radius: 8px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); border: 1px solid #d4af37; width: 70%; margin: 0 auto;">
-    <div class="sub-header" style="text-align: center; margin-bottom: 20px;">
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #8b4513; text-transform: uppercase; letter-spacing: 2px;">
-            <i>Would You Like to Provide Feedback About My Website?</i>
-        </h1>
-    </div>
-
-    <div class="email-container" style="text-align: center; margin-bottom: 20px;">
-        <span class="email-text" style="font-size: 16px; font-family: 'Poppins', sans-serif; font-weight: 600; color: #8b4513;">
-            <a href="mailto:dalitkahzam6@gmail.com?subject=פנייה מהאתר&body=שלום דלית,"
-               style="text-decoration: none; color: #d4af37; display: inline-flex; align-items: center; justify-content: center;">
-                <i class="fa fa-envelope" style="font-size: 30px; margin-right: 10px; color: #d4af37;"></i>
-                dalitkahzam6@gmail.com
-            </a>
-        </span>
-    </div>
-
-    <div class="social-icons-container" style="text-align: center;">
-        <a href="https://www.facebook.com/profile.php?id=100080877307525&locale=he_IL" target="_blank" style="margin-right: 15px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon" 
-                 style="width: 35px; height: 35px; transition: transform 0.3s; filter: drop-shadow(0 4px 6px rgba(212, 175, 55, 0.6));">
-        </a>
-        <a href="https://www.linkedin.com/in/dp1986" target="_blank" style="margin-left: 15px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon" 
-                 style="width: 35px; height: 35px; transition: transform 0.3s; filter: drop-shadow(0 4px 6px rgba(212, 175, 55, 0.6));">
-        </a>
-    </div>
-</div>
-
-
-<style>
-    .social-icon:hover {
-        transform: scale(1.2);
-        filter: brightness(1.5);
-    }
-</style>
-
-
-<!-- הוספת אנימציה לאייקונים כשעוברים עליהם -->
-<style>
-    .social-icon:hover {
-        transform: scale(1.1); /* האייקון יתפשט מעט כשעוברים עליו */
-    }
-</style>
-
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
 
   </body>
 </html>
-
