@@ -8,118 +8,152 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-      body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #f0f8ff;
-      }
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+  }
 
-      header {
-        background-color: #333;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-      }
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
 
-      header img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
+  header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 
-      header nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 15px;
-      }
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
 
-      header nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-      }
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
 
-      .menu-trigger {
-        display: none;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-      }
+  .menu-trigger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
 
-      .main-content {
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 30px;
-      }
+  .main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Added this to allow content to wrap on smaller screens */
+  }
 
-      .main-content img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
+  .main-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Ensures image doesn't sit too close to text */
+  }
 
-      .text-container {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        flex: 1;
-      }
+  .text-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px; /* Ensures the container has a minimum width */
+  }
 
-      .text-container h1 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 28px;
-        font-weight: bold;
-        color: #023e8a;
-        line-height: 1.4;
-      }
+  .text-container h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #023e8a;
+    line-height: 1.4;
+  }
 
-      .text-container p {
-        font-size: 16px;
-        color: #495057;
-        line-height: 1.8;
-        text-align: justify;
-      }
+  .text-container p {
+    font-size: 16px;
+    color: #495057;
+    line-height: 1.8;
+    text-align: justify;
+  }
 
-      /* Responsive Design */
-      @media screen and (max-width: 768px) {
-        header nav ul {
-          display: none;
-          flex-direction: column;
-          background-color: #333;
-          position: absolute;
-          top: 60px;
-          right: 0;
-          width: 100%;
-        }
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    header nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+    }
 
-        header.nav-active ul {
-          display: flex;
-        }
+    header.nav-active ul {
+      display: flex;
+    }
 
-        .menu-trigger {
-          display: block;
-        }
+    .menu-trigger {
+      display: block;
+    }
 
-        .main-content {
-          flex-direction: column;
-          align-items: center;
-        }
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .text-container {
-          margin-top: 20px;
-        }
-      }
-    </style>
+    .text-container {
+      margin-top: 20px;
+    }
+
+    .main-content img {
+      width: 100%; /* Make the image full width on small screens */
+    }
+  }
+</style>
+
+<!-- HTML -->
+<body>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-trigger" onclick="document.querySelector('header').classList.toggle('nav-active');">
+      &#9776;
+    </div>
+  </header>
+
+  <div class="main-content">
+    <img src="image.jpg" alt="Image description">
+    <div class="text-container">
+      <h1>Welcome to My Website</h1>
+      <p>This is an example of responsive design that adapts to different screen sizes. The layout changes for mobile devices to ensure the content remains easy to read and navigate. On smaller screens, the image takes up more space, and the text is aligned appropriately to fit the screen width.</p>
+    </div>
+  </div>
+</body>
+
   </head>
   <body>
     <header>
