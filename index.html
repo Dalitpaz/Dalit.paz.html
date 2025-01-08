@@ -281,14 +281,6 @@ body, html {
     display: block; /* התפריט יוצג כשלוחצים עליו */
   }
 
-  /* עיצוב לינקים בתפריט */
-  .menu-link {
-    padding: 15px;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-  }
-
 }
 
 /* הגדרות כלליות */
@@ -337,7 +329,7 @@ body, html {
 }
 
 	.main-nav ul {
-  display: none;
+  display: relative;
 }
 .main-nav ul.open {
   display: flex; /* או block, תלוי בעיצוב */
@@ -382,7 +374,7 @@ body, html {
   }
   .menu-item::after {
     content: '';
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     bottom: -5px;
@@ -399,14 +391,14 @@ body, html {
     .main-nav {
       display: none;
       width: 100%;
-      position: absolute;
+      position: relative;
       top: 60px;
       left: 0;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .menu-toggle {
-      display: block;
+      display: relative;
     }
     .menu-link {
       display: block;
