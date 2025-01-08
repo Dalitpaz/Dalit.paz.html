@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!DOCTYPE html>
+
+    <link href="assets/css/Style.css" rel="stylesheet">
+   <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -35,69 +37,93 @@
         padding: 20px;
       }
 
-      .main-nav ul {
-        display: flex;
-        gap: 30px;
+      .logo-container {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin-right: 30px;
+        display: inline-block;
+        transform-origin: center;
       }
 
-      /* עיצוב רספונסיבי למסכים קטנים יותר, למשל במובייל */
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        align-items: center;
+        gap: 40px;
+      }
+
+      /* כפתור לתפריט נפתח במובייל */
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 30px;
+        color: #333;
+      }
+
+      /* עיצוב רספונסיבי עבור מסכים קטנים (מובייל) */
       @media (max-width: 768px) {
         header {
-          flex-direction: column;
-          align-items: center;
           padding: 15px;
         }
 
         .main-nav ul {
-          display: none; /* לא להציג תפריט במובייל */
+          display: none; /* לא להציג את התפריט במובייל */
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          text-align: center;
         }
 
         .menu-toggle {
-          display: block; /* להציג כפתור לתפריט נפתח במובייל */
+          display: block; /* להציג את כפתור התפריט הנפתח */
+        }
+
+        .menu-toggle.open + .main-nav ul {
+          display: flex; /* להציג את התפריט לאחר לחיצה על כפתור התפריט */
+        }
+
+        .main-nav {
+          width: 100%;
         }
       }
     </style>
   </head>
   <body>
-    <!-- התוכן של הדף שלך כאן -->
+    <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+      <!-- לוגו -->
+      <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+        <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+      </div>
+
+      <!-- תפריט -->
+      <nav class="main-nav" style="display: inline-block;">
+        <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+          <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+          <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+          <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- כפתור לתפריט נפתח במובייל -->
+      <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
+        &#9776;
+      </div>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.querySelector('.main-nav ul');
+        menu.classList.toggle('open');
+        var toggleButton = document.querySelector('.menu-toggle');
+        toggleButton.classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
-
-
-      /* אפקט רקע זז */
-      .scroll-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
-        background-size: 300% 300%;
-        animation: backgroundScroll 10s infinite linear;
-        z-index: -1;
-      }
-
-      @keyframes backgroundScroll {
-        0% {
-          background-position: 0% 50%;
-        }
-        100% {
-          background-position: 100% 50%;
-        }
-      }
-
-      /* לוגו */
-      .rotating-logo {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .logo-container:hover .rotating-logo {
-        transform: rotateY(360deg);
-      }
 
       /* תפריט */
       .menu-link {
