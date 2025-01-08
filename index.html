@@ -252,6 +252,44 @@ body, html {
 </header>
 	  
 <style>
+	/* עיצוב התפריט במובייל */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: none; /* התפריט מוסתר במובייל */
+    width: 100%;
+    position: absolute;
+    top: 60px; /* מתחת לכותרת */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav.open {
+    display: block; /* התפריט יוצג כשלוחצים עליו */
+  }
+
+  .menu-link {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
 	.main-nav ul {
   display: none;
 }
