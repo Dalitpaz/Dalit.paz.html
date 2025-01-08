@@ -223,6 +223,7 @@
 
 	  
 
+
 <!-- CSS -->
 <style>
   /* תפריט עכבר */
@@ -246,6 +247,7 @@
   }
   .menu-item::after {
     content: '';
+    position: absolute;
     left: 0;
     right: 0;
     bottom: -5px;
@@ -262,6 +264,7 @@
     .main-nav {
       display: none;
       width: 100%;
+      position: absolute;
       top: 60px;
       left: 0;
       background-color: #fff;
@@ -282,7 +285,6 @@
     }
   }
 </style>
-
       <!-- כפתור לתפריט נפתח במובייל -->
       <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
         &#9776;
