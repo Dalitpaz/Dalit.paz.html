@@ -208,11 +208,12 @@
         }
       
     </style>
-  <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+   <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
-  <div class="logo-container" style="display: flex; align-items: center;">
-    <img src="images/logo my lab.jpg" alt="Logo" style="width: 80px; height: 80px;">
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
   </div>
+
 
   <!-- תפריט -->
   <nav class="main-nav" style="flex-grow: 1; margin-left: 30px;">
