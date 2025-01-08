@@ -129,7 +129,46 @@ body, html {
 
 <!-- CSS -->
 <style>
-  /* תפריט עכבר */
+/* התאמות כלליות */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none; /* תפריט מוסתר כברירת מחדל */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: block; /* כפתור תפריט מופיע במובייל */
+  }
+
+  .menu-open .main-nav ul {
+    display: flex; /* הצגת התפריט בעת לחיצה */
+  }
+}
+
+	
+	/* תפריט עכבר */
   .menu-link {
     text-decoration: none;
     color: #333;
