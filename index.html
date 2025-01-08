@@ -15,22 +15,17 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!-- CSS --> 
-	
-	  <style>
+<!-- CSS -->    
 
-		  .main-nav ul {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+<style>
+main {
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
-
-
-		  .main-nav ul {
-  flex-wrap: wrap;
-  justify-content: flex-start;
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
 }
-
 
 
       /* אפקט רקע זז */
@@ -146,68 +141,54 @@
       }
     </style>
 
-
   </head>
   <body>
-<style>
-	    
-      /* עיצוב רגיל, המסך בדסקטופ */
-      body {
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-      .logo-container {
-        width: 80px;
-        height: 80px;
-        position: relative;
-        margin-right: 30px;
-        display: inline-block;
-        transform-origin: center;
-      }
-
-      .main-nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-        align-items: center;
-        gap: 40px;
-      }
-
-    .main-nav {
-          width: 100%;
-        }
-      
-    </style>
-	  
-<header style="display: flex; align-items: center; width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
-  <div class="logo-container" style="width: 80px; height: 80px; margin-right: 30px;">
-    <img src="images/logo-my-lab.jpg" alt="Logo" style="width: 100%; height: auto;">
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="assets/images/logo my lab.jpg" alt="Logo" class="rotating-logo" style="transition: transform 1s ease-in-out;">
   </div>
 
   <!-- תפריט -->
-  <nav class="main-nav" style="flex-grow: 1;">
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+  <nav class="main-nav" style="display: inline-block;">
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
       <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
       <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
       <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
     </ul>
   </nav>
+
 </header>
 
-
-	  <!-- CSS -->
 <style>
 
+main {
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* אפשר גלילה */
+  margin: 0;
+  position: relative;
+  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
+}
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
   .menu-link:hover {
     background-color: #f0f0f0;
     transform: scale(1.1);
@@ -257,17 +238,13 @@
     }
   }
 </style>
-	
-  <body>
-
-
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- תמונה -->
     <div style="flex: 1; max-width: 500px;">
         <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
                     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-            <img src="images/labs.jpg" 
-		    style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
+            <img src="assets/images/labs.jpg" alt="Laboratory QA" 
+                 style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
         </div>
     </div>
 
@@ -316,6 +293,16 @@
         transition: color 0.3s ease-in-out;
     }
 </style>
+
+
+
+	  
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector("header nav");
+        nav.classList.toggle("nav-active");
+      }
+    </script>
   </body>
 </html>
 
