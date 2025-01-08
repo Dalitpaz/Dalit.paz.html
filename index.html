@@ -379,6 +379,15 @@ body, html {
         transition: color 0.3s ease-in-out;
     }
 </style>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.main-nav ul');
+    menu.classList.toggle('open');
+
+    const toggleButton = document.querySelector('.menu-toggle');
+    toggleButton.classList.toggle('open');
+  }
+</script>
 
 
 
