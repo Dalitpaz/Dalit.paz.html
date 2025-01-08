@@ -19,6 +19,54 @@
 	  
   
 <style>
+	/* סגנון כללי ל-header */
+.header {
+  display: flex;
+  align-items: center; /* ליישור אנכי */
+  justify-content: space-between; /* מרווח בין הלוגו לתפריט */
+  padding: 10px 20px;
+  background-color: #fff; /* רקע */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* צל */
+}
+
+/* סגנון ללוגו */
+.logo img {
+  height: 50px; /* גובה מותאם ללוגו */
+  width: auto; /* שמירה על פרופורציות */
+}
+
+/* סגנון לתפריט */
+.main-nav {
+  display: flex;
+}
+
+/* סגנון לפריטי התפריט */
+.menu {
+  display: flex;
+  list-style: none; /* הסרת בולטים */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin-left: 20px; /* רווח בין פריטי התפריט */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
 main {
   margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
