@@ -245,16 +245,23 @@ body, html {
     </ul>
   </nav>
 	  
-	   <!-- כפתור לפתיחת התפריט בנייד -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <!-- אייקון תפריט לנייד -->
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   </header>
 	  
 
 <style>
+	/* הכפתור ייראה רק במובייל */
+.menu-toggle {
+  display: none; /* נסתר כברירת מחדל */
+}
+
+/* ברגע שהמסך קטן מ-768px, הכפתור יוצג */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מוצג במובייל */
+  }
+}
+
 
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
