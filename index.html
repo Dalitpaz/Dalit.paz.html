@@ -15,68 +15,53 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Page</title>
+    <link href="assets/css/Style.css" rel="stylesheet">
+    <style>
+      /* עיצוב רגיל, המסך בדסקטופ */
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+      }
 
-<style>
-	/* עיצוב כללי */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
 
-/* עיצוב רספונסיבי - מסכים קטנים (מובייל) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px; /* להקטין את הגודל של הטקסט במובייל */
-  }
+      .main-nav ul {
+        display: flex;
+        gap: 30px;
+      }
 
-  header {
-    padding: 10px; /* פחות רווחים במובייל */
-    display: flex;
-    flex-direction: column; /* לסדר את הלוגו והתפריט בעמודה */
-    align-items: center;
-  }
+      /* עיצוב רספונסיבי למסכים קטנים יותר, למשל במובייל */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: center;
+          padding: 15px;
+        }
 
-  .main-nav ul {
-    display: none; /* לא להראות את התפריט במובייל */
-  }
+        .main-nav ul {
+          display: none; /* לא להציג תפריט במובייל */
+        }
 
-  .menu-toggle {
-    display: block; /* להראות את כפתור התפריט */
-  }
-
-  .menu-open .main-nav ul {
-    display: block; /* להציג את התפריט לאחר לחיצה */
-    text-align: center; /* לסדר את הפריטים במרכז */
-  }
-}
-
-/* עיצוב למסכים גדולים יותר (דסקטופ) */
-@media (min-width: 769px) {
-  header {
-    display: flex;
-    justify-content: space-between; /* סידור הלוגו והתפריט בסרגל אחד */
-    padding: 20px;
-  }
-
-  .main-nav ul {
-    display: flex;
-    gap: 20px; /* יותר רווחים בין פריטי התפריט */
-  }
-
-  .menu-toggle {
-    display: none; /* לא להראות את כפתור התפריט בדסקטופ */
-  }
-}
-
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
+        .menu-toggle {
+          display: block; /* להציג כפתור לתפריט נפתח במובייל */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- התוכן של הדף שלך כאן -->
+  </body>
+</html>
 
 
       /* אפקט רקע זז */
