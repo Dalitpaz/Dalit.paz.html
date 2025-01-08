@@ -17,17 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <!-- CSS --> 
 	  
-<style>
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-
+    <style>
       /* אפקט רקע זז */
       .scroll-background {
         position: fixed;
@@ -79,7 +69,18 @@ body, html {
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
       }
 
-      
+      /* תפריט רספונסיבי */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          border-radius: 10px;
+          display: none;
+        }
 
         nav ul.active {
           display: flex;
