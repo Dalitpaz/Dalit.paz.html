@@ -53,7 +53,7 @@
   }
 
   .main-nav ul {
-    display: none;
+    display: relative;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -77,7 +77,7 @@
   /* עיצוב למסכים גדולים */
   @media (min-width: 768px) {
     .menu-toggle {
-      display: none;
+      display: relative;
     }
 
     .main-nav ul {
@@ -115,7 +115,7 @@ body, html {
 
       /* אפקט רקע זז */
       .scroll-background {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
@@ -170,7 +170,7 @@ body, html {
           flex-direction: column;
           background: rgba(0, 0, 0, 0.8);
           padding: 10px;
-          position: absolute;
+          position: relative;
           top: 60px;
           left: 20px;
           border-radius: 10px;
