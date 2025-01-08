@@ -18,6 +18,115 @@
 
     <link href="assets/css/Style.css" rel="stylesheet">
     <style>
+
+	    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Page</title>
+    <link href="assets/css/Style.css" rel="stylesheet">
+    <style>
+      /* עיצוב רגיל, המסך בדסקטופ */
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .logo-container {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin-right: 30px;
+        display: inline-block;
+        transform-origin: center;
+      }
+
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        align-items: center;
+        gap: 40px;
+      }
+
+      /* כפתור לתפריט נפתח במובייל */
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 30px;
+        color: #333;
+      }
+
+      /* עיצוב רספונסיבי עבור מסכים קטנים (מובייל) */
+      @media (max-width: 768px) {
+        header {
+          padding: 15px;
+        }
+
+        .main-nav ul {
+          display: none; /* לא להציג את התפריט במובייל */
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .menu-toggle {
+          display: block; /* להציג את כפתור התפריט הנפתח */
+        }
+
+        .menu-toggle.open + .main-nav ul {
+          display: flex; /* להציג את התפריט לאחר לחיצה על כפתור התפריט */
+        }
+
+        .main-nav {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+      <!-- לוגו -->
+      <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+        <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+      </div>
+
+      <!-- תפריט -->
+      <nav class="main-nav" style="display: inline-block;">
+        <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+          <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+          <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+          <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- כפתור לתפריט נפתח במובייל -->
+      <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
+        &#9776;
+      </div>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.querySelector('.main-nav ul');
+        menu.classList.toggle('open');
+        var toggleButton = document.querySelector('.menu-toggle');
+        toggleButton.classList.toggle('open');
+      }
+    </script>
+  </body>
+</html>
+
 	    
       /* עיצוב רגיל, המסך בדסקטופ */
       body {
@@ -200,168 +309,9 @@
   </head>
   <body>
 
-
-
-<style>
-
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-body, html {
-  height: 100%;
-  overflow-y: auto; /* אפשר גלילה */
-  margin: 0;
-  position: relative;
-  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
-}
-
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-</style>
-</body>
-
 </header>
 
-<style>
 
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-body, html {
-  height: 100%;
-  overflow-y: auto; /* אפשר גלילה */
-  margin: 0;
-  position: relative;
-  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
-}
-
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-</style>
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- תמונה -->
     <div style="flex: 1; max-width: 500px;">
