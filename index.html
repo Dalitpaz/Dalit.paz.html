@@ -252,92 +252,11 @@ body, html {
     <!-- אייקון תפריט לנייד -->
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+
 <style>
-	
-/* עיצוב התפריט במובייל */
-@media (max-width: 768px) {
-  /* כפתור תפריט */
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* תפריט בנייד */
-  .main-nav {
-    display: none; /* התפריט מוסתר במובייל */
-    width: 100%;
-    position: absolute;
-    top: 60px; /* מתחת לכותרת */
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  /* כאשר התפריט פתוח */
-  .main-nav.open {
-    display: block; /* התפריט יוצג כשלוחצים עליו */
-  }
-
-}
-
-/* הגדרות כלליות */
-.main-nav ul {
-  display: none; /* מוסתר כברירת מחדל */
-}
-.main-nav ul.open {
-  display: flex; /* הצגת התפריט כשהוא פתוח */
-}
-
-
-
-.menu-link:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
-}
-
-/* תפריט בקטגוריות */
-.menu-item {
-  position: relative;
-}
-.menu-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 2px;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-
-  .menu-link {
-    padding: 15px;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .menu-item {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-}
-
-	.main-nav ul {
-  display: relative;
-}
-.main-nav ul.open {
-  display: flex; /* או block, תלוי בעיצוב */
-}
-
 
 main {
-  margin-top:0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
 body, html {
   height: 100%;
@@ -374,7 +293,7 @@ body, html {
   }
   .menu-item::after {
     content: '';
-    position: relative;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: -5px;
@@ -391,14 +310,14 @@ body, html {
     .main-nav {
       display: none;
       width: 100%;
-      position: relative;
+      position: absolute;
       top: 60px;
       left: 0;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .menu-toggle {
-      display: relative;
+      display: block;
     }
     .menu-link {
       display: block;
