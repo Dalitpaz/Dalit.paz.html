@@ -1,32 +1,21 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Lab & QA Insights
-</title>
-<link href="assets\css\templatemo-villa-agency.css" rel="stylesheet">
+    <title>Lab & QA Insights</title>
+    <link href="assets/css/templatemo-villa-agency.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets\css\Style.css">
+    <link href="assets/css/Style.css">
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!-- CSS -->    
-<style>
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-
+    <style>
       /* אפקט רקע זז */
       .scroll-background {
         position: fixed;
@@ -139,10 +128,8 @@ body, html {
         font-weight: bold;
       }
     </style>
-
   </head>
-  <body>
-  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+  <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="assets/images/logo my lab.jpg" alt="Logo" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -157,27 +144,14 @@ body, html {
     </ul>
   </nav>
 
+  <!-- כפתור לתפריט נפתח במובייל -->
+  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
+    &#9776;
+  </div>
 </header>
 
+<!-- CSS -->
 <style>
-
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-body, html {
-  height: 100%;
-  overflow-y: auto; /* אפשר גלילה */
-  margin: 0;
-  position: relative;
-  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
-}
-
   /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
@@ -237,73 +211,65 @@ body, html {
     }
   }
 </style>
-<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
-    <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-            <img src="assets/images/labs.jpg" alt="Laboratory QA" 
-                 style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
-        </div>
+
+
+    <!-- Background Animation -->
+    <div class="scroll-background"></div>
+
+    <!-- Header with gradient background -->
+    <h3 class="section-title">
+      <span>Quality Control</span>
+    </h3>
+
+    <!-- Text Block - Description -->
+    <div class="content-section">
+      After years of working as a quality inspector at Tnuva and as a lab technician, I bring with me in-depth knowledge and rich experience in quality testing, process analysis, and maintaining high standards. My expertise focuses on finding accurate and reliable solutions that guarantee optimal results in every project.
     </div>
 
-    <!-- טקסט -->
-    <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
-                   color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
-           My Journey Into Precision and Quality
-        </h1>
-        <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
-            <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
-            a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
- My role was to ensure 
-            that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
-
-            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. 
-            These skills are at the core of my transition into software quality assurance.<br><br>
-
-            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background 
-            and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
-
-            Let’s work together to redefine quality standards and create outstanding results!
-        </p>
+    <!-- Expertise Section -->
+    <h3 class="section-title">
+      <span>My Areas of Expertise</span>
+    </h3>
+    <div class="content-section">
+      1. <strong>Quality control in food factories:</strong> As part of my work at Tnuva, I developed quality control processes that ensured compliance with strict standards in food factories, while continuously improving the efficiency and accuracy of tests.<br><br>
+      2. <strong>Advanced laboratory tests:</strong> As a laboratory technician, I was involved in physical, chemical, and microbiological testing of products and materials, using advanced equipment and innovative methods.<br><br>
+      3. <strong>Data management and analysis:</strong> My experience includes working with complex data, creating detailed reports, and identifying trends that help improve processes and reduce errors.<br><br>
+      4. <strong>Improving processes and streamlining work:</strong> During my work, I contributed to the development of new work methods and the improvement of existing methods, which led to significant savings in time and resources.
     </div>
-</main>
 
-<!-- הוספת אנימציה ותוספות סטייל -->
-<style>
-    main img:hover {
-        transform: scale(1.05);
-    }
+    <!-- Services Section -->
+    <h3 class="section-title">
+      <span>Services I Offer</span>
+    </h3>
+    <div class="content-section">
+      1. <strong>Consulting and training on quality control processes in food factories and laboratories.</strong><br><br>
+      2. <strong>Building customized processes for quality testing and process improvement.</strong><br><br>
+      3. <strong>Accompanying projects in the fields of quality control and laboratory tests.</strong><br><br>
+      4. <strong>Creating customized reports that provide practical insights for continuous improvement.</strong>
+    </div>
 
-    main div:hover {
-        transform: translateY(-6px);
-        transition: transform 0.3s ease-in-out;
-    }
+    <!-- Special Qualities Section -->
+    <h3 class="section-title">
+      <span>What Makes Me Special?</span>
+    </h3>
+    <div class="content-section">
+      1. <strong>5 years of experience in Tnuva:</strong> working in an intensive production environment, maintaining the quality of the products while complying with regulatory requirements.<br><br>
+      2. <strong>Practical experience in the laboratory:</strong> a combination of deep technical knowledge and the ability to work with advanced test tools.<br><br>
+      3. <strong>Passion for excellence:</strong> I believe that quality tests are the key to innovation and creating reliable and quality results.
+    </div>
 
-    h1:hover {
-        color: #0366d6;
-        transition: color 0.3s ease-in-out;
-    }
-
-    p strong:hover {
-        color: #023e8a;
-        transition: color 0.3s ease-in-out;
-    }
-</style>
+    <!-- Offer to Organization Section -->
+    <h3 class="section-title">
+      <span>What can I offer to your organization?</span>
+    </h3>
+    <div class="content-section">
+      1. <strong>Accuracy and attention to details:</strong> As someone who has worked for years in laboratory testing, I understand the importance of going down to the smallest details. My ability to locate problems already in the early stages of the process ensures that the product will meet the highest standards.<br><br>
+      2. <strong>Continuous improvement in processes:</strong> In my previous job, I proposed significant improvements in testing processes that contributed to saving time and resources. I always strive to optimize processes in the field of software testing as well.<br><br>
+      3. <strong>Fast learning and adaptability:</strong> My transition to the QA world is accompanied by constant learning of new tools and technologies, such as Selenium and Post
 
 
 
-	  
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector("header nav");
-        nav.classList.toggle("nav-active");
-      }
-    </script>
+<div class="container">
+    <script src="https://h3></script>cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
-
-
-
+</html> 
