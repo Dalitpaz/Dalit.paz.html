@@ -17,6 +17,58 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
 <style>
+	/* עיצוב כללי */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* עיצוב רספונסיבי - מסכים קטנים (מובייל) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* להקטין את הגודל של הטקסט במובייל */
+  }
+
+  header {
+    padding: 10px; /* פחות רווחים במובייל */
+    display: flex;
+    flex-direction: column; /* לסדר את הלוגו והתפריט בעמודה */
+    align-items: center;
+  }
+
+  .main-nav ul {
+    display: none; /* לא להראות את התפריט במובייל */
+  }
+
+  .menu-toggle {
+    display: block; /* להראות את כפתור התפריט */
+  }
+
+  .menu-open .main-nav ul {
+    display: block; /* להציג את התפריט לאחר לחיצה */
+    text-align: center; /* לסדר את הפריטים במרכז */
+  }
+}
+
+/* עיצוב למסכים גדולים יותר (דסקטופ) */
+@media (min-width: 769px) {
+  header {
+    display: flex;
+    justify-content: space-between; /* סידור הלוגו והתפריט בסרגל אחד */
+    padding: 20px;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 20px; /* יותר רווחים בין פריטי התפריט */
+  }
+
+  .menu-toggle {
+    display: none; /* לא להראות את כפתור התפריט בדסקטופ */
+  }
+}
+
 main {
   margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
