@@ -18,6 +18,65 @@
 <!-- CSS -->    
 <style>
 
+	/* עיצוב כללי */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* רווח כללי */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  width: 60px; /* גודל לוגו מותאם */
+  height: 60px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* רווח קטן יותר בין הפריטים */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+/* התאמות למובייל */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row; /* שומר על הלוגו והתפריט באותו קו */
+  }
+
+  .main-nav ul {
+    display: none; /* מוסתר כברירת מחדל */
+    flex-direction: column; /* הצגה אנכית */
+    position: absolute;
+    top: 70px; /* קרוב ללוגו */
+    right: 20px;
+    background-color: #fff;
+    width: calc(100% - 40px);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px; /* רווח קטן בין פריטים */
+  }
+
+  .menu-toggle {
+    display: block; /* כפתור תפריט */
+  }
+
+  .menu-open .main-nav ul {
+    display: flex; /* הצגת תפריט בלחיצה */
+  }
+}
+
+
 	/* התאמות כלליות */
 body {
   margin: 0;
