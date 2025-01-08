@@ -32,12 +32,6 @@
 }
 
 
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
 
       /* אפקט רקע זז */
       .scroll-background {
@@ -188,19 +182,12 @@ body, html {
         gap: 40px;
       }
 
-      .menu-toggle {
-          display: block; /* להציג את כפתור התפריט הנפתח */
-        }
-
-        .menu-toggle.open + .main-nav ul {
-          display: flex; /* להציג את התפריט לאחר לחיצה על כפתור התפריט */
-        }
-
-        .main-nav {
+    .main-nav {
           width: 100%;
         }
       
     </style>
+	  
 <header style="display: flex; align-items: center; width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; margin-right: 30px;">
@@ -270,11 +257,7 @@ body, html {
     }
   }
 </style>
-   
-</body>	  
 	
-
-  </head>
   <body>
 
 
