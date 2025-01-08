@@ -252,19 +252,37 @@ body, html {
   </header>
 	  
 
-<style>
-	/* הכפתור ייראה רק במובייל */
+<style>/* הכפתור מוצג רק במובייל */
 .menu-toggle {
-  display: none; /* נסתר כברירת מחדל */
+  display: none; /* מוסתר במחשב */
 }
 
 /* ברגע שהמסך קטן מ-768px, הכפתור יוצג */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* מוצג במובייל */
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ה-main-nav מוצג רק במובייל כשמתחילים */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+
+  .main-nav.open {
+    display: block; /* מציג את התפריט כשנלחץ על כפתור התפריט */
   }
 }
-
 
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
