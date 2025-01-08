@@ -253,27 +253,22 @@ body, html {
 	  
 
 <style>
-
-	/* הגדרת כפתור תפריט למובייל */
+/* הגדרת כפתור תפריט למובייל */
 .menu-toggle {
   display: none; /* לא מוצג במחשב */
 }
-	/* הכפתור מוצג רק במובייל */
-.menu-toggle {
-  display: none; /* מוסתר במחשב */
-}
 
-/* ברגע שהמסך קטן מ-768px, הכפתור יוצג */
 @media (max-width: 768px) {
+  /* מוצג רק במובייל */
   .menu-toggle {
-    display: block; /* מוצג במובייל */
+    display: block;
     font-size: 30px;
     background: none;
     border: none;
     cursor: pointer;
   }
 
-  /* ה-main-nav מוצג רק במובייל כשמתחילים */
+  /* ה-main-nav מוסתר עד שלוחצים על הכפתור */
   .main-nav {
     display: none;
     position: absolute;
@@ -285,9 +280,12 @@ body, html {
     width: 100%;
   }
 
+  /* התפריט ייפתח כשנוסף אליו class open */
   .main-nav.open {
-    display: block; /* מציג את התפריט כשנלחץ על כפתור התפריט */
+    display: block;
   }
+}
+
 }
 
 main {
