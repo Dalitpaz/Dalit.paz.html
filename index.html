@@ -17,6 +17,73 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <!-- CSS -->    
 <style>
+	/* עיצוב הכללי של ה-header */
+header {
+  display: flex;
+  align-items: center; /* מיישר את הלוגו והתפריט לגובה */
+  justify-content: space-between; /* יוצר רווח בין הלוגו לתפריט */
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  width: 60px; /* גודל הלוגו */
+  height: 60px;
+  margin-right: 20px; /* מרווח קטן לימין הלוגו */
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px; /* מרווח קטן בין פריטי התפריט */
+  align-items: center; /* מיישר את פריטי התפריט לגובה */
+}
+
+/* הצגת תפריט וניהולו */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+/* במובייל */
+@media (max-width: 768px) {
+  header {
+    justify-content: flex-start; /* לא משנה את המיקום של התפריט */
+    flex-direction: row; /* שומר את הלוגו והתפריט באותו קו */
+  }
+
+  .main-nav ul {
+    display: none; /* מסתיר את התפריט כברירת מחדל */
+    position: absolute;
+    top: 60px; /* קרוב ללוגו */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* מרווחים קטנים יותר בין פריטים */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    margin-left: 20px; /* לא קרוב מדי ללוגו */
+  }
+
+  .menu-open .main-nav ul {
+    display: flex; /* מראה את התפריט אחרי לחיצה */
+    flex-direction: column;
+    align-items: flex-start; /* מיישר את פריטי התפריט בצורה אנכית */
+  }
+}
+
 
 	/* עיצוב כללי */
 header {
