@@ -249,7 +249,6 @@
   }
   .menu-item::after {
     content: '';
-    position: absolute;
     left: 0;
     right: 0;
     bottom: -5px;
@@ -266,7 +265,6 @@
     .main-nav {
       display: none;
       width: 100%;
-      position: absolute;
       top: 60px;
       left: 0;
       background-color: #fff;
@@ -363,16 +361,6 @@
         transition: color 0.3s ease-in-out;
     }
 </style>
-
-
-
-	  
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector("header nav");
-        nav.classList.toggle("nav-active");
-      }
-    </script>
   </body>
 </html>
 
