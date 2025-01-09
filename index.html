@@ -296,7 +296,7 @@ header {
 .main-nav {
   display: flex;
   gap: 40px;
-  justify-content: flex-end;
+  justify-content: flex-end; /* תפריט מיושר לימין במחשב */
   align-items: center;
 }
 
@@ -316,33 +316,36 @@ header {
   transform: scale(1.1);
 }
 
+/* התאמות למובייל */
 @media (max-width: 768px) {
   header {
-    position: relative;
+    flex-direction: column; /* הופך את הפריסה למבנה אנכי */
+    align-items: flex-start; /* מבטיח שהתפריט והלוגו מיושרים לשמאל */
   }
 
   .menu-toggle {
     display: block;
+    align-self: flex-end; /* מיישר את כפתור התפריט לימין */
   }
 
   .main-nav {
-    display: none;
+    display: none; /* תפריט מוסתר כברירת מחדל */
     position: absolute;
     top: 60px;
-    left: 0;
-    right: 0;
+    right: 0; /* מעביר את התפריט לצד ימין */
     background-color: #fff;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* משנה את התפריט לאנכי */
     transition: all 0.3s ease-in-out;
   }
 
   .main-nav.open {
-    display: block;
+    display: flex;
   }
 
   .logo-container img {
-    max-width: 100px;
+    max-width: 100px; /* מקטין את הלוגו במובייל */
   }
 
   .menu-link {
@@ -354,6 +357,7 @@ header {
   }
 }
 </style>
+
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 30px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- תמונה -->
