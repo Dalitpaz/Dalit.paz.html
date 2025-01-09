@@ -196,6 +196,19 @@ function toggleMenu() {
         const nav = document.querySelector("header nav");
         nav.classList.toggle("nav-active");
       }
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeIcon = document.getElementById("close-icon");
+
+    menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.add("open");
+    });
+
+    closeIcon.addEventListener("click", function () {
+        mobileMenu.classList.remove("open");
+    });
+});
 
 </script>
 
@@ -597,19 +610,4 @@ body {
 }
 
 </style>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const closeIcon = document.getElementById("close-icon");
 
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.add("open");
-    });
-
-    closeIcon.addEventListener("click", function () {
-        mobileMenu.classList.remove("open");
-    });
-});
-
-</script>
