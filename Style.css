@@ -1,7 +1,3 @@
-
-	  <style>
-
-	  <style>
 		  
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
@@ -268,9 +264,6 @@ body, html {
     display: none;
   }
 }
-
-  </style>
-
     .menu a {
         color: white;
         display: block;
@@ -952,10 +945,6 @@ body, html {
       background-color: transparent;
     }
   }
-</style>
-
-
-
 
 img {
   width: 100%; /* ההתאמה לרוחב של המיכל */
@@ -1204,12 +1193,6 @@ header {
     .social-links li {
       margin: 10px 0;
     }
-  </style>
-</head>
-<body>
-
-background-image: url('https://drive.google.com/uc?id=FILE_ID');
-
 
 /* עיצוב ברירת מחדל */
 .logo-img {
@@ -1304,44 +1287,6 @@ header nav ul li a:hover {
     width: 150px; /* גודל גדול יותר עבור מסכים רחבים */
   }
 }
-.video.section {
-  background-image: url("assets\images\video-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.video.section {
-  background-image: url('path-to-your-image.jpg'); /* החלף את הנתיב לנתיב לתמונה שלך */
-  background-size: contain; /* משנה את גודל התמונה כך שתתאים למסגרת */
-  background-position: center; /* ממקם את התמונה במרכז */
-  background-repeat: no-repeat; /* מונע חזרה של התמונה */
-  width: 50%; /* או קבע גודל ספציפי אם צריך */
-  height: 300px; /* קבע את הגובה הרצוי */
-}
-
-
-
-
-<style>
-  .bright-image {
-    filter: brightness(1.5); /* ערך גבוה מ-1 מבהיר את התמונה */
-    transition: 0.3s; /* אפקט מעבר חלק */
-  }
-
-  .bright-image:hover {
-    filter: brightness(2); /* הדגשה נוספת בעת ריחוף */
-  }
-</style>
-
-.video.section {
-  background-image: url("assets\images\video-bg.jpg"); /* החלף בנתיב לתמונה שלך */
-  background-size: cover; /* או contain, תלוי איך אתה רוצה שהתמונה תוצג */
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 400px; /* התאמת גובה */
-}
-
-
 
 /* סגנון לתמונת הלוגו */
 .logo {
@@ -1376,25 +1321,6 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* תוכן נוסף */
-.content {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #555;
-}
-
-
-.video.section {
-    background-image: url('assets/images/video-bg.jpg'); /* נתיב לתמונת הרקע */
-    background-size: cover; /* ממלא את המסגרת בלי לעבור את גבולותיה */
-    background-position: center; /* ממקם את התמונה במרכז */
-    background-repeat: no-repeat; /* מונע חזרה של התמונה */
-    width: 100%; /* התאמת רוחב למסגרת */
-    height: 300px; /* גובה מותאם (שנה לפי הצורך) */
-    border: 1px solid #ddd; /* מסגרת לדוגמה, לא חובה */
-}
-
-<style>
     .main-content img {
         max-width: 80%; /* הקטנת התמונה הגדולה */
         height: auto;
