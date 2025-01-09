@@ -291,6 +291,33 @@ header {
   display: none; /* מוסתר כברירת מחדל */
 }
 
+/* תפריט במחשב */
+.main-nav ul {
+  display: flex; /* התפריט מוצג תמיד במחשב */
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.main-nav ul li {
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* תפריט בנייד */
 @media (max-width: 768px) {
   .logo-container {
     flex: 1;
@@ -304,19 +331,22 @@ header {
     cursor: pointer;
     position: absolute;
     top: 15px;
-    right: 20px; /* כפתור בצד ימין */
+    right: 20px;
   }
 
   .main-nav ul {
-    display: none; /* תפריט מוסתר כברירת מחדל */
+    display: none; /* התפריט מוסתר בנייד */
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .main-nav ul.open {
-    display: block; /* תפריט פתוח */
-    background-color: #fff;
-    width: 100%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* התפריט מוצג אחרי שלחצת על כפתור התפריט */
   }
 
   .menu-link {
@@ -338,7 +368,7 @@ header {
 <script>
   function toggleMenu() {
     const menu = document.querySelector('.main-nav ul');
-    menu.classList.toggle('open');
+    menu.classList.toggle('open'); // מוסיף ומסיר את המחלקה "open" כדי להציג את התפריט
 
     const toggleButton = document.querySelector('.menu-toggle');
     toggleButton.classList.toggle('open');
