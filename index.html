@@ -246,60 +246,45 @@ body, html {
   </nav>
 
 </header>
-
-	  
-
 <style>
-	@media (min-width: 769px) {
-  .main-nav {
-    display: flex; /* הצגת התפריט ברוחב מסך מעל 768px */
-    gap: 40px; /* מרווחים בין הפריטים */
-    justify-content: flex-end; /* יישור התפריט לימין */
-    align-items: center;
-  }
+	  
+/* תפריט ברירת מחדל במחשב */
+.main-nav {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-
-
-.main-nav.open {
-  display: block; /* מוצג לאחר לחיצה */
-  position: absolute;
-  top: 60px; /* התאימי לגובה ה-header */
-  right: 0;
-  background-color: white;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
+/* כפתור תפריט למובייל */
 .menu-toggle {
-  display: none; /* מוסתר במחשב */
+  display: none;
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* מוצג רק במובייל */
+    display: block; /* כפתור מוצג רק במובייל */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
-}
 
-
-  /* ה-main-nav מוסתר עד שלוחצים על הכפתור */
   .main-nav {
-    display: none;
+    display: none; /* תפריט מוסתר כברירת מחדל */
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* התפריט ייפתח כשנוסף אליו class open */
   .main-nav.open {
-    display: block;
+    display: block; /* תפריט מוצג כשנוסף המחלקה open */
   }
-
+}
 
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
