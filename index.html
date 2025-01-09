@@ -17,112 +17,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <!-- CSS -->    
 
+<!-- CSS -->    
+
 <style>
-	/* עיצוב כללי ללוגו */
-.logo-container img {
-  max-width: 100%; /* ודא שהלוגו לא יחרוג מהשטח הזמין */
-  height: auto; /* שומר על היחס בין הגובה והרוחב */
-}
-
-/* הגדרות מיוחדות לנייד */
-@media (max-width: 768px) {
-  .logo-container {
-    width: 60px; /* גודל קבוע ללוגו בנייד */
-    height: 60px;
-    margin: 0 auto; /* ממרכז את הלוגו */
-  }
-
-  .logo-container img {
-    width: 100%; /* מתאים את התמונה לגודל הקונטיינר */
-    height: auto;
-  }
-}
-
-  /* עיצוב כללי לתפריט */
-  .main-nav {
-    display: flex;
-    align-items: center;
-  }
-  .main-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 40px;
-  }
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  /* תפריט בנייד - מוסתר כברירת מחדל */
-  .menu-toggle {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-  }
-
-  .menu-toggle.open {
-    color: #333;
-  }
-
-  .main-nav ul {
-    display: relative;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 15px;
-    gap: 20px;
-    z-index: 1000;
-  }
-
-  .main-nav ul.open {
-    display: flex;
-  }
-
-  .menu-item {
-    text-align: center;
-  }
-
-  /* עיצוב למסכים גדולים */
-  @media (min-width: 768px) {
-    .menu-toggle {
-      display: relative;
-    }
-
-    .main-nav ul {
-      display: flex;
-      position: static;
-      flex-direction: row;
-      box-shadow: none;
-      padding: 0;
-      gap: 40px;
-    }
-
-	body {
-  margin-top: -30px; /* מקטין את המרווח */
-}
-
-	body {
-  margin: 0;
-  padding: 0;
-}
-header {
-  margin: 0;
-  padding: 0;
-}
-
 main {
-  margin-top: 20px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
 body, html {
   height: 100%;
@@ -133,7 +32,7 @@ body, html {
 
       /* אפקט רקע זז */
       .scroll-background {
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -187,8 +86,8 @@ body, html {
         nav ul {
           flex-direction: column;
           background: rgba(0, 0, 0, 0.8);
-          padding: 10px;
-          position: relative;
+          padding: 20px;
+          position: absolute;
           top: 60px;
           left: 20px;
           border-radius: 10px;
@@ -215,11 +114,11 @@ body, html {
         font-family: 'Cinzel', serif;
         font-weight: bold;
         text-transform: uppercase;
-        background: linear-gradient(125deg, #16a085, #1abc9c);
-        padding: 15px 10px;
-        border-radius: 10px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-        margin: 10px 0;
+        background: linear-gradient(135deg, #16a085, #1abc9c);
+        padding: 15px 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        margin: 30px 0;
       }
 
       .section-title span {
@@ -233,7 +132,7 @@ body, html {
         color: #34495e;
         line-height: 1.8;
         margin-bottom: 30px;
-        padding: 10px;
+        padding: 20px;
         background-color: #ecf0f1;
         border-left: 5px solid #16a085;
         border-radius: 10px;
