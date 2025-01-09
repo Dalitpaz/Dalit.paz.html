@@ -282,55 +282,8 @@ body, html {
 </div>
   </nav>
 </header>
-	  
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mainNav = document.querySelector('.main-nav');
-  const overlay = document.querySelector('.overlay');
-
-  // פתיחה/סגירה של התפריט
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open'); // הוספת/הסרת מחלקה "open"
-    overlay.classList.toggle('open'); // הצגת כיסוי כהה
-  });
-
-  // סגירת התפריט בלחיצה על הכיסוי
-  overlay.addEventListener('click', () => {
-    mainNav.classList.remove('open'); // הסרת מחלקה "open"
-    overlay.classList.remove('open'); // הסרת הכיסוי
-  });
-});
-
-	function toggleMenu() {
-  const nav = document.querySelector('.main-nav');
-  const menuButton = document.querySelector('.menu-toggle');
-  const closeButton = document.querySelector('.close-btn');
-
-  nav.classList.toggle('open'); // פותח או סוגר את התפריט
-  menuButton.classList.toggle('open'); // אם
-
-	const menuToggle = document.querySelector('.menu-toggle');
-const mainNav = document.querySelector('.main-nav');
-const navOverlay = document.createElement('div');
-navOverlay.classList.add('nav-overlay');
-document.body.appendChild(navOverlay);
-
-menuToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('active');
-  navOverlay.classList.toggle('active');
-});
-
-navOverlay.addEventListener('click', () => {
-  mainNav.classList.remove('active');
-  navOverlay.classList.remove('active');
-});
-  // פונקציה שתפתח ותסגור את התפריט בנייד
-  function toggleMenu() {
-    const menu = document.querySelector('.main-nav');
-    menu.classList.toggle('open');
-  }
-		function toggleMenu() {
+<script>	  
+function toggleMenu() {
   var menuList = document.querySelector('.menu-list');
   var xIcon = document.querySelector('.x-icon');
   var barsIcon = document.querySelector('.bars');
@@ -338,18 +291,17 @@ navOverlay.addEventListener('click', () => {
   // אם התפריט פתוח, סגור אותו
   if (menuList.classList.contains('open')) {
     menuList.classList.remove('open');
-    barsIcon.style.display = 'block';
-    xIcon.style.display = 'none';
+    barsIcon.style.display = 'block';  // להחזיר את הפסים
+    xIcon.style.display = 'none';     // להסתיר את ה-X
   } else {
     // אם התפריט סגור, פתח אותו
     menuList.classList.add('open');
-    barsIcon.style.display = 'none';
-    xIcon.style.display = 'block';
+    barsIcon.style.display = 'none';   // להסתיר את הפסים
+    xIcon.style.display = 'block';    // להציג את ה-X
   }
 }
 
 </script>
-
 	  <style>
 
 		  /* תפריט שולחן עבודה */
