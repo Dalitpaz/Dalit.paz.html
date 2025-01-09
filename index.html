@@ -167,6 +167,27 @@ body, html {
 
 	
   <style>
+
+	  .main-nav {
+  display: none; /* מוסתר כברירת מחדל */
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: block; /* מוצג רק כאשר הכפתור מופעל */
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
     /* Overlay כהה */
     .overlay {
       display: none;
