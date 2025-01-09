@@ -614,21 +614,24 @@ body, html {
     }
 </style>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButton = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('.main-nav ul');
-      const overlay = document.querySelector('.overlay');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const overlay = document.querySelector('.overlay');
 
-      toggleButton.addEventListener('click', function () {
-        menu.classList.toggle('open');
-        overlay.classList.toggle('open');  // אם יש overlay מסך כהה
-      });
+  // פתיחה/סגירה של התפריט
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open'); // הוספת/הסרת מחלקה "open"
+    overlay.classList.toggle('open'); // הצגת כיסוי כהה
+  });
 
-      overlay.addEventListener('click', function() {
-        menu.classList.remove('open');
-        overlay.classList.remove('open');
-      });
-    });
+  // סגירת התפריט בלחיצה על הכיסוי
+  overlay.addEventListener('click', () => {
+    mainNav.classList.remove('open'); // הסרת מחלקה "open"
+    overlay.classList.remove('open'); // הסרת הכיסוי
+  });
+});
+
   </script>
   </body>
 </html>
