@@ -267,10 +267,10 @@ body, html {
 
 </header>
 <style>
-	/* עיצוב ה-header */
+/* עיצוב ה-header */
 header {
   display: flex;
-  justify-content: space-between; /* מרחיק את הלוגו וכפתור התפריט אחד מהשני */
+  justify-content: space-between; /* מרחיק את הלוגו והתפריט */
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
@@ -278,63 +278,21 @@ header {
 }
 
 /* עיצוב הלוגו */
-.logo-container {
-  flex-shrink: 0; /* מונע מהלוגו להקטן */
-}
-
 .logo-container img {
-  max-width: 120px; /* הגדרת גודל מקסימלי ללוגו */
+  max-width: 120px;
   height: auto;
 }
 
 /* כפתור תפריט למובייל */
 .menu-toggle {
-  display: none; /* מוסתר כברירת מחדל */
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  header {
-    position: relative; /* מוודא שכל האלמנטים יישארו בתוך ה-header */
-  }
-
-  .menu-toggle {
-    display: block; /* מציג את כפתור התפריט במובייל */
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .main-nav {
-    display: none; /* תפריט מוסתר כברירת מחדל */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .main-nav.open {
-    display: block; /* מציג את התפריט לאחר לחיצה */
-  }
-
-  .logo-container img {
-    max-width: 100px; /* מקטין את הלוגו במובייל */
-  }
-}
-
-/* תפריט ברירת מחדל במחשב */
-.main-nav {
-  display: flex; /* מציג את התפריט בצורה אופקית במחשב */
-  gap: 40px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-	  
-/* תפריט ברירת מחדל במחשב */
+/* תפריט */
 .main-nav {
   display: flex;
   gap: 40px;
@@ -342,22 +300,33 @@ header {
   align-items: center;
 }
 
-/* כפתור תפריט למובייל */
-.menu-toggle {
-  display: none;
+/* עיצוב לינקים */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+
   .menu-toggle {
-    display: block; /* כפתור מוצג רק במובייל */
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: block;
   }
 
   .main-nav {
-    display: none; /* תפריט מוסתר כברירת מחדל */
+    display: none;
     position: absolute;
     top: 60px;
     left: 0;
@@ -365,89 +334,27 @@ header {
     background-color: #fff;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
   }
 
   .main-nav.open {
-    display: block; /* תפריט מוצג כשנוסף המחלקה open */
+    display: block;
   }
-}
 
-main {
-  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
+  .logo-container img {
+    max-width: 100px;
+  }
 
-body, html {
-  height: 100%;
-  overflow-y: auto; /* אפשר גלילה */
-  margin: 0;
-  position: relative;
-  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
-}
-
-  /* תפריט עכבר */
   .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
   }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
+}
 </style>
+
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 30px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- תמונה -->
     <div style="flex: 1; max-width: 500px;">
