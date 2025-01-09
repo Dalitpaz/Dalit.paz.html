@@ -266,7 +266,7 @@ body, html {
   </nav>
 
 </header>
-	  <style>
+<style>
 /* עיצוב ה-header */
 header {
   display: flex;
@@ -287,7 +287,7 @@ header {
   height: auto;
 }
 
-/* תפריט */
+/* עיצוב התפריט */
 .main-nav {
   display: flex;
   gap: 20px; /* רווח בין פריטי התפריט */
@@ -322,8 +322,61 @@ header {
 /* התאמות למובייל */
 @media (max-width: 768px) {
   header {
-    justify-content: space-between; /* הלוגו בצד שמאל וכפתור הת
-	  </style>
+    justify-content: space-between; /* הלוגו בצד שמאל וכפתור התפריט בצד ימין */
+  }
+
+  .menu-toggle {
+    display: block; /* מציג את כפתור התפריט במובייל */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: none; /* תפריט מוסתר כברירת מחדל */
+    position: absolute;
+    top: 60px;
+    right: 0; /* תפריט מופיע בצד ימין במובייל */
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* הופך את התפריט לאנכי */
+    align-items: flex-start; /* מיושר לשמאל */
+    padding: 10px;
+    z-index: 999; /* לוודא שהתפריט יהיה מעל כל תוכן אחר */
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .logo-container img {
+    max-width: 100px; /* מקטין את הלוגו במובייל */
+  }
+
+  .menu-link {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #eee; /* קו תחתון בין פריטי התפריט */
+  }
+
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* תיקון רווחים בין פריטי התפריט */
+  .main-nav .menu-item {
+    width: 100%; /* כל פריט יהיה בגובה מלא */
+  }
+}
+</style>
 
 
 
