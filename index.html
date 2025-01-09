@@ -330,6 +330,24 @@ navOverlay.addEventListener('click', () => {
     const menu = document.querySelector('.main-nav');
     menu.classList.toggle('open');
   }
+		function toggleMenu() {
+  var menuList = document.querySelector('.menu-list');
+  var xIcon = document.querySelector('.x-icon');
+  var barsIcon = document.querySelector('.bars');
+
+  // אם התפריט פתוח, סגור אותו
+  if (menuList.classList.contains('open')) {
+    menuList.classList.remove('open');
+    barsIcon.style.display = 'block';
+    xIcon.style.display = 'none';
+  } else {
+    // אם התפריט סגור, פתח אותו
+    menuList.classList.add('open');
+    barsIcon.style.display = 'none';
+    xIcon.style.display = 'block';
+  }
+}
+
 </script>
 
 	  <style>
