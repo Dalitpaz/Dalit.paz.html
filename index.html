@@ -312,10 +312,9 @@ navOverlay.addEventListener('click', () => {
 	
   <style>
 
-		  
 /* עיצוב בסיסי ללוגו במחשב */
 .logo-container img {
-  width: 80px; /* גודל קבוע למחשב */
+  width: 100px; /* גודל קבוע למחשב */
   height: auto;
 }
 
@@ -331,7 +330,7 @@ navOverlay.addEventListener('click', () => {
 
   /* החבאת התפריט בנייד */
   .main-nav {
-    display: none;
+    display: none; /* מוסתר ברירת מחדל */
     position: absolute;
     top: 60px; /* המרחק מהחלק העליון של המסך */
     right: 0;
@@ -350,6 +349,45 @@ navOverlay.addEventListener('click', () => {
     flex-direction: column; /* עיצוב התפריט בתור ורטיקלי בנייד */
     gap: 20px;
   }
+}
+
+/* עיצוב בסיסי לתפריט */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: none; /* מוסתר במחשב */
+}
+
+.main-nav {
+  display: flex; /* גלוי במחשב */
+  gap: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
 }
 
 /* עיצוב בסיסי לתפריט */
