@@ -302,6 +302,7 @@ function toggleMenu() {
 }
 
 </script>
+
 	  <style>
 /* עיצוב הכללי של התפריט */
 .menu {
@@ -341,7 +342,7 @@ function toggleMenu() {
   background-color: #575757; /* צבע רקע בהעברה */
 }
 
-/* עיצוב לפסים */
+/* עיצוב לפסים במובייל */
 .bars {
   font-size: 30px;
   cursor: pointer;
@@ -349,12 +350,12 @@ function toggleMenu() {
   display: block;
 }
 
-/* עיצוב ל-X */
+/* עיצוב ל-X - נסתר במחשב */
 .x-icon {
   font-size: 30px;
   color: white;
   cursor: pointer;
-  display: none; /* בהתחלה נסתר */
+  display: none; /* נסתר במחשב */
 }
 
 /* תפריט נייד */
@@ -402,162 +403,6 @@ function toggleMenu() {
   .menu-toggle .bars {
     display: none;
   }
-}
-
-
-
-		  /* תפריט שולחן עבודה */
-.desktop-menu {
-  display: block;
-}
-
-/* תפריט נייד */
-.mobile-menu {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  /* רק בגרסת המובייל */
-  .desktop-menu {
-    display: none; /* נסתר בגרסת נייד */
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  .menu-list {
-    display: none;
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .bars {
-    font-size: 30px;
-  }
-
- 
-
-  .menu-list.open {
-    display: block;
-  }
-}
-
-/* עיצוב בסיסי */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.menu-toggle {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* מוסתר במחשב */
-}
-
-.main-nav {
-  display: flex; /* גלוי במחשב */
-  gap: 20px;
-}
-
-/* עיצוב תפריט במחשב */
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  gap: 40px;
-  align-items: center;
-}
-
-.main-nav li {
-  margin: 0 10px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-}
-
-/* עיצוב לנייד */
-@media (max-width: 768px) {
-  /* כפתור תפריט */
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    margin-left: auto; /* מוודא שהוא בצד ימין */
-  }
-
-  /* תפריט נייד מוסתר ברירת מחדל */
-  .main-nav {
-    display: none; /* מוסתר כברירת מחדל */
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    padding-top: 60px;
-  }
-
-  /* הצגת התפריט כאשר הכפתור נלחץ */
-  .main-nav.open {
-    display: flex;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .main-nav ul li {
-    text-align: center;
-    padding: 15px;
-    font-size: 20px;
-    width: 100%;
-  }
-
-  .main-nav a {
-    font-size: 18px;
-  }
-
-  /* Overlay כהה */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-
-  .overlay.active {
-    display: block;
-  }
-}
-
-.menu-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-link:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
 }
   </style>
 
