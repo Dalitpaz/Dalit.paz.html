@@ -333,6 +333,47 @@ navOverlay.addEventListener('click', () => {
 </script>
 
 	  <style>
+
+		  /* תפריט שולחן עבודה */
+.desktop-menu {
+  display: block;
+}
+
+/* תפריט נייד */
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* רק בגרסת המובייל */
+  .desktop-menu {
+    display: none; /* נסתר בגרסת נייד */
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .bars {
+    font-size: 30px;
+  }
+
+  .x-icon {
+    font-size: 30px;
+    display: none;
+  }
+
+  .menu-list.open {
+    display: block;
+  }
+}
+
 /* עיצוב בסיסי */
 header {
   display: flex;
