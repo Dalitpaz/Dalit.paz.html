@@ -184,6 +184,46 @@ document.addEventListener('DOMContentLoaded', () => {
   </script>
 	
   <style>
+	  header {
+  display: flex;
+  justify-content: space-between; /* מיקום לוגו ותפריט */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* מוסתר ברזולוציות גדולות */
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  /* כפתור תפריט לימין רק בנייד */
+  .menu-toggle {
+    display: block; /* כפתור התפריט מופיע בנייד */
+    margin-left: auto; /* מוודא שהוא בצד ימין */
+  }
+
+  .main-nav {
+    display: none; /* תפריט מוסתר כברירת מחדל בנייד */
+    flex-direction: column;
+    text-align: right; /* מיישר את הפריטים לימין */
+  }
+
+  .main-nav.active {
+    display: flex; /* מציג את התפריט כשהוא פעיל */
+  }
+}
+
 
 .menu-toggle {
   font-size: 24px;
