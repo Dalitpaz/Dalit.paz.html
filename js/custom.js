@@ -13,6 +13,11 @@
 </script>
 
 
+	function toggleMenu() {
+  const nav = document.querySelector('.main-nav');
+  nav.classList.toggle('open'); // מוסיף/מסיר את המחלקה 'open'
+}
+
 (function ($) {
 	
 	"use strict";
