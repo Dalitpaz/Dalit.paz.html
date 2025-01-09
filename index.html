@@ -233,6 +233,33 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 	  <style>
+
+
+		  /* תפריט רגיל - יופיע רק במסכים גדולים */
+.main-nav {
+  display: flex;
+}
+
+.hamburger-menu,
+.mobile-nav {
+  display: none;
+}
+
+/* תפריט פסים למובייל */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+}
+
 		  /* עיצוב כללי */
 body {
     font-family: Arial, sans-serif;
