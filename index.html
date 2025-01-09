@@ -184,6 +184,46 @@ document.addEventListener('DOMContentLoaded', () => {
   </script>
 	
   <style>
+	  header {
+  display: flex;
+  justify-content: space-between; /* מפזר את האלמנטים בצורה שווה */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  direction: rtl; /* מסדר את התצוגה מימין לשמאל */
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* מוסתר ברזולוציות גדולות */
+  margin-left: auto; /* מיישר את הכפתור לימין */
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור התפריט ברזולוציות קטנות */
+  }
+
+  .main-nav {
+    display: none; /* מסתיר את התפריט כברירת מחדל */
+    flex-direction: column;
+    text-align: right; /* מיישר את הפריטים בתוך התפריט לימין */
+  }
+
+  .main-nav.active {
+    display: flex; /* מציג את התפריט כשהוא פעיל */
+  }
+}
+
 
 	  .main-nav {
   display: none; /* מוסתר כברירת מחדל */
