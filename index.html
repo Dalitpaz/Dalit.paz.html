@@ -292,6 +292,82 @@ function toggleMenu() {
 </script>
 
 	  <style>
+		  
+main {
+  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* אפשר גלילה */
+  margin: 0;
+  position: relative;
+  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
+}
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* עיצוב תפריט בקטגוריות */
+  .menu-item {
+    position: relative;
+  }
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .menu-item:hover::after {
+    background-color: #5A4FCF;
+  }
+
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
 /* עיצוב הכללי של התפריט */
 .menu {
   background-color: #333; /* צבע רקע כהה */
