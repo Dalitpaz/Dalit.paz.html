@@ -177,7 +177,21 @@ function toggleMenu() {
     xIcon.style.display = 'block';    // להציג את ה-X
   }
 }
-	
+
+	document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", function () {
+        menu.classList.add("open");
+    });
+
+    closeIcon.addEventListener("click", function () {
+        menu.classList.remove("open");
+    });
+});
+
 	function toggleMenu() {
         const nav = document.querySelector("header nav");
         nav.classList.toggle("nav-active");
