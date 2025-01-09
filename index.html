@@ -320,106 +320,43 @@ navOverlay.addEventListener('click', () => {
   }
 </script>
 
-	
-  <style>
+	  <style>
 
-	  /* עיצוב לתפריט */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1000;
+/* עיצוב בסיסי למחשב */
+.menu {
+    /* עיצוב רגיל למחשב */
+    background-color: #333;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    text-align: center;
 }
 
-.logo-container img {
-  width: 100px;
-  height: auto;
-}
-
-.menu-toggle {
-  font-size: 30px;
-  background-color: #007BFF; /* צבע פתריט פסים */
-  color: #fff;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: block; /* רק בנייד */
-}
-
-.close-btn {
-  display: none; /* כפתור X מוסתר בהתחלה */
-  font-size: 30px;
-  background-color: transparent;
-  color: #333;
-  border: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.main-nav {
-  display: none; /* תפריט מוסתר בהתחלה */
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  border-radius: 8px;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: center;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.main-nav a:hover {
-  background-color: #007BFF;
-  color: #fff;
-}
-
-/* הצגת התפריט ו-X רק בנייד */
+/* עיצוב חדש לנייד בלבד */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+    .menu {
+        background-color: #007BFF; /* צבע רקע חדש */
+        font-size: 18px; /* גודל גופן גדול יותר */
+        padding: 20px;
+        color: white;
+        text-align: left;
+        border-radius: 10px; /* פינות מעוגלות */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צלליות להוספת עומק */
+    }
 
-  .main-nav.open {
-    display: block; /* הצגת התפריט */
-  }
+    .menu a {
+        color: white;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
 
-  .close-btn {
-    display: block; /* הצגת כפתור X */
-  }
+    .menu a:hover {
+        background-color: #0056b3; /* צבע רקע בעת ריחוף */
+    }
 }
 
-/* עיצוב בסיסי ללוגו במחשב */
-.logo-container img {
-  width: 80px; /* גודל קבוע למחשב */
-  height: auto;
-}
 
 /* עיצוב עבור נייד */
 @media (max-width: 768px) {
