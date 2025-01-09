@@ -247,8 +247,7 @@ body, html {
   </head>
   <body>
 	  
-
-<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; display: flex; justify-content: flex-start; align-items: center;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -266,6 +265,17 @@ body, html {
     </ul>
   </nav>
 </header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.main-nav ul');
+    menu.classList.toggle('open'); // הוספת או הסרת המחלקה 'open' מהתפריט
+
+    const toggleButton = document.querySelector('.menu-toggle');
+    toggleButton.classList.toggle('open');
+  }
+</script>
+
 
 <script>
   function toggleMenu() {
