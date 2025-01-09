@@ -167,6 +167,68 @@ body, html {
 
 	
 <style>
+
+	/* עיצוב תפריט בנייד */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* תפריט נייד מוסתר ברירת מחדל */
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* מוסתר ברירת מחדל */
+  }
+
+  /* כאשר המחלקה open מוצגת, התפריט יהיה גלוי */
+  .main-nav.open ul {
+    display: block; /* מציג את התפריט */
+  }
+
+  /* אלמנט כיסוי שחור מוסתר אם התפריט לא פתוח */
+  .overlay {
+    display: none;
+  }
+
+  /* שינוי התנהגות של התפריט במובייל */
+  .main-nav ul li {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  /* קישורים בתפריט */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* כל אלמנט אחר שמוסתר בעת סגירת התפריט */
+  .menu-toggle.open {
+    /* אפשרות לעיצוב כפתור לאחר שנלחץ */
+  }
+}
+
   /* עיצוב ה-header */
   header {
     display: flex;
