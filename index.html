@@ -18,6 +18,26 @@
 <!-- CSS -->    
 
 <style>
+	/* עיצוב כללי ללוגו */
+.logo-container img {
+  max-width: 100%; /* ודא שהלוגו לא יחרוג מהשטח הזמין */
+  height: auto; /* שומר על היחס בין הגובה והרוחב */
+}
+
+/* הגדרות מיוחדות לנייד */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 60px; /* גודל קבוע ללוגו בנייד */
+    height: 60px;
+    margin: 0 auto; /* ממרכז את הלוגו */
+  }
+
+  .logo-container img {
+    width: 100%; /* מתאים את התמונה לגודל הקונטיינר */
+    height: auto;
+  }
+}
+
   /* עיצוב כללי לתפריט */
   .main-nav {
     display: flex;
