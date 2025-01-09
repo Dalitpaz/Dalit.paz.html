@@ -288,86 +288,71 @@ body, html {
 </script>
 
 
-<style>
-/* עיצוב ה-header */
+/* עיצוב header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* מוודא שהתפריט והלוגו מופרדים */
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* לוגו */
 .logo-container {
-  flex-shrink: 0;
+  flex-shrink: 0; /* מונע מהלוגו להתכווץ */
 }
 
-.logo-container img {
-  max-width: 120px;
-  height: auto;
+/* תפריט במחשב */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
+.main-nav .menu-item a {
+  text-decoration: none; /* מסיר קו תחתי */
+  color: #333; /* צבע טקסט */
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease; /* הוספת אנימציה למעבר */
+}
+
+.main-nav .menu-item a:hover {
+  color: #5A4FCF; /* צבע בעת ריחוף */
+  text-decoration: underline; /* קו תחתי בעת ריחוף */
+  transform: scale(1.05); /* הגדלת טקסט בעת ריחוף */
+}
+
+/* כפתור תפריט פסים */
 .menu-toggle {
   display: none; /* מוסתר כברירת מחדל */
 }
 
-/* תפריט במחשב */
-.main-nav ul {
-  display: flex; /* התפריט מוצג תמיד במחשב */
-  gap: 20px;
-  justify-content: flex-end;
-}
-
-.main-nav ul li {
-  list-style: none;
-}
-
-.menu-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-link:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
-}
-
-/* תפריט בנייד */
+/* תפריט במובייל */
 @media (max-width: 768px) {
-  .logo-container {
-    flex: 1;
+  /* תפריט במובייל */
+  header {
+    justify-content: space-between; /* מבצע חלוקה בין הלוגו לכפתור התפריט */
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-
-  .main-nav ul {
-    display: none; /* התפריט מוסתר בנייד */
-    background-color: #fff;
-    width: 100%;
+  .main-nav {
+    display: none; /* התפריט מוסתר עד שנלחץ על כפתור */
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 20px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .main-nav ul.open {
-    display: block; /* התפריט מוצג אחרי שלחצת על כפתור התפריט */
+  .menu-toggle {
+    display: block; /* כפתור התפריט מוצג במובייל */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .menu-link {
@@ -376,15 +361,13 @@ header {
     font-size: 20px;
     text-align: center;
     width: 100%;
-    color: #333;
-    text-decoration: none;
   }
 
-  .menu-item:hover {
-    background-color: #f0f0f0;
+  .main-nav.open {
+    display: block; /* מציג את התפריט כאשר יש למחלקה 'open' */
   }
 }
-</style>
+
 
 <script>
   function toggleMenu() {
