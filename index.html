@@ -248,14 +248,15 @@ body, html {
   <body>
 	  
 
-  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
   </div>
 
-<button class="menu-toggle" onclick="toggleMenu()">&#9776;</button> <!-- כפתור תפריט פסים -->
-  <nav class="main-nav">
+  <!-- כפתור תפריט פסים -->
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
   <!-- תפריט -->
   <nav class="main-nav" style="display: inline-block;">
     <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
@@ -264,8 +265,18 @@ body, html {
       <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
     </ul>
   </nav>
-
 </header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.main-nav ul');
+    menu.classList.toggle('open'); // הוספת או הסרת המחלקה 'open' מהתפריט
+
+    const toggleButton = document.querySelector('.menu-toggle');
+    toggleButton.classList.toggle('open');
+  }
+</script>
+
 
 <style>
 /* עיצוב ה-header */
