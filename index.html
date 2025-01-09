@@ -202,10 +202,10 @@ navOverlay.addEventListener('click', () => {
   <style>
 
 
-	  /* עיצוב בסיסי */
+/* עיצוב בסיסי לתפריט במחשב */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* מיקום לוגו ותפריט */
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
@@ -214,76 +214,94 @@ header {
   z-index: 1000;
 }
 
-.logo-container img {
-  width: 60px;
-  height: auto;
+.main-nav {
+  display: flex; /* תפריט גלוי במחשב */
+  gap: 20px;
 }
 
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* כפתור תפריט - מוסתר במחשב */
 .menu-toggle {
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
+  display: none;
 }
 
-.main-nav {
-  position: fixed;
-  top: 0;
-  right: -100%; /* ברירת מחדל מחוץ למסך */
-  width: 70%;
-  height: 100%;
-  background-color: #f7f7f7;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
+/* עיצוב למכשירים ניידים */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור התפריט בנייד */
+    margin-left: auto;
+  }
 
-.main-nav.active {
-  right: 0; /* מופיע כשהתפריט נפתח */
-}
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* מוסתר מחוץ למסך בנייד */
+    width: 70%;
+    height: 100%;
+    background-color: #f7f7f7;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+  }
 
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .main-nav.active {
+    right: 0; /* מציג את התפריט כשהוא פעיל */
+  }
 
-.main-nav li {
-  margin: 20px 0;
-}
+  .main-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.main-nav a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
-  transition: color 0.2s ease-in-out;
-}
+  .main-nav li {
+    margin: 0;
+  }
 
-.main-nav a:hover {
-  color: #007BFF; /* צבע קישור בעת ריחוף */
-}
+  .main-nav a {
+    font-size: 18px;
+    text-align: right;
+  }
 
-/* אפקט רקע כהה */
-.nav-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 1000;
-}
+  /* רקע כהה בעת פתיחת התפריט */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+  }
 
-.nav-overlay.active {
-  opacity: 1;
-  pointer-events: all;
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 	  header {
