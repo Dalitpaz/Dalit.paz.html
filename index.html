@@ -166,8 +166,88 @@ body, html {
 </header>
 
 	
-<style>
+  <style>
+    /* Overlay כהה */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
 
+    /* כפתור תפריט (פאס) */
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* תפריט */
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .main-nav ul.open {
+      display: block;
+    }
+
+    /* עיצוב של התפריט במחשב */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .main-nav ul {
+        display: flex;
+        justify-content: flex-start; /* תפריט בצד שמאל */
+      }
+
+      .overlay {
+        display: none;
+      }
+    }
+
+    /* עיצוב לנייד (תפריט בצד ימין) */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        width: 250px;
+        height: 100%;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+        padding-top: 60px;
+      }
+
+      .main-nav ul.open {
+        display: block;
+      }
+
+      .main-nav ul li {
+        padding: 10px;
+        text-align: right;
+      }
+    }
 	/* עיצוב תפריט בנייד */
 @media (max-width: 768px) {
   .menu-toggle {
