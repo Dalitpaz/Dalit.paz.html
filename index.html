@@ -534,18 +534,22 @@ body, html {
     }
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.main-nav ul');
-    const overlay = document.querySelector('.overlay');
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.main-nav ul');
+      const overlay = document.querySelector('.overlay');
 
-    overlay.addEventListener('click', function() {
+      toggleButton.addEventListener('click', function () {
+        menu.classList.toggle('open');
+        overlay.classList.toggle('open');  // אם יש overlay מסך כהה
+      });
+
+      overlay.addEventListener('click', function() {
         menu.classList.remove('open');
         overlay.classList.remove('open');
       });
     });
   </script>
-</script>
   </body>
 </html>
 
