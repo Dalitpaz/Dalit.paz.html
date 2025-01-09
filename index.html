@@ -21,6 +21,19 @@
 <!-- CSS -->    
 
 <style>
+	/* עיצוב בסיסי ללוגו במחשב */
+.logo-container img {
+  width: 100px; /* גודל קבוע למחשב */
+  height: auto;
+}
+
+/* עיצוב עבור נייד */
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 80px; /* גודל מותאם לנייד */
+  }
+}
+
 	/* עיצוב בסיסי לתפריט */
 header {
   display: flex;
