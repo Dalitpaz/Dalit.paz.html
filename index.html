@@ -272,15 +272,16 @@ body, html {
 }
 
 
+.menu-toggle {
+  display: none; /* מוסתר במחשב */
+}
+
 @media (max-width: 768px) {
-  /* מוצג רק במובייל */
   .menu-toggle {
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: block; /* מוצג רק במובייל */
   }
+}
+
 
   /* ה-main-nav מוסתר עד שלוחצים על הכפתור */
   .main-nav {
