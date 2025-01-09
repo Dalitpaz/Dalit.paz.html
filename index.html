@@ -294,6 +294,10 @@ header {
   align-items: center;
 }
 
+.menu-item {
+  position: relative;
+}
+
 /* לינקים בתפריט */
 .menu-link {
   text-decoration: none;
@@ -376,8 +380,32 @@ header {
     width: 100%; /* כל פריט יהיה בגובה מלא */
   }
 }
-</style>
 
+/* עיצוב ברירת מחדל במחשב */
+.main-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* התפריט בצד שמאל */
+  align-items: center;
+}
+
+/* תפריט עם מעבר חלק */
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::after {
+  background-color: #5A4FCF; /* קו צבעוני תחת פריט בתפריט */
+}
+
+</style>
 
 
 
