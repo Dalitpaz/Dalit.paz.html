@@ -21,6 +21,128 @@
 <!-- CSS -->    
 
 <style>
+	/* עיצוב בסיסי לתפריט */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.logo-container img {
+  width: 50px;
+  height: auto;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: none; /* מוסתר במחשב */
+}
+
+.main-nav {
+  display: flex; /* גלוי במחשב */
+  gap: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* עיצוב מותאם למכשירים ניידים */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג כפתור תפריט */
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #f5f8fa; /* צבע עדין ונקי */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .main-nav.active {
+    right: 0; /* תפריט מוצג */
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .main-nav li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e90ff; /* כחול מקצועי */
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .main-nav a:hover {
+    background-color: #1e90ff; /* כחול כהה יותר */
+    color: #ffffff; /* טקסט לבן */
+  }
+
+  /* רקע כהה בעת פתיחת התפריט */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
 main {
   margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
