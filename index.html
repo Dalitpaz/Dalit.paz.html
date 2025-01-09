@@ -539,11 +539,12 @@ body, html {
     const menu = document.querySelector('.main-nav ul');
     const overlay = document.querySelector('.overlay');
 
-    toggleButton.addEventListener('click', function () {
-      menu.classList.toggle('open');
-      overlay.classList.toggle('open');  // אם יש overlay מסך כהה
+    overlay.addEventListener('click', function() {
+        menu.classList.remove('open');
+        overlay.classList.remove('open');
+      });
     });
-  });
+  </script>
 </script>
   </body>
 </html>
