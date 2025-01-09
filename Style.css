@@ -1,3 +1,713 @@
+	  <style>
+
+/* עיצוב בסיסי למחשב */
+.menu {
+    /* עיצוב רגיל למחשב */
+    background-color: #333;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* עיצוב חדש לנייד בלבד */
+@media (max-width: 768px) {
+    .menu {
+        background-color: #007BFF; /* צבע רקע חדש */
+        font-size: 18px; /* גודל גופן גדול יותר */
+        padding: 20px;
+        color: white;
+        text-align: left;
+        border-radius: 10px; /* פינות מעוגלות */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צלליות להוספת עומק */
+    }
+
+    .menu a {
+        color: white;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+        background-color: #0056b3; /* צבע רקע בעת ריחוף */
+    }
+}
+
+
+/* עיצוב עבור נייד */
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 80px; /* גודל מותאם לנייד */
+  }
+
+  .menu-toggle {
+    display: block; /* הצגת כפתור התפריט בנייד */
+  }
+
+  /* החבאת התפריט בנייד */
+  .main-nav {
+    display: none; /* מוסתר ברירת מחדל */
+    position: absolute;
+    top: 60px; /* המרחק מהחלק העליון של המסך */
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* הצגת התפריט כאשר כפתור הפסים נלחץ */
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column; /* עיצוב התפריט בתור ורטיקלי בנייד */
+    gap: 20px;
+  }
+}
+
+/* עיצוב בסיסי לתפריט */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: none; /* מוסתר במחשב */
+}
+
+.main-nav {
+  display: flex; /* גלוי במחשב */
+  gap: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+
+}
+
+/* עיצוב בסיסי לתפריט */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: none; /* מוסתר במחשב */
+}
+
+.main-nav {
+  display: flex; /* גלוי במחשב */
+  gap: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  margin: 0 10px;
+}
+
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* כפתור תפריט - מוסתר במחשב */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* עיצוב למכשירים ניידים */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור התפריט בנייד */
+    margin-left: auto;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* מוסתר מחוץ למסך בנייד */
+    width: 70%;
+    height: 100%;
+    background-color: #f7f7f7;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .main-nav.active {
+    right: 0; /* מציג את התפריט כשהוא פעיל */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+    text-align: right;
+  }
+
+  /* רקע כהה בעת פתיחת התפריט */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+	  header {
+  display: flex;
+  justify-content: space-between; /* מיקום לוגו ותפריט */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* מוסתר ברזולוציות גדולות */
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  /* כפתור תפריט לימין רק בנייד */
+  .menu-toggle {
+    display: block; /* כפתור התפריט מופיע בנייד */
+    margin-left: auto; /* מוודא שהוא בצד ימין */
+  }
+
+  .main-nav {
+    display: none; /* תפריט מוסתר כברירת מחדל בנייד */
+    flex-direction: column;
+    text-align: right; /* מיישר את הפריטים לימין */
+  }
+
+  .main-nav.active {
+    display: flex; /* מציג את התפריט כשהוא פעיל */
+  }
+}
+
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* מוסתר ברזולוציות גדולות */
+  margin-left: auto; /* מיישר את הכפתור לימין */
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור התפריט ברזולוציות קטנות */
+  }
+
+  .main-nav {
+    display: none; /* מסתיר את התפריט כברירת מחדל */
+    flex-direction: column;
+    text-align: right; /* מיישר את הפריטים בתוך התפריט לימין */
+  }
+
+  .main-nav.active {
+    display: flex; /* מציג את התפריט כשהוא פעיל */
+  }
+}
+
+
+	  .main-nav {
+  display: none; /* מוסתר כברירת מחדל */
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: block; /* מוצג רק כאשר הכפתור מופעל */
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+    /* Overlay כהה */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    /* כפתור תפריט (פאס) */
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* תפריט */
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .main-nav ul.open {
+      display: block;
+    }
+
+    /* עיצוב של התפריט במחשב */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .main-nav ul {
+        display: flex;
+        justify-content: flex-start; /* תפריט בצד שמאל */
+      }
+
+      .overlay {
+        display: none;
+      }
+    }
+
+    /* עיצוב לנייד (תפריט בצד ימין) */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        width: 250px;
+        height: 100%;
+        box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+        padding-top: 60px;
+      }
+
+      .main-nav ul.open {
+        display: block;
+      }
+
+      .main-nav ul li {
+        padding: 10px;
+        text-align: right;
+      }
+    }
+	/* עיצוב תפריט בנייד */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* תפריט נייד מוסתר ברירת מחדל */
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* מוסתר ברירת מחדל */
+  }
+
+  /* כאשר המחלקה open מוצגת, התפריט יהיה גלוי */
+  .main-nav.open ul {
+    display: block; /* מציג את התפריט */
+  }
+
+  /* אלמנט כיסוי שחור מוסתר אם התפריט לא פתוח */
+  .overlay {
+    display: none;
+  }
+
+  /* שינוי התנהגות של התפריט במובייל */
+  .main-nav ul li {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  /* קישורים בתפריט */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* כל אלמנט אחר שמוסתר בעת סגירת התפריט */
+  .menu-toggle.open {
+    /* אפשרות לעיצוב כפתור לאחר שנלחץ */
+  }
+}
+
+  /* עיצוב ה-header */
+  header {
+    display: flex;
+    justify-content: space-between; /* מרחיק את הלוגו וכפתור התפריט אחד מהשני */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* עיצוב הלוגו */
+  .logo-container {
+    flex-shrink: 0;
+  }
+
+  .logo-container img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  /* כפתור תפריט למובייל */
+  .menu-toggle {
+    display: none; /* מוסתר כברירת מחדל */
+  }
+
+  /* עיצוב תפריט ברירת מחדל במחשב */
+  .main-nav {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none; /* מוסתר כברירת מחדל בנייד */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .main-nav.open {
+      display: block; /* תפריט מוצג לאחר לחיצה */
+    }
+
+    .menu-toggle {
+      display: block; /* מציג את כפתור התפריט במובייל */
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+      border: none;
+    }
+
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
+
+main {
+  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* אפשר גלילה */
+  margin: 0;
+  position: relative;
+  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
+}
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* עיצוב תפריט בקטגוריות */
+  .menu-item {
+    position: relative;
+  }
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .menu-item:hover::after {
+    background-color: #5A4FCF;
+  }
+
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
+/* לוגו */
+.logo-container {
+  flex-shrink: 0; /* מונע מהלוגו להתכווץ */
+}
+
+/* תפריט במחשב */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+/* כפתור תפריט פסים */
+.menu-toggle {
+  display: none; /* מוסתר כברירת מחדל */
+}
+
+/* תפריט במובייל */
+@media (max-width: 768px) {
+  /* תפריט במובייל */
+  header {
+    justify-content: space-between; /* מבצע חלוקה בין הלוגו לכפתור התפריט */
+  }
+
+  .main-nav {
+    display: none; /* התפריט מוסתר עד שנלחץ על כפתור */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle {
+    display: block; /* כפתור התפריט מוצג במובייל */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* עיצוב תפריט בקטגוריות */
+  .menu-item {
+    position: relative;
+  }
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .menu-item:hover::after {
+    background-color: #5A4FCF;
+  }
+
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
+</style>
+
+
+
+
 img {
   width: 100%; /* ההתאמה לרוחב של המיכל */
   height: auto; /* שמירה על יחס הגובה-רוחב */
