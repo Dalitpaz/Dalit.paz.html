@@ -1,26 +1,107 @@
 	  <style>
 
-/* עיצוב בסיסי למחשב */
+	  <style>
+/* עיצוב הכללי של התפריט */
 .menu {
-    /* עיצוב רגיל למחשב */
-    background-color: #333;
-    font-size: 16px;
-    padding: 10px;
-    color: white;
-    text-align: center;
+  background-color: #333; /* צבע רקע כהה */
+  padding: 10px;
 }
 
-/* עיצוב חדש לנייד בלבד */
-@media (max-width: 768px) {
-    .menu {
-        background-color: #007BFF; /* צבע רקע חדש */
-        font-size: 18px; /* גודל גופן גדול יותר */
-        padding: 20px;
-        color: white;
-        text-align: left;
-        border-radius: 10px; /* פינות מעוגלות */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צלליות להוספת עומק */
-    }
+.desktop-menu {
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* עיצוב לתפריט במחשב - כפי שהיה קודם */
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-list li {
+  margin-right: 20px;
+}
+
+.menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+.menu-list li a:hover {
+  background-color: #575757; /* צבע רקע בהעברה */
+}
+
+/* עיצוב לפסים במובייל */
+.bars {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: block;
+}
+
+/* עיצוב ל-X */
+.x-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none; /* נסתר במובייל עד שהתפריט נפתח */
+}
+
+/* תפריט נייד */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none; /* הסתרת התפריט במחשב */
+  }
+
+  .mobile-menu {
+    display: block; /* מציג את התפריט הנייד */
+  }
+
+  .menu-list {
+    display: none; /* התפריט נסתר בהתחלה */
+    flex-direction: column;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .menu-list.open {
+    display: block; /* התפריט ייפתח כאשר נוסיף את class "open" */
+  }
+
+  .menu-list li {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .menu-list li a {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .menu-list li a:hover {
+    background-color: #575757;
+  }
+
+  /* מציג את ה-X רק כשיש פתיחה */
+  .menu-list.open ~ .menu-toggle .x-icon {
+    display: block;
+  }
+
+  /* מחביא את הפסים כשיש פתיחה */
+  .menu-toggle .bars {
+    display: none;
+  }
+}
+
+  </style>
 
     .menu a {
         color: white;
