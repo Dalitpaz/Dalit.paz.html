@@ -250,6 +250,20 @@ body, html {
 	  
 
 <style>
+	.main-nav {
+  display: none; /* מוסתר בנייד כברירת מחדל */
+}
+
+.main-nav.open {
+  display: block; /* מוצג לאחר לחיצה */
+  position: absolute;
+  top: 60px; /* התאימי לגובה ה-header */
+  right: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* הגדרת כפתור תפריט למובייל */
 .menu-toggle {
   display: none; /* לא מוצג במחשב */
