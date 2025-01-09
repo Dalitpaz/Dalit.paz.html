@@ -350,23 +350,22 @@ function toggleMenu() {
   display: block;
 }
 
-/* עיצוב ל-X - נסתר במחשב */
+/* עיצוב ל-X */
 .x-icon {
   font-size: 30px;
   color: white;
   cursor: pointer;
-  display: none !important; /* הוספתי !important כדי להבטיח שה-X יוסתר במחשב */
+  display: none; /* נסתר במובייל עד שהתפריט נפתח */
 }
 
 /* תפריט נייד */
 @media screen and (max-width: 768px) {
-  /* במובייל רק פסים בהתחלה */
   .desktop-menu {
-    display: none;
+    display: none; /* הסתרת התפריט במחשב */
   }
 
   .mobile-menu {
-    display: block;
+    display: block; /* מציג את התפריט הנייד */
   }
 
   .menu-list {
