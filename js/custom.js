@@ -1,23 +1,23 @@
 <script>
-  function toggleMenu() {
-    const header = document.querySelector('header');
-    header.classList.toggle('menu-open');
-  }
-</script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const overlay = document.querySelector('.overlay');
 
-<script>
-  function toggleMenu() {
-    const header = document.querySelector('header');
-    header.classList.toggle('menu-open');
-  }
-</script>
+  // פתיחה/סגירה של התפריט
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open'); // הוספת/הסרת מחלקה "open"
+    overlay.classList.toggle('open'); // הצגת כיסוי כהה
+  });
 
+  // סגירת התפריט בלחיצה על הכיסוי
+  overlay.addEventListener('click', () => {
+    mainNav.classList.remove('open'); // הסרת מחלקה "open"
+    overlay.classList.remove('open'); // הסרת הכיסוי
+  });
+});
 
-	function toggleMenu() {
-  const nav = document.querySelector('.main-nav');
-  nav.classList.toggle('open'); // מוסיף/מסיר את המחלקה 'open'
-}
-
+  </script>
 (function ($) {
 	
 	"use strict";
