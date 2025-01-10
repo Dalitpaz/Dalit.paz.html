@@ -240,6 +240,33 @@ closeMenu.addEventListener('click', () => {
 
 	  <style>
 
+		  /* תפריט רגיל */
+.main-nav {
+  display: flex;
+}
+
+/* תפריט פסים מוסתר */
+.hamburger-menu,
+.mobile-nav {
+  display: none;
+}
+
+/* תפריט פסים למובייל */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+  }
+}
+
+
 
 		  /* תפריט רגיל - יופיע רק במסכים גדולים */
 .main-nav {
