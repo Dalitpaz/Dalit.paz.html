@@ -210,13 +210,15 @@ body, html {
     color: #ff9800;
   }
 
-  /* ברירת מחדל - עבור מחשבים */
-  @media (min-width: 769px) {
-    .main-nav {
-      display: inline-block;
-      position: absolute; /* מיקום בצד שמאל */
-      left: 0; /* מיקום בצד שמאל */
-    }
+/* ברירת מחדל - עבור מחשבים */
+@media (min-width: 769px) {
+  .main-nav {
+    display: inline-block;
+    position: relative; /* שינוי ל-relative */
+    margin-left: 150px; /* הוספת רווח מצד שמאל */
+  }
+}
+
     .mobile-nav {
       display: none;
     }
