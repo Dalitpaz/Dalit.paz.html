@@ -181,6 +181,31 @@ closeMenu.addEventListener('click', function() {
 	
 <!-- CSS -->
 <style>
+	
+  /* עיצוב האייקון X */
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .close-menu:hover {
+    color: #f00; /* צבע אדום בעת ריחוף */
+  }
+}
+
+/* מסתיר את התפריט במחשב */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* מסתיר את כפתור המבורגר במחשב */
+  }
+  .mobile-nav {
+    display: none; /* מסתיר את התפריט גם במחשב */
+  }
+}
 
 	@media (max-width: 768px) {
   .hamburger-menu {
