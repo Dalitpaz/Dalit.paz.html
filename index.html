@@ -196,7 +196,75 @@ body, html {
 
 
 <!-- CSS -->
+
 <style>
+
+	
+/* כפתור הפסים */
+.menu-toggle {
+  display: none; /* יוצג רק במובייל */
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001; /* מעל התפריט */
+  background-color: #f8f9fa; /* רקע עדין */
+  border: 1px solid #ddd; /* מסגרת דקה */
+  border-radius: 5px;
+}
+
+/* תפריט מובייל */
+.mobile-nav {
+  display: none; /* מוסתר כברירת מחדל */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* רקע לבן */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל עדין */
+  z-index: 1000; /* מעל הכל */
+  padding-top: 60px; /* רווח לכפתור הפסים */
+  overflow-y: auto; /* גלילה אם התפריט ארוך */
+}
+
+/* עיצוב הרשימה */
+.mobile-nav ul {
+  list-style-type: none; /* ללא נקודות */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav li {
+  margin: 15px 0; /* מרווח בין הפריטים */
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  background-color: #f0f0f0; /* רקע ב-hover */
+  color: #007bff; /* צבע כותרת */
+}
+
+/* הצגת התפריט במובייל */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור הפסים */
+  }
+}
 	/* למחשב */
 @media (min-width: 769px) {
   .mobile-nav {
