@@ -182,6 +182,28 @@ function toggleMenu() {
 <!-- CSS -->
 
 <style>
+	/* תפריט נייד במובייל בלבד */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* הצגת כפתור המבורגר במובייל */
+  }
+
+  .mobile-nav {
+    display: none; /* התפריט יוסתר כברירת מחדל */
+  }
+}
+
+/* הסתרת התפריט הנייד במחשב */
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none; /* מסתיר את כפתור המבורגר במחשב */
+  }
+
+  .mobile-nav {
+    display: none; /* מסתיר את התפריט גם במחשב */
+  }
+}
+
 
 	
 /* כפתור הפסים */
