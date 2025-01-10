@@ -149,35 +149,29 @@ body, html {
 
 
 	
-
-<!-- סקריפט לניהול פתיחה וסגירה -->
 <script>
   // מציאת האיברים
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
   const closeMenu = document.querySelector('.close-menu');
+  const hamburgerMenu = document.querySelector('.menu-toggle'); // עדכון פה לשם הנכון של הכפתור
 
-// פונקציה לפתיחה וסגירה של התפריט
-function toggleMenu() {
-  const mobileNav = document.querySelector('.mobile-nav');
-  mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
-}
-	const hamburgerMenu = document.querySelector('.hamburger-menu');
-const mobileNav = document.querySelector('.mobile-nav');
-const closeMenu = document.querySelector('.close-menu');
+  // פונקציה לפתיחה וסגירה של התפריט
+  function toggleMenu() {
+    mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+  }
 
-// הצגת התפריט בעת לחיצה על כפתור המבורגר
-hamburgerMenu.addEventListener('click', function() {
-  mobileNav.classList.toggle('open'); // הוספת/הסרת מחלקת "open"
-});
+  // הצגת התפריט בעת לחיצה על כפתור המבורגר
+  hamburgerMenu.addEventListener('click', function() {
+    mobileNav.classList.toggle('open'); // הוספת/הסרת מחלקת "open"
+  });
 
-// סגירת התפריט בעת לחיצה על כפתור סגירה
-closeMenu.addEventListener('click', function() {
-  mobileNav.classList.remove('open'); // הסרת מחלקת "open"
-});
-
-
+  // סגירת התפריט בעת לחיצה על כפתור סגירה
+  closeMenu.addEventListener('click', function() {
+    mobileNav.classList.remove('open'); // הסרת מחלקת "open"
+  });
 </script>
+
 	
 <!-- CSS -->
 <style>
