@@ -180,8 +180,9 @@
 
 </script>
 
-<style>
 
+<!-- CSS -->
+<style>
   /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
@@ -197,7 +198,6 @@
     transform: scale(1.1);
   }
 
- 
   /* עיצוב תפריט בקטגוריות */
   .menu-item {
     position: relative;
@@ -216,122 +216,6 @@
     background-color: #5A4FCF;
   }
 
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-
-.logo img {
-  height: 60px;
-}
-	.menu-link:hover {
-  background-color: #f0f0f0; /* רקע אפור בהיר */
-  transform: scale(1.1); /* הגדלה קלה */
-}
-
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-
-.menu-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 2px;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover::after {
-  background-color: #5A4FCF;
-}
-
-/* עיצוב תפריט פסים לנייד */
-.hamburger-menu {
-  display: none; /* מוסתר במחשב */
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 1000;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-nav a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-}
-
-.mobile-nav a:hover {
-  color: #ff9800;
-}
-
-/* מדיה לנייד */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none; /* מסתיר את התפריט במובייל */
-  }
-
-  .hamburger-menu {
-    display: block; /* מציג את תפריט הפסים */
-  }
-}
-	
   /* עיצוב בנייד */
   @media (max-width: 768px) {
     .main-nav {
