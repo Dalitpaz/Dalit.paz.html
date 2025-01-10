@@ -159,25 +159,22 @@
   </div>
   
 
+<!-- סקריפט לניהול פתיחה וסגירה -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".hamburger-menu");
-    const closeIcon = document.querySelector(".close-menu");
-    const mobileNav = document.querySelector(".mobile-nav");
-
-    menuToggle.addEventListener("click", function () {
-      mobileNav.style.display = "flex";
-    });
-
-    closeIcon.addEventListener("click", function () {
-      mobileNav.style.display = "none";
-    });
-  });
-	document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  // מציאת האיברים
+  const hamburger = document.querySelector('.hamburger-menu');
   const mobileNav = document.querySelector('.mobile-nav');
-  mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
-});
+  const closeMenu = document.querySelector('.close-menu');
 
+  // פתיחת התפריט
+  hamburger.addEventListener('click', () => {
+    mobileNav.style.display = 'block';  // מראה את התפריט
+  });
+
+  // סגירת התפריט
+  closeMenu.addEventListener('click', () => {
+    mobileNav.style.display = 'none';  // מסתיר את התפריט
+  });
 </script>
 
 
