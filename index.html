@@ -210,99 +210,82 @@ body, html {
     color: #ff9800;
   }
 
-/* ברירת מחדל - עבור מחשבים */
-@media (min-width: 769px) {
-  .main-nav {
-    display: inline-block;
-    position: relative; /* שינוי ל-relative */
-    margin-left:20px; /* הוספת רווח מצד שמאל */
-  }
-}
-	header {
+/* עיצוב עבור מחשבים */
+header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  align-items: center; /* ממרכז את האלמנטים אנכית */
+  gap: 20px; /* ריווח בין הלוגו לתפריט */
+  padding: 0 20px; /* ריווח פנימי */
 }
 
+.logo img {
+  height: 60px; /* גובה לוגו אחיד */
+}
 
-    .mobile-nav {
-      display: none;
-    }
-    .hamburger-menu {
-      display: none;
-    }
-  }
+.main-nav {
+  display: flex; /* הופך את התפריט לשורה */
+}
 
-  /* עבור ניידים */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-    }
-    
-    .hamburger-menu {
-      display: block;
-    }
+.main-nav ul {
+  display: flex; /* מציג את רשימת התפריט בשורה */
+  list-style: none; /* הסרת עיגולים */
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* ריווח בין הפריטים */
+}
 
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0; /* ימין לפס נייד */
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
-      z-index: 1000;
-      padding: 20px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-nav a:hover {
+  color: #ff9800; /* צבע בהיר בעת ריחוף */
+}
+
+/* עיצוב לנייד */
+.hamburger-menu {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .main-nav {
-    display: none; /* מסתיר את התפריט במחשב */
+    display: none; /* מסתיר את התפריט במובייל */
   }
 
   .hamburger-menu {
-    display: block; /* מציג את התפריט הפסים */
+    display: block; /* מציג את תפריט הפסים */
+    font-size: 30px;
+    cursor: pointer;
   }
-}
 
-main {
-  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
+  .mobile-nav {
+    display: none; /* ברירת מחדל: מוסתר */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 
-body, html {
-  height: 100%;
-  overflow-y: auto; /* אפשר גלילה */
-  margin: 0;
-  position: relative;
-  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
-}
-
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
+  .mobile-nav a {
     font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
+    color: #333;
   }
 
-  /* עיצוב תפריט בקטגוריות */
+  .mobile-nav a:hover {
+    color: #ff9800;
+  }
+}
+ב תפריט בקטגוריות */
   .menu-item {
     position: relative;
   }
