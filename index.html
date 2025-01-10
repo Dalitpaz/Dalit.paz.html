@@ -172,71 +172,24 @@ body, html {
   </nav>
 </header>
 
-<script>	  
-function toggleMenu() {
-  var menuList = document.querySelector('.menu-list');
-  var xIcon = document.querySelector('.x-icon');
-  var barsIcon = document.querySelector('.bars');
-
-  // אם התפריט פתוח, סגור אותו
-  if (menuList.classList.contains('open')) {
-    menuList.classList.remove('open');
-    barsIcon.style.display = 'block';  // להחזיר את הפסים
-    xIcon.style.display = 'none';     // להסתיר את ה-X
-  } else {
-    // אם התפריט סגור, פתח אותו
-    menuList.classList.add('open');
-    barsIcon.style.display = 'none';   // להסתיר את הפסים
-    xIcon.style.display = 'block';    // להציג את ה-X
-  }
-}
-
-	document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.getElementById("menu-icon");
-    const closeIcon = document.getElementById("close-icon");
-    const menu = document.getElementById("menu");
-
-    menuIcon.addEventListener("click", function () {
-        menu.classList.add("open");
-    });
-
-    closeIcon.addEventListener("click", function () {
-        menu.classList.remove("open");
-    });
-});
-
-	function toggleMenu() {
-        const nav = document.querySelector("header nav");
-        nav.classList.toggle("nav-active");
-      }
+	  <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const closeIcon = document.getElementById("close-icon");
+  // אלמנטים לתפריט הפסים
+  const menuToggle = document.querySelector(".hamburger-menu");
+  const closeIcon = document.querySelector(".close-menu");
+  const mobileNav = document.querySelector(".mobile-nav");
 
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.add("open");
-    });
+  // הצגת תפריט הפסים
+  menuToggle.addEventListener("click", function () {
+    mobileNav.classList.add("active"); // הוספת מחלקה שתראה את התפריט
+  });
 
-    closeIcon.addEventListener("click", function () {
-        mobileMenu.classList.remove("open");
-    });
+  // הסתרת תפריט הפסים
+  closeIcon.addEventListener("click", function () {
+    mobileNav.classList.remove("active"); // הסרת המחלקה שמראה את התפריט
+  });
 });
-
-	const hamburgerMenu = document.querySelector('.hamburger-menu');
-const mobileNav = document.querySelector('.mobile-nav');
-const closeMenu = document.querySelector('.close-menu');
-
-hamburgerMenu.addEventListener('click', () => {
-  mobileNav.classList.add('active');
-});
-
-closeMenu.addEventListener('click', () => {
-  mobileNav.classList.remove('active');
-});
-
-
-</script>
+  </script>
 
 	  <style>
 
