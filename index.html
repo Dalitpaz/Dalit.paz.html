@@ -187,7 +187,19 @@
 
 <!-- CSS -->
 <style>
-	
+
+	@media (max-width: 768px) {
+  .mobile-nav {
+    display: block; /* יפעל רק במובייל */
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none; /* יבטיח שהתפריט לא ישפיע על המחשב */
+  }
+}
+
 	/* עיצוב לתפריט לנייד */
   @media (max-width: 768px) {
     .mobile-nav {
