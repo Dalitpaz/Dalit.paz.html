@@ -174,25 +174,28 @@ body, html {
     </ul>
   </nav>
 </header>
-
-	  <script>
+	  
+<script>
+	
 document.addEventListener("DOMContentLoaded", function () {
-  // אלמנטים לתפריט הפסים
+  // בחירת אלמנטים
   const menuToggle = document.querySelector(".hamburger-menu");
   const closeIcon = document.querySelector(".close-menu");
   const mobileNav = document.querySelector(".mobile-nav");
 
   // הצגת תפריט הפסים
   menuToggle.addEventListener("click", function () {
-    mobileNav.classList.add("active"); // הוספת מחלקה שתראה את התפריט
+    mobileNav.classList.add("active"); // הוספת המחלקה "active" להצגת התפריט
   });
 
   // הסתרת תפריט הפסים
   closeIcon.addEventListener("click", function () {
-    mobileNav.classList.remove("active"); // הסרת המחלקה שמראה את התפריט
+    mobileNav.classList.remove("active"); // הסרת המחלקה "active" להסתרת התפריט
   });
 });
-  </script>
+	
+</script>
+	  
   <style>
 	  
     /* עיצוב כללי */
