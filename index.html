@@ -183,15 +183,12 @@ body, html {
   const mobileNav = document.querySelector('.mobile-nav');
   const closeMenu = document.querySelector('.close-menu');
 
-  // פתיחת התפריט
-  menuToggle.addEventListener('click', () => {
-    mobileNav.style.display = 'block';  // מראה את התפריט
-  });
+// פונקציה לפתיחה וסגירה של התפריט
+function toggleMenu() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+}
 
-  // סגירת התפריט
-  closeMenu.addEventListener('click', () => {
-    mobileNav.style.display = 'none';  // מסתיר את התפריט
-  });
 </script>
 
 
