@@ -193,39 +193,36 @@ body, html {
       mobileNav.style.display = "none";
     });
   });
+	document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+});
+
 </script>
 <style>
-
-  /* עיצוב לנייד */
-  .hamburger-menu {
-    display: none;
-  }
-
-  .mobile-nav .menu-link {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-  }
-
-  .mobile-nav .menu-link:hover {
-    color: #ff9800;
-  }
-
-
-.logo img {
-  height: 60px; /* גובה לוגו אחיד */
+/* כללי */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
+.logo img {
+  height: 60px;
+}
+
+/* תפריט מחשב */
 .main-nav {
-  display: flex; /* הופך את התפריט לשורה */
+  display: flex;
+  gap: 20px; /* ריווח בין הפריטים */
 }
 
 .main-nav ul {
-  display: flex; /* מציג את רשימת התפריט בשורה */
-  list-style: none; /* הסרת עיגולים */
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* ריווח בין הפריטים */
 }
 
 .main-nav a {
@@ -235,12 +232,71 @@ body, html {
   font-family: 'Poppins', sans-serif;
 }
 
-
-/* עיצוב לנייד */
-.hamburger-menu {
-  display: none;
+.main-nav a:hover {
+  color: #5A4FCF;
 }
 
+/* אפקט מעבר בתפריט מחשב */
+.menu-item {
+  position: relative;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::after {
+  background-color: #5A4FCF;
+}
+
+/* עיצוב תפריט פסים לנייד */
+.hamburger-menu {
+  display: none; /* מוסתר במחשב */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.mobile-nav a:hover {
+  color: #ff9800;
+}
+
+/* מדיה לנייד */
 @media (max-width: 768px) {
   .main-nav {
     display: none; /* מסתיר את התפריט במובייל */
@@ -248,78 +304,9 @@ body, html {
 
   .hamburger-menu {
     display: block; /* מציג את תפריט הפסים */
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-  .mobile-nav {
-    display: none; /* ברירת מחדל: מוסתר */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .mobile-nav a {
-    font-size: 18px;
-    color: #333;
-  }
-
-  .mobile-nav a:hover {
-    color: #ff9800;
   }
 }
-ב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
 
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-</style>
 
 	  <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 30px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- תמונה -->
