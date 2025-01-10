@@ -154,17 +154,14 @@ body, html {
   const menuToggle = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
   const closeMenu = document.querySelector('.close-menu');
-  const hamburgerMenu = document.querySelector('.menu-toggle'); // עדכון פה לשם הנכון של הכפתור
 
   // פונקציה לפתיחה וסגירה של התפריט
   function toggleMenu() {
-    mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+    mobileNav.classList.toggle('open'); // הוספת/הסרת מחלקת "open"
   }
 
   // הצגת התפריט בעת לחיצה על כפתור המבורגר
-  hamburgerMenu.addEventListener('click', function() {
-    mobileNav.classList.toggle('open'); // הוספת/הסרת מחלקת "open"
-  });
+  menuToggle.addEventListener('click', toggleMenu);
 
   // סגירת התפריט בעת לחיצה על כפתור סגירה
   closeMenu.addEventListener('click', function() {
@@ -184,7 +181,6 @@ body, html {
   width: 250px; /* רוחב התפריט */
   height: 100%; /* גובה מלא */
   background-color: #fff;
-  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* הצללה בצד ימין */
   z-index: 1000; /* מוודא שהתפריט נמצא מעל שאר האלמנטים */
   padding-top: 50px; /* מרווח מהחלק העליון */
   text-align: center;
