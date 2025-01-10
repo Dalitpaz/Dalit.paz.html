@@ -213,21 +213,18 @@ function toggleMenu() {
   border-radius: 5px;
 }
 
-/* תפריט מובייל */
-.mobile-nav {
-  display: none; /* מוסתר כברירת מחדל */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff; /* רקע לבן */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל עדין */
-  z-index: 1000; /* מעל הכל */
-  padding-top: 60px; /* רווח לכפתור הפסים */
-  overflow-y: auto; /* גלילה אם התפריט ארוך */
-}
-
+  .mobile-nav {
+    display: none; /* התפריט מוסתר כברירת מחדל */
+    position: fixed;
+    top: 0; /* מיקום בחלק העליון */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 30px;
+  }
 /* עיצוב הרשימה */
 .mobile-nav ul {
   list-style-type: none; /* ללא נקודות */
