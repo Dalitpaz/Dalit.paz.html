@@ -190,6 +190,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <style>
+	/* עיצוב לתפריט במחשב */
+.main-nav {
+  display: flex;
+}
+
+.main-nav .menu-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.main-nav .menu-link:hover {
+  color: #ff9800;
+}
+
+/* עיצוב לנייד */
+.hamburger-menu {
+  display: none;
+}
+
+.mobile-nav .menu-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.mobile-nav .menu-link:hover {
+  color: #ff9800;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* מסתיר את התפריט במחשב */
+  }
+
+  .hamburger-menu {
+    display: block; /* מציג את התפריט הפסים */
+  }
+}
 
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
