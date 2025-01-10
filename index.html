@@ -171,12 +171,12 @@
 <!-- סקריפט לניהול פתיחה וסגירה -->
 <script>
   // מציאת האיברים
-  const hamburger = document.querySelector('.hamburger-menu');
+  const menuToggle = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
   const closeMenu = document.querySelector('.close-menu');
 
   // פתיחת התפריט
-  hamburger.addEventListener('click', () => {
+  menuToggle.addEventListener('click', () => {
     mobileNav.style.display = 'block';  // מראה את התפריט
   });
 
