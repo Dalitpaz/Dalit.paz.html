@@ -19,6 +19,7 @@
 	  <!-- CSS -->    
 	  
 <style>
+	
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
@@ -157,6 +158,13 @@ function toggleMenu() {
 	
 <!-- CSS -->
 <style>
+
+	@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block !important; /* דאג שהכפתור יופיע במובייל */
+  }
+}
+
 	.hamburger-menu {
   position: relative;
   z-index: 2000; /* לוודא שהכפתור נמצא מעל כל האלמנטים */
