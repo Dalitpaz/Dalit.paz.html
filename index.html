@@ -181,18 +181,69 @@ closeMenu.addEventListener('click', function() {
 	
 <!-- CSS -->
 <style>
-	
-  /* עיצוב האייקון X */
-  .close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
+/* עיצוב תפריט המובייל */
+.mobile-nav {
+  display: none; /* התפריט מוסתר ברירת מחדל */
+  position: fixed;
+  top: 0;
+  right: 0; /* ממקם את התפריט בצד ימין */
+  width: 250px; /* רוחב התפריט */
+  height: 100%; /* גובה מלא */
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* הצללה בצד ימין */
+  z-index: 1000; /* מוודא שהתפריט נמצא מעל שאר האלמנטים */
+  padding-top: 50px; /* מרווח מהחלק העליון */
+  text-align: center;
+}
+
+.mobile-nav.open {
+  display: block; /* התפריט מוצג כאשר "open" מתווספת */
+}
+
+/* עיצוב כפתור המבורגר */
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+}
+
+/* עיצוב האייקון X */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-menu:hover {
+  color: #f00; /* צבע אדום בעת ריחוף */
+}
+
+/* תפריט במובייל */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* כפתור המבורגר מוצג במובייל */
+  }
+  .main-nav {
+    display: none; /* מסתיר את התפריט במחשב */
+  }
+  .mobile-nav ul {
+    list-style-type: none; /* ללא נקודות */
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-nav li {
+    padding: 20px 0;
+  }
+  .mobile-nav a {
+    text-decoration: none;
+    font-size: 20px;
     color: #333;
   }
-
-  .close-menu:hover {
+  .mobile-nav a:hover {
     color: #f00; /* צבע אדום בעת ריחוף */
   }
 }
