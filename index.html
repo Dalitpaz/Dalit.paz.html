@@ -297,25 +297,71 @@ body, html {
 }
 
 /* עיצוב תפריט בקטגוריות */
-.menu-item {
-  position: relative;
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* עיצוב תפריט בקטגוריות */
+  .menu-item {
+    position: relative;
+  }
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .menu-item:hover::after {
+    background-color: #5A4FCF;
+  }
+
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
+  body, html {
+  height: 100%;
+  overflow-y: auto;
 }
 
-.menu-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 2px;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover::after {
-  background-color: #5A4FCF;
-}
-  </style>
+</style>
 
 	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
