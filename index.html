@@ -157,6 +157,15 @@ function toggleMenu() {
 	
 <!-- CSS -->
 <style>
+	.hamburger-menu {
+  position: relative;
+  z-index: 2000; /* לוודא שהכפתור נמצא מעל כל האלמנטים */
+}
+
+.mobile-nav {
+  z-index: 1000; /* לוודא שהתפריט לא יסתיר את האלמנטים האחרים */
+}
+
   /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
