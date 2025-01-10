@@ -184,10 +184,6 @@ body, html {
 
 <!-- CSS -->
 <style>
-/* הבטחת אחידות לכל האלמנטים */
-* {
-  box-sizing: border-box;
-}
 
 /* עיצוב לתפריט לנייד */
 @media (max-width: 768px) {
@@ -247,16 +243,16 @@ body, html {
   display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
 }
 
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
+ 
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
 
   .menu-link:hover {
     background-color: #f0f0f0;
@@ -268,18 +264,16 @@ body, html {
   .menu-item {
     position: relative;
   }
-
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
   .menu-item:hover::after {
     background-color: #5A4FCF;
   }
