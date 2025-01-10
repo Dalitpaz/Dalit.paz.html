@@ -164,8 +164,6 @@ body, html {
   
 </header>
 
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".hamburger-menu");
@@ -221,87 +219,7 @@ body, html {
     transform: scale(1.1);
   }
 
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-</style>
-	  
-<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
-    <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-            <img src="images/labs.jpg" 
-                 style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
-        </div>
-    </div>
-
-    <!-- טקסט -->
-    <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
-                   color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
-           My Journey Into Precision and Quality
-        </h1>
-        <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
-            <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
-            a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
- My role was to ensure 
-            that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
-
-            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. 
-            These skills are at the core of my transition into software quality assurance.<br><br>
-
-            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background 
-            and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
-
-            Let’s work together to redefine quality standards and create outstanding results!
-        </p>
-    </div>
-</main>
-	  <style>
-
-
+ 
   /* עיצוב תפריט בקטגוריות */
   .menu-item {
     position: relative;
@@ -443,7 +361,67 @@ body, html {
   }
 }
 	
-	  </style>
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
+</style>
+	  
+<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
+    <!-- תמונה -->
+    <div style="flex: 1; max-width: 500px;">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
+                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
+            <img src="images/labs.jpg" 
+                 style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
+        </div>
+    </div>
+
+    <!-- טקסט -->
+    <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
+        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
+                   color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
+           My Journey Into Precision and Quality
+        </h1>
+        <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
+            <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
+            a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
+ My role was to ensure 
+            that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
+
+            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. 
+            These skills are at the core of my transition into software quality assurance.<br><br>
+
+            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background 
+            and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
+
+            Let’s work together to redefine quality standards and create outstanding results!
+        </p>
+    </div>
+</main>
+
 
 <!-- הוספת אנימציה ותוספות סטייל -->
 <style>
