@@ -293,19 +293,7 @@ body, html {
     transition: all 0.3s ease-in-out;
   }
 
-    .main-nav {
-      display: block !important; /* תפריט רגיל במחשב */
-    }
-
-    /* כפתור המבורגר לא יוצג במחשב */
-    .menu-toggle {
-      display: none;
-    }
-
-   .main-nav li {
-      display: inline-block;
-    }
-	/* עיצוב עבור המחשב */
+  /* עיצוב עבור המחשב */
 @media (min-width: 769px) {
   .mobile-nav {
     display: none; /* מוסתר במחשב */
@@ -319,6 +307,100 @@ body, html {
   .menu-toggle {
     display: none;
   }
+
+  .main-nav li {
+    display: inline-block;
+  }
+}
+
+/* עיצוב עבור המובייל */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* כפתור המבורגר יוצג במובייל */
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* התפריט מוסתר מימין */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    display: none; /* מוסתר בהתחלה */
+  }
+
+  .mobile-nav.open {
+    right: 0; /* התפריט יוצג כשהוא פתוח */
+  }
+
+  .main-nav {
+    display: none; /* מסתיר את התפריט הרגיל במובייל */
+  }
+}
+
+/* עיצוב כללי */
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+main {
+  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+
+/* עיצוב כללי לקישורים בתפריט */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* תפריט בקטגוריות */
+.menu-item {
+  position: relative;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: transparent;
+}
+
+.menu-item:hover::after {
+  background-color: #5A4FCF;
+}
+
+/* כפתור המבורגר */
+.menu-toggle {
+  display: none; /* לא יוצג במחשב */
+}
+
+.main-nav li {
+  display: inline-block; /* לא יותר פסים */
+}
+
 
  
 /* עיצוב עבור המובייל */
