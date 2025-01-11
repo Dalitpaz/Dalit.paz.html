@@ -177,48 +177,6 @@ main {
 
 <style>
 
-	
-/* תפריט יוסתר במובייל */
-.main-nav {
-  display: none; /* התפריט לא יופיע בהתחלה */
-  flex-direction: column;
-}
-
-/* הצגת התפריט כשנלחץ כפתור */
-.main-nav.active {
-  display: flex;
-}
-	/* תצוגת תפריט רגיל במחשב */
-.main-nav {
-  display: flex; /* הצגת התפריט במחשב */
-  background-color: #fff;
-}
-
-
-	/* הסתיר את כפתור הפסים במסך רחב (מעל 768px) */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    cursor: pointer;
-  }
-
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
