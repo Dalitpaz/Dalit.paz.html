@@ -183,22 +183,25 @@ body, html {
   border: none;
   box-shadow: none;
 }
-
 .mobile-nav {
-  display: none; /* ברירת מחדל - מוסתר */
+  display: none; /* מוסתר כברירת מחדל */
   position: fixed;
   top: 0;
-  right: 0; /* ממוקם בצד ימין */
-  width: 250px; /* רוחב התפריט */
-  height: 100%; /* גובה התפריט */
-  background-color: #fff; /* צבע רקע */
-  z-index: 1000; /* לוודא שהתפריט מופיע מעל */
-  padding-top: 50px; /* ריווח פנימי */
-  text-align: center; /* טקסט מיושר למרכז */
-  border: none; /* הסרת גבול */
-  box-shadow: none; /* הסרת צל */
-  margin: 0; /* הסרת מרווחים */
-  overflow: hidden; /* הסתרת תוכן מעבר */
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  padding-top: 50px;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.mobile-nav.open {
+  display: block;
 }
 
 /* התפריט מוצג כאשר "open" מתווספת */
