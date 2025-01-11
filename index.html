@@ -58,49 +58,25 @@ main {
 
 .logo-container:hover .rotating-logo {
   transform: rotateY(360deg);
-}
-
-/* תפריט */
-.menu-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.menu-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
-/* רספונסיביות */
-@media (max-width: 768px) {
+/* תפריט למחשב */
+@media (min-width: 769px) {
   nav ul {
-    flex-direction: column;
-    background: transparent; /* שינוי לרקע שקוף */
-    padding: 20px;
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    border-radius: 10px;
-    display: none;
+    display: flex; /* הצגת התפריט על המחשב */
+    flex-direction: row; /* התפריט יוצג בשורה */
+    background: transparent; /* הרקע יהיה שקוף */
+    padding: 0;
+    border-radius: 0;
   }
-}
 
-
-  nav ul.active {
-    display: flex;
+  .menu-link {
+    color: #333; /* הצבע של הקישורים */
   }
 
   .menu-trigger {
-    display: block;
-    font-size: 30px;
-    color: #ffffff;
-    cursor: pointer;
+    display: none; /* מסתיר את כפתור המובייל במחשב */
   }
-</style>
+}
+
   </head>
   <body>
 <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; display: flex; align-items: center; justify-content: flex-start;">
