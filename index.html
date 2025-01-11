@@ -181,6 +181,36 @@ body, html {
 
 
 <style>
+	/* כפתור תפריט פסים בצד ימין */
+.menu-toggle {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* תפריט בצד ימין */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    width: 250px; /* רוחב התפריט */
+    position: fixed; /* תפריט מקובע בצד */
+    top: 0;
+    right: 0; /* העבר את התפריט לצד ימין */
+    background-color: #fff;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1); /* הצללה צד ימין */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* התפריט ייפתח מצד ימין */
+  .main-nav ul.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+	
 	main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
