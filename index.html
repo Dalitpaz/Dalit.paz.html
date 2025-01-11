@@ -256,10 +256,10 @@ body, html {
 </style>
 
 </header>
-<script>
+	  <script>
 // קוד JavaScript לפתיחת וסגירת התפריט
 document.querySelector('.menu-toggle').addEventListener('click', function() {
-  const menu = document.querySelector('.main-menu');
+  const menu = document.querySelector('.main-nav');
   const overlay = document.querySelector('.menu-overlay');
   
   menu.classList.toggle('active'); // מוסיף ומסיר את המחלקה active לתפריט
@@ -268,14 +268,13 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 
 // סגירת התפריט כאשר לוחצים על הרקע השחור
 document.querySelector('.menu-overlay').addEventListener('click', function() {
-  const menu = document.querySelector('.main-menu');
+  const menu = document.querySelector('.main-nav');
   const overlay = document.querySelector('.menu-overlay');
   
   menu.classList.remove('active');
   overlay.classList.remove('active');
 });
   </script>
-
 
 <style>
   /* תפריט עכבר */
