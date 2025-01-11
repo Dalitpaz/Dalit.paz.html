@@ -259,6 +259,32 @@ li {
 }
 
 	
+/* עיצוב עבור המחשב */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* מסתיר את כפתור המבורגר במחשב */
+  }
+
+  .mobile-nav {
+    display: none; /* מוסתר במחשב */
+  }
+}
+
+/* עיצוב עבור המובייל */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* מציג את כפתור המבורגר במובייל */
+  }
+
+  .mobile-nav {
+    display: none; /* מוסתר בהתחלה */
+  }
+
+  .mobile-nav.open {
+    display: block; /* מציג את התפריט כשהוא פתוח */
+  }
+}
+	
   /* עיצוב כללי */
   body, html {
     height: 100%;
