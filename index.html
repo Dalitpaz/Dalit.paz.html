@@ -190,8 +190,7 @@ main {
   });	  
 
     </script>
-<style>
-
+	  <style>
 body {
   background-color: transparent !important; /* מבטל רקע כהה */
 }
@@ -252,6 +251,7 @@ body {
     right: 10px;
     z-index: 2000;
   }
+}
 
 /* עיצוב עבור מחשב */
 @media (min-width: 769px) {
@@ -272,80 +272,52 @@ body {
   }
 }
 
-    .menu-toggle {
-      font-size: 30px;
-      color: #333;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 2000;
-    }
-  
-  /* עיצוב עבור מחשב */
-  @media (min-width: 769px) {
-    .mobile-nav {
-      display: none; /* הסתרת תפריט המובייל במחשב */
-    }
+/* עיצוב כללי */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto; /* לוודא שיש גלילה אנכית אחת בלבד */
+}
 
-    .main-nav {
-      display: block; /* תפריט המחשב מוצג */
-    }
+main {
+  margin-top: 0px; /* הוספת רווח לתיאום עם header */
+}
 
-    .menu-toggle {
-      display: none; /* כפתור ההמבורגר לא יוצג במחשב */
-    }
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
 
-    .main-nav li {
-      display: inline-block; /* פריטי התפריט של המחשב מוצגים בשורה */
-    }
-  
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
 
-  /* עיצוב כללי */
-  body, html {
-    height: 100%;
-    margin: 0;
-    overflow-y: auto; /* לוודא שיש גלילה אנכית אחת בלבד */
-  }
+.menu-item {
+  position: relative;
+}
 
-  main {
-    margin-top: 0px; /* הוספת רווח לתיאום עם header */
-  }
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
 
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
+.menu-item:hover::after {
+  background-color: #5A4FCF;
+}
 
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  .menu-item {
-    position: relative;
-  }
-
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-</style>
-
+  </style>
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
