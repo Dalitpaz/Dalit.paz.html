@@ -179,10 +179,7 @@ body, html {
       }
     </script>
 
-
-	  
 <style>
-
 /* עיצוב עבור המובייל */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -209,9 +206,7 @@ body, html {
   .main-nav {
     display: none; /* מסתיר את התפריט הרגיל במובייל */
   }
-}
 
-	
   /* עיצוב כללי */
   body, html {
     height: 100%;
@@ -239,7 +234,7 @@ body, html {
     transform: scale(1.1);
   }
 
-  /* עיצוב תפריט בקטגוריות */
+  /* תפריט בקטגוריות */
   .menu-item {
     position: relative;
   }
@@ -255,10 +250,10 @@ body, html {
     transition: all 0.3s ease;
   }
 
-	
-    .menu-item:hover {
-      background-color: transparent;
-    }
+  .menu-item:hover {
+    background-color: transparent;
+  }
+
   .menu-item:hover::after {
     background-color: #5A4FCF;
   }
@@ -267,18 +262,62 @@ body, html {
   .menu-toggle {
     display: block;
   }
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
+
+  .menu-toggle {
+    font-size: 30px;
     color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
   }
 
-  /* עיצוב עבור המחשב */
+  /* הצגת התפריט כשיש פתיחה */
+  .mobile-nav.open {
+    display: block;
+  }
+
+  /* מסתיר את התפריט הרגיל במובייל */
+  .main-nav {
+    display: none; /* מסתיר את התפריט הרגיל במובייל */
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px; /* הגדלת האייקון */
+    cursor: pointer;
+    color: #333;
+  }
+
+  .mobile-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 15px 20px;
+    display: block;
+    border-bottom: 1px solid #ddd; /* גבול תחתון לכל פריט */
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .mobile-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* עיצוב עבור המחשב */
 @media (min-width: 769px) {
   .mobile-nav {
     display: none; /* מוסתר במחשב */
@@ -294,35 +333,7 @@ body, html {
   }
 
   .main-nav li {
-    display: inline-block;
-  }
-}
-
-/* עיצוב עבור המובייל */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* כפתור המבורגר יוצג במובייל */
-  }
-
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -250px; /* התפריט מוסתר מימין */
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    display: none; /* מוסתר בהתחלה */
-  }
-
-  .mobile-nav.open {
-    right: 0; /* התפריט יוצג כשהוא פתוח */
-  }
-
-  .main-nav {
-    display: none; /* מסתיר את התפריט הרגיל במובייל */
+    display: inline-block; /* לא יותר פסים */
   }
 }
 
@@ -376,93 +387,8 @@ main {
 .menu-item:hover::after {
   background-color: #5A4FCF;
 }
+  </style>
 
-/* כפתור המבורגר */
-.menu-toggle {
-  display: none; /* לא יוצג במחשב */
-}
-
-.main-nav li {
-  display: inline-block; /* לא יותר פסים */
-}
-
-
- 
-/* עיצוב עבור המובייל */
-@media (max-width: 768px) {
-  .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%; /* תפריט תופס את כל הרוחב */
-    height: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    padding-top: 50px;
-    text-align: center;
-    overflow-y: auto; /* גלילה פנימית */
-    display: none; /* מוסתר בתחילה */
-    box-shadow: none; /* הסרת הצללה */
-  }
-    }
-
-    .close-menu {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 35px; /* הגדלת האייקון */
-      cursor: pointer;
-      color: #333;
-    }
-
-    .mobile-nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .mobile-nav li {
-      padding: 15px 0;
-      font-size: 18px;
-    }
-
-    .mobile-nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 20px;
-      padding: 15px 20px;
-      display: block;
-      border-bottom: 1px solid #ddd; /* גבול תחתון לכל פריט */
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .mobile-nav a:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    /* כפתור המבורגר במובייל */
-    .menu-toggle {
-      display: block;
-      font-size: 30px;
-      color: #333;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 2000;
-    }
-
-    /* הצגת התפריט כשיש פתיחה */
-    .mobile-nav.open {
-      display: block;
-    }
-
-    /* מסתיר את התפריט הרגיל במובייל */
-    .main-nav {
-      display: none; /* מסתיר את התפריט הרגיל במובייל */
-    }
-  }
-
-</style>
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
