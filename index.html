@@ -162,6 +162,7 @@ main {
   <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
   <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
 </button>
+	  
 <script>
   // JavaScript להפעלת התפריט במובייל
   const menuToggle = document.querySelector('.menu-toggle');
@@ -173,50 +174,6 @@ main {
 </script>
 
 <style>
-  /* כפתור תפריט פסים - יוצג רק במובייל */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block; /* הצגת כפתור תפריט פסים רק במובייל */
-    }
-  }
-
-  /* תצוגת תפריט רגיל במחשב */
-  .main-nav {
-    display: flex; /* הצגת התפריט במחשב */
-    background-color: #fff;
-    transition: right 0.3s ease;
-  }
-
-  /* עיצוב למובייל */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none; /* לא יופיע במובייל */
-      flex-direction: column;
-      background-color: #fff;
-      transition: right 0.3s ease;
-    }
-
-    .main-nav.active {
-      display: flex;
-      right: 0;
-    }
-
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  /* תצוגת תפריט רגיל במחשב */
-  .main-nav {
-    display: flex;
-    background-color: #fff;
-    transition: right 0.3s ease;
-  }
-
   .menu-toggle {
     display: block;
     position: fixed;
