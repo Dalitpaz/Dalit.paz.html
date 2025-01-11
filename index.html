@@ -173,6 +173,14 @@ body, html {
 <!-- CSS -->
 
 	  <style>
+		  .mobile-nav {
+  display: none; /* מוסתר ברירת מחדל */
+}
+
+.mobile-nav.open {
+  display: block; /* מוצג רק כאשר "open" מופעל */
+}
+
 
 
 		  .menu-link, .menu-toggle, .close-menu {
@@ -201,11 +209,6 @@ body, html {
 		  
 .mobile-nav.open {
   display: block; /* התפריט יופיע */
-}
-/* הסרת גבולות וצללים מכל התפריטים */
-.mobile-nav {
-  border: none;
-  box-shadow: none;
 }
 
 
