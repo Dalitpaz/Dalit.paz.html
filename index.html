@@ -173,10 +173,24 @@ main {
 </script>
 
 <style>
+  /* כפתור תפריט פסים - יוצג רק במובייל */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* הצגת כפתור תפריט פסים רק במובייל */
+    }
+  }
+
+  /* תצוגת תפריט רגיל במחשב */
+  .main-nav {
+    display: flex; /* הצגת התפריט במחשב */
+    background-color: #fff;
+    transition: right 0.3s ease;
+  }
+
   /* עיצוב למובייל */
   @media (max-width: 768px) {
     .main-nav {
-      display: none;
+      display: none; /* לא יופיע במובייל */
       flex-direction: column;
       background-color: #fff;
       transition: right 0.3s ease;
