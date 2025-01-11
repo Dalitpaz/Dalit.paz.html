@@ -189,24 +189,24 @@ body, html {
 }
 
 .mobile-nav {
-  display: none; /* מוסתר כברירת מחדל */
+  display: none; /* מוסתר ברירת מחדל */
   position: fixed;
   top: 0;
   right: 0;
   width: 250px;
   height: 100%;
-  background-color: #fff;
+  background-color: #fff; /* רקע לבן */
   z-index: 1000;
   padding-top: 50px;
   text-align: center;
-  border: none;
-  box-shadow: none;
+  border: none; /* הסרת גבול */
+  box-shadow: none; /* הסרת צל */
   margin: 0;
-  overflow: hidden;
+  overflow: hidden; /* מניעת גלילה פנימית */
 }
 
 .mobile-nav.open {
-  display: block;
+  display: block; /* התפריט יופיע */
 }
 
 /* התפריט מוצג כאשר "open" מתווספת */
@@ -267,9 +267,7 @@ body, html {
     color: #333;
   }
 
-  .mobile-nav a:hover {
-    color: #f00; /* צבע אדום בעת ריחוף */
-  }
+
 
   /* כפתור המבורגר מוצג במובייל */
   .menu-toggle {
