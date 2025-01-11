@@ -189,9 +189,7 @@ body, html {
   });
 </script>
 
-
-	  <style>
-
+<style>
 /* תפריט במובייל - יוסתר בהתחלה */
 .main-nav {
   display: none;
@@ -214,6 +212,7 @@ body, html {
   transform: translateX(0);
 }
 
+/* עיצוב פריטי התפריט */
 .menu-item {
   padding: 15px;
   text-align: center;
@@ -231,6 +230,7 @@ body, html {
   background-color: #f0f0f0;
 }
 
+/* כפתור תפריט */
 .menu-toggle {
   display: block;
   position: fixed;
@@ -250,10 +250,19 @@ body, html {
 
 /* חבוי את כפתור הפסים במסך רחב */
 @media (min-width: 769px) {
+  /* כפתור הפסים לא יוצג במסך רחב */
   .menu-toggle {
-    display: none; /* כפתור הפסים לא יוצג במסך גדול */
+    display: none;
   }
 
+  /* תפריט במחשב */
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+  }
 
   .menu-item a {
     font-size: 18px;
@@ -261,57 +270,59 @@ body, html {
   }
 }
 
-		  
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
+/* תפריט עכבר */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
 
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
+.menu-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
 
- 
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-  body, html {
+/* עיצוב תפריט בקטגוריות */
+.menu-item {
+  position: relative;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::after {
+  background-color: #5A4FCF;
+}
+
+.menu-link {
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.menu-item:hover {
+  background-color: transparent;
+}
+
+body, html {
   height: 100%;
   overflow-y: auto;
 }
-  </style>
+</style>
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
