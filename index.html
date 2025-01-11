@@ -181,45 +181,70 @@ body, html {
 	
 <!-- CSS -->
 <style>
-  /* ברירת מחדל עבור המובייל - התפריט מוסתר */
+/* עיצוב התפריט במובייל */
+@media (max-width: 768px) {
   .mobile-nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* תפריט תופס את כל הרוחב */
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding-top: 20px; /* רווח למעלה כדי שהתפריט לא יהיה צמוד מידי */
+    text-align: center;
+    overflow-y: auto; /* להפעיל גלילה פנימית אם התפריט גבוה מדי */
+    box-shadow: none;
   }
 
-  /* התפריט מוצג במובייל אם הוספת class open */
-  .mobile-nav.open {
+  /* גודל אייקון ה-X */
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 35px; /* הגדלת האייקון */
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* עיצוב פריטי התפריט */
+  .mobile-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 15px 20px;
     display: block;
+    border-bottom: 1px solid #ddd; /* גבול תחתון לכל פריט */
+    transition: background-color 0.3s ease-in-out;
   }
 
-  /* כפתור המבורגר */
+  .mobile-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* הצללה בעת ריחוף */
+  }
+
+  /* הגדלת כפתור המבורגר */
   .menu-toggle {
     display: block;
-    cursor: pointer;
     font-size: 30px;
     color: #333;
-    z-index: 2000;
     position: fixed;
     top: 10px;
     right: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+    z-index: 2000;
   }
+}
 
-  /* סגנונות עבור מחשבים */
-  @media (min-width: 769px) {
-    /* הראה את התפריט במחשב */
-    .main-nav {
-      display: flex; /* מציג את התפריט כ-row */
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    /* כפתור המבורגר מוסתר במחשב */
-    .menu-toggle {
-      display: none;
-    }
 
     /* עיצוב עבור פריטי התפריט */
     .menu-link {
