@@ -150,8 +150,16 @@ main {
   // סגירת התפריט בעת לחיצה על כפתור סגירה
   closeMenu.addEventListener('click', function() {
     mobileNav.classList.remove('open'); // הסרת מחלקת "open"
-  });
-</script>
+  });	  
+	  // אם יש כפתור או פעולה טכנית לפתיחה של התפריט, נמנע אותה
+document.addEventListener('DOMContentLoaded', function () {
+  // במקרה שהקוד הזה מפעיל את הקופסה השחורה או המיותרת
+  var overlay = document.querySelector('.overlay');
+  if (overlay) {
+    overlay.style.display = 'none'; // הסתרת הקופסה
+  }
+});
+
 
     <script>
       function toggleMenu() {
