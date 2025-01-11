@@ -168,51 +168,50 @@ body, html {
 </button>
 
 <style>
-  /* ברירת מחדל - כפתור התפריט יוצג רק בנייד */
+	
+/* ברירת מחדל - כפתור התפריט יוצג רק בנייד */
+.menu-toggle {
+  display: block;
+  position: absolute;
+  top: 15px; /* מיקום הכפתור למעלה */
+  right: 15px; /* מיקום הכפתור בצד ימין */
+  z-index: 1000; /* מוודא שהכפתור יהיה מעל לתוכן */
+}
+
+@media (min-width: 768px) {
   .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 15px; /* מיקום הכפתור למעלה */
-    right: 15px; /* מיקום הכפתור בצד ימין */
-    z-index: 1000; /* מוודא שהכפתור יהיה מעל לתוכן */
+    display: none;
   }
+}
 
-  /* במחשב נייח - הכפתור יוסתר */
-  @media (min-width: 768px) {
-    .menu-toggle {
-      display: none;
-    }
-  }
+nav ul {
+  position: fixed;
+  top: 0;
+  right: -250px; /* התפריט מתחיל מחוץ למסך */
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
 
-  /* עיצוב התפריט כשזה נפתח */
-  nav ul.active {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px; /* רוחב התפריט */
-    height: 100vh; /* גובה מלא */
-    background-color: #333;
-    color: #fff;
-    flex-direction: column;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-start;
-    transform: translateX(100%); /* התפריט מתחיל מחוץ למסך */
-    transition: transform 0.3s ease;
-  }
+nav ul.active {
+  transform: translateX(-250px); /* התפריט ייכנס למסך */
+}
 
-  nav ul.active.open {
-    transform: translateX(0); /* התפריט יימשך פנימה */
-  }
+nav ul li {
+  margin-bottom: 20px;
+}
 
-  nav ul li {
-    margin-bottom: 20px;
-  }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
 </style>
 
 </header>
