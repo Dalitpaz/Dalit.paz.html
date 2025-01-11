@@ -169,6 +169,31 @@ body, html {
 </button>
 
 <style>
+	@media (max-width: 768px) {
+  .main-nav {
+    right: -100%; /* התפריט מחוץ למסך */
+    transition: right 0.3s ease;
+  }
+  
+  .main-nav.active {
+    right: 0; /* התפריט נכנס למסך */
+  }
+
+  .menu-overlay {
+    display: none; /* מוסתר כברירת מחדל */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-overlay.active {
+    display: block; /* מופיע רק כשהתפריט פתוח */
+  }
+}
+
 /* ברירת מחדל - התפריט מוצג בכל הגדלים */
 .main-nav {
   position: relative;
