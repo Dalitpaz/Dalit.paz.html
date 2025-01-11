@@ -274,21 +274,23 @@ body, html {
     display: none;
   }
 
-  /* עיצוב עבור המובייל */
-  @media (max-width: 768px) {
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%; /* תפריט תופס את כל הרוחב */
-      height: 100%;
-      background-color: #fff;
-      z-index: 1000;
-      padding-top: 50px;
-      text-align: center;
-      overflow-y: auto; /* גלילה פנימית */
-      display: none; /* מוסתר בתחילה */
-      box-shadow: none; /* הסרת הצללה */
+ 
+/* עיצוב עבור המובייל */
+@media (max-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* תפריט תופס את כל הרוחב */
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding-top: 50px;
+    text-align: center;
+    overflow-y: auto; /* גלילה פנימית */
+    display: none; /* מוסתר בתחילה */
+    box-shadow: none; /* הסרת הצללה */
+  }
     }
 
     .close-menu {
