@@ -186,8 +186,22 @@ body, html {
   });
 </script>
 
-
 <style>
+
+	 /* תפריט פסים לנייד */
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            /* כפתור הפסים */
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
 	/* כפתור תפריט פסים בצד ימין */
 .menu-toggle {
   display: block;
