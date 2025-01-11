@@ -219,7 +219,24 @@ main {
     transition: all 0.3s ease;
   }
 
-  /* עיצוב תפריט עכבר */
+main {
+  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* אפשר גלילה */
+  margin: 0;
+  position: relative;
+  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
+}
+
+  /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
     color: #333;
@@ -229,7 +246,6 @@ main {
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }
-
   .menu-link:hover {
     background-color: #f0f0f0;
     transform: scale(1.1);
@@ -239,7 +255,6 @@ main {
   .menu-item {
     position: relative;
   }
-
   .menu-item::after {
     content: '';
     position: absolute;
@@ -250,22 +265,23 @@ main {
     background-color: transparent;
     transition: all 0.3s ease;
   }
-
   .menu-item:hover::after {
     background-color: #5A4FCF;
   }
 
-  /* עיצוב לגוף ולדף */
-  body, html {
-    height: 100%;
-    overflow-y: auto; /* אפשר גלילה */
-    margin: 0;
-    position: relative;
-    display: block;
-  }
-
-  main {
-    margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
   }
 </style>
 
