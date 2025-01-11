@@ -162,14 +162,6 @@ body, html {
       <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
     </ul>
   </nav>
-	  <!-- תפריט -->
-<nav class="main-nav">
-  <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-    <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-    <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-    <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-  </ul>
-</nav>
 
 <!-- כפתור תפריט פסים (יוצג רק במובייל) -->
 <button class="menu-toggle">
@@ -190,33 +182,6 @@ body, html {
 </script>
 
 <style>
-/* תפריט במובייל - יוסתר בהתחלה */
-.main-nav {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  height: 100%;
-  width: 250px;
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  padding-top: 60px; /* רווח מלמעלה */
-  transform: translateX(100%); /* התפריט יוצא מחוץ למסך */
-  transition: transform 0.3s ease;
-}
-
-/* הצגת התפריט כשנלחץ כפתור */
-.main-nav.active {
-  transform: translateX(0);
-}
-
-/* עיצוב פריטי התפריט */
-.menu-item {
-  padding: 15px;
-  text-align: center;
-}
 
 .menu-item a {
   text-decoration: none;
