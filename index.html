@@ -176,6 +176,18 @@ main {
 
 
 <style>
+
+	
+/* תפריט יוסתר במובייל */
+.main-nav {
+  display: none; /* התפריט לא יופיע בהתחלה */
+  flex-direction: column;
+}
+
+/* הצגת התפריט כשנלחץ כפתור */
+.main-nav.active {
+  display: flex;
+}
 	/* תצוגת תפריט רגיל במחשב */
 .main-nav {
   display: flex; /* הצגת התפריט במחשב */
