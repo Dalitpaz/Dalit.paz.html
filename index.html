@@ -163,7 +163,110 @@ body, html {
     </ul>
   </nav>
 
+<!-- כפתור תפריט פסים (יוצג רק במובייל) -->
+<button class="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</button>
+
+<script>
+  // JavaScript להפעלת התפריט במובייל
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  // הפעלת התפריט כשנלחץ כפתור תפריט הפסים
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+</script>
+
+
 	  <style>
+		  /* עיצוב תפריט רגיל במחשב */
+.main-nav {
+  display: flex; /* הצגת התפריט במחשב */
+  background-color: #fff;
+  padding: 10px;
+  justify-content: center; /* מרכז את התפריט */
+}
+
+/* תפריט במובייל - יוסתר בהתחלה */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 250px;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding-top: 60px; /* רווח מלמעלה */
+  transform: translateX(100%); /* התפריט יוצא מחוץ למסך */
+  transition: transform 0.3s ease;
+}
+
+/* הצגת התפריט כשנלחץ כפתור */
+.main-nav.active {
+  transform: translateX(0);
+}
+
+.menu-item {
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-toggle {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* חבוי את כפתור הפסים במסך רחב */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* כפתור הפסים לא יוצג במסך גדול */
+  }
+
+  /* תפריט רגיל במחשב */
+  .main-nav {
+    display: flex;
+    background-color: #fff;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .menu-item a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
 		  
   /* תפריט עכבר */
   .menu-link {
@@ -198,20 +301,7 @@ body, html {
     background-color: #5A4FCF;
   }
 
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
+ 
     .menu-link {
       display: block;
       padding: 15px;
