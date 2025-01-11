@@ -256,11 +256,24 @@ body, html {
       display: none;
     }
 
-
-
-    .main-nav li {
+   .main-nav li {
       display: inline-block;
     }
+	/* עיצוב עבור המחשב */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none; /* מוסתר במחשב */
+  }
+
+  .main-nav {
+    display: block; /* תפריט רגיל במחשב */
+  }
+
+  /* כפתור המבורגר לא יוצג במחשב */
+  .menu-toggle {
+    display: none;
+  }
+}
 
 
   /* עיצוב עבור המובייל */
