@@ -372,6 +372,22 @@ body, html {
     width: 100%;
   }
 }
+	@media (min-width: 768px) {
+  .main-nav {
+    display: flex; /* שומר את התפריט גלוי במחשב */
+    flex-direction: row; /* סידור אופקי */
+    position: relative; /* לא קבוע */
+    background-color: transparent; /* רקע שקוף */
+    height: auto; /* התאמה אוטומטית */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-toggle {
+    display: none; /* מסתיר את כפתור התפריט במחשב */
+  }
+}
+
 
 
 </style>
