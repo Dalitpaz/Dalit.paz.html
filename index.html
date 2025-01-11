@@ -181,7 +181,7 @@ body, html {
 	
 <!-- CSS -->
 <style>
-/* עיצוב התפריט במובייל */
+/* ברירת המחדל עבור המובייל */
 @media (max-width: 768px) {
   .mobile-nav {
     position: fixed;
@@ -191,13 +191,13 @@ body, html {
     height: 100%;
     background-color: #fff;
     z-index: 1000;
-    padding-top: 20px; /* רווח למעלה כדי שהתפריט לא יהיה צמוד מידי */
+    padding-top: 20px;
     text-align: center;
-    overflow-y: auto; /* להפעיל גלילה פנימית אם התפריט גבוה מדי */
+    overflow-y: auto; /* גלילה פנימית */
     box-shadow: none;
+    display: block; /* הצגת התפריט במובייל */
   }
 
-  /* גודל אייקון ה-X */
   .close-menu {
     position: absolute;
     top: 20px;
@@ -207,7 +207,6 @@ body, html {
     color: #333;
   }
 
-  /* עיצוב פריטי התפריט */
   .mobile-nav ul {
     list-style-type: none;
     margin: 0;
@@ -230,8 +229,46 @@ body, html {
   }
 
   .mobile-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* הצללה בעת ריחוף */
+    background-color: rgba(0, 0, 0, 0.1);
   }
+
+  /* כפתור המבורגר במובייל */
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #333;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+  }
+
+  /* כפתור המבורגר מוסתר במחשב */
+  .main-nav {
+    display: none; /* מסתיר את התפריט במחשב */
+  }
+
+  /* כפתור המבורגר מוצג במובייל */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ברירת המחדל עבור המחשב */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none; /* מוסתר במחשב */
+  }
+
+  .main-nav {
+    display: block; /* תפריט רגיל עבור המחשב */
+  }
+
+  .menu-toggle {
+    display: none; /* הסתרת כפתור המבורגר במחשב */
+  }
+}
+
 
   /* הגדלת כפתור המבורגר */
   .menu-toggle {
