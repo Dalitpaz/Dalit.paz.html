@@ -182,7 +182,7 @@ body, html {
 <!-- CSS -->
 
 	  <style>
-/* עיצוב עבור התפריט במובייל */
+/* עיצוב עבור המובייל */
 @media (max-width: 768px) {
   .mobile-nav {
     position: fixed;
@@ -227,6 +227,53 @@ body, html {
     border-bottom: 1px solid #ddd; /* גבול תחתון לכל פריט */
     transition: background-color 0.3s ease-in-out;
   }
+
+  .mobile-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* כפתור המבורגר במובייל */
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #333;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+  }
+
+  /* הצגת התפריט כשיש פתיחה */
+  .mobile-nav.open {
+    display: block;
+  }
+
+  /* הסתרת תפריט המחשב במובייל */
+  .main-nav {
+    display: none;
+  }
+}
+
+/* עיצוב עבור המחשב */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none; /* מוסתר במחשב */
+  }
+
+  .main-nav {
+    display: block; /* תפריט רגיל במחשב */
+  }
+
+  .menu-toggle {
+    display: none; /* הסתרת כפתור המבורגר במחשב */
+  }
+
+  /* הסרת כל תפריט צדדי במחשב */
+  .menu-toggle,
+  .mobile-nav.open {
+    display: none !important; /* דאג למנוע את הצגת התפריט בצד במחשב */
+  }
+}
 
   .mobile-nav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
