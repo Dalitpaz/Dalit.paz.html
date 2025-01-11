@@ -23,11 +23,7 @@
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
+
 
  /* אפקט רקע זז */
 .scroll-background {
@@ -343,6 +339,16 @@ body, html {
   overflow-y: scroll; /* להפעיל גלילה תמידית */
   margin: 0;
 }
+	html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* הסתרת גלילה אופקית */
+}
+
+body {
+  overflow-y: auto; /* לוודא שיש גלילה אנכית אחת בלבד */
+}
+
 
 main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
