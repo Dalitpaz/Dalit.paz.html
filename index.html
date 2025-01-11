@@ -195,15 +195,7 @@ body, html {
   background-color: #f0f0f0;
 }
 
-/* כפתור תפריט */
-.menu-toggle {
-  display: block;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-  cursor: pointer;
-}
+
 
 .menu-toggle .bar {
   width: 25px;
@@ -213,27 +205,11 @@ body, html {
   transition: all 0.3s ease;
 }
 
-/* חבוי את כפתור הפסים במסך רחב */
-@media (min-width: 769px) {
-  /* כפתור הפסים לא יוצג במסך רחב */
-  .menu-toggle {
-    display: none;
-  }
-
-  /* תפריט במחשב */
-  .main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #fff;
-    padding: 10px;
-  }
-
   .menu-item a {
     font-size: 18px;
     padding: 10px 20px;
   }
-}
+
 
 /* תפריט עכבר */
 .menu-link {
