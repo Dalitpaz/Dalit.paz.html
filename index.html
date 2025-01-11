@@ -173,6 +173,80 @@ body, html {
 </button>
 
 <style>
+
+	/* סגנון כללי לתפריט */
+.main-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -250px; /* מתחיל מחוץ למסך */
+  width: 250px;
+  height: 100vh;
+  background-color: #fff; /* צבע רקע בהיר */
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: right 0.3s ease-in-out; /* אנימציה לפתיחה וסגירה */
+  z-index: 999;
+}
+
+/* תפריט נפתח */
+.main-nav.active {
+  right: 0;
+  display: flex;
+}
+
+/* כפתור תפריט פסים */
+.menu-toggle {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* עיצוב לינקים */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* במחשב נייח */
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
 	@media (max-width: 768px) {
   .main-nav {
     right: -100%; /* התפריט מחוץ למסך */
