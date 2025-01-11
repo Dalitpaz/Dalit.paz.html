@@ -159,17 +159,22 @@ body, html {
     <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
   </ul>
 </nav>
-  <!-- כפתור תפריט פסים -->
-  <button class="menu-toggle">
-    <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
-    <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
-    <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
-  </button>
+
+<!-- כפתור תפריט פסים -->
+<button class="menu-toggle">
+  <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
+  <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
+  <div class="bar" style="width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></div>
+</button>
 
 <style>
-  /* ברירת מחדל - הכפתור יוצג בכל הגדלים */
+  /* ברירת מחדל - כפתור התפריט יוצג רק בנייד */
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 15px; /* מיקום הכפתור למעלה */
+    right: 15px; /* מיקום הכפתור בצד ימין */
+    z-index: 1000; /* מוודא שהכפתור יהיה מעל לתוכן */
   }
 
   /* במחשב נייח - הכפתור יוסתר */
@@ -178,8 +183,40 @@ body, html {
       display: none;
     }
   }
+
+  /* עיצוב התפריט כשזה נפתח */
+  nav ul.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px; /* רוחב התפריט */
+    height: 100vh; /* גובה מלא */
+    background-color: #333;
+    color: #fff;
+    flex-direction: column;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(100%); /* התפריט מתחיל מחוץ למסך */
+    transition: transform 0.3s ease;
+  }
+
+  nav ul.active.open {
+    transform: translateX(0); /* התפריט יימשך פנימה */
+  }
+
+  nav ul li {
+    margin-bottom: 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
 </style>
-  </header>
+
+</header>
+
 <script>
 // הפעלת כפתור התפריט לנייד
 const menuToggle = document.querySelector('.menu-toggle');
