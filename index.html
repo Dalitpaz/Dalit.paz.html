@@ -238,18 +238,6 @@ body, html {
   }
 }
 
-/* ברקע שחור */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998; /* הרקע מתחת לתפריט */
-}
-
 /* כאשר התפריט פתוח במובייל */
 .main-menu.active {
   transform: translateX(-250px);
@@ -268,18 +256,25 @@ body, html {
 </style>
 
 </header>
-
 <script>
-// הפעלת כפתור התפריט לנייד
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('nav ul');
-
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');  // מוסיף ומסיר את המחלקה active
-  menuToggle.classList.toggle('open'); // משנה את המראה של כפתור התפריט
+// קוד JavaScript לפתיחת וסגירת התפריט
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  const menu = document.querySelector('.main-menu');
+  const overlay = document.querySelector('.menu-overlay');
+  
+  menu.classList.toggle('active'); // מוסיף ומסיר את המחלקה active לתפריט
+  overlay.classList.toggle('active'); // מוסיף ומסיר את המחלקה active לרקע השחור
 });
-</script>
 
+// סגירת התפריט כאשר לוחצים על הרקע השחור
+document.querySelector('.menu-overlay').addEventListener('click', function() {
+  const menu = document.querySelector('.main-menu');
+  const overlay = document.querySelector('.menu-overlay');
+  
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+  </script>
 
 
 <style>
