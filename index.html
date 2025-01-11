@@ -22,11 +22,6 @@
 main {
   margin-top: 0; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
 
 
       /* אפקט רקע זז */
@@ -168,21 +163,6 @@ body, html {
 </button>
 
 <style>
-  /* עיצוב כללי לתפריט */
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: #fff;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: right 0.3s ease-in-out;
-    z-index: 999;
-  }
 
   .main-nav.active {
     right: 0;
@@ -207,34 +187,11 @@ body, html {
     transition: all 0.3s ease;
   }
 
-  /* עיצוב לינקים */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
+
 
   .menu-link:hover {
     background-color: #f0f0f0;
   }
-
-  /* עיצוב לנייחים */
-  @media (min-width: 768px) {
-    .main-nav {
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      background-color: transparent;
-      box-shadow: none;
-      height: auto;
-      padding: 0;
-      margin: 0;
-      right: 0;
-    }
 
     .menu-toggle {
       display: none;
@@ -270,24 +227,43 @@ body, html {
       display: block;
     }
 
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-  
-    .menu-item:hover {
-      background-color: transparent;
-    }
+
+main {
+  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* אפשר גלילה */
+  margin: 0;
+  position: relative;
+  display: block; /* וודא שהדף מציג את התוכן בצורה נורמלית */
+}
+
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
   }
 
   /* עיצוב תפריט בקטגוריות */
   .menu-item {
     position: relative;
   }
-
   .menu-item::after {
     content: '';
     position: absolute;
@@ -298,9 +274,23 @@ body, html {
     background-color: transparent;
     transition: all 0.3s ease;
   }
-
   .menu-item:hover::after {
     background-color: #5A4FCF;
+  }
+
+    .menu-toggle {
+      display: block;
+    }
+    .menu-link {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    .menu-item:hover {
+      background-color: transparent;
+    }
   }
 </style>
 
