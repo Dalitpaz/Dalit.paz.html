@@ -168,6 +168,18 @@ body, html {
 
 </header>
 
+	  <script>
+  // הפעלת כפתור התפריט לנייד
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');  // מוסיף ומסיר את המחלקה active
+    menuToggle.classList.toggle('open'); // משנה את המראה של כפתור התפריט
+  });
+</script>
+
+
 <style>
 	main {
   margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
