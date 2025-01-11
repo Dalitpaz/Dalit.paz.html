@@ -163,6 +163,28 @@ main {
 </button>
 
 <style>
+	/* עיצוב למובייל */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* לא יופיע במובייל */
+    flex-direction: column;
+    background-color: #fff;
+    transition: right 0.3s ease;
+  }
+
+  .main-nav.active {
+    display: flex;
+    right: 0;
+  }
+}
+
+/* תצוגת תפריט רגיל במחשב */
+.main-nav {
+  display: flex; /* הצגת התפריט במחשב */
+  background-color: #fff;
+  transition: right 0.3s ease;
+}
+
 
   .main-nav.active {
     right: 0;
