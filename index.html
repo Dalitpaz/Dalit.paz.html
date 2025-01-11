@@ -399,6 +399,11 @@ document.querySelector('.menu-overlay')?.addEventListener('click', function () {
   menu.classList.remove('active');
   overlay.classList.remove('active');
 });
+		  document.querySelector('.menu-toggle').addEventListener('click', function () {
+  const menu = document.querySelector('.main-nav');
+  menu.classList.toggle('active');
+});
+
 
 
   </script>
