@@ -167,9 +167,6 @@ main {
     &#9776; <!-- כפתור המבורגר -->
   </div>
 </header>
-
-
-	
 <script>
   // מציאת האיברים
   const menuToggle = document.querySelector('.menu-toggle');
@@ -203,16 +200,15 @@ body {
   }
 
   .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -250px; /* התפריט מוסתר מימין */
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    transition: right 0.3s ease;
-    display: none; /* מוסתר בהתחלה */
-  }
+  position: fixed;
+  top: 0;
+  right: -250px; /* התפריט מוסתר מימין */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
 
   .mobile-nav.open {
     right: 0; /* התפריט יוצג כשהוא פתוח */
