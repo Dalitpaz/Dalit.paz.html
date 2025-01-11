@@ -282,23 +282,22 @@ body, html {
 </header>
 	  
 	  <script>
-// קוד JavaScript לפתיחת וסגירת התפריט
 document.querySelector('.menu-toggle').addEventListener('click', function() {
   const menu = document.querySelector('.main-nav');
   const overlay = document.querySelector('.menu-overlay');
   
-  menu.classList.toggle('active'); // מוסיף ומסיר את המחלקה active לתפריט
-  overlay.classList.toggle('active'); // מוסיף ומסיר את המחלקה active לרקע השחור
+  menu.classList.toggle('active');
+  if (overlay) overlay.classList.toggle('active');
 });
 
-// סגירת התפריט כאשר לוחצים על הרקע השחור
-document.querySelector('.menu-overlay').addEventListener('click', function() {
+document.querySelector('.menu-overlay')?.addEventListener('click', function() {
   const menu = document.querySelector('.main-nav');
   const overlay = document.querySelector('.menu-overlay');
   
   menu.classList.remove('active');
-  overlay.classList.remove('active');
+  if (overlay) overlay.classList.remove('active');
 });
+
   </script>
 
 <style>
