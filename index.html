@@ -424,24 +424,22 @@ body, html {
         </p>
     </div>
 <!-- תמונה -->
-	<style>
-	.image-container:hover img {
-    transform: scale(1.05); /* הגדלה של 5% בעת ריחוף */
-}
-
-		</style>
+<style>
+    .image-container:hover img {
+        transform: scale(1.05); /* הגדלה של 5% בעת ריחוף */
+        transition: transform 0.4s ease-in-out; /* אחיד לכל האפקט */
+    }
+</style>
 <div style="flex: 1; max-width: 500px;" class="image-container">
     <div style="border: 5px solid #0366d6; 
                 border-radius: 20px; 
                 overflow: hidden; 
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); 
-                transition: transform 0.4s ease-in-out; 
                 display: inline-block;">
         <img src="images/labs.jpg" 
              style="width: 100%; 
                     height: auto; 
                     display: block; 
-                    transition: transform 0.4s ease-in-out; 
                     border-radius: 15px;">
     </div>
 </div>
