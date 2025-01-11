@@ -168,10 +168,12 @@ main {
   const menuToggle = document.querySelector('.menu-toggle');
   const mainNav = document.querySelector('.main-nav');
   
+  // הפעלת התפריט כשנלחץ כפתור תפריט הפסים
   menuToggle.addEventListener('click', () => {
     mainNav.classList.toggle('active');
   });
 </script>
+
 
 <style>
 	/* תצוגת תפריט רגיל במחשב */
@@ -255,16 +257,6 @@ main {
   }
 </style>
 
-
-<script>
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-  const menu = document.querySelector('.main-nav');
-  const overlay = document.querySelector('.menu-overlay');
-  
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-</script>
 
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
