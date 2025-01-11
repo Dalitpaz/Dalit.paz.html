@@ -189,7 +189,7 @@ body, html {
   margin: 5px 0;
 }
 
-/* התפריט - מוצג במחשב נייח */
+/* במחשב נייח - התפריט תמיד יהיה גלוי */
 .main-menu {
   display: flex;
   list-style: none;
@@ -206,14 +206,14 @@ body, html {
     display: none;
   }
 
-  .main-menu {
+  .main-nav {
     display: flex; /* תפריט גלוי תמיד */
   }
 }
 
 /* במובייל - התפריט יוסתר */
 @media (max-width: 767px) {
-  .main-menu {
+  .main-nav {
     display: none; /* התפריט מוסתר בהתחלה */
     position: fixed;
     top: 0;
@@ -228,19 +228,30 @@ body, html {
     z-index: 999;
   }
 
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
   /* כפתור התפריט יופיע רק במובייל */
   .menu-toggle {
     display: block;
   }
-
-  .menu-overlay.active {
-    display: block;
-  }
 }
 
-/* כאשר התפריט פתוח במובייל */
-.main-menu.active {
-  transform: translateX(-250px);
+/* כשכפתור התפריט נלחץ */
+.main-nav.active {
+  transform: translateX(0); /* תפריט נפתח */
+}
+
+.menu-overlay.active {
+  display: block; /* הצגת הרקע השחור */
 }
 
 /* עיצוב הלינקים בתפריט */
@@ -252,6 +263,18 @@ body, html {
   color: #fff;
   text-decoration: none;
 }
+
+/* עיצוב בנייד */
+@media (max-width: 768px) {
+  .menu-link {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 
 </style>
 
@@ -345,11 +368,6 @@ document.querySelector('.menu-overlay').addEventListener('click', function() {
       width: 100%;
     }
 
-    /* כשכפתור התפריט נלחץ */
-    .main-nav.active {
-      right: 0;
-    }
-  }
 </style>
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
