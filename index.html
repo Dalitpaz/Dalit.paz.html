@@ -168,46 +168,99 @@ body, html {
 </button>
 
 <style>
-	
-/* ברירת מחדל - כפתור התפריט יוצג רק בנייד */
-.menu-toggle {
-  display: block;
-  position: absolute;
-  top: 15px; /* מיקום הכפתור למעלה */
-  right: 15px; /* מיקום הכפתור בצד ימין */
-  z-index: 1000; /* מוודא שהכפתור יהיה מעל לתוכן */
+/* ברירת מחדל - התפריט מוצג בכל הגדלים */
+.main-nav {
+  position: relative;
 }
 
+/* כפתור התפריט */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000; /* הכפתור מעל התוכן */
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* התפריט - מוצג במחשב נייח */
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  gap: 40px;
+}
+
+/* במחשב נייח - הכפתור יוסתר */
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
+
+  .main-menu {
+    display: flex; /* תפריט גלוי תמיד */
+  }
 }
 
-nav ul {
+/* במובייל - התפריט יוסתר */
+@media (max-width: 767px) {
+  .main-menu {
+    display: none; /* התפריט מוסתר בהתחלה */
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  /* כפתור התפריט יופיע רק במובייל */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
+}
+
+/* ברקע שחור */
+.menu-overlay {
+  display: none;
   position: fixed;
   top: 0;
-  right: -250px; /* התפריט מתחיל מחוץ למסך */
-  width: 250px;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  background-color: #333;
-  color: white;
-  flex-direction: column;
-  padding: 20px;
-  display: flex;
-  justify-content: flex-start;
-  transition: transform 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998; /* הרקע מתחת לתפריט */
 }
 
-nav ul.active {
-  transform: translateX(-250px); /* התפריט ייכנס למסך */
+/* כאשר התפריט פתוח במובייל */
+.main-menu.active {
+  transform: translateX(-250px);
 }
 
-nav ul li {
+/* עיצוב הלינקים בתפריט */
+.main-menu li {
   margin-bottom: 20px;
 }
 
-nav ul li a {
+.main-menu li a {
   color: #fff;
   text-decoration: none;
 }
