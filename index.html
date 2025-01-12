@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!-- CSS -->    
+
+	  <!-- CSS -->    
 <style>
+	
    /* אפקט רקע זז */
    .scroll-background {
      position: fixed;
@@ -97,28 +99,27 @@
      border-radius: 3px;
      transition: all 0.3s ease;
    }
+/* תפריט מובייל */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out; /* אנימציה עם transform */
+  transform: translateX(100%); /* התפריט לא גלויות בתחילה */
+}
 
-   /* תפריט מובייל */
-   .mobile-menu {
-     display: none;
-     position: fixed;
-     top: 0;
-     right: 0;
-     height: 100%;
-     width: 250px;
-     background-color: #34495e;
-     color: white;
-     padding: 20px;
-     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-     z-index: 1000;
-     transition: transform 0.3s ease-in-out;
-     transform: translateX(100%);
-   }
+/* כאשר התפריט פעיל */
+.mobile-menu.active {
+  transform: translateX(0); /* תפריט נצפה */
+}
 
-   .mobile-menu.active {
-     transform: translateX(0);
-     display: block;
-   }
 
    .mobile-menu ul {
      list-style: none;
