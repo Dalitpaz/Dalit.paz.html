@@ -183,25 +183,16 @@
 .menu-toggle.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
-	if (window.innerWidth <= 768) {
-  console.log("מצב מובייל");
-} else {
-  console.log("מצב דסקטופ");
-}
-
 
 </script>
 
 <!-- CSS -->
 <style>
 
-	.menu-link:focus {
-    outline: 2px solid #007BFF;
-}
 
 
   body {
-    margin: 0;
+margin: 0;
     font-family: 'Poppins', sans-serif;
   }
 
@@ -232,6 +223,16 @@
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
   }
+	.mobile-menu {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: flex;
+  }
+}
+
 
 
     .menu-link {
@@ -251,8 +252,7 @@
     .menu-toggle {
       display: none; /* כפתור פסים מוסתר במסך מחשב */
     }
-  }
-
+  
   /* תפריט לנייד */
   @media (max-width: 768px) {
     .desktop-menu {
