@@ -193,7 +193,7 @@ body {
   </style>
 </head>
 <body>
-<header class="header" style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -209,14 +209,14 @@ body {
   </nav>
 
   <!-- כפתור תפריט פסים -->
-  <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" style="position: absolute; top: 20px; right: 20px; z-index: 2000;">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
   </button>
 
   <!-- תפריט מובייל -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" style="position: fixed; top: 0; right: 0; width: 250px; height: 100%; background-color: #fff; box-shadow: -4px 0 10px rgba(0,0,0,0.1); transform: translateX(100%); transition: transform 0.3s ease-in-out; padding: 20px;">
     <ul>
       <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
       <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
@@ -237,6 +237,13 @@ menuToggle.addEventListener('click', (e) => {
   const isExpanded = mobileMenu.classList.contains('active');
   menuToggle.setAttribute('aria-expanded', isExpanded);
   mobileMenu.setAttribute('aria-hidden', !isExpanded);
+
+  // שינוי מיקום התפריט
+  if (isExpanded) {
+    mobileMenu.style.transform = 'translateX(0)';
+  } else {
+    mobileMenu.style.transform = 'translateX(100%)';
+  }
 });
 
 // סגירת התפריט בלחיצה מחוץ לתפריט
@@ -245,6 +252,7 @@ document.addEventListener('click', (e) => {
     mobileMenu.classList.remove('active');
     menuToggle.setAttribute('aria-expanded', false);
     mobileMenu.setAttribute('aria-hidden', true);
+    mobileMenu.style.transform = 'translateX(100%)';
   }
 });
 
@@ -254,6 +262,7 @@ document.addEventListener('keydown', (e) => {
     mobileMenu.classList.remove('active');
     menuToggle.setAttribute('aria-expanded', false);
     mobileMenu.setAttribute('aria-hidden', true);
+    mobileMenu.style.transform = 'translateX(100%)';
   }
 });
 </script>
