@@ -101,15 +101,16 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.mobile-menu.active {
-  transform: translateX(0);
-}
 
 @media (max-width: 768px) {
   /* הצגת כפתור הפסים במובייל */
   .menu-toggle {
     display: flex; /* כעת כפתור הפסים יוצג במובייל */
   }
+	
+.mobile-menu.active {
+  transform: translateX(0);
+}
 	
 /* תפריט פסים */
 .menu-toggle {
@@ -232,22 +233,21 @@ body {
       </ul>
     </nav>
 
-    <!-- כפתור לתפריט נפתח במובייל -->
+<!-- כפתור לתפריט נפתח במובייל -->
 <div class="menu-toggle" onclick="toggleMenu()">
   <div class="bar"></div>
   <div class="bar"></div>
   <div class="bar"></div>
 </div>
 
-
-    <!-- תפריט המובייל -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <ul>
-        <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
-        <li><a href="#" class="menu-link">Fields of Specialization</a></li>
-        <li><a href="#" class="menu-link">Contact</a></li>
-      </ul>
-    </div>
+<!-- תפריט המובייל -->
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
+    <li><a href="#" class="menu-link">Fields of Specialization</a></li>
+    <li><a href="#" class="menu-link">Contact</a></li>
+  </ul>
+</div>
 
   </header>
 </body>
