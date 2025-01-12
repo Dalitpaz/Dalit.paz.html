@@ -159,6 +159,18 @@ body {
 .mobile-menu li:hover {
   color: #1abc9c;
 }
+		  @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 
 /* מדיה מובייל */
 @media (max-width: 768px) {
@@ -227,14 +239,13 @@ body {
 </style>
 
 	<script>
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
 
   menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-    const isExpanded = mobileMenu.classList.contains("active");
-    menuToggle.setAttribute("aria-expanded", isExpanded);
+    const isActive = mobileMenu.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", isActive);
   });
 
   document.addEventListener("click", (e) => {
@@ -245,12 +256,13 @@ body {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+    if (e.key === "Escape") {
       mobileMenu.classList.remove("active");
       menuToggle.setAttribute("aria-expanded", false);
     }
   });
 });
+
 
 </script>
 
