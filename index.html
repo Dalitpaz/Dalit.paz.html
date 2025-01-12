@@ -115,6 +115,22 @@
     transition: transform 0.3s ease-in-out;
   }
 
+	/* כפתור הפסים */
+.menu-toggle {
+  display: none; /* מוסתר ברוב התצוגות */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
   .mobile-menu.active {
     transform: translateX(0);
   }
@@ -181,11 +197,12 @@
     </nav>
 
     <!-- כפתור לתפריט נפתח במובייל -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+<div class="menu-toggle" onclick="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
 
     <!-- תפריט המובייל -->
     <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
