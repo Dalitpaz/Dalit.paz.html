@@ -201,22 +201,22 @@ body {
         <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
       </ul>
     </nav>
-
-<!-- כפתור לתפריט נפתח במובייל -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</div>
+<!-- כפתור הפתיחה של התפריט -->
+<button class="menu-toggle" aria-label="Open mobile menu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
 
 <!-- תפריט המובייל -->
-<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+<nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
   <ul>
     <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
     <li><a href="#" class="menu-link">Fields of Specialization</a></li>
     <li><a href="#" class="menu-link">Contact</a></li>
   </ul>
-</div>
+</nav>
+
 
   </header>
 </body>
