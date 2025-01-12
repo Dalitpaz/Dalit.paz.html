@@ -168,14 +168,16 @@
 
 <!-- JavaScript -->
 <script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
+ const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-  menuToggle.addEventListener('click', () => {
-    const isActive = mobileMenu.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', isActive);
-    mobileMenu.setAttribute('aria-hidden', !isActive);
-  });
+menuToggle.addEventListener('click', () => {
+  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !isExpanded);
+  mobileMenu.setAttribute('aria-hidden', isExpanded);
+  mobileMenu.classList.toggle('active', !isExpanded);
+});
+
 
   // סגירת התפריט בלחיצה מחוץ לתפריט
   document.addEventListener('click', (e) => {
@@ -245,10 +247,14 @@ margin: 0;
     display: flex;
   }
 	
-  .mobile-menu {
-    display: none; /* תפריט מובייל מוסתר */
-  }
+.mobile-menu {
+  display: none; /* ברירת מחדל: מוסתר */
 }
+
+.mobile-menu.active {
+  display: flex; /* מוצג רק כשהתפריט פעיל */
+}
+
 
 /* תפריט לנייד */
 @media (max-width: 768px) {
