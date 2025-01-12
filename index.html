@@ -175,6 +175,11 @@ document.addEventListener('click', (e) => {
     menuItems.classList.remove('active');
   }
 });
+	menuToggle.addEventListener('click', () => {
+  const isActive = menuItems.classList.toggle('active');
+  menuToggle.setAttribute('aria-expanded', isActive);
+});
+
 
 </script>
 
