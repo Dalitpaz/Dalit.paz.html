@@ -209,58 +209,31 @@ body {
 </style>
 
 	<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
+ document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    menuToggle.addEventListener("click", () => {
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-      mobileMenu.setAttribute("aria-hidden", isExpanded);
-      menuToggle.classList.toggle("active");
-      mobileMenu.classList.toggle("active");
-    });
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    const isExpanded = mobileMenu.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded", isExpanded);
   });
 
-// פונקציה לפתיחת/סגירת תפריט הפסים במובייל
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", false);
+    }
+  });
 
-menuToggle.addEventListener('click', (e) => {
-  e.stopPropagation(); // מונע מה-click להגיע לאירועים אחרים
-  mobileMenu.classList.toggle('active');
-  // עדכון של aria-expanded
-  const isExpanded = mobileMenu.classList.contains('active');
-  menuToggle.setAttribute('aria-expanded', isExpanded);
-  mobileMenu.setAttribute('aria-hidden', !isExpanded);
-
-  // שינוי מיקום התפריט
-  if (isExpanded) {
-    mobileMenu.style.transform = 'translateX(0)';
-  } else {
-    mobileMenu.style.transform = 'translateX(100%)';
-  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+      mobileMenu.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", false);
+    }
+  });
 });
 
-// סגירת התפריט בלחיצה מחוץ לתפריט
-document.addEventListener('click', (e) => {
-  if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-    mobileMenu.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', false);
-    mobileMenu.setAttribute('aria-hidden', true);
-    mobileMenu.style.transform = 'translateX(100%)';
-  }
-});
-
-// סגירת התפריט גם על כפתור ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-    mobileMenu.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', false);
-    mobileMenu.setAttribute('aria-hidden', true);
-    mobileMenu.style.transform = 'translateX(100%)';
-  }
-});
 </script>
 
 </head>
