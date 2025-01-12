@@ -76,21 +76,6 @@ body {
   background: linear-gradient(135deg, #2c3e50, #3498db);
 }
 
-/* תפריט פסים */
-.menu-toggle {
-  display: none; /* מוסתר ברוב התצוגות */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
 
 .menu-toggle .bar {
   width: 100%;
@@ -125,17 +110,47 @@ body {
   .menu-toggle {
     display: flex; /* כעת כפתור הפסים יוצג במובייל */
   }
-		@media (max-width: 768px) {
+	
+/* תפריט פסים */
+.menu-toggle {
+  display: none; /* מוסתר ברוב התצוגות */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
   nav ul {
-    flex-direction: column;  /* משנה את כיוון האלמנטים בתפריט לעמוד אחד מתחת לשני */
-    background: rgba(0, 0, 0, 0.8);  /* צבע רקע כהה עם שקיפות */
-    padding: 20px;  /* ריווח פנימי של 20px לכל הצדדים של התפריט */
-    position: absolute;  /* מיקום מוחלט ביחס לאלמנט האב */
-    top: 60px;  /* המרחק מקצה המסך העליון של הדפדפן */
-    left: 20px;  /* המרחק מקצה המסך השמאלי */
-    border-radius: 10px;  /* קצוות מעוגלות של התפריט ברדיוס 10px */
-    display: none;  /* מחביא את התפריט (לא מוצג) */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 10px;
+    display: none;
   }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-trigger {
+    display: block;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
 
   /* תפריט נפתח */
   .mobile-menu {
