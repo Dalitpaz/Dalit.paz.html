@@ -16,184 +16,191 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <!-- CSS -->    
-
 <style>
-  /* אפקט רקע זז */
-  .scroll-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
-    background-size: 300% 300%;
-    animation: backgroundScroll 10s infinite linear;
-    z-index: -1;
-  }
-
-  @keyframes backgroundScroll {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  /* לוגו */
-  .rotating-logo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .logo-container:hover .rotating-logo {
-    transform: rotateY(360deg);
-  }
-
-  /* תפריט */
-  .menu-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-  }
-
-  .menu-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-  }
-  /* רקע תפריט זז */
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-  }
-
-  /* כפתור תפריט פסים (מובייל) */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-  }
-
-  .menu-toggle .bar {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-  }
-
-  /* תפריט מובייל */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #34495e;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-  }
-
-  .mobile-menu.active {
-    transform: translateX(0);
-  }
-
-  /* עיצוב קישורים בתפריט מובייל */
-  .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .mobile-menu li {
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  .mobile-menu li:hover {
-    color: #1abc9c;
-  }
-
-  /* עבור מסכים קטנים */
-  @media (max-width: 768px) {
-    /* מסתיר את תפריט המחשב */
-    .main-nav {
-      display: none;
+    /* אפקט רקע זז */
+    .scroll-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
+      background-size: 300% 300%;
+      animation: backgroundScroll 10s infinite linear;
+      z-index: -1;
     }
 
-    /* מציג את כפתור תפריט הפסים */
+    @keyframes backgroundScroll {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* לוגו */
+    .rotating-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .logo-container:hover .rotating-logo {
+      transform: rotateY(360deg);
+    }
+
+    /* תפריט */
+    .menu-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .menu-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+    }
+
+    /* כפתור תפריט פסים (מובייל) */
     .menu-toggle {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      position: fixed;
+      top: 20px;
+      left: 20px;
     }
 
-    /* מציג את התפריט המובייל כשפעיל */
+    .menu-toggle .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #ffffff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* תפריט מובייל */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+      transform: translateX(-100%);
+    }
+
     .mobile-menu.active {
-      display: flex;
+      transform: translateX(0);
     }
-  }
-</style>
 
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-  </head>
-  <body>
-  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
-  <!-- לוגו -->
-  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
-  </div>
+    .mobile-menu li {
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
+    .mobile-menu li:hover {
+      color: #1abc9c;
+    }
 
-  <!-- תפריט -->
-  <nav class="main-nav" style="display: inline-block;">
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
+    @media (max-width: 768px) {
+      /* מסתיר את תפריט המחשב */
+      .main-nav {
+        display: none;
+      }
 
+      /* מציג את כפתור תפריט הפסים */
+      .menu-toggle {
+        display: flex;
+      }
 
+      /* מציג את התפריט המובייל כשפעיל */
+      .mobile-menu.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+    <!-- לוגו -->
+    <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+      <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+    </div>
+
+    <!-- תפריט -->
+    <nav class="main-nav" style="display: inline-block;">
+      <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+        <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+        <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+        <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- כפתור תפריט פסים -->
+    <button class="menu-toggle" id="menuToggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+
+    <!-- תפריט מובייל -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+        <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+        <li><a href="property-details.html" class="menu-link">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
-
-<!-- JavaScript -->
 <script>
- const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+  // הגדרת משתנים
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-menuToggle.addEventListener('click', () => {
-  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-  menuToggle.setAttribute('aria-expanded', !isExpanded);
-  mobileMenu.setAttribute('aria-hidden', isExpanded);
-  mobileMenu.classList.toggle('active', !isExpanded);
-});
-
+  // פתיחה וסגירה של תפריט הפסים
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.setAttribute('aria-hidden', isExpanded);
+    mobileMenu.classList.toggle('active', !isExpanded);
+  });
 
   // סגירת התפריט בלחיצה מחוץ לתפריט
   document.addEventListener('click', (e) => {
@@ -203,19 +210,28 @@ menuToggle.addEventListener('click', () => {
       mobileMenu.setAttribute('aria-hidden', true);
     }
   });
-	.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
 
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
+  // עיצוב כפתור תפריט פסים כאשר הוא פעיל
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+  });
 </script>
+
+<!-- CSS לשינוי עיצוב כפתור תפריט פסים כאשר הוא פעיל -->
+<style>
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
+
 
 	  <style>
   /* תפריט עכבר */
