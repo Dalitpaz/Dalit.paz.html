@@ -157,6 +157,13 @@
     }
   }
 
+	.menu-toggle {
+  position: fixed;
+  top: 20px;  /* שינוי המיקום בהתאם לצורך */
+  right: 20px;
+  z-index: 1001; /* ווידוא שהכפתור יהיה מעל כל האלמנטים */
+}
+
   /* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
