@@ -163,6 +163,15 @@ body {
     menu.classList.toggle('active');  // הפעלת התפריט הנפתח
     toggle.classList.toggle('active');  // שינוי כפתור הפסים
   }
+				      function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  // הוספת/הסרת קלאס active כדי להראות/להסתיר את התפריט
+  mobileMenu.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+}
+
 </script>
 
 <body>
