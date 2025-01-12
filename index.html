@@ -184,7 +184,19 @@ body {
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+	.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
 
+.mobile-menu.active {
+  transform: translateX(0);
+}
+	@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+}
   .menu-toggle.active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -195,7 +207,20 @@ body {
 }
 </style>
 
-<script>
+	<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.setAttribute("aria-hidden", isExpanded);
+      menuToggle.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+    });
+  });
+
 // פונקציה לפתיחת/סגירת תפריט הפסים במובייל
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
