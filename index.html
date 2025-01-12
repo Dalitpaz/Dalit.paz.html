@@ -17,234 +17,187 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <link href="assets/css/Style.css" rel="stylesheet">
 
-	  <style>
-	  /* אפקט רקע זז */
-.scroll-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
-  background-size: 300% 300%;
-  animation: backgroundScroll 10s infinite linear;
-  z-index: -1;
-}
-
-@keyframes backgroundScroll {
-  0% {
-    background-position: 0% 50%;
+<style>
+  /* אפקט רקע זז */
+  .scroll-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
+    background-size: 300% 300%;
+    animation: backgroundScroll 10s infinite linear;
+    z-index: -1;
   }
-  100% {
-    background-position: 100% 50%;
+
+  @keyframes backgroundScroll {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
-}
 
-/* לוגו */
-.rotating-logo {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
+  /* לוגו */
+  .rotating-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.logo-container:hover .rotating-logo {
-  transform: rotateY(360deg);
-}
+  .logo-container:hover .rotating-logo {
+    transform: rotateY(360deg);
+  }
 
-/* תפריט */
-.menu-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.3s;
-}
+  /* תפריט */
+  .menu-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+  }
 
-.menu-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
+  .menu-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #2c3e50, #3498db);
-}
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+  }
 
-/* תפריט פסים */
-.menu-toggle {
-  display: none; /* מוסתר ברוב התצוגות */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
-
-.menu-toggle .bar {
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* תפריט מובייל */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 250px;
-  background-color: #34495e;
-  color: white;
-  padding: 20px;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
-		
-
-.mobile-menu.active {
-  transform: translateX(0);
-}
-/* מדיה מובייל */
-@media (max-width: 768px) {
-  /* כפתור פסים יוצג רק במובייל */
+  /* תפריט פסים */
   .menu-toggle {
-    display: flex;  /* כעת כפתור הפסים יוצג */
+    display: none; /* מוסתר ברוב התצוגות */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
   }
 
-  /* תפריט אנכי שניתן לפתוח במובייל */
-  .mobile-menu {
-    display: none;  /* התפריט יוסתר קודם */
-  }
-  
-  /* תפריט נפתח */
-  .mobile-menu.active {
-    display: flex;  /* יופיע כאשר הכפתור נלחץ */
-  }
-
-  /* מסתיר את תפריט המחשב */
-  .main-nav {
-    display: none;
-  }
-}
-
-.mobile-menu li {
-  color: white;
-}
-
-.mobile-menu li:hover {
-  color: #1abc9c;
-}
-
-/* מדיה מובייל */
-@media (max-width: 768px) {
-  /* תפריט פסים יוצג רק במובייל */
-  .menu-toggle {
-    display: flex;
-  }
-
-  /* מסתיר את תפריט המחשב */
-  .main-nav {
-    display: none;
+  .menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
   }
 
   /* תפריט מובייל */
   .mobile-menu {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
-    width: 250px;
     height: 100%;
+    width: 250px;
     background-color: #34495e;
     color: white;
     padding: 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1000;
   }
 
   .mobile-menu.active {
     transform: translateX(0);
   }
-}
 
-/* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+  /* מדיה מובייל */
+  @media (max-width: 768px) {
+    /* כפתור פסים יוצג רק במובייל */
+    .menu-toggle {
+      display: flex;  /* כעת כפתור הפסים יוצג */
+    }
 
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
+    /* תפריט נפתח */
+    .mobile-menu {
+      display: none;  /* התפריט יוסתר קודם */
+    }
 
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+    .mobile-menu.active {
+      display: flex;  /* יופיע כאשר הכפתור נלחץ */
+    }
 
+    /* מסתיר את תפריט המחשב */
+    .main-nav {
+      display: none;
+    }
+  }
 
-  </style>
+  /* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-	  <script>
-	function toggleMenu() {
-  const menu = document.querySelector('.mobile-menu');
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector("header nav");
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-  menu.classList.toggle('active');  // הפעלת התפריט הנפתח
-  toggle.classList.toggle('active');  // שינוי כפתור הפסים
-  nav.classList.toggle("nav-active");  // שינוי מצב הניווט
-}
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
 
-  </script>
-</head>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const toggle = document.querySelector('.menu-toggle');
+    menu.classList.toggle('active');  // הפעלת התפריט הנפתח
+    toggle.classList.toggle('active');  // שינוי כפתור הפסים
+  }
+</script>
+
 <body>
-<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
-  <!-- לוגו -->
-  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
-  </div>
+  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+    <!-- לוגו -->
+    <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+      <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+    </div>
 
-  <!-- תפריט -->
-  <nav class="main-nav" style="display: inline-block;">
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- תפריט -->
+    <nav class="main-nav" style="display: inline-block;">
+      <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+        <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+        <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+        <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+      </ul>
+    </nav>
 
-	
-  <!-- כפתור לתפריט נפתח במובייל -->
-  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
-    &#9776;
-  </div>
+    <!-- כפתור לתפריט נפתח במובייל -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
-<!-- תפריט המובייל -->
-<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-  <ul>
-    <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
-    <li><a href="#" class="menu-link">Fields of Specialization</a></li>
-    <li><a href="#" class="menu-link">Contact</a></li>
-  </ul>
-</div>
+    <!-- תפריט המובייל -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
+        <li><a href="#" class="menu-link">Fields of Specialization</a></li>
+        <li><a href="#" class="menu-link">Contact</a></li>
+      </ul>
+    </div>
 
-</header>
+  </header>
+</body>
 
 <style>
   .menu-toggle.active .bar:nth-child(1) {
