@@ -18,7 +18,7 @@
 <link href="assets/css/Style.css" rel="stylesheet">
 
 <style>
-	  
+
 	  /* אפקט רקע זז */
 .scroll-background {
   position: fixed;
@@ -125,6 +125,17 @@ body {
   .menu-toggle {
     display: flex; /* כעת כפתור הפסים יוצג במובייל */
   }
+		@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;  /* משנה את כיוון האלמנטים בתפריט לעמוד אחד מתחת לשני */
+    background: rgba(0, 0, 0, 0.8);  /* צבע רקע כהה עם שקיפות */
+    padding: 20px;  /* ריווח פנימי של 20px לכל הצדדים של התפריט */
+    position: absolute;  /* מיקום מוחלט ביחס לאלמנט האב */
+    top: 60px;  /* המרחק מקצה המסך העליון של הדפדפן */
+    left: 20px;  /* המרחק מקצה המסך השמאלי */
+    border-radius: 10px;  /* קצוות מעוגלות של התפריט ברדיוס 10px */
+    display: none;  /* מחביא את התפריט (לא מוצג) */
+  }
 
   /* תפריט נפתח */
   .mobile-menu {
@@ -183,6 +194,10 @@ body {
   mobileMenu.classList.toggle('active');
   menuToggle.classList.toggle('active');
 }
+      function toggleMenu() {
+        const nav = document.querySelector("header nav");
+        nav.classList.toggle("nav-active");
+      }
 
 </script>
 
@@ -343,14 +358,5 @@ body {
     }
 </style>
 
-
-
-	  
-    <script>
-      function toggleMenu() {
-        const nav = document.querySelector("header nav");
-        nav.classList.toggle("nav-active");
-      }
-    </script>
   </body>
 </html>
