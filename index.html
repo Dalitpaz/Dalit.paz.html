@@ -410,6 +410,17 @@ margin: 0;
     background-color: #5A4FCF;
   }
 
+  /* עיצוב בנייד */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
     .menu-toggle {
       display: block;
     }
@@ -423,6 +434,8 @@ margin: 0;
     .menu-item:hover {
       background-color: transparent;
     }
+  }
+</style>
   
 </style>
 
