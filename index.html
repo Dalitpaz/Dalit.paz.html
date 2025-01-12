@@ -215,25 +215,25 @@ body {
     </ul>
   </nav>
 
-  <!-- כפתור תפריט פסים -->
-<button class="menu-toggle">
+<!-- כפתור תפריט פסים -->
+<button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle Menu">
   <span class="bar"></span>
   <span class="bar"></span>
   <span class="bar"></span>
 </button>
 
+<!-- תפריט המובייל -->
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
+    <li><a href="#" class="menu-link">Fields of Specialization</a></li>
+    <li><a href="#" class="menu-link">Contact</a></li>
+  </ul>
+</div>
 
-  <!-- תפריט מובייל -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" style="position: fixed; top: 0; right: 0; width: 250px; height: 100%; background-color: #fff; box-shadow: -4px 0 10px rgba(0,0,0,0.1); transform: translateX(100%); transition: transform 0.3s ease-in-out; padding: 20px;">
-    <ul>
-      <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-      <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-      <li><a href="property-details.html" class="menu-link">Contact</a></li>
-    </ul>
-  </div>
 </header>
 
-<script>
+	<script>
 // פונקציה לפתיחת/סגירת תפריט הפסים במובייל
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -274,7 +274,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 </script>
-
 <style>
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
