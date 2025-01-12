@@ -118,15 +118,27 @@ body {
 .mobile-menu.active {
   transform: translateX(0);
 }
+/* מדיה מובייל */
+@media (max-width: 768px) {
+  /* כפתור פסים יוצג רק במובייל */
+  .menu-toggle {
+    display: flex;  /* כעת כפתור הפסים יוצג */
+  }
 
-/* סידור התפריט האנכי */
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  /* תפריט אנכי שניתן לפתוח במובייל */
+  .mobile-menu {
+    display: none;  /* התפריט יוסתר קודם */
+  }
+  
+  /* תפריט נפתח */
+  .mobile-menu.active {
+    display: flex;  /* יופיע כאשר הכפתור נלחץ */
+  }
+
+  /* מסתיר את תפריט המחשב */
+  .main-nav {
+    display: none;
+  }
 }
 
 .mobile-menu li {
