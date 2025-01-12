@@ -193,67 +193,62 @@ body {
   </style>
 </head>
 <body>
-  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
-    <!-- לוגו -->
-    <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-      <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
-    </div>
+ <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+  <!-- לוגו -->
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+  </div>
 
-    <!-- תפריט -->
-    <nav class="main-nav" style="display: inline-block;">
-      <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-        <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-        <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-        <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- תפריט -->
+  <nav class="main-nav" style="display: inline-block;">
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- כפתור תפריט פסים -->
-    <button class="menu-toggle" id="menuToggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </button>
+  <!-- כפתור תפריט פסים -->
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
 
-    <!-- תפריט מובייל -->
-    <div class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-        <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-        <li><a href="property-details.html" class="menu-link">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+  <!-- תפריט מובייל -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+      <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+      <li><a href="property-details.html" class="menu-link">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-<script>
-  // הגדרת משתנים
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
+	<script>
+// פונקציה לפתיחת/סגירת תפריט הפסים במובייל
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
 
-  // פתיחה וסגירה של תפריט הפסים
-  menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    mobileMenu.setAttribute('aria-hidden', isExpanded);
-    mobileMenu.classList.toggle('active', !isExpanded);
-  });
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  // עדכון של aria-expanded
+  const isExpanded = mobileMenu.classList.contains('active');
+  menuToggle.setAttribute('aria-expanded', isExpanded);
+  mobileMenu.setAttribute('aria-hidden', !isExpanded);
+});
 
-  // סגירת התפריט בלחיצה מחוץ לתפריט
-  document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', false);
-      mobileMenu.setAttribute('aria-hidden', true);
-    }
-  });
-
-  // עיצוב כפתור תפריט פסים כאשר הוא פעיל
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-  });
+// סגירת התפריט בלחיצה מחוץ לתפריט
+document.addEventListener('click', (e) => {
+  if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', false);
+    mobileMenu.setAttribute('aria-hidden', true);
+  }
+});
 </script>
 
-<!-- CSS לשינוי עיצוב כפתור תפריט פסים כאשר הוא פעיל -->
+
 <style>
   .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
