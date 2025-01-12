@@ -159,6 +159,7 @@ body {
   function toggleMenu() {
     const menu = document.querySelector('.mobile-menu');
     const toggle = document.querySelector('.menu-toggle');
+	  menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');  // הפעלת התפריט הנפתח
     toggle.classList.toggle('active');  // שינוי כפתור הפסים
   }
