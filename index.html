@@ -18,8 +18,7 @@
 <link href="assets/css/Style.css" rel="stylesheet">
 
 	  <style>
-		  
-/* אפקט רקע זז */
+	  /* אפקט רקע זז */
 .scroll-background {
   position: fixed;
   top: 0;
@@ -76,10 +75,9 @@ body {
   background: linear-gradient(135deg, #2c3e50, #3498db);
 }
 
-
 /* תפריט פסים */
 .menu-toggle {
-  display: flex;
+  display: none; /* מוסתר ברוב התצוגות */
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -121,8 +119,6 @@ body {
   transform: translateX(0);
 }
 
-
-
 /* סידור התפריט האנכי */
 .mobile-menu ul {
   list-style: none;
@@ -133,61 +129,27 @@ body {
   gap: 15px;
 }
 
-
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-		  .mobile-menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-		  .menu-toggle {
-  position: fixed;
-  z-index: 1001;
-}
-
-.mobile-menu {
-  z-index: 1000;
+.mobile-menu li {
+  color: white;
 }
 
 .mobile-menu li:hover {
   color: #1abc9c;
 }
-		  @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-}
-
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
 
 /* מדיה מובייל */
 @media (max-width: 768px) {
+  /* תפריט פסים יוצג רק במובייל */
+  .menu-toggle {
+    display: flex;
+  }
+
   /* מסתיר את תפריט המחשב */
   .main-nav {
     display: none;
   }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-  }
-
+  /* תפריט מובייל */
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -209,34 +171,20 @@ body {
   }
 }
 
-
-
-  /* שינוי סגנון כפתור הפסים */
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-	.mobile-menu {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+/* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
-.mobile-menu.active {
-  transform: translateX(0);
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
 }
-	@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
-}
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
 
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
-</style>
+
+  </style>
 
 	<script>
 document.addEventListener("DOMContentLoaded", () => {
