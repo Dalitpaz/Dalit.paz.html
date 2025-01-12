@@ -151,6 +151,7 @@ body, html {
     </ul>
   </nav>
 
+  </header>
 <script>
   // JavaScript להפעלת התפריט במובייל
   const menuToggle = document.querySelector('.menu-toggle');
@@ -161,6 +162,7 @@ body, html {
     mainNav.classList.toggle('active');
   });
 </script>
+
 
 <!-- CSS -->
 <style>
@@ -218,12 +220,11 @@ body, html {
       text-align: center;
       width: 100%;
     }
-   
-  
+    .menu-item:hover {
+      background-color: transparent;
+    }
+  }
 </style>
-
-  </header>
-
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
