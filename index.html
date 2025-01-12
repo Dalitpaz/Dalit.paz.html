@@ -114,6 +114,7 @@ body {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }
+		
 
 .mobile-menu.active {
   transform: translateX(0);
@@ -199,38 +200,18 @@ body {
 
   </style>
 
-	<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuToggle.addEventListener("click", () => {
-    const isActive = mobileMenu.classList.toggle("active");
-    menuToggle.setAttribute("aria-expanded", isActive);
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", false);
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      mobileMenu.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", false);
-    }
-  });
-});
-		function toggleMenu() {
+	  <script>
+	function toggleMenu() {
   const menu = document.querySelector('.mobile-menu');
   const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector("header nav");
+
   menu.classList.toggle('active');  // הפעלת התפריט הנפתח
   toggle.classList.toggle('active');  // שינוי כפתור הפסים
+  nav.classList.toggle("nav-active");  // שינוי מצב הניווט
 }
-</script>
 
+  </script>
 </head>
 <body>
 <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
