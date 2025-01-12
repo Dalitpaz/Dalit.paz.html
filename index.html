@@ -39,9 +39,7 @@
   100% {
     background-position: 100% 50%;
   }
-}
-
-/* לוגו */
+}/* לוגו */
 .rotating-logo {
   width: 100%;
   height: 100%;
@@ -70,12 +68,28 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
+/* רקע וסטיילינג כללי */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #2c3e50, #3498db);
 }
 
+/* כפתור הפסים */
+.menu-toggle {
+  display: none; /* מוסתר ברוב התצוגות */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
 
 .menu-toggle .bar {
   width: 100%;
@@ -101,35 +115,19 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+/* תפריט נפתח במובייל */
+.mobile-menu.active {
+  transform: translateX(0); /* התפריט יופיע כאשר הכפתור נלחץ */
+}
 
+/* רספונסיביות למובייל */
 @media (max-width: 768px) {
   /* הצגת כפתור הפסים במובייל */
   .menu-toggle {
     display: flex; /* כעת כפתור הפסים יוצג במובייל */
   }
-	
-.mobile-menu.active {
-  transform: translateX(0);
-}
-	
-/* כפתור הפסים */
-.menu-toggle {
-  display: none; /* מוסתר ברוב התצוגות */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
 
-/* רספונסיביות */
-@media (max-width: 768px) {
+  /* סגנון התפריט במובייל */
   nav ul {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
@@ -145,27 +143,24 @@ body {
     display: flex;
   }
 
-  .menu-trigger {
-    display: block;
-    font-size: 30px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-}
-
-  /* תפריט נפתח */
-  .mobile-menu {
-    display: none;  /* התפריט יוסתר קודם */
-  }
-
-  .mobile-menu.active {
-    display: flex;  /* יופיע כאשר הכפתור נלחץ */
-  }
-
   /* מסתיר את תפריט המחשב */
   .main-nav {
     display: none;
   }
+
+  /* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
 
   /* שינוי סגנון כפתור הפסים כשיש אינטראקציה */
   .menu-toggle.active .bar:nth-child(1) {
