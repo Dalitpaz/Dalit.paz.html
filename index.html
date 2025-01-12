@@ -72,128 +72,7 @@
         box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
       }
 
-      /* תפריט רספונסיבי */
-      @media (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-          background: rgba(0, 0, 0, 0.8);
-          padding: 20px;
-          position: absolute;
-          top: 60px;
-          left: 20px;
-          border-radius: 10px;
-          display: none;
-        }
-
-        nav ul.active {
-          display: flex;
-        }
-
-        .menu-trigger {
-          display: block;
-          font-size: 30px;
-          color: #ffffff;
-          cursor: pointer;
-        }
-      }
-
-      /* התוכן של הדף */
-      .section-title {
-        text-align: center;
-        font-size: 26px;
-        color: #34495e;
-        font-family: 'Cinzel', serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        background: linear-gradient(135deg, #16a085, #1abc9c);
-        padding: 15px 30px;
-        border-radius: 20px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        margin: 30px 0;
-      }
-
-      .section-title span {
-        text-decoration: underline;
-        color: white;
-      }
-
-      .content-section {
-        font-size: 22px;
-        font-family: 'Cinzel', serif;
-        color: #34495e;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        padding: 20px;
-        background-color: #ecf0f1;
-        border-left: 5px solid #16a085;
-        border-radius: 10px;
-      }
-
-      .content-section strong {
-        font-weight: bold;
-      }
-    </style>
-
-
-  </head>
-  <body>
-  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
-  <!-- לוגו -->
-  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
-  </div>
-
-
-  <!-- תפריט -->
-  <nav class="main-nav" style="display: inline-block;">
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
-
-
-  </header>
-
-
-<!-- JavaScript -->
-<script>
- const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-menuToggle.addEventListener('click', () => {
-  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-  menuToggle.setAttribute('aria-expanded', !isExpanded);
-  mobileMenu.setAttribute('aria-hidden', isExpanded);
-  mobileMenu.classList.toggle('active', !isExpanded);
-});
-
-
-  // סגירת התפריט בלחיצה מחוץ לתפריט
-  document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', false);
-      mobileMenu.setAttribute('aria-hidden', true);
-    }
-  });
-	.menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-</script>
-
-<!-- CSS -->
-<style>
+	    <style>
 	/* ברירת מחדל: תפריט מחשב מוצג */
 .main-nav {
   display: flex;
@@ -327,81 +206,133 @@ margin: 0;
 .mobile-menu.active {
   display: flex; /* מוצג רק כשהתפריט פעיל */
 }
-<style>
 /* עיצוב ברירת מחדל */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
-/* עיצוב תפריט מחשב */
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+      /* תפריט רספונסיבי */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          position: absolute;
+          top: 60px;
+          left: 20px;
+          border-radius: 10px;
+          display: none;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        .menu-trigger {
+          display: block;
+          font-size: 30px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+
+      /* התוכן של הדף */
+      .section-title {
+        text-align: center;
+        font-size: 26px;
+        color: #34495e;
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(135deg, #16a085, #1abc9c);
+        padding: 15px 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        margin: 30px 0;
+      }
+
+      .section-title span {
+        text-decoration: underline;
+        color: white;
+      }
+
+      .content-section {
+        font-size: 22px;
+        font-family: 'Cinzel', serif;
+        color: #34495e;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #ecf0f1;
+        border-left: 5px solid #16a085;
+        border-radius: 10px;
+      }
+
+      .content-section strong {
+        font-weight: bold;
+      }
+    </style>
+
+
+  </head>
+  <body>
+  <header style= "width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+  <!-- לוגו -->
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+  </div>
+
+
+  <!-- תפריט -->
+  <nav class="main-nav" style="display: inline-block;">
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  </header>
+
+
+<!-- JavaScript -->
+<script>
+ const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !isExpanded);
+  mobileMenu.setAttribute('aria-hidden', isExpanded);
+  mobileMenu.classList.toggle('active', !isExpanded);
+});
+
+
+  // סגירת התפריט בלחיצה מחוץ לתפריט
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+    }
+  });
+	.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
 }
 
-.menu-link:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* עיצוב תפריט נייד */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  padding: 20px;
-  z-index: 1000;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
+</script>
 
-.mobile-menu.active {
-  transform: translateX(0);
-}
-
-/* כפתור תפריט נייד */
-.menu-toggle {
-  display: none;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* עבור מובייל */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+	  <style>
 
   /* תפריט עכבר */
   .menu-link {
@@ -462,7 +393,6 @@ body {
     }
   }
 </style>
-  
 
 	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
