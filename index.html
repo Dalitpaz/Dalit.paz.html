@@ -81,6 +81,15 @@ main {
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
+/* תפריט עכבר */
+.main-nav {
+  display: flex; /* הצג את התפריט הראשי במחשב */
+}
+
+.mobile-nav {
+  display: none; /* הסתר את התפריט הנייד */
+}
+
 /* הצגת כפתור המבורגר במובייל */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -146,12 +155,6 @@ main {
     font-size: 20px;
   }
 
- /* ברירת מחדל למובייל */
-.mobile-nav {
-  display: none; /* התפריט מוסתר ברירת מחדל */
-}
-
-
   .menu-link {
     padding: 15px;
     font-size: 20px;
@@ -170,6 +173,7 @@ main {
     display: flex; /* הצג את התפריט הראשי במחשב */
   }
 }
+
 </style>
   </head>
   <body
