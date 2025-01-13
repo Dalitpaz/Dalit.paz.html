@@ -324,23 +324,25 @@ main {
   .text-container {
     flex: unset;
     width: 100%; /* הרחבת הטקסט כך שתהיה בגודל מלא */
-    padding: 20px; /* צמצום הריווח במובייל */
+    max-width: 100%; /* הוספת מקסימום רוחב למובייל */
+    padding: 30px; /* הוספת ריווח כדי שהטקסט לא יהיה צמוד מדי */
     box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
     background: #ffffff; /* רקע לבן */
     border-radius: 25px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* הצללה */
-  }
+}
 
-  .text-container h1 {
+.text-container h1 {
     font-size: 24px; /* צמצום גודל כותרת במובייל */
     text-align: center; /* מרכז הכותרת */
-  }
+}
 
-  .text-container p {
+.text-container p {
     font-size: 14px; /* הקטנת גודל טקסט במובייל */
     line-height: 1.6;
     text-align: justify;
-  }
+}
+
 
   .image-container {
     flex: unset;
