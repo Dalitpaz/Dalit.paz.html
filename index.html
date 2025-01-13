@@ -80,103 +80,104 @@ main {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}/* הצגת כפתור המבורגר במובייל */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* הצג את הכפתור רק במובייל */
-    position: fixed; /* מיקום קבוע על המסך */
-    top: 15px; /* מיקום מהחלק העליון */
-    right: 15px; /* מיקום מהצד הימני */
-    z-index: 999; /* לוודא שהכפתור יהיה מעל אלמנטים אחרים */
+
+/* הצגת כפתור המבורגר במובייל */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* הצג את הכפתור רק במובייל */
+      position: fixed; /* מיקום קבוע על המסך */
+      top: 15px; /* מיקום מהחלק העליון */
+      right: 15px; /* מיקום מהצד הימני */
+      z-index: 999; /* לוודא שהכפתור יהיה מעל אלמנטים אחרים */
+    }
+
+    /* כפתור המבורגר */
+    .menu-toggle .bar {
+      width: 30px;
+      height: 4px;
+      margin: 6px 0;
+      background-color: #333;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* תפריט נייד */
+    .mobile-nav {
+      display: none; /* התפריט מוסתר ברירת מחדל */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-direction: column; /* הצגת הקישורים בצורה אנכית */
+      padding: 10px;
+      z-index: 1000; /* לוודא שהתפריט יהיה מעל לתוכן אחר */
+    }
+
+    .mobile-nav.active {
+      display: flex; /* התפריט יוצג כאשר הוא פעיל */
+    }
+
+    .mobile-nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .mobile-nav ul li {
+      margin: 20px 0;
+    }
+
+    .mobile-nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+    }
+
+    /* ברירת מחדל למובייל */
+    .main-nav {
+      display: none; /* הסתרת התפריט הראשי במובייל */
+    }
+
+    .mobile-nav {
+      display: flex; /* הצגת התפריט הנייד במובייל */
+    }
+
+    /* עיצוב כפתור המבורגר במובייל */
+    .menu-toggle {
+      display: block; /* הצג את הכפתור במובייל */
+    }
+
+    .menu-link {
+      padding: 15px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
   }
 
-  /* כפתור המבורגר */
-  .menu-toggle .bar {
-    width: 30px;
-    height: 4px;
-    margin: 6px 0;
-    background-color: #333;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-  }
+  /* ברירת מחדל למחשב (לא נוגעים בזה) */
+  @media (min-width: 769px) {
+    .mobile-nav {
+      display: none; /* הסתר את התפריט הנייד במחשב */
+    }
 
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    .main-nav {
+      display: flex; /* הצג את התפריט הראשי במחשב */
+    }
   }
-
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* תפריט נייד */
-  .mobile-nav {
-    display: none; /* התפריט מוסתר ברירת מחדל */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* הצגת הקישורים בצורה אנכית */
-    padding: 10px;
-    z-index: 1000; /* לוודא שהתפריט יהיה מעל לתוכן אחר */
-  }
-
-  .mobile-nav.active {
-    display: flex; /* התפריט יוצג כאשר הוא פעיל */
-  }
-
-  .mobile-nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .mobile-nav ul li {
-    margin: 20px 0;
-  }
-
-  .mobile-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-  }
-
-  /* ברירת מחדל למובייל */
-  .main-nav {
-    display: none; /* הסתרת התפריט הראשי במובייל */
-  }
-
-  .mobile-nav {
-    display: flex; /* הצגת התפריט הנייד במובייל */
-  }
-
-  /* עיצוב כפתור המבורגר במובייל */
-  .menu-toggle {
-    display: block; /* הצג את הכפתור במובייל */
-  }
-
-  .menu-link {
-    padding: 15px;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-/* ברירת מחדל למחשב (לא נוגעים בזה) */
-@media (min-width: 769px) {
-  .mobile-nav {
-    display: none; /* הסתר את התפריט הנייד במחשב */
-  }
-
-  .main-nav {
-    display: flex; /* הצג את התפריט הראשי במחשב */
-  }
-}
 
 </style>
   </head>
