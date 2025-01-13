@@ -127,27 +127,23 @@ main {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* תפריט אופקי במחשב - הסתר במובייל */
+  /* הסתרת התפריט האופקי במובייל */
   .main-nav {
-    display: none; /* הסתר את התפריט הראשי במובייל */
+    display: none; /* הסתר את התפריט הראשי בנייד */
   }
 
-  /* תפריט נייד */
+  /* הצגת התפריט הנייד בלבד */
   .mobile-nav {
-    display: none;
+    display: flex; /* הצג את התפריט הנייד במובייל */
+    flex-direction: column; /* פריסה אנכית */
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
-    background-color: #fff;
+    width: 100%; /* פריסה על כל רוחב המסך */
+    background-color: #fff; /* צבע רקע (אופציונלי) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
     padding: 10px;
     z-index: 1000;
-  }
-
-  .mobile-nav.active {
-    display: flex; /* התפריט יוצג כאשר הוא פעיל */
   }
 
   .mobile-nav ul {
@@ -176,7 +172,8 @@ main {
     display: none; /* הסתר את התפריט הנייד במחשב */
   }
 }
-</style>
+	</style>
+
 	  
 <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
