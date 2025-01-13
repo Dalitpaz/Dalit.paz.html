@@ -319,35 +319,59 @@ main {
     padding: 30px;
   }
 
-  .text-container {
+ .text-container {
     flex: unset;
     width: 100%; /* הרחבת הטקסט כך שתהיה בגודל מלא */
     max-width: 900px; /* הרחבת רוחב המסגרת */
     padding: 50px; /* ריווח */
-  }
+    box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
+}
 
-  .text-container h1 {
+.text-container h1 {
     font-size: 28px; /* צמצום גודל כותרת */
     text-align: center; /* מרכז הכותרת */
-  }
+}
 
-  .text-container p {
+.text-container p {
     font-size: 16px; /* הקטנת טקסט */
     line-height: 1.6;
-  }
+}
 
-  .image-container {
+.image-container {
     flex: unset;
     max-width: 90%; /* הקטנת רוחב התמונה */
-  }
+}
 
-  .image-container img {
+.image-container img {
     max-width: 100%; /* התאמת התמונה לרוחב המובייל */
     height: auto;
     display: block;
-  }
 }
-</style>
+
+/* Media query למובייל */
+@media (max-width: 768px) {
+    .text-container {
+        padding: 20px; /* צמצום הריווח במובייל */
+    }
+
+    .text-container h1 {
+        font-size: 24px; /* צמצום גודל כותרת במובייל */
+    }
+
+    .text-container p {
+        font-size: 14px; /* הקטנת גודל טקסט במובייל */
+    }
+
+    .image-container {
+        max-width: 100%; /* התאמת רוחב התמונה במובייל */
+    }
+
+    .image-container img {
+        width: 100%; /* התאמת התמונה לרוחב המובייל */
+    }
+}
+
+	</style>
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
