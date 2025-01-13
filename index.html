@@ -195,12 +195,12 @@ body, html {
       <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
     </ul>
   </nav>
-
-    <!-- כפתור תפריט נפתח במובייל -->
-  <div class="menu-toggle" onclick="toggleMenu()">
-    &#9776;
-  </div>
-</header>
+<!-- כפתור תפריט נפתח במובייל -->
+<div class="menu-toggle" id="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
 
 <!-- תפריט נייד -->
 <nav class="mobile-nav">
@@ -211,6 +211,7 @@ body, html {
   </ul>
 </nav>
 </header>
+
 <script>
 	  // Toggle the mobile menu and hamburger icon
 const menuToggle = document.getElementById('menu-toggle');
