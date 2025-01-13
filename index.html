@@ -421,6 +421,16 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileNav.classList.toggle("active"); // להציג/להסתיר את התפריט
   });
 });
+  // קוד JavaScript להפעלת התפריט הנייד
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    // הוספת מחלקת active לכפתור המבורגר
+    this.classList.toggle('active');
+    
+    // הוספת מחלקת active לתפריט הנייד כדי להציג אותו
+    document.querySelector('.mobile-nav').classList.toggle('active');
+  });
+</script>
+
 
 
 	  </script>
