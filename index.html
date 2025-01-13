@@ -93,7 +93,7 @@ main {
 
 /* תפריט נייד מוסתר ברירת מחדל */
 .mobile-nav {
-  display: none;
+  display: none; /* התפריט יהיה מוסתר כבר בהתחלה */
 }
 
 /* הצגת כפתור המבורגר במובייל */
@@ -133,8 +133,8 @@ main {
   }
 
   /* הצגת התפריט הנייד בלבד */
-  .mobile-nav {
-    display: flex; /* הצג את התפריט הנייד במובייל */
+  .mobile-nav.active {
+    display: flex; /* הצג את התפריט הנייד במובייל כאשר הוא פעיל */
     flex-direction: column; /* פריסה אנכית */
     position: absolute;
     top: 60px;
@@ -172,6 +172,7 @@ main {
     display: none; /* הסתר את התפריט הנייד במחשב */
   }
 }
+
 	</style>
 
 	  
@@ -190,20 +191,21 @@ main {
     </ul>
   </nav>
   
-  <!-- כפתור תפריט נפתח במובייל -->
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+  <!-- כפתור המבורגר -->
+<button class="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</button>
 
-  <nav class="mobile-nav" id="mobile-nav">
-    <ul>
-      <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-      <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-      <li><a href="property-details.html" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
+<!-- התפריט הנייד -->
+<nav class="mobile-nav">
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</nav>
 </header>
 
 </body>
@@ -318,9 +320,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-	  </script>
-</body>
 
+	  </script>
 
   </body>
 </html>
