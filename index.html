@@ -85,6 +85,7 @@ body, html {
 /* רספונסיביות */
 @media (max-width: 768px) {
   nav ul {
+    display: none;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
@@ -92,87 +93,53 @@ body, html {
     top: 60px;
     left: 20px;
     border-radius: 10px;
-    display: none;
+    text-align: right;
   }
 
   nav ul.active {
     display: flex;
+    animation: slideIn 0.3s ease;
   }
 
-	
-  /* עיצוב כללי לתפריט */
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
+  .menu-toggle {
+    display: block;
+    background-color: #333;
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        /* תפריט לנייד */
-        @media (max-width: 768px) {
-            /* מחביא את התפריט הראשי בנייד */
-            nav ul {
-                display: none;
-                flex-direction: column;
-                text-align: right;
-            }
-
-            /* כפתור פסים לנייד */
-            .menu-toggle {
-                display: block;
-                background-color: #333;
-                color: white;
-                font-size: 30px;
-                border: none;
-                padding: 10px;
-                cursor: pointer;
-            }
-
-            /* התפריט ייחשף כאשר הכפתור נלחץ */
-            nav ul.active {
-                display: flex;
-            }
-
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-
-	    /* הוספת אנימציה של פתיחה */
-    @keyframes slideIn {
-        from {
-            transform: translateY(-100%);
-        }
-        to {
-            transform: translateY(0);
-        }
-    }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
 }
 
-        /* כפתור פסים לא יופיע במחשב */
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
-        
+/* אנימציה של פתיחה */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
-</style>
+/* כפתור פסים לא יופיע במחשב */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 
 
 	  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
