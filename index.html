@@ -41,14 +41,15 @@
   }
 }
 
-/* גוף האתר */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #2c3e50, #3498db);
-  position: relative; /* לוודא שהתוכן לא מכוסה */
-  z-index: 1; /* לוודא שהתוכן נמצא מעל הרקע */
+main {
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
 
 /* תפריט יוסתר במובייל */
 .main-nav {
@@ -90,47 +91,6 @@ body {
   background-color: #333;
   margin: 5px 0;
   transition: all 0.3s ease; /* הוספת מעברים חלקים */
-}
-
-/* עיצוב תפריט עכבר */
-.menu-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-link:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.1);
-}
-
-/* עיצוב תפריט בקטגוריות */
-.menu-item {
-  position: relative;
-}
-
-.menu-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 2px;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover::after {
-  background-color: #5A4FCF;
-}
-
-/* עיצוב ל-main */
-main {
-  margin-top: 0px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
 
 /* עיצוב גוף הדף */
