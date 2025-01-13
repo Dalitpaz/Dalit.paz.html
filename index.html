@@ -106,7 +106,6 @@ body, html {
     cursor: pointer;
   }
 
-
 /* תפריט למובייל */
 @media (max-width: 768px) {
   .main-nav {
@@ -223,71 +222,40 @@ body, html {
 main {
   margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
 }
-		 
-	
-@media (max-width: 768px) {
-  .main-nav {
-    display: none; /* התפריט מוסתר במובייל */
-  }
-}
-	  
-	  </style>
 
-	  <script>
-		  
-  // פונקציה לפתיחת וסגירת התפריט
-  function toggleMenu() {
-    const mobileMenu = document.getElementById('mobileMenu'); // בחר את התפריט
-    const menuToggle = document.querySelector('.menu-toggle'); // בחר את כפתור הפסים
+</style>
+	  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+  <!-- לוגו -->
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+  </div>
+  <!-- תפריט ראשי -->
+  <nav class="main-nav" style="display: inline-block;">
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
 
-    // הוספת/הסרת מחלקת active כדי להראות/להסתיר את התפריט
-    if (mobileMenu && menuToggle) {
-      const isMenuOpen = mobileMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+  <!-- כפתור תפריט פסים -->
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
 
-      // עדכון המאפיינים לנגישות
-      mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
-      menuToggle.setAttribute('aria-expanded', isMenuOpen);
+  <!-- תפריט מובייל -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#" class="menu-link">דף הבית</a></li>
+      <li><a href="#" class="menu-link">עלינו</a></li>
+      <li><a href="#" class="menu-link">שירותים</a></li>
+      <li><a href="#" class="menu-link">צור קשר</a></li>
+    </ul>
+  </nav>
 
-      // אם התפריט פתוח, נמנע מכיסוי של התוכן
-      if (isMenuOpen) {
-        document.body.style.overflow = 'hidden'; // מניעת גלילה בזמן שהתפריט פתוח
-      } else {
-        document.body.style.overflow = ''; // מחזיר את הגלילה כאשר התפריט סגור
-      }
-    } else {
-      console.error('Error: Element not found.');
-    }
-  }
-
-  // הוספת מאזין לאירוע לחיצה
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    if (menuToggle) {
-      menuToggle.addEventListener('click', toggleMenu);
-    } else {
-      console.error('Error: Menu toggle button not found.');
-    }
-  });
-</script>
-
-	  
-  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
-    <!-- לוגו -->
-    <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-      <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
-    </div>
-<!-- תפריט ראשי -->
-<nav class="main-nav" style="display: inline-block;">
-  <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
-    <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
-    <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
-    <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
-  </ul>
-</nav>
-
-  </header>
-
+</header>
 
 	  
 	  <style>
@@ -325,6 +293,42 @@ main {
   }
 
 	  </style>
+  <script>
+	  // פונקציה לפתיחת וסגירת התפריט
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu'); // בחר את התפריט
+  const menuToggle = document.querySelector('.menu-toggle'); // בחר את כפתור הפסים
+
+  // הוספת/הסרת מחלקת active כדי להראות/להסתיר את התפריט
+  if (mobileMenu && menuToggle) {
+    const isMenuOpen = mobileMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+
+    // עדכון המאפיינים לנגישות
+    mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
+    menuToggle.setAttribute('aria-expanded', isMenuOpen);
+
+    // אם התפריט פתוח, נמנע מכיסוי של התוכן
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'; // מניעת גלילה בזמן שהתפריט פתוח
+    } else {
+      document.body.style.overflow = ''; // מחזיר את הגלילה כאשר התפריט סגור
+    }
+  } else {
+    console.error('Error: Element not found.');
+  }
+}
+
+// הוספת מאזין לאירוע לחיצה
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMenu);
+  } else {
+    console.error('Error: Menu toggle button not found.');
+  }
+});
+  </script>
 
 <body>	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
