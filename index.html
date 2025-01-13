@@ -216,7 +216,18 @@ main {
 
 
 
-</header>
+</header> 
+	  <script>
+    // Toggle the mobile menu and hamburger icon
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+  </script>
+	  
 
 <!-- CSS -->
 <style>
@@ -315,15 +326,7 @@ main {
         transition: color 0.3s ease-in-out;
     }
 </style>
-	  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileNav = document.getElementById('mobile-nav');
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-  });
-</script>
 </body>
 
 
