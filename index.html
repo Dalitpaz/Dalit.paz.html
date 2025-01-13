@@ -265,11 +265,10 @@ main {
 }
 
 </style>
-	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);" class="text-container">
         <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
                    color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
            My Journey Into Precision and Quality
@@ -291,7 +290,7 @@ main {
     </div>
 
     <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
+    <div style="flex: 1; max-width: 500px;" class="image-container">
         <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
                     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
             <img src="images/labs.jpg" 
@@ -299,7 +298,6 @@ main {
         </div>
     </div>
 </main>
-
 
 <style>
 /* עיצוב כללית */
@@ -353,7 +351,7 @@ main {
     .text-container {
         width: 100%; /* הרחבת המסגרת כך שתהיה בגודל מלא */
         max-width: 100%; /* הוספת מקסימום רוחב למובייל */
-        padding: 40px; /* הגדלת ריווח */
+        padding: 40px; /* שמירה על ריווח */
         box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
         background: #ffffff;
         border-radius: 25px;
@@ -370,7 +368,6 @@ main {
         line-height: 1.6;
     }
 
-    /* תיקון התמונה למובייל */
     .image-container {
         width: 100%; /* תמונה ברוחב מלא */
         max-width: 100%;
@@ -386,6 +383,7 @@ main {
     }
 }
 </style>
+
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
