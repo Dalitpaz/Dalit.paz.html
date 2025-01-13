@@ -93,103 +93,103 @@ main {
   margin: 0;
 }
 
-/* תפריט נייד מוסתר ברירת מחדל */
-.mobile-nav {
-  display: none;
-}
-
-/* כפתור המבורגר */
-.menu-toggle {
-  display: none;
-}
-
-.menu-toggle .bar {
-  width: 30px;
-  height: 4px;
-  margin: 6px 0;
-  background-color: #333;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-
-/* עיצוב למובייל */
-@media (max-width: 768px) {
-  /* הסתרת התפריט הראשי במובייל */
-  .main-nav {
-    display: none !important; /* הסתרת תפריט האופקי לגמרי */
-  }
-
-  /* הצגת כפתור המבורגר בלבד */
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 999;
-  }
-
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* הצגת התפריט הנייד רק כאשר הוא פעיל */
+	/* תפריט נייד מוסתר ברירת מחדל */
   .mobile-nav {
     display: none;
   }
 
-  .mobile-nav.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 1000;
-  }
-
-  .mobile-nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .mobile-nav ul li {
-    margin: 20px 0;
-  }
-
-  .mobile-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-  }
-}
-
-/* עיצוב למחשב */
-@media (min-width: 769px) {
-  .main-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    list-style: none;
-  }
-
-  .mobile-nav, .menu-toggle {
+  /* כפתור המבורגר */
+  .menu-toggle {
     display: none;
   }
-}
-	</style>
-	  
-<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+
+  .menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  /* עיצוב למובייל */
+  @media (max-width: 768px) {
+    /* הסתרת התפריט הראשי במובייל */
+    .main-nav {
+      display: none !important; /* הסתרת תפריט האופקי לגמרי */
+    }
+
+    /* הצגת כפתור המבורגר בלבד */
+    .menu-toggle {
+      display: block;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 999;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* הצגת התפריט הנייד רק כאשר הוא פעיל */
+    .mobile-nav {
+      display: none;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .mobile-nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .mobile-nav ul li {
+      margin: 20px 0;
+    }
+
+    .mobile-nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+    }
+  }
+
+  /* עיצוב למחשב */
+  @media (min-width: 769px) {
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .mobile-nav, .menu-toggle {
+      display: none;
+    }
+  }
+</style>
+
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -203,23 +203,35 @@ main {
       <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
     </ul>
   </nav>
-  
-  <!-- כפתור המבורגר -->
-<button class="menu-toggle">
-  <div class="bar"></div>
-  <div class="bar"></div>
-  <div class="bar"></div>
-</button>
 
-<!-- התפריט הנייד -->
-<nav class="mobile-nav">
-  <ul>
-    <li><a href="#">Quality in the Laboratory</a></li>
-    <li><a href="#">Fields of Specialization</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+  <!-- כפתור המבורגר -->
+  <button class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+
+  <!-- התפריט הנייד -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Quality in the Laboratory</a></li>
+      <li><a href="properties.html">Fields of Specialization</a></li>
+      <li><a href="property-details.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
+
+<script>
+  // קוד JavaScript להפעלת התפריט הנייד
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    // הוספת מחלקת active לכפתור המבורגר
+    this.classList.toggle('active');
+    
+    // הוספת מחלקת active לתפריט הנייד כדי להציג אותו
+    document.querySelector('.mobile-nav').classList.toggle('active');
+  });
+</script>
+
 
 </body>
 
