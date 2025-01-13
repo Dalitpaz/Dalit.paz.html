@@ -104,6 +104,7 @@ body, html {
   }
 }
 
+/* Mobile menu styles */
 @media (max-width: 768px) {
   .mobile-nav {
     position: fixed;
@@ -124,6 +125,52 @@ body, html {
 
   .mobile-nav.active {
     transform: translateX(0);
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Navigation links */
+  .mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .mobile-nav ul li {
+    margin: 20px 0;
+  }
+
+  .mobile-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
   }
 }
 
@@ -149,21 +196,32 @@ body, html {
     </ul>
   </nav>
 
-  <!-- כפתור לתפריט נפתח במובייל -->
-  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
+    <!-- כפתור תפריט נפתח במובייל -->
+  <div class="menu-toggle" onclick="toggleMenu()">
     &#9776;
   </div>
 </header>
-	  <script>
-	  const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+
+<!-- תפריט נייד -->
+<nav class="mobile-nav">
+  <ul>
+    <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+    <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+    <li><a href="property-details.html" class="menu-link">Contact</a></li>
+  </ul>
+</nav>
+</header>
+<script>
+	  // Toggle the mobile menu and hamburger icon
+const menuToggle = document.getElementById('menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
 
 menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+  mobileNav.classList.toggle('active');
 });
 
-
-	  </script>
+</script>
 <!-- CSS -->
 <style>
 
