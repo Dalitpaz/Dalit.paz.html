@@ -154,6 +154,17 @@ body, html {
             }
         }
 
+	    /* הוספת אנימציה של פתיחה */
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+}
+
         /* כפתור פסים לא יופיע במחשב */
         @media (min-width: 769px) {
             .menu-toggle {
