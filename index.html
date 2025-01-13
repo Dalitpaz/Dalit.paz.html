@@ -161,6 +161,25 @@
   }
 
 }
+
+	@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex; /* הצג את התפריט הנייד */
+  }
+  .main-nav {
+    display: none; /* הסתר את התפריט הראשי */
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none; /* הסתר את התפריט הנייד */
+  }
+  .main-nav {
+    display: flex; /* הצג את התפריט הראשי */
+  }
+}
+
 </style>
 
   </head>
@@ -201,21 +220,21 @@
 </header>
 
 <script>
-	  // Toggle the mobile menu and hamburger icon
-const menuToggle = document.getElementById('menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
+  // Toggle the mobile menu and hamburger icon
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  mobileNav.classList.toggle('active');
-});
-	function toggleMenu() {
-  const mobileNav = document.querySelector('.mobile-nav');
-  mobileNav.classList.toggle('active');
-}
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+  });
 
-
+  // פונקציה נוספת שתפעיל את התפריט הנייד
+  function toggleMenu() {
+    mobileNav.classList.toggle('active');
+  }
 </script>
+
 <!-- CSS -->
 <style>
 
