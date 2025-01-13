@@ -157,6 +157,154 @@ body, html {
       }
     }
   </style>
+	  
+	  
+	  <style>
+		  
+ /* אפקט רקע זז */
+
+.scroll-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(120deg, #2c3e50, #3498db, #8e44ad);
+  background-size: 300% 300%;
+  animation: backgroundScroll 10s infinite linear;
+  z-index: -1;
+}
+
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+main {
+  margin-top: 0; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
+
+/* לוגו */
+.rotating-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container:hover .rotating-logo {
+  transform: rotateY(360deg);
+}
+
+/* תפריט */
+.menu-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.menu-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+ /* עיצוב גוף העמוד */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+   
+  @media (max-width: 768px) {
+  /* עיצוב תפריט מובייל */
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+}
+
+
+    /* עיצוב אייקון הפסים */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .menu-toggle .bar {
+      width: 100%;
+      height: 5px;
+      background-color: #333;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* רספונסיביות */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    }
+		  nav {
+  z-index: 1000;
+}
+main {
+  z-index: 1;
+}
+
+  </style>
 
   </head>
   <body
@@ -182,7 +330,15 @@ body, html {
     &#9776;
   </div>
 </header>
+	  <script>
+	  const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+	  </script>
 <!-- CSS -->
 <style>
 
