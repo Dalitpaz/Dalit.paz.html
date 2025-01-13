@@ -18,6 +18,7 @@
 <link href="assets/css/Style.css" rel="stylesheet">
 
 	swiper@7/swiper-bundle.min.css">
+swiper@7/swiper-bundle.min.css">
  <style>
  /* אפקט רקע זז */
 .scroll-background {
@@ -105,97 +106,17 @@ body, html {
     cursor: pointer;
   }
 }
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* רספונסיביות - רק למובייל (max-width: 768px) */
-@media (max-width: 768px) {
-  /* מחביא את התפריט בנייד */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    position: absolute;
-    top: 60px;
-    left: 20px;
-    border-radius: 10px;
-    text-align: right;
-  }
-
-  /* כפתור פסים למובייל */
-  .menu-toggle {
-    display: block;
-    background-color: #333;
-    color: white;
-    font-size: 30px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  /* כאשר הכפתור נלחץ, התפריט ייחשף */
-  nav ul.active {
-    display: flex;
-    animation: slideIn 0.3s ease;
-  }
-
-  /* סגנונות עבור פריטים בתפריט בנייד */
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-}
-
-/* אנימציה של פתיחה */
-@keyframes slideIn {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* כפתור פסים לא יופיע במחשב */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* לא יופיע במחשב */
-  }
-}
-
-/* הוספת רווח בין ה-header לשאר התוכן */
-main {
-  margin-top: 0; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-	}
-</style>
-	  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+	 
+	</style>
+  </head>
+  <body
+  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
-    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+    <img src="assets/images/logo my lab.jpg" alt="Logo" class="rotating-logo" style="transition: transform 1s ease-in-out;">
   </div>
-  <!-- תפריט ראשי -->
+
+  <!-- תפריט -->
   <nav class="main-nav" style="display: inline-block;">
     <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
       <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
@@ -204,100 +125,13 @@ body, html {
     </ul>
   </nav>
 
+  <!-- כפתור לתפריט נפתח במובייל -->
+  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
+    &#9776;
+  </div>
+</header>
 
-   <style>
-  /* תפריט עכבר */
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  .menu-link:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-
-  /* עיצוב תפריט בקטגוריות */
-  .menu-item {
-    position: relative;
-  }
-  .menu-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 2px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  .menu-item:hover::after {
-    background-color: #5A4FCF;
-  }
-
-  </style>
-
-<body>	
-	
-	  <!-- כפתור תפריט פסים -->
-  <button class="menu-toggle" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </button>
-
-  <!-- תפריט מובייל -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
-      <li><a href="#" class="menu-link">Fields of Specialization</a></li>
-      <li><a href="#" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
- <nav>
-     
-    </nav>
-			  
-    <script>
-        // פונקציה לפתיחת וסגירת התפריט
-        function toggleMenu() {
-            const mobileMenu = document.getElementById('mobileMenu'); // בחר את התפריט
-            const menuToggle = document.querySelector('.menu-toggle'); // בחר את כפתור הפסים
-
-            // הוספת/הסרת מחלקת active כדי להראות/להסתיר את התפריט
-            if (mobileMenu && menuToggle) {
-                const isMenuOpen = mobileMenu.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-
-                // עדכון המאפיינים לנגישות
-                mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
-                menuToggle.setAttribute('aria-expanded', isMenuOpen);
-
-                // אם התפריט פתוח, נמנע מכיסוי של התוכן
-                if (isMenuOpen) {
-                    document.body.style.overflow = 'hidden'; // מניעת גלילה בזמן שהתפריט פתוח
-                } else {
-                    document.body.style.overflow = ''; // מחזיר את הגלילה כאשר התפריט סגור
-                }
-            } else {
-                console.error('Error: Element not found.');
-            }
-        }
-
-        // הוספת מאזין לאירוע לחיצה
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            if (menuToggle) {
-                menuToggle.addEventListener('click', toggleMenu);
-            } else {
-                console.error('Error: Menu toggle button not found.');
-            }
-        });
-    </script>
+	 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
