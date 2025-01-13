@@ -99,20 +99,30 @@ body, html {
     display: flex;
   }
 
-  .menu-trigger {
-    display: block;
-    font-size: 30px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-
-/* תפריט למובייל */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none; /* התפריט מוסתר במובייל */
-  }
-
 	
+  /* עיצוב כללי לתפריט */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
         /* תפריט לנייד */
         @media (max-width: 768px) {
             /* מחביא את התפריט הראשי בנייד */
@@ -149,157 +159,11 @@ body, html {
             .menu-toggle {
                 display: none;
             }
-        }
-  .menu-toggle {
-    display: flex; /* כפתור התפריט יוצג במובייל */
-  }
-
-  .mobile-menu {
-    display: none; /* התפריט מוסתר במובייל */
-  }
-
-  .mobile-menu.active {
-    display: flex; /* הצגת התפריט כאשר נלחץ */
-  }
-}
-
-/* כפתור התפריט */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2rem;
-  height: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 1001;
-}
-
-.menu-toggle .bar {
-  width: 100%;
-  height: 0.2rem;
-  background-color: #fff;
-  border-radius: 0.2rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(0.3rem, 0.3rem);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
-}
-
-/* תפריט מובייל */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 18.75rem; /* 300px */
-  height: 100%;
-  background-color: #34495e;
-  color: white;
-  padding: 1rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.mobile-menu.active {
-  display: flex;
-  transform: translateX(0);
-  flex-direction: column;
-}
-
-.mobile-menu li {
-  list-style: none;
-  margin-bottom: 1rem;
-}
-
-.mobile-menu li:hover {
-  color: #1abc9c;
-}
-
-/* עיצוב לקישורים בתפריט המובייל */
-.menu-link {
-  display: block;
-  padding: 1rem;
-  font-size: 1.25rem; /* 20px */
-  text-align: center;
-  width: 100%;
-  color: white;
-  text-decoration: none;
-}
-
-.menu-link:hover {
-  color: #1abc9c;
-}
-
-/* תצוגה של התפריט רק במובייל */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .mobile-menu.active {
-    transform: translateX(0);
-  }
-}
-
-/* עיצוב עבור תוכן הדף */
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
+        
 
 </style>
 
-	       <script>
-	  // פונקציה לפתיחת וסגירת התפריט
-function toggleMenu() {
-  const mobileMenu = document.getElementById('mobileMenu'); // בחר את התפריט
-  const menuToggle = document.querySelector('.menu-toggle'); // בחר את כפתור הפסים
 
-  // הוספת/הסרת מחלקת active כדי להראות/להסתיר את התפריט
-  if (mobileMenu && menuToggle) {
-    const isMenuOpen = mobileMenu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-
-    // עדכון המאפיינים לנגישות
-    mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
-    menuToggle.setAttribute('aria-expanded', isMenuOpen);
-
-    // אם התפריט פתוח, נמנע מכיסוי של התוכן
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden'; // מניעת גלילה בזמן שהתפריט פתוח
-    } else {
-      document.body.style.overflow = ''; // מחזיר את הגלילה כאשר התפריט סגור
-    }
-  } else {
-    console.error('Error: Element not found.');
-  }
-}
-
-// הוספת מאזין לאירוע לחיצה
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', toggleMenu);
-  } else {
-    console.error('Error: Menu toggle button not found.');
-  }
-});
-  </script>
-	 
 	  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
@@ -314,30 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </ul>
   </nav>
 
-  <!-- כפתור תפריט פסים -->
-  <button class="menu-toggle" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </button>
-
-  <!-- תפריט מובייל -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
-      <li><a href="#" class="menu-link">Fields of Specialization</a></li>
-      <li><a href="#" class="menu-link">Contact</a></li>
-    </ul>
-  </nav>
- <nav>
-        <!-- כפתור הפסים לנייד -->
-        <button class="menu-toggle">&#9776;</button>
-        <ul>
-            <li><a href="#">Quality in the Laboratory</a></li>
-            <li><a href="#">Fields of Specialization</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
 
    <style>
   /* תפריט עכבר */
@@ -373,9 +213,65 @@ document.addEventListener('DOMContentLoaded', () => {
     background-color: #5A4FCF;
   }
 
-	  </style>
+  </style>
 
-<body>	  
+<body>	
+	
+	  <!-- כפתור תפריט פסים -->
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+
+  <!-- תפריט מובייל -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#" class="menu-link">Quality in the Laboratory</a></li>
+      <li><a href="#" class="menu-link">Fields of Specialization</a></li>
+      <li><a href="#" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
+ <nav>
+     
+    </nav>
+			  
+    <script>
+        // פונקציה לפתיחת וסגירת התפריט
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu'); // בחר את התפריט
+            const menuToggle = document.querySelector('.menu-toggle'); // בחר את כפתור הפסים
+
+            // הוספת/הסרת מחלקת active כדי להראות/להסתיר את התפריט
+            if (mobileMenu && menuToggle) {
+                const isMenuOpen = mobileMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+
+                // עדכון המאפיינים לנגישות
+                mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
+                menuToggle.setAttribute('aria-expanded', isMenuOpen);
+
+                // אם התפריט פתוח, נמנע מכיסוי של התוכן
+                if (isMenuOpen) {
+                    document.body.style.overflow = 'hidden'; // מניעת גלילה בזמן שהתפריט פתוח
+                } else {
+                    document.body.style.overflow = ''; // מחזיר את הגלילה כאשר התפריט סגור
+                }
+            } else {
+                console.error('Error: Element not found.');
+            }
+        }
+
+        // הוספת מאזין לאירוע לחיצה
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMenu);
+            } else {
+                console.error('Error: Menu toggle button not found.');
+            }
+        });
+    </script>
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
