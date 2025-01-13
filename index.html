@@ -82,7 +82,7 @@ body, html {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* רספונסיביות */
+/* רספונסיביות - רק למובייל (max-width: 768px) */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -99,50 +99,42 @@ body, html {
     display: flex;
   }
 
-  .menu-trigger {
+  .menu-toggle {
     display: block;
-    font-size: 30px;
-    color: #ffffff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    z-index: 1000;
+  }
+
+  /* עיצוב ברי הפסים */
+  .menu-toggle .bar {
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 3px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* אם רוצים אפקט כאשר הכפתור נלחץ */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
   }
 }
-		  /* עיצוב כפתור הפסים */
-.menu-toggle {
-  display: block;
-  position: fixed;
-  top: 20px; /* מיקום עליון */
-  right: 20px; /* מיקום לימין */
-  width: 40px;
-  height: 30px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 1000; /* מוודא שהכפתור יהיה מעל התוכן */
-}
-
-/* עיצוב ברי הפסים */
-.menu-toggle .bar {
-  width: 100%;
-  height: 6px;
-  background-color: white;
-  margin: 6px 0;
-  border-radius: 3px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* אם רוצים אפקט כאשר הכפתור נלחץ */
-.menu-toggle.open .bar:nth-child(1) {
-  transform: translateY(12px) rotate(45deg); /* סיבוב של הפס העליון */
-}
-
-.menu-toggle.open .bar:nth-child(2) {
-  opacity: 0; /* מחביא את הפס האמצעי */
-}
-
-.menu-toggle.open .bar:nth-child(3) {
-  transform: translateY(-12px) rotate(-45deg); /* סיבוב של הפס התחתון */
-}
-
 /* במובייל בלבד */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -190,12 +182,7 @@ body, html {
 </button>
 
 <nav>
-  <ul id="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+
 
 <!-- CSS -->
 <style>
