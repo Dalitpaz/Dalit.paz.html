@@ -265,7 +265,6 @@ main {
 }
 
 </style>
-
 <main class="main-container">
     <!-- טקסט -->
     <div class="text-container">
@@ -322,39 +321,45 @@ main {
 /* עיצוב עבור המובייל */
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column;
+        flex-direction: column; /* סידור אנכי */
         align-items: center;
         gap: 30px;
-        padding: 30px;
+        padding: 20px; /* התאמת ריווח במובייל */
     }
 
     .text-container {
-        width: 100%; /* הרחבת המסגרת כך שתהיה בגודל מלא */
-        padding: 30px; /* הוספת ריווח */
+        width: 100%; /* מתיחה מלאה של הטקסט */
+        padding: 20px;
         box-sizing: border-box;
+        background: #ffffff;
+        border-radius: 25px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
     }
 
     .text-container h1 {
         font-size: 24px; /* צמצום גודל כותרת במובייל */
-        text-align: center; /* מרכז הכותרת */
+        text-align: center;
     }
 
     .text-container p {
-        font-size: 14px; /* הקטנת גודל טקסט במובייל */
+        font-size: 14px; /* צמצום גודל טקסט במובייל */
         line-height: 1.6;
     }
 
     .image-container {
-        max-width: 100%;
+        width: 100%; /* תמונה ברוחב מלא */
+        max-width: 500px; /* הגבלת רוחב התמונה במובייל */
     }
 
     .image-container img {
         width: 100%;
         height: auto;
+        display: block;
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
     }
 }
 </style>
-
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
