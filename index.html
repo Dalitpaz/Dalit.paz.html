@@ -52,7 +52,6 @@ body, html {
   margin: 0;
 }
 
-
 /* לוגו */
 .rotating-logo {
   width: 100%;
@@ -82,8 +81,33 @@ body, html {
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* רספונסיביות */
+/* עיצוב תפריט רגיל במחשב */
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* תפריט אופקי במחשב */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* רספונסיביות - רק למובייל (max-width: 768px) */
 @media (max-width: 768px) {
+  /* מחביא את התפריט בנייד */
   nav ul {
     display: none;
     flex-direction: column;
@@ -96,11 +120,7 @@ body, html {
     text-align: right;
   }
 
-  nav ul.active {
-    display: flex;
-    animation: slideIn 0.3s ease;
-  }
-
+  /* כפתור פסים למובייל */
   .menu-toggle {
     display: block;
     background-color: #333;
@@ -111,6 +131,13 @@ body, html {
     cursor: pointer;
   }
 
+  /* כאשר הכפתור נלחץ, התפריט ייחשף */
+  nav ul.active {
+    display: flex;
+    animation: slideIn 0.3s ease;
+  }
+
+  /* סגנונות עבור פריטים בתפריט בנייד */
   nav ul li {
     display: block;
     margin: 10px 0;
@@ -136,7 +163,7 @@ body, html {
 /* כפתור פסים לא יופיע במחשב */
 @media (min-width: 769px) {
   .menu-toggle {
-    display: none;
+    display: none; /* לא יופיע במחשב */
   }
 }
 
