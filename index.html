@@ -18,7 +18,7 @@
 <link href="assets/css/Style.css" rel="stylesheet">
 
 <style>
-	  
+	   
 /* אפקט רקע זז */
 .scroll-background {
   position: fixed;
@@ -32,6 +32,7 @@
   z-index: -1; /* לוודא שזה לא מסתיר את התוכן */
 }
 
+/* אנימציה לרקע */
 @keyframes backgroundScroll {
   0% {
     background-position: 0% 50%;
@@ -41,29 +42,18 @@
   }
 }
 
-main {
-  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
-}
-body, html {
-  height: 100%;
-  overflow-y: scroll; /* להפעיל גלילה תמידית */
-  margin: 0;
-}
-
-
-/* תפריט יוסתר במובייל */
+/* עיצוב תפריט למובייל */
 .main-nav {
   display: none; /* התפריט לא יופיע בהתחלה */
   flex-direction: column;
   background-color: #fff;
 }
 
-/* הצגת התפריט כשנלחץ כפתור */
 .main-nav.active {
-  display: flex;
+  display: flex; /* הצגת התפריט כאשר נלחץ */
 }
 
-/* תצוגת תפריט רגיל במחשב */
+/* תצוגת תפריט במחשב */
 @media (min-width: 769px) {
   .menu-toggle {
     display: none;
@@ -74,23 +64,90 @@ body, html {
   }
 }
 
-/* כפתור הפסים */
+/* עיצוב לחצן תפריט (פסים) */
 .menu-toggle {
-  display: block;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
-  cursor: pointer;
-  transition: all 0.3s ease; /* הוספת מעברים חלקים לכפתור */
+  z-index: 1001;
 }
 
 .menu-toggle .bar {
-  width: 25px;
+  width: 100%;
   height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: all 0.3s ease; /* הוספת מעברים חלקים */
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* תפריט מובייל */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  display: flex;
+  transform: translateX(0);
+  flex-direction: column;
+}
+
+.mobile-menu li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.mobile-menu li:hover {
+  color: #1abc9c;
+}
+
+/* תפריט מחשב */
+.main-nav {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
 }
 
 /* עיצוב גוף הדף */
@@ -110,10 +167,8 @@ body, html {
   text-align: center;
   width: 100%;
 }
-	@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
+
+@media (max-width: 768px) {
   .menu-toggle {
     display: flex;
     position: fixed;
@@ -121,6 +176,7 @@ body, html {
     right: 20px;
     z-index: 1001;
   }
+
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -136,16 +192,18 @@ body, html {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
   }
+
   .mobile-menu.active {
     transform: translateX(0);
   }
 }
 
-
+/* עיצוב עבור המודעות במעבר */
 .menu-item:hover {
   background-color: transparent;
 }
- </style>
+  </style>
+
 	  <script>
 		  
   // פונקציה לפתיחת וסגירת התפריט
