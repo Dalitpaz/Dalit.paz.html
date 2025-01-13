@@ -17,10 +17,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <link href="assets/css/Style.css" rel="stylesheet">
 
-	  <style>
-	  
-
-	  /* אפקט רקע זז */
+	swiper@7/swiper-bundle.min.css">
+ <style>
+ /* אפקט רקע זז */
 .scroll-background {
   position: fixed;
   top: 0;
@@ -41,6 +40,17 @@
     background-position: 100% 50%;
   }
 }
+
+
+main {
+  margin-top: 120px; /* הוסף רווח שמפצה על גובה ה-header הקבוע */
+}
+body, html {
+  height: 100%;
+  overflow-y: scroll; /* להפעיל גלילה תמידית */
+  margin: 0;
+}
+
 
 /* לוגו */
 .rotating-logo {
@@ -71,17 +81,29 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* עיצוב תפריט רגיל במחשב */
-nav {
-  background-color: transparent;  /* צבע רקע שקוף לתפריט במחשב */
-  padding: 10px;
-}
+/* רספונסיביות */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    border-radius: 10px;
+    display: none;
+  }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* תפריט אופקי במחשב */
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-trigger {
+    display: block;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+  }
 }
 
 nav ul li {
