@@ -64,6 +64,19 @@
     margin: 0;
     background: linear-gradient(135deg, #2c3e50, #3498db);
   }
+	/* תפריט מובייל מוצג רק במובייל */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 /* כפתור הפסים */
 .menu-toggle {
   display: flex;
@@ -74,7 +87,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  position: fixed;
+  position: relative;
   top: 20px;
   right: 20px;
   z-index: 1001; /* לוודא שהכפתור נמצא מעל התפריט */
@@ -108,7 +121,7 @@
   
  /* תפריט מובייל */
   .mobile-menu {
-    position: fixed;
+  position: relative;
     top: 0;
     right: 0;
     height: 100%;
@@ -222,13 +235,14 @@
 
 
 <!-- תפריט המובייל -->
-<nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+<nav id="mobileMenu" class="mobile-menu" aria-hidden="true" role="navigation">
   <ul>
     <li><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
     <li><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
     <li><a href="property-details.html" class="menu-link">Contact</a></li>
   </ul>
 </nav>
+
 
 	  
 	  <style>
