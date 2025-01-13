@@ -112,6 +112,44 @@ body, html {
     display: none; /* התפריט מוסתר במובייל */
   }
 
+	
+        /* תפריט לנייד */
+        @media (max-width: 768px) {
+            /* מחביא את התפריט הראשי בנייד */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: right;
+            }
+
+            /* כפתור פסים לנייד */
+            .menu-toggle {
+                display: block;
+                background-color: #333;
+                color: white;
+                font-size: 30px;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            /* התפריט ייחשף כאשר הכפתור נלחץ */
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* כפתור פסים לא יופיע במחשב */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
   .menu-toggle {
     display: flex; /* כפתור התפריט יוצג במובייל */
   }
