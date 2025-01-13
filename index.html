@@ -265,6 +265,8 @@ main {
 }
 
 </style>
+
+	  
 <main class="main-container" style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div class="text-container" style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
@@ -319,59 +321,43 @@ main {
     padding: 30px;
   }
 
- .text-container {
+  .text-container {
     flex: unset;
     width: 100%; /* הרחבת הטקסט כך שתהיה בגודל מלא */
-    max-width: 900px; /* הרחבת רוחב המסגרת */
-    padding: 50px; /* ריווח */
+    padding: 20px; /* צמצום הריווח במובייל */
     box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
-}
+    background: #ffffff; /* רקע לבן */
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* הצללה */
+  }
 
-.text-container h1 {
-    font-size: 28px; /* צמצום גודל כותרת */
+  .text-container h1 {
+    font-size: 24px; /* צמצום גודל כותרת במובייל */
     text-align: center; /* מרכז הכותרת */
-}
+  }
 
-.text-container p {
-    font-size: 16px; /* הקטנת טקסט */
+  .text-container p {
+    font-size: 14px; /* הקטנת גודל טקסט במובייל */
     line-height: 1.6;
-}
+    text-align: justify;
+  }
 
-.image-container {
+  .image-container {
     flex: unset;
-    max-width: 90%; /* הקטנת רוחב התמונה */
-}
+    max-width: 100%; /* התאמת רוחב התמונה במובייל */
+    padding: 0; /* ביטול ריווח פנימי */
+  }
 
-.image-container img {
-    max-width: 100%; /* התאמת התמונה לרוחב המובייל */
+  .image-container img {
+    width: 100%; /* התאמת התמונה לרוחב המובייל */
     height: auto;
     display: block;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); /* הצללה */
+  }
 }
+</style>
 
-/* Media query למובייל */
-@media (max-width: 768px) {
-    .text-container {
-        padding: 20px; /* צמצום הריווח במובייל */
-    }
-
-    .text-container h1 {
-        font-size: 24px; /* צמצום גודל כותרת במובייל */
-    }
-
-    .text-container p {
-        font-size: 14px; /* הקטנת גודל טקסט במובייל */
-    }
-
-    .image-container {
-        max-width: 100%; /* התאמת רוחב התמונה במובייל */
-    }
-
-    .image-container img {
-        width: 100%; /* התאמת התמונה לרוחב המובייל */
-    }
-}
-
-	</style>
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
