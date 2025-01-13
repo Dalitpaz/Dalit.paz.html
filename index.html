@@ -189,6 +189,10 @@ body {
       console.error('Error: Menu toggle button not found.');
     }
   });
+	  // עדכון המאפיינים לנגישות
+  mobileMenu.setAttribute('aria-hidden', !isMenuOpen);
+  menuToggle.setAttribute('aria-expanded', isMenuOpen);
+}
 </script>
 
 	  
@@ -214,6 +218,8 @@ body {
   <span class="bar"></span>
   <span class="bar"></span>
 </button>
+	  <button class="menu-toggle" aria-label="Open mobile menu" aria-expanded="false" onclick="toggleMenu()">
+
 
 <!-- תפריט המובייל -->
 <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
