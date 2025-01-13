@@ -265,6 +265,7 @@ main {
 }
 
 </style>
+	  
 <main class="main-container">
     <!-- טקסט -->
     <div class="text-container">
@@ -321,16 +322,17 @@ main {
 /* עיצוב עבור המובייל */
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column; /* סידור אנכי */
+        flex-direction: column; /* טקסט ותמונה אחד מתחת לשני */
         align-items: center;
         gap: 30px;
-        padding: 20px; /* התאמת ריווח במובייל */
+        padding: 30px;
     }
 
     .text-container {
-        width: 100%; /* מתיחה מלאה של הטקסט */
-        padding: 20px;
-        box-sizing: border-box;
+        width: 100%; /* הרחבת המסגרת כך שתהיה בגודל מלא */
+        max-width: 100%; /* הוספת מקסימום רוחב למובייל */
+        padding: 30px; /* הוספת ריווח כדי שהטקסט לא יהיה צמוד מדי */
+        box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
         background: #ffffff;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
@@ -338,7 +340,7 @@ main {
 
     .text-container h1 {
         font-size: 24px; /* צמצום גודל כותרת במובייל */
-        text-align: center;
+        text-align: center; /* מרכז הכותרת */
     }
 
     .text-container p {
@@ -348,11 +350,12 @@ main {
 
     .image-container {
         width: 100%; /* תמונה ברוחב מלא */
-        max-width: 500px; /* הגבלת רוחב התמונה במובייל */
+        max-width: 100%;
+        padding: 0;
     }
 
     .image-container img {
-        width: 100%;
+        width: 100%; /* התאמת התמונה לרוחב המובייל */
         height: auto;
         display: block;
         border-radius: 20px;
