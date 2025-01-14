@@ -324,7 +324,6 @@ main {
         font-size: 20px;
         color: #0a58ca;
     }
-/* עיצוב התמונה */
 .image-container {
     width: 100%;
     padding: 0 10px;
@@ -349,53 +348,6 @@ main {
 
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    main {
-        display: block;
-        padding: 20px;
-        background: linear-gradient(135deg, #eaf1f8, #ffffff);
-        border-radius: 15px;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-    }
-
-    .text-container {
-        width: 100%;
-        padding: 25px;
-        background: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-    }
-
-    .text-container h1 {
-        font-size: 28px;
-        font-weight: 700;
-        color: #0a58ca;
-        text-align: center;
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
-
-    .text-container p {
-        font-size: 16px;
-        color: #333333;
-        line-height: 1.8;
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    .text-container p strong {
-        font-size: 18px;
-        color: #0a58ca;
-    }
-
     .image-container {
         width: 100%;
         padding: 0 10px;
@@ -418,20 +370,22 @@ main {
         transform: scale(1.05);
     }
 }
-	.responsive-img {
+
+/* עבור מסכים קטנים יותר (ניידים) */
+.responsive-img {
     width: 100%;   /* רוחב דינמי */
     height: auto;  /* גובה שמתחייב לפרופורציות של התמונה */
-  }
+}
 
-  /* עבור מסכים קטנים יותר (ניידים) */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .responsive-img {
-      width: 100%;
-      height: auto; /* התמונה תשמור על פרופורציות במובייל */
+        width: 100%;
+        height: auto; /* התמונה תשמור על פרופורציות במובייל */
     }
-  }
-</style>
+}
 
+	</style>
+	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
@@ -456,17 +410,15 @@ main {
         </p>
     </div>
 
- <!-- תמונה -->
-	<img src="images/labs.jpg" class="responsive-img">
-
-<div class="image-container" style="flex: 1; max-width: 500px;">
-    <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-        <img src="images/labs.jpg" 
-                 style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
+    <!-- תמונה -->
+    <div class="image-container" style="flex: 1; max-width: 500px;">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
+                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
+            <img src="images/labs.jpg" 
+                 style="width:100%; height:auto; display: block; transition: transform 0.4s ease-in-out;">
+        </div>
     </div>
-</div>
-
+</main>
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
