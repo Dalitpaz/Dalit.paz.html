@@ -341,6 +341,7 @@ main {
         background: #ffffff;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box; /* ודא שהריווח בתוך הרוחב */
     }
 
     .text-container h1 {
@@ -357,6 +358,24 @@ main {
         width: 100%; /* תתפוס את כל הרוחב במובייל */
         height: auto; /* שמירה על פרופורציות התמונה */
         border-radius: 20px; /* עיגול פינות התמונה */
+    }
+}
+
+/* עיצוב כללי נוסף שיבטיח שהמראה במחשב לא יפגע */
+@media (min-width: 769px) {
+    .text-container {
+        padding: 40px;
+        margin: 0 auto;
+        width: 80%; /* קובע רוחב משתנה כך שלא יתפוס יותר מדי רוחב */
+        max-width: 100%;
+    }
+
+    .text-container h1 {
+        font-size: 38px; /* גדלים מותאמים לעיצוב המחשב */
+    }
+
+    .text-container p {
+        font-size: 18px; /* שמירה על גודל קריא במחשב */
     }
 }
 </style>
