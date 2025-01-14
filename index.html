@@ -277,7 +277,6 @@ main {
 
 	  
 <style>
-	  
 /* עיצוב למחשב - מסך גדול מ-768px */
 @media (min-width: 769px) {
     body {
@@ -400,23 +399,23 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* הגובה של התמונה יהיה בגובה המסך */
     }
 
-    .image-container img {
-        width: auto; /* התמונה תתפוס את רוחב התמונה */
-        height: 100%; /* התמונה תתפוס את כל הגובה של המסך */
+    img {
+        width: auto;
+        height: 400px; /* גובה מותאם לתמונה */
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        object-fit: cover; /* וודא שהתמונה תכסה את הגובה בצורה יפה */
+        object-fit: cover; /* התמונה תתמלא בגובה */
         transition: transform 0.4s ease-in-out;
     }
 
-    .image-container img:hover {
+    img:hover {
         transform: scale(1.05);
     }
 }
 </style>
+
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
