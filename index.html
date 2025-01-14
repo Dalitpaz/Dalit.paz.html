@@ -275,9 +275,8 @@ main {
   overflow-y: auto;
 }
 	  
-<style>
 	  
-   <style>
+  <style>
     /* עיצוב למחשב - מסך גדול מ-768px */
     @media (min-width: 769px) {
         body {
@@ -367,15 +366,19 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            height: 0;
+            padding-bottom: 100%; /* יוצר יחס של 1:1 (מרובע) */
+            position: relative;
+            overflow: hidden;
         }
 
         .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100%; /* הגובה והאורך יהיו שווים */
-            object-fit: cover; /* התמונה תכסה את כל השטח ותשמור על פרופורציות */
+            height: 100%;
+            object-fit: cover; /* שומר על פרופורציות התמונה מבלי למתוח אותה */
             border-radius: 10px;
             transition: transform 0.4s ease-in-out;
         }
