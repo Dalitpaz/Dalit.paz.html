@@ -277,7 +277,6 @@ main {
 }
 
 </style>
-	  
 <style>
 /* עיצוב כללית */
 main {
@@ -298,8 +297,12 @@ main {
     background: #ffffff;
     border-radius: 25px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    width: 100%; /* תופס 100% רוחב */
+    max-width: 600px; /* מגביל את הרוחב המקסימלי */
+    margin: 0 auto; /* מרכז את המסגרת */
 }
 
+/* כותרת */
 .text-container h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 38px;
@@ -310,6 +313,7 @@ main {
     line-height: 1.5;
 }
 
+/* פסקה */
 .text-container p {
     font-family: 'Roboto', sans-serif;
     color: #333333;
@@ -328,11 +332,10 @@ main {
     }
 
     .text-container {
-        width: 100%; /* תופס 100% רוחב במובייל */
-        max-width: 100%; /* מגביל את הרוחב המקסימלי */
         padding: 40px; /* ריווח פנימי יותר גדול */
         margin: 0 20px; /* מרווח מצדדים */
-        box-sizing: border-box; /* כולל את הריווח בתוך הרוחב הכולל */
+        width: auto; /* וודא שהרוחב מתאים למסכים קטנים */
+        max-width: 100%; /* תפס 100% רוחב */
         background: #ffffff;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
@@ -340,21 +343,22 @@ main {
 
     .text-container h1 {
         font-size: 24px; /* צמצום גודל כותרת במובייל */
-        text-align: center; /* מרכז הכותרת */
+        text-align: center; /* מרכז את הכותרת */
     }
 
     .text-container p {
         font-size: 16px; /* צמצום גודל הטקסט במובייל */
     }
 
-    /* עיצוב תמונה במובייל */
+    /* עיצוב לתמונה במובייל */
     .image-container img {
-        width: 100%; /* וודא שהרוחב מתאים למסכים קטנים */
+        width: 100%; /* תתפוס את כל הרוחב במובייל */
         height: auto; /* שמירה על פרופורציות התמונה */
-        border-radius: 20px; /* עיגול הפינות של התמונה */
+        border-radius: 20px; /* עיגול פינות התמונה */
     }
 }
 </style>
+
 
 
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
