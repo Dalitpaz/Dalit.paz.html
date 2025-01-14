@@ -276,19 +276,83 @@ main {
 }
 
 <style>
-<style>
+/* עיצוב למחשב - מסך גדול מ-768px */
+@media (min-width: 769px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 60px;
+        background: linear-gradient(135deg, #eaf1f8, #ffffff);
+        border-radius: 30px;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-container {
+        flex: 2;
+        padding: 40px;
+        background: #ffffff;
+        border-radius: 25px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .text-container h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        color: #0a58ca;
+        margin-bottom: 30px;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .text-container p {
+        font-family: 'Roboto', sans-serif;
+        color: #333333;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    .text-container p strong {
+        font-size: 20px;
+        color: #0a58ca;
+    }
+
+    .image-container {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.05);
+    }
+}
+
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
     body {
         font-family: 'Roboto', sans-serif;
-        background: linear-gradient(135deg, #eaf1f8, #ffffff);
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
     main {
-        display: block; /* וודא שהמבנה יהיה אנכי */
+        display: block;
         padding: 20px;
         background: linear-gradient(135deg, #eaf1f8, #ffffff);
         border-radius: 15px;
@@ -297,7 +361,6 @@ main {
     }
 
     .text-container {
-        position: relative;
         width: 100%;
         padding: 25px;
         background: #ffffff;
@@ -372,6 +435,7 @@ main {
         <img src="images/labs.jpg" alt="Laboratory Image">
     </div>
 </main>
+
 
 
 <!-- הוספת אנימציה ותוספות סטייל -->
