@@ -294,12 +294,10 @@ main {
 /* טקסט */
 .text-container {
     flex: 2;
-    padding: 60px; /* הגדלתי את ה-padding של המיכל */
+    padding: 40px;
     background: #ffffff;
     border-radius: 25px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-    width: 100%; /* וודא שהמיכל תופס את כל הרוחב */
-    box-sizing: border-box; /* כולל את הריווח בתוך הרוחב */
 }
 
 .text-container h1 {
@@ -330,11 +328,11 @@ main {
     }
 
     .text-container {
-        width: 90%; /* מרחב גמיש יותר למסכים קטנים */
-        max-width: 100%; /* הוספת מקסימום רוחב */
-        padding: 40px; /* הגדלתי את ה-padding במובייל */
-        margin: 0 auto; /* מרכז את המסגרת */
-        box-sizing: border-box; /* לכלול את הריווח בתוך הרוחב הכולל */
+        width: 100%; /* תופס 100% רוחב במובייל */
+        max-width: 100%; /* מגביל את הרוחב המקסימלי */
+        padding: 40px; /* ריווח פנימי יותר גדול */
+        margin: 0 20px; /* מרווח מצדדים */
+        box-sizing: border-box; /* כולל את הריווח בתוך הרוחב הכולל */
         background: #ffffff;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
