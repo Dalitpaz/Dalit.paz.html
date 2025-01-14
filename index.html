@@ -279,7 +279,6 @@ main {
 </style>
 	  
 <style>
-	
 /* עיצוב כללית */
 main {
     display: flex;
@@ -300,7 +299,7 @@ main {
     border-radius: 25px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
     width: 100%; /* תופס 100% רוחב */
-    max-width: 600px; /* מגביל את הרוחב המקסימלי */
+    box-sizing: border-box; /* לוודא שהריווח כלול ברוחב */
     margin: 0 auto; /* מרכז את המסגרת */
 }
 
@@ -333,14 +332,15 @@ main {
         padding: 30px;
     }
 
+    /* הגדלת רוחב של הטקסט במובייל */
     .text-container {
         padding: 40px; /* ריווח פנימי יותר גדול */
-        margin:0 5px; /* מרווח מצדדים */
-        width: auto; /* וודא שהרוחב מתאים למסכים קטנים */
-        max-width: 100%; /* תפס 100% רוחב */
+        margin: 0 20px; /* מרווח מצדדים */
+        width: 100%; /* תופס את כל הרוחב במובייל */
+        max-width: 100%; /* תופס את כל הרוחב המלא */
         background: #ffffff;
-        border-radius: 30px;
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 25px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
     }
 
     .text-container h1 {
