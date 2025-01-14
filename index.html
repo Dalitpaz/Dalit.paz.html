@@ -280,7 +280,7 @@ main {
 	  
 
 <style>
-/* עיצוב למחשב - ללא שינוי */
+/* עיצוב למחשב - נשאר כפי שהוא */
 main {
     display: flex;
     justify-content: space-between;
@@ -293,7 +293,7 @@ main {
 }
 
 .text-container {
-    flex: 1;
+    flex: 2;
     padding: 40px;
     background: #ffffff;
     border-radius: 25px;
@@ -308,14 +308,6 @@ main {
     margin-bottom: 30px;
     text-align: left;
     line-height: 1.5;
-}
-
-.text-container p {
-    font-family: 'Roboto', sans-serif;
-    color: #333333;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
 }
 
 /* עיצוב למובייל */
@@ -345,6 +337,7 @@ main {
         font-size: 16px; /* צמצום גודל הטקסט במובייל */
     }
 
+    /* תמונה במובייל */
     .image-container img {
         width: 100%; /* תתפוס את כל הרוחב במובייל */
         height: auto; /* שמירה על פרופורציות התמונה */
@@ -354,13 +347,12 @@ main {
 </style>
 
 
-<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
+
+<main>
     <!-- טקסט -->
-    <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
-                   color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
-           My Journey Into Precision and Quality
+    <div class="text-container">
+
+        <h1 My Journey Into Precision and Quality
         </h1>
         <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
             <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
@@ -378,16 +370,17 @@ main {
         </p>
     </div>
 
+  
     <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
+    <div class="image-container">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden;
                     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
             <img src="images/labs.jpg" 
                  style="width: 100%; height: auto; display: block; transition: transform 0.4s ease-in-out;">
         </div>
     </div>
 </main>
-
+	  
 <!-- הוספת אנימציה ותוספות סטייל -->
 <style>
     main img:hover {
