@@ -191,7 +191,7 @@ main {
  
   </head>
   <body>
-  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -206,54 +206,22 @@ main {
     </ul>
   </nav>
 
-  <!-- כפתור לתפריט נפתח במובייל -->
-  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
-    &#9776;
-  </div>
+  <!-- כפתור המבורגר -->
+  <button class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+
+  <!-- התפריט הנייד -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Quality in the Laboratory</a></li>
+      <li><a href="properties.html">Fields of Specialization</a></li>
+      <li><a href="property-details.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-
-<!-- CSS -->
-<style>
-/* התאמות כלליות */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-/* התאמה למובייל */
-@media (max-width: 768px) {
-  .main-nav ul {
-    display: none; /* תפריט מוסתר כברירת מחדל */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .menu-toggle {
-    display: block; /* כפתור תפריט מופיע במובייל */
-  }
-
-  .menu-open .main-nav ul {
-    display: flex; /* הצגת התפריט בעת לחיצה */
-  }
-}
-
-</style>
-
 
 <script>
   // קוד JavaScript להפעלת התפריט הנייד
@@ -307,7 +275,6 @@ header {
   overflow-y: auto;
 }
 	</style>
-
 
 
 <!-- רקע עם אפקט גלילה -->
