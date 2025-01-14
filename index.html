@@ -275,55 +275,57 @@ main {
   overflow-y: auto;
 }
 	  
-<style>
-	  
-    /* עיצוב למחשב - מסך גדול מ-768px */
-    @media (min-width: 769px) {
-        body {
-            font-family: 'Roboto', sans-serif;
-            padding: 40px;
-            background: #f4f4f4;
-        }
+    /* עיצוב למחשב - לא נוגעים בזה */
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 60px;
+        background: linear-gradient(135deg, #eaf1f8, #ffffff);
+        border-radius: 30px;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    }
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
+    .text-container {
+        flex: 2;
+        padding: 40px;
+        background: #ffffff;
+        border-radius: 25px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    }
 
-        .text-container {
-            text-align: center;
-            max-width: 600px;
-        }
+    .text-container h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        color: #0a58ca;
+        margin-bottom: 30px;
+        text-align: left;
+        line-height: 1.5;
+    }
 
-        .text-container h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 36px;
-            font-weight: bold;
-            color: #0a58ca;
-            margin-bottom: 20px;
-        }
+    .text-container p {
+        font-family: 'Roboto', sans-serif;
+        color: #333333;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: justify;
+    }
 
-        .text-container p {
-            font-size: 18px;
-            color: #333333;
-            line-height: 1.6;
-        }
+    .image-container {
+        flex: 1;
+        max-width: 500px;
+    }
 
-        .image-container {
-            width: 300px;
-            height: 300px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-	    
+    .image-container img {
+        width: 600px;
+        height: 600px;
+        display: block;
+        transition: transform 0.4s ease-in-out;
+    }
 
-    /* עיצוב למובייל - מסך קטן מ-768px */
+   /* עיצוב למובייל - מסך קטן מ-768px */
     @media (max-width: 768px) {
         main {
             flex-direction: column; /* משנה לעיצוב אנכי */
@@ -336,54 +338,48 @@ main {
         }
 
         .image-container {
-            width: 90%; /* עיצוב מותאם למובייל */
-            max-width: 350px; /* הגבלת רוחב */
-            height: auto; /* תאפשר גובה אוטומטי */
+            width: 100%; /* תופס את כל הרוחב */
+            max-width: 400px; /* הגבלת רוחב מקסימלי */
+            height: 0;
+            padding-bottom: 100%; /* שמירה על יחס רוחב-גובה 1:1 (מרובע) */
             margin-top: 20px;
+            border-radius: 20px; /* פינות מעוגלות */
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל */
         }
 
         .image-container img {
-            width: 100%; /* תתפוס 100% מהרוחב */
-            height: auto; /* גובה אוטומטי */
+            width: 100%;
+            height: 100%;
             object-fit: cover; /* תשמור על יחס רוחב-גובה */
-            border-radius: 20px; /* פינות מעוגלות */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל לתמונה */
         }
     }
 </style>
-	  
-<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
+
+<main>
     <!-- טקסט -->
-    <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; 
-                   color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
-           My Journey Into Precision and Quality
-        </h1>
-        <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
-            <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
-            a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
- My role was to ensure 
-            that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
+    <div class="text-container">
+        <h1>My Journey Into Precision and Quality</h1>
+        <p>
+            <strong>Hello, I'm Dalit Paz,</strong> a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
+            My role was to ensure that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
 
-            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. 
-            These skills are at the core of my transition into software quality assurance.<br><br>
+            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. These skills are at the core of my transition into software quality assurance.<br><br>
 
-            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background 
-            and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
+            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
 
             Let’s work together to redefine quality standards and create outstanding results!
         </p>
     </div>
-<!-- תמונה -->
-<div style="flex: 1; max-width: 500px;">
-    <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-        <img src="images/labs.jpg" 
-                 style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
+
+    <!-- תמונה -->
+    <div class="image-container">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);">
+            <img src="images/labs.jpg">
         </div>
     </div>
-</main>  
+</main>
+
 <!-- הוספת אנימציה ותוספות סטייל -->
 <style>
     main img:hover {
