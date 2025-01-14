@@ -276,90 +276,91 @@ main {
 }
 
 <style>
-/* עיצוב למחשב עם קיבוע */
-@media (min-width: 769px) {
-    .text-container {
-        position: fixed; /* קיבוע האלמנט במיקום קבוע */
-        top: 20px; /* המיקום העליון של האלמנט */
-        left: 20px; /* המיקום השמאלי של האלמנט */
-        width: 300px; /* רוחב קבוע */
-        padding: 20px; /* ריווח פנימי */
-        background: #ffffff;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צל */
-        border-radius: 15px; /* פינות מעוגלות */
-    }
-}
-
+<style>
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #eaf1f8, #ffffff);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     main {
-        display: flex;
-        flex-direction: column; /* שים את האלמנטים בצורה אנכית */
-        gap: 30px; /* רווח בין האלמנטים */
+        display: block; /* וודא שהמבנה יהיה אנכי */
         padding: 20px;
+        background: linear-gradient(135deg, #eaf1f8, #ffffff);
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        margin: 10px;
     }
 
     .text-container {
-        position: relative; /* מסיר את הקיבוע במובייל */
-        width: 100%; /* מותאם למובייל, 100% מהרוחב */
-        padding: 20px; /* ריווח פנימי */
-        margin: 0 auto; /* מרכז את הקונטיינר */
-        background: #ffffff; /* צבע רקע לבן */
-        border-radius: 15px; /* פינות מעוגלות קלות */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* צל קל */
+        position: relative;
+        width: 100%;
+        padding: 25px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
     }
 
     .text-container h1 {
-        font-size: 28px; /* גודל כותרת מותאם למובייל */
-        text-align: center; /* מרכז את הכותרת */
-        line-height: 1.4; /* שיפור קריאות */
-        color: #0366d6; /* כותרת מודגשת בצבע */
-        margin-bottom: 20px; /* רווח מתחת לכותרת */
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a58ca;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 20px;
     }
 
     .text-container p {
-        font-size: 16px; /* גודל טקסט מותאם למובייל */
-        line-height: 1.6; /* שיפור ריווח לקריאות */
-        text-align: justify; /* מיושר לשני הצדדים */
-        color: #333333; /* גוון טקסט כהה */
-        margin-bottom: 15px; /* רווח בין הפסקאות */
+        font-size: 16px;
+        color: #333333;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
     }
 
     .text-container p strong {
-        font-size: 18px; /* גודל טקסט מודגש */
-        color: #0a58ca; /* צבע מודגש לטקסט החשוב */
+        font-size: 18px;
+        color: #0a58ca;
     }
 
     .image-container {
-        width: 100%; /* התמונה ממלאת את כל הרוחב במובייל */
-        padding: 0 15px; /* הוספת רווחים בצדדים במובייל */
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 20px;
     }
 
-    .responsive-image {
-        width: 100%; /* התמונה תתפוס 100% מהרוחב במובייל */
-        height: auto; /* שמירה על פרופורציות */
-        object-fit: contain; /* מוודא שהתמונה לא מתעוותת */
-        display: block; /* וודא שהתמונה תוצג בצורה ברורה */
-        margin: 0 auto; /* ממקם את התמונה במרכז */
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.05);
     }
 }
 </style>
 
-<main style="background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
+<main>
     <!-- טקסט -->
-    <div class="text-container" style="background: #ffffff; border-radius: 25px; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
-            My Journey Into Precision and Quality
-        </h1>
-        <p style="font-family: 'Roboto', sans-serif; color: #333333; font-size: 18px; line-height: 1.8; text-align: justify;">
-            <strong style="font-size: 20px; color: #0a58ca;">Hello, I'm Dalit Paz,</strong> 
+    <div class="text-container">
+        <h1>My Journey Into Precision and Quality</h1>
+        <p>
+            <strong>Hello, I'm Dalit Paz,</strong>
             a passionate QA professional with over 5 years of experience in laboratory testing at "Tnuva" factory.
             My role was to ensure that every product meets the highest standards through precision, thoroughness, and advanced testing methodologies.<br><br>
 
-            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization. 
+            Over the years, I’ve developed expertise in data analysis, issue detection, and process optimization.
             These skills are at the core of my transition into software quality assurance.<br><br>
 
-            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background 
+            My approach is rooted in accuracy, adaptability, and innovation. I am excited to bring my extensive technical background
             and dedication to excellence to your organization, helping deliver software solutions that are both reliable and efficient.<br><br>
 
             Let’s work together to redefine quality standards and create outstanding results!
@@ -367,10 +368,8 @@ main {
     </div>
 
     <!-- תמונה -->
-    <div class="image-container" style="max-width: 100%; display: flex; justify-content: center; align-items: center;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-            <img src="images/labs.jpg" class="responsive-image" style="transition: transform 0.4s ease-in-out;">
-        </div>
+    <div class="image-container">
+        <img src="images/labs.jpg" alt="Laboratory Image">
     </div>
 </main>
 
