@@ -325,23 +325,29 @@ main {
         color: #0a58ca;
     }
 
-    .image-container {
-        flex: 1;
-        max-width: 500px;
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .image-container img:hover {
-        transform: scale(1.05);
-    }
+/* עיצוב התמונה */
+.image-container {
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.image-container img {
+    width: 100%; /* התמונה תתפוס את רוחב הקונטיינר שלה */
+    height: 400px; /* הגובה יותאם כך שהתמונה תיראה אנכית */
+    object-fit: cover; /* וודא שהתמונה תכסה את הגובה בצורה יפה */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
 
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
