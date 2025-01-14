@@ -276,76 +276,63 @@ main {
 }
 
 <style>
-/* עיצוב למחשב */
-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    background: linear-gradient(135deg, #eaf1f8, #ffffff);
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.text-container {
-    flex: 1;
-    padding: 40px;
-    background: #ffffff;
-    border-radius: 50px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-.text-container h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-    color: #0a58ca;
-    margin-bottom: 30px;
-    text-align: left;
-    line-height: 1.2;
+	  
+/* עיצוב למחשב עם קיבוע */
+@media (min-width: 769px) {
+    .text-container {
+        position: fixed; /* קיבוע האלמנט במיקום קבוע */
+        top: 20px; /* המיקום העליון של האלמנט */
+        left: 20px; /* המיקום השמאלי של האלמנט */
+        width: 300px; /* רוחב קבוע */
+        padding: 20px; /* ריווח פנימי */
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* צל */
+        border-radius: 15px; /* פינות מעוגלות */
+    }
 }
 
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column; /* כל האלמנטים אחד מתחת לשני */
-        align-items: center;
-        gap: 20px; /* רווח בין האלמנטים */
-        padding: 20px; /* ריווח פנימי */
-    }
-
     .text-container {
-        width: 100%; /* תופס את כל הרוחב */
-        max-width: 600px; /* מגביל את הרוחב המקסימלי */
-        padding: 20px; /* ריווח פנימי */
+        position: relative; /* מסיר את הקיבוע במובייל */
+        width: 90%; /* מותאם למובייל, 90% מהרוחב */
+        padding: 25px; /* ריווח פנימי */
         margin: 0 auto; /* מרכז את הקונטיינר */
         background: #ffffff; /* צבע רקע לבן */
         border-radius: 15px; /* פינות מעוגלות קלות */
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* צל קל */
-        margin-top: -20px; /* הרמת המסגרת למעלה במובייל */
     }
 
     .text-container h1 {
-        font-size: 22px; /* גודל כותרת מותאם למובייל */
+        font-size: 24px; /* גודל כותרת מותאם למובייל */
         text-align: center; /* מרכז את הכותרת */
         line-height: 1.4; /* שיפור קריאות */
         color: #0366d6; /* כותרת מודגשת בצבע */
-        margin-bottom: 15px; /* רווח מתחת לכותרת */
+        margin-bottom: 20px; /* רווח מתחת לכותרת */
     }
 
     .text-container p {
-        font-size: 14px; /* גודל טקסט קטן יותר למובייל */
+        font-size: 16px; /* גודל טקסט מותאם למובייל */
         line-height: 1.6; /* שיפור ריווח לקריאות */
         text-align: justify; /* מיושר לשני הצדדים */
         color: #333333; /* גוון טקסט כהה */
-        margin-bottom: 10px; /* רווח בין הפסקאות */
+        margin-bottom: 15px; /* רווח בין הפסקאות */
     }
 
     .text-container p strong {
-        font-size: 16px; /* גודל טקסט מודגש */
+        font-size: 18px; /* גודל טקסט מודגש */
         color: #0a58ca; /* צבע מודגש לטקסט החשוב */
     }
+}
+
+
+/* עיצוב עבור מחשבים - אם רוצים לשמור על העיצוב הקיים */
+@media (min-width: 769px) {
+    .text-container {
+        width: 50%; /* לשמור על הרוחב שהוגדר למחשב */
+        padding: 40px; /* ריווח פנימי */
+    }
+}
 
     .image-container {
         width: 100%; /* התמונה ממלאת את כל הרוחב במובייל */
