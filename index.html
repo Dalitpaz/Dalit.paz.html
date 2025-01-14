@@ -276,7 +276,6 @@ main {
 }
 
 <style>
-	  
 /* עיצוב למחשב עם קיבוע */
 @media (min-width: 769px) {
     .text-container {
@@ -293,10 +292,17 @@ main {
 
 /* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column; /* שים את האלמנטים בצורה אנכית */
+        gap: 30px; /* רווח בין האלמנטים */
+        padding: 20px;
+    }
+
     .text-container {
         position: relative; /* מסיר את הקיבוע במובייל */
-        width: 90%; /* מותאם למובייל, 90% מהרוחב */
-        padding: 25px; /* ריווח פנימי */
+        width: 100%; /* מותאם למובייל, 100% מהרוחב */
+        padding: 20px; /* ריווח פנימי */
         margin: 0 auto; /* מרכז את הקונטיינר */
         background: #ffffff; /* צבע רקע לבן */
         border-radius: 15px; /* פינות מעוגלות קלות */
@@ -304,7 +310,7 @@ main {
     }
 
     .text-container h1 {
-        font-size: 24px; /* גודל כותרת מותאם למובייל */
+        font-size: 28px; /* גודל כותרת מותאם למובייל */
         text-align: center; /* מרכז את הכותרת */
         line-height: 1.4; /* שיפור קריאות */
         color: #0366d6; /* כותרת מודגשת בצבע */
@@ -323,18 +329,7 @@ main {
         font-size: 18px; /* גודל טקסט מודגש */
         color: #0a58ca; /* צבע מודגש לטקסט החשוב */
     }
-}
 
-
-/* עיצוב עבור מחשבים - אם רוצים לשמור על העיצוב הקיים */
-@media (min-width: 769px) {
-    .text-container {
-        width: 50%; /* לשמור על הרוחב שהוגדר למחשב */
-        padding: 40px; /* ריווח פנימי */
-    }
-}
-
-@media (max-width: 768px) {
     .image-container {
         width: 100%; /* התמונה ממלאת את כל הרוחב במובייל */
         padding: 0 15px; /* הוספת רווחים בצדדים במובייל */
@@ -348,14 +343,11 @@ main {
         margin: 0 auto; /* ממקם את התמונה במרכז */
     }
 }
-
-
 </style>
 
-	  
-<main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
+<main style="background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
-    <div class="text-container" style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
+    <div class="text-container" style="background: #ffffff; border-radius: 25px; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);">
         <h1 style="font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 700; color: #0a58ca; margin-bottom: 30px; text-align: left; line-height: 1.5;">
             My Journey Into Precision and Quality
         </h1>
@@ -374,16 +366,14 @@ main {
         </p>
     </div>
 
-
     <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
-            <img src="images/labs.jpg" 
-                 style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
+    <div class="image-container" style="max-width: 100%; display: flex; justify-content: center; align-items: center;">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
+            <img src="images/labs.jpg" class="responsive-image" style="transition: transform 0.4s ease-in-out;">
         </div>
     </div>
 </main>
+
 
 <!-- הוספת אנימציה ותוספות סטייל -->
 <style>
