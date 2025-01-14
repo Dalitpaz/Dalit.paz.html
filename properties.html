@@ -223,7 +223,8 @@ main {
       }
     </style>
   </head>
-  <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
+	
+<header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
   <!-- לוגו -->
   <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
     <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
@@ -238,14 +239,36 @@ main {
     </ul>
   </nav>
 
-  <!-- כפתור לתפריט נפתח במובייל -->
-  <div class="menu-toggle" onclick="toggleMenu()" style="display: none; cursor: pointer; font-size: 30px; color: #333;">
-    &#9776;
-  </div>
+  <!-- כפתור המבורגר -->
+  <button class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+
+  <!-- התפריט הנייד -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Quality in the Laboratory</a></li>
+      <li><a href="properties.html">Fields of Specialization</a></li>
+      <li><a href="property-details.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- CSS -->
-<style>
+<script>
+  // קוד JavaScript להפעלת התפריט הנייד
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    // הוספת מחלקת active לכפתור המבורגר
+    this.classList.toggle('active');
+    
+    // הוספת מחלקת active לתפריט הנייד כדי להציג אותו
+    document.querySelector('.mobile-nav').classList.toggle('active');
+  });
+</script>
+
+
+  <style>
   /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
@@ -279,33 +302,12 @@ main {
     background-color: #5A4FCF;
   }
 
-  /* עיצוב בנייד */
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .menu-toggle {
-      display: block;
-    }
-    .menu-link {
-      display: block;
-      padding: 15px;
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-    }
-    .menu-item:hover {
-      background-color: transparent;
-    }
-  }
-</style>
-
+  
+  body, html {
+  height: 100%;
+  overflow-y: auto;
+}
+	</style>
 
     <!-- Background Animation -->
     <div class="scroll-background"></div>
