@@ -276,73 +276,116 @@ main {
 }
 	  
 	  
-  <style>
-  <style>
-    /* עיצוב למחשב - מסך גדול מ-768px */
-    @media (min-width: 769px) {
-        body {
-            font-family: 'Roboto', sans-serif;
+  /* עיצוב למחשב - מסך גדול מ-768px */
+        @media (min-width: 769px) {
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            main {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 50px;
+                padding: 60px;
+                background: linear-gradient(135deg, #eaf1f8, #ffffff);
+                border-radius: 30px;
+                box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+            }
+
+            .text-container {
+                flex: 2;
+                padding: 40px;
+                background: #ffffff;
+                border-radius: 25px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            }
+
+            .text-container h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 38px;
+                font-weight: 700;
+                color: #0a58ca;
+                margin-bottom: 30px;
+                text-align: left;
+                line-height: 1.5;
+            }
+
+            .text-container p {
+                font-family: 'Roboto', sans-serif;
+                color: #333333;
+                font-size: 18px;
+                line-height: 1.8;
+                text-align: justify;
+            }
+
+            .text-container p strong {
+                font-size: 20px;
+                color: #0a58ca;
+            }
+
+            .image-container {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
         }
 
-        main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 50px;
-            padding: 60px;
-            background: linear-gradient(135deg, #eaf1f8, #ffffff);
-            border-radius: 30px;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        /* עיצוב למובייל - מסך קטן מ-768px */
+        @media (max-width: 768px) {
+            body {
+                font-family: 'Roboto', sans-serif;
+                padding: 20px;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                background: #ffffff;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            }
+
+            .text-container {
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .text-container h1 {
+                font-size: 28px;
+            }
+
+            .text-container p {
+                font-size: 16px;
+            }
+
+            .image-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .image-container img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 15px;
+            }
         }
-
-        .text-container {
-            flex: 2;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 25px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .text-container h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 38px;
-            font-weight: 700;
-            color: #0a58ca;
-            margin-bottom: 30px;
-            text-align: left;
-            line-height: 1.5;
-        }
-
-        .text-container p {
-            font-family: 'Roboto', sans-serif;
-            color: #333333;
-            font-size: 18px;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        .text-container p strong {
-            font-size: 20px;
-            color: #0a58ca;
-        }
-
-        .image-container {
-            width: 100%;
-            padding: 0 10px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-container img {
-            width: 50%;
-            height: 400px;
-            object-fit: cover;
-       
-
-</style>
-
+    </style>
 
 	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
