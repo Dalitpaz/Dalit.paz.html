@@ -235,8 +235,7 @@ main {
 
 </body>
 
-<style>
-
+  <style>
   /* תפריט עכבר */
   .menu-link {
     text-decoration: none;
@@ -276,7 +275,37 @@ main {
   overflow-y: auto;
 }
 
-	<style>
+	  <style>
+/* עיצוב למחשב */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 60px;
+    background: linear-gradient(135deg, #eaf1f8, #ffffff);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 1;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.text-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #0a58ca;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.5;
+}
+
 /* עיצוב למובייל - רק כאשר המסך קטן מ-768px */
 @media (max-width: 768px) {
     main {
@@ -304,17 +333,16 @@ main {
         font-size: 16px; /* צמצום גודל הטקסט במובייל */
     }
 
-    /* תמונה במובייל */
+    /* עיצוב לתמונה במובייל */
     .image-container img {
-        width: 80%; /* שים 80% במקום 100% כדי שהרוחב יהיה יותר קטן */
+        width: 80%; /* שים 80% במקום 100% כדי שהרוחב יהיה יותר קטן במובייל */
         max-width: 400px; /* גודל מקסימלי לתמונה */
         height: auto; /* שמירה על פרופורציות התמונה */
         margin: 0 auto; /* למרכז את התמונה */
     }
 }
+
 </style>
-
-
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
