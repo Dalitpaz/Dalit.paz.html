@@ -275,12 +275,8 @@ main {
   height: 100%;
   overflow-y: auto;
 }
-
-</style>
-	  
-<style>
 /* עיצוב למחשב */
-main {
+.main-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -309,9 +305,17 @@ main {
     line-height: 1.5;
 }
 
+.text-container p {
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
 /* עיצוב למובייל - רק כאשר המסך קטן מ-768px */
 @media (max-width: 768px) {
-    main {
+    .main-container {
         flex-direction: column; /* טקסט ותמונה אחד מתחת לשני */
         align-items: center;
         gap: 30px;
@@ -343,9 +347,8 @@ main {
         border-radius: 20px; /* עיגול פינות התמונה */
     }
 }
+
 </style>
-
-
 
 
 
