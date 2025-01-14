@@ -371,20 +371,13 @@ main {
     }
 
     .responsive-image {
-        width: 80%; /* הצמצום ל-80% במובייל */
-        max-width: 100%; /* לא תשתלט על כל הרוחב במובייל */
+        width: 50%; /* הצמצום ל-80% במובייל */
+        max-width: 50%; /* לא תשתלט על כל הרוחב במובייל */
         height: auto; /* שומרת על פרופורציות התמונה */
         object-fit: contain; /* מוודא שהתמונה לא מעוותת */
     }
 }
 
-/* עיצוב נוסף למובייל קטן (עד 480px) */
-@media (max-width: 480px) {
-    .responsive-image {
-        width: 70%; /* הצמצום ל-70% במובייל קטן מאוד */
-        margin: 0 auto; /* ממקם את התמונה במרכז */
-    }
-}
 
 </style>
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
