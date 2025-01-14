@@ -324,26 +324,28 @@ main {
         font-size: 20px;
         color: #0a58ca;
     }
-.image-container {
-    width: 100%;
-    padding: 0 10px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.image-container img {
-    width: 100%; /* התמונה תתפוס את רוחב הקונטיינר שלה */
-    height: 400px; /* הגובה יותאם כך שהתמונה תיראה אנכית */
-    object-fit: cover; /* וודא שהתמונה תכסה את הגובה בצורה יפה */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease-in-out;
-}
+    .image-container {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.image-container img:hover {
-    transform: scale(1.05);
+    .image-container img {
+        width: 50%; /* התמונה תופס חצי מהאורך של המחשב */
+        height: 400px; /* הגובה יותאם כך שהתמונה תיראה אנכית */
+        object-fit: cover; /* וודא שהתמונה תכסה את הגובה בצורה יפה */
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .image-container img:hover {
+        transform: scale(1.05);
+    }
 }
 
 /* עיצוב למובייל - מסך קטן מ-768px */
@@ -384,6 +386,7 @@ main {
     }
 }
 
+
 	</style>
 	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
@@ -410,12 +413,12 @@ main {
         </p>
     </div>
 
-    <!-- תמונה -->
+     <!-- תמונה -->
     <div class="image-container" style="flex: 1; max-width: 500px;">
         <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
                     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
             <img src="images/labs.jpg" 
-                 style="width:100%; height:auto; display: block; transition: transform 0.4s ease-in-out;">
+                style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
         </div>
     </div>
 </main>
