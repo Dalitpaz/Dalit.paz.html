@@ -407,10 +407,10 @@ main {
 
     /* במובייל, הצג את התמונה באופן אנכי */
     .image-container img {
-        width: 100%;
-        height: auto; /* גובה משתנה לפי התמונה במובייל */
+        width: 100%; /* התמונה תתפוס את רוחב הקונטיינר */
+        height: auto; /* גובה מותאם כך שהתמונה תראה בצורה אנכית */
         max-height: 500px; /* גובה מרבי למובייל */
-        object-fit: contain; /* התמונה תתמלא בגובה */
+        object-fit: contain; /* התמונה תתמלא בגובה ותשמור על הפרופורציות */
         transition: transform 0.4s ease-in-out;
     }
 
