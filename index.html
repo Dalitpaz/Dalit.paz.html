@@ -322,7 +322,7 @@ main {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 	    
-    /* עיצוב למובייל - מסך קטן מ-768px */
+  /* עיצוב למובייל - מסך קטן מ-768px */
     @media (max-width: 768px) {
         body {
             font-family: 'Roboto', sans-serif;
@@ -357,20 +357,19 @@ main {
 
         /* עיצוב לתמונה במובייל */
         .image-container {
-            width: 80%; /* תופס רוחב של 80% */
-            max-width: 350px; /* הגבלת רוחב מרבי */
+            width: 90%; /* רוחב גמיש */
+            max-width: 350px; /* מקסימום רוחב */
             height: auto; /* גובה אוטומטי */
-            aspect-ratio: 1 / 1; /* יחס מרובע */
-            border-radius: 20px; /* פינות מרובעות */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל */
-            margin-top: 20px; /* מרווח עליון */
+            aspect-ratio: 1 / 1; /* שמירה על יחס מרובע */
+            margin-top: 20px; /* מרווח למעלה */
+            border-radius: 20px; /* פינות מעוגלות */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל לתמונה */
         }
 
-        /* התמונה עצמה */
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* מתאימה את התמונה למיכל */
+            object-fit: cover; /* התאמה למיכל התמונה */
         }
     }
 </style>
