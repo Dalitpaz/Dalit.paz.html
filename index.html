@@ -352,43 +352,41 @@ main {
     display: flex;
     justify-content: center; /* מרכז את התמונה */
     align-items: center; /* מרכז את התמונה גם אנכית */
-    max-width: 100%; /* לא להגביל יותר מדי במחשב */
-    width: 100%; /* תמונה תופסת את כל הרוחב */
+    width: 100%; /* תופס 100% מהרוחב של הקונטיינר */
+    max-width: 100%; /* לא תשתלט על כל הרוחב */
 }
 
+/* עיצוב התמונה */
 .responsive-image {
-    width: 100%; /* התמונות תופסות 100% מהרוחב של הקונטיינר */
-    height: auto; /* שומר על פרופורציות */
-    object-fit: contain; /* שומר שהתמונה תתאים לקונטיינר מבלי להימתח */
-    max-width: 100%; /* לא תשתלט על כל הרוחב יותר מדי */
+    width: 100%; /* תמונה תתפוס את כל הרוחב של הקונטיינר */
+    height: auto; /* שומרת על פרופורציות התמונה */
+    object-fit: contain; /* התמונה מתאימה לקונטיינר מבלי להימתח */
     transition: transform 0.4s ease-in-out; /* אפקט מעבר */
 }
 
 /* עיצוב למובייל */
 @media (max-width: 768px) {
     .image-container {
-        width: 50%; /* מאפשר לתמונה למלא את כל הרוחב במובייל */
-        max-width: 50%; /* תמונה תתפוס 100% מהרוחב */
-        padding: 0 15px; /* הוספת רווחים בצדדים */
+        width: 50%; /* מאפשר לתמונה למלא רק 50% מהמסך במובייל */
+        max-width: 50%; /* לא יחרוג מרוחב של 50% */
     }
 
     .responsive-image {
-        width: 100%; /* תמונה תתפוס את כל הרוחב של הקונטיינר */
-        height: auto; /* שומר על פרופורציות התמונה */
+        width: 100%; /* התאמת רוחב התמונה לקונטיינר */
+        height: auto; /* שומרת על פרופורציות התמונה */
         object-fit: contain; /* מוודא שהתמונה לא מעוותת */
     }
 }
 
-/* אם רוצים להקטין את התמונה יותר, נוכל להגביל את רוחב התמונה במובייל */
+/* עיצוב נוסף למובייל קטן (עד 480px) */
 @media (max-width: 480px) {
     .responsive-image {
-        width: 90%; /* תקטין את התמונה ב-10% במובייל מאוד קטן */
+        width: 85%; /* צמצום הרוחב ל-85% במובייל קטן מאוד */
         margin: 0 auto; /* ממקם את התמונה במרכז */
     }
 }
 
 </style>
-
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
     <div style="flex: 2; padding: 40px; background: #ffffff; border-radius: 25px; 
