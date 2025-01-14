@@ -317,6 +317,91 @@ header {
 }
 
 </style>
+	  <header style="width: 100%; z-index: 1000; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
+  <!-- לוגו -->
+  <div class="logo-container" style="width: 80px; height: 80px; position: relative; margin-right: 30px; display: inline-block; transform-origin: center;">
+    <img src="images/logo my lab.jpg" class="rotating-logo" style="transition: transform 1s ease-in-out;">
+  </div>
+
+  <!-- תפריט -->
+  <nav class="main-nav" style="display: inline-block;">
+    <ul style="display: flex; list-style: none; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; align-items: center; gap: 40px;">
+      <li class="menu-item"><a href="index.html" class="menu-link">Quality in the Laboratory</a></li>
+      <li class="menu-item"><a href="properties.html" class="menu-link">Fields of Specialization</a></li>
+      <li class="menu-item"><a href="property-details.html" class="menu-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- כפתור המבורגר -->
+  <button class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </button>
+
+  <!-- התפריט הנייד -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Quality in the Laboratory</a></li>
+      <li><a href="properties.html">Fields of Specialization</a></li>
+      <li><a href="property-details.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  // קוד JavaScript להפעלת התפריט הנייד
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    // הוספת מחלקת active לכפתור המבורגר
+    this.classList.toggle('active');
+    
+    // הוספת מחלקת active לתפריט הנייד כדי להציג אותו
+    document.querySelector('.mobile-nav').classList.toggle('active');
+  });
+</script>
+
+
+  <style>
+  /* תפריט עכבר */
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+  }
+
+  /* עיצוב תפריט בקטגוריות */
+  .menu-item {
+    position: relative;
+  }
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .menu-item:hover::after {
+    background-color: #5A4FCF;
+  }
+
+  
+  body, html {
+  height: 100%;
+  overflow-y: auto;
+}
+	</style>
+
 
 
 <!-- רקע עם אפקט גלילה -->
