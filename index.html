@@ -346,24 +346,6 @@ main {
         color: #0a58ca; /* צבע מודגש לטקסט החשוב */
     }
 }
-/* עיצוב לתמונה */
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* מרכז את התמונה */
-    align-items: center; /* מרכז את התמונה גם אנכית */
-    width: 100%; /* תופס את כל הרוחב של הקונטיינר */
-}
-
-/* עיצוב התמונה במחשב (קיבוע גודל) */
-.responsive-image {
-    width: 600px; /* קיבוע גודל התמונה במחשב */
-    height: 600px; /* קיבוע גובה התמונה במחשב */
-    object-fit: contain; /* התמונה מתאימה לקונטיינר מבלי להימתח */
-    transition: transform 0.4s ease-in-out; /* אפקט מעבר */
-}
-
-/* עיצוב למובייל */
 @media (max-width: 768px) {
     .image-container {
         width: 100%; /* התמונה ממלאת את כל הרוחב במובייל */
@@ -371,12 +353,19 @@ main {
     }
 
     .responsive-image {
-        width: 50%; /* הצמצום ל-80% במובייל */
-        max-width: 50%; /* לא תשתלט על כל הרוחב במובייל */
-        height: auto; /* שומרת על פרופורציות התמונה */
-        object-fit: contain; /* מוודא שהתמונה לא מעוותת */
+        width: 80%; /* צמצום התמונה ל-80% מהרוחב במובייל */
+        height: auto; /* שמירה על פרופורציות */
+        object-fit: contain; /* מוודא שהתמונה לא מתעוותת */
     }
 }
+
+@media (max-width: 480px) {
+    .responsive-image {
+        width: 70%; /* צמצום ל-70% במובייל קטן מאוד */
+        margin: 0 auto; /* ממקם את התמונה במרכז */
+    }
+}
+
 
 
 </style>
@@ -404,12 +393,11 @@ main {
         </p>
     </div>
 
-    <!-- תמונה -->
-    <div style="flex: 1; max-width: 500px;">
-        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
-                    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
+   <!-- תמונה -->
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center; max-width: 500px;">
+        <div style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
             <img src="images/labs.jpg" 
-                 style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
+                 style="width: 100%; height: auto; max-width: 600px; object-fit: contain; transition: transform 0.4s ease-in-out;">
         </div>
     </div>
 </main>
