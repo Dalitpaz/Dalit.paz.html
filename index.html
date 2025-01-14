@@ -336,7 +336,7 @@ main {
  //* עיצוב לתמונה */
 .image-container {
     flex: 1;
-    max-width: 300px; /* גודל מקסימלי למחשב */
+    max-width: 100px; /* גודל מקסימלי למחשב */
     margin: 0 auto; /* ממרכז את התמונה */
 }
 
@@ -392,6 +392,18 @@ main {
                  style="width:600px;height:600px; display: block; transition: transform 0.4s ease-in-out;">
         </div>
     </div>
+	<!-- עיצוב תמונה -->
+<div style="flex: 1; max-width: 500px;">
+    <div 
+        style="border: 5px solid #0366d6; border-radius: 20px; overflow: hidden; 
+               box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); transition: transform 0.4s ease-in-out;">
+        <!-- עיצוב קונטיינר תמונה -->
+        <div class="image-container" style="margin: 0 auto;">
+            <img src="images/labs.jpg" alt="Lab Image" class="responsive-image">
+        </div>
+    </div>
+</div>
+
 </main>
 
 
