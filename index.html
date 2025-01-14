@@ -329,8 +329,8 @@ main {
             object-fit: cover;
         }
     }
-
-    /* עיצוב למובייל - מסך קטן מ-768px */
+	  
+/* עיצוב למובייל - מסך קטן מ-768px */
     @media (max-width: 768px) {
         body {
             font-family: 'Roboto', sans-serif;
@@ -365,17 +365,20 @@ main {
 
         /* עיצוב לתמונה במובייל */
         .image-container {
-            width: 250px; /* רוחב מוגבל */
-            height: 250px; /* גובה מוגבל */
+            width: 100%; /* גודל דינמי מלא */
+            max-width: 300px; /* רוחב מרבי */
+            height: auto;
+            aspect-ratio: 1 / 1; /* שומר על יחס מרובע */
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 20px; /* עיצוב פינות מרובע */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל יפה */
+            margin-top: 20px; /* מרווח עליון */
         }
 
         .image-container img {
             width: 100%;
-            height: 100%; /* שומר על כיסוי מלא */
-            object-fit: cover;
+            height: 100%;
+            object-fit: cover; /* מכסה את כל התמונה בצורה יפה */
         }
     }
 </style>
