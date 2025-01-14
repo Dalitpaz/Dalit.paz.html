@@ -329,8 +329,8 @@ main {
             object-fit: cover;
         }
     }
-	  
-/* עיצוב למובייל - מסך קטן מ-768px */
+
+    /* עיצוב למובייל - מסך קטן מ-768px */
     @media (max-width: 768px) {
         body {
             font-family: 'Roboto', sans-serif;
@@ -365,20 +365,20 @@ main {
 
         /* עיצוב לתמונה במובייל */
         .image-container {
-            width: 100%; /* גודל דינמי מלא */
-            max-width: 300px; /* רוחב מרבי */
-            height: auto;
-            aspect-ratio: 1 / 1; /* שומר על יחס מרובע */
+            width: 100%; /* תופס רוחב של 100% */
+            max-width: 300px; /* הגבלת רוחב מרבי */
+            height: auto; /* גובה אוטומטי */
+            aspect-ratio: 1 / 1; /* יחס מרובע */
             overflow: hidden;
-            border-radius: 20px; /* עיצוב פינות מרובע */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל יפה */
+            border-radius: 20px; /* פינות מרובעות */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* צל */
             margin-top: 20px; /* מרווח עליון */
         }
 
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* מכסה את כל התמונה בצורה יפה */
+            object-fit: cover; /* תמונה מלאה שמכסה את המיכל */
         }
     }
 </style>
