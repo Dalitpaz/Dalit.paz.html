@@ -280,62 +280,52 @@ main {
         @media (min-width: 769px) {
             body {
                 font-family: 'Roboto', sans-serif;
+                padding: 40px;
+                background: #f4f4f4;
             }
 
             main {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
                 align-items: center;
-                gap: 50px;
-                padding: 60px;
-                background: linear-gradient(135deg, #eaf1f8, #ffffff);
-                border-radius: 30px;
-                box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+                gap: 30px;
+                padding: 40px;
+                background: #ffffff;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             }
 
             .text-container {
-                flex: 2;
-                padding: 40px;
-                background: #ffffff;
-                border-radius: 25px;
-                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+                text-align: center;
+                max-width: 600px;
             }
 
             .text-container h1 {
                 font-family: 'Montserrat', sans-serif;
-                font-size: 38px;
-                font-weight: 700;
+                font-size: 36px;
+                font-weight: bold;
                 color: #0a58ca;
-                margin-bottom: 30px;
-                text-align: left;
-                line-height: 1.5;
+                margin-bottom: 20px;
             }
 
             .text-container p {
-                font-family: 'Roboto', sans-serif;
-                color: #333333;
                 font-size: 18px;
-                line-height: 1.8;
-                text-align: justify;
-            }
-
-            .text-container p strong {
-                font-size: 20px;
-                color: #0a58ca;
+                color: #333333;
+                line-height: 1.6;
             }
 
             .image-container {
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             }
 
             .image-container img {
                 width: 100%;
-                height: 400px;
+                height: 100%;
                 object-fit: cover;
-                border-radius: 15px;
             }
         }
 
@@ -344,6 +334,7 @@ main {
             body {
                 font-family: 'Roboto', sans-serif;
                 padding: 20px;
+                background: #f4f4f4;
             }
 
             main {
@@ -353,18 +344,18 @@ main {
                 gap: 20px;
                 padding: 20px;
                 background: #ffffff;
-                border-radius: 20px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                border-radius: 15px;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             }
 
             .text-container {
-                width: 100%;
-                padding: 20px;
                 text-align: center;
+                width: 100%;
             }
 
             .text-container h1 {
-                font-size: 28px;
+                font-size: 24px;
+                margin-bottom: 15px;
             }
 
             .text-container p {
@@ -372,17 +363,17 @@ main {
             }
 
             .image-container {
-                width: 100%;
-                display: flex;
-                justify-content: center;
+                width: 250px;
+                height: 250px;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
             }
 
             .image-container img {
                 width: 100%;
-                max-width: 300px;
-                height: auto;
+                height: 100%;
                 object-fit: cover;
-                border-radius: 15px;
             }
         }
     </style>
