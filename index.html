@@ -274,9 +274,8 @@ main {
   height: 100%;
   overflow-y: auto;
 }
-
-<style>	  
-  /* עיצוב למחשב - מסך גדול מ-768px */
+<style>
+    /* עיצוב למחשב - מסך גדול מ-768px */
     @media (min-width: 769px) {
         body {
             font-family: 'Roboto', sans-serif;
@@ -366,13 +365,16 @@ main {
             justify-content: center;
             align-items: center;
             height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .image-container img {
             width: auto;
             height: 100%;
             max-height: 500px;
-            object-fit: contain;
+            object-fit: contain; /* התמונה תשמור על פרופורציות ותתמלא בגובה */
+            border-radius: 10px;
             transition: transform 0.4s ease-in-out;
         }
 
@@ -393,8 +395,8 @@ main {
             height: auto;
         }
     }
+</style>
 
-	  </style>
 	  
 <main style="display: flex; justify-content: space-between; align-items: center; gap: 50px; padding: 60px; background: linear-gradient(135deg, #eaf1f8, #ffffff); border-radius: 30px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);">
     <!-- טקסט -->
