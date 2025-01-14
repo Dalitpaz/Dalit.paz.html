@@ -306,32 +306,46 @@ main {
     line-height: 1.2;
 }
 
-/* עיצוב למובייל - רק כאשר המסך קטן מ-768px */
+/* עיצוב למובייל - מסך קטן מ-768px */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* טקסט ותמונה אחד מתחת לשני */
+        flex-direction: column; /* כל האלמנטים אחד מתחת לשני */
         align-items: center;
-        gap: 20px;
-        padding: 20px;
+        gap: 20px; /* רווח בין האלמנטים */
+        padding: 20px; /* ריווח פנימי */
     }
 
     .text-container {
-        width: 200%; /* תופס את כל הרוחב במובייל */
-        padding: 40px;
-        margin: 0 ; /* מרווח מצדדים */
-        background: #ffffff;
-        border-radius: 25px;
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        width: 100%; /* תופס את כל הרוחב */
+        max-width: 600px; /* מגביל את הרוחב המקסימלי */
+        padding: 20px; /* ריווח פנימי */
+        margin: 0 auto; /* מרכז את הקונטיינר */
+        background: #ffffff; /* צבע רקע לבן */
+        border-radius: 15px; /* פינות מעוגלות קלות */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* צל קל */
     }
 
     .text-container h1 {
-        font-size: 24px; /* צמצום גודל כותרת במובייל */
+        font-size: 22px; /* גודל כותרת מותאם למובייל */
         text-align: center; /* מרכז את הכותרת */
+        line-height: 1.4; /* שיפור קריאות */
+        color: #0366d6; /* כותרת מודגשת בצבע */
+        margin-bottom: 15px; /* רווח מתחת לכותרת */
     }
 
     .text-container p {
-        font-size: 16px; /* צמצום גודל הטקסט במובייל */
+        font-size: 14px; /* גודל טקסט קטן יותר למובייל */
+        line-height: 1.6; /* שיפור ריווח לקריאות */
+        text-align: justify; /* מיושר לשני הצדדים */
+        color: #333333; /* גוון טקסט כהה */
+        margin-bottom: 10px; /* רווח בין הפסקאות */
     }
+
+    .text-container p strong {
+        font-size: 16px; /* גודל טקסט מודגש */
+        color: #0a58ca; /* צבע מודגש לטקסט החשוב */
+    }
+}
 
  //* עיצוב לתמונה */
 .image-container {
