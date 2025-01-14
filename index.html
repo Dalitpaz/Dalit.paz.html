@@ -277,6 +277,7 @@ main {
 
 	  
 <style>
+	  
 /* עיצוב למחשב - מסך גדול מ-768px */
 @media (min-width: 769px) {
     body {
@@ -357,12 +358,13 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: auto; /* הוסף גובה דינמי כדי שהמיכל יתמוך בתמונה האנכית */
     }
 
     /* במובייל, הצג את התמונה באופן אנכי */
     .image-container img {
-        width: 100%; /* התמונה תתפוס את רוחב הקונטיינר */
-        height: auto; /* גובה מותאם כך שהתמונה תראה בצורה אנכית */
+        width: auto; /* הגדר את הרוחב באופן אוטומטי כדי לשמור על פרופורציות */
+        height: 100%; /* התמקד בהגבהה */
         max-height: 500px; /* גובה מרבי למובייל */
         object-fit: contain; /* התמונה תתמלא בגובה ותשמור על הפרופורציות */
         transition: transform 0.4s ease-in-out;
